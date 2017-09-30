@@ -53,11 +53,7 @@ public class PersonCard extends UiPart<Region> {
     @FXML
     private Label email;
     @FXML
-    private FlowPane tags;
-
-    public PersonCard(ReadOnlyPerson person, int displayedIndex) {
-        super(FXML);
-        this.person = person;
+    private FlowPane tags; public PersonCard(ReadOnlyPerson person, int displayedIndex) { super(FXML); this.person = person;
         id.setText(displayedIndex + ". ");
         initTags(person);
         bindListeners(person);
@@ -78,9 +74,6 @@ public class PersonCard extends UiPart<Region> {
         });
     }
 
-    /*
-    * Inits tags, by getting a new tag and setting it to its specific colour or assigning it a random colour
-    * */
     private void initTags(ReadOnlyPerson person) {
         person.getTags().forEach(tag -> {
             Label tagLabel = new Label(tag.tagName);
@@ -89,8 +82,8 @@ public class PersonCard extends UiPart<Region> {
         });
     }
 
-    private static String getTagColour (String tagName){
-        if (!(tagColours.containsKey(tagName))){
+    private static String getTagColour (String tagName) {
+        if (!(tagColours.containsKey(tagName))) {
             tagColours.put(tagName, Colour.randomColour().toString());
         }
 
