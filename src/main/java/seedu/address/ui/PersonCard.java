@@ -1,6 +1,10 @@
 package seedu.address.ui;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Random;
 
 import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
@@ -16,6 +20,10 @@ import seedu.address.model.person.ReadOnlyPerson;
 public class PersonCard extends UiPart<Region> {
 
     private static final String FXML = "PersonListCard.fxml";
+
+    /**
+    * Enumerate fixed colours for tags
+    * */
     private static enum Colour {
         RED, ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET, BLACK;
 
@@ -53,7 +61,9 @@ public class PersonCard extends UiPart<Region> {
     @FXML
     private Label email;
     @FXML
-    private FlowPane tags; public PersonCard(ReadOnlyPerson person, int displayedIndex) { super(FXML); this.person = person;
+    private FlowPane tags; public PersonCard(ReadOnlyPerson person, int displayedIndex) {
+        super(FXML);
+        this.person = person;
         id.setText(displayedIndex + ". ");
         initTags(person);
         bindListeners(person);
@@ -70,10 +80,18 @@ public class PersonCard extends UiPart<Region> {
         email.textProperty().bind(Bindings.convert(person.emailProperty()));
         person.tagProperty().addListener((observable, oldValue, newValue) -> {
             tags.getChildren().clear();
+
+            /*
+            * Initalise tags for a person by assigning it with a labelled tag
+            * */
             initTags(person);
         });
     }
 
+    /**
+     *Initialises a label with an assigned colour for a given person
+     * @param person
+     */
     private void initTags(ReadOnlyPerson person) {
         person.getTags().forEach(tag -> {
             Label tagLabel = new Label(tag.tagName);
