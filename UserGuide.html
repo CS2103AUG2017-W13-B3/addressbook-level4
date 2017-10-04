@@ -123,6 +123,9 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="ulist">
 <ul>
 <li>
+<p>Command can be substituted with shorthand alias.</p>
+</li>
+<li>
 <p>Words in <code>UPPER_CASE</code> are the parameters to be supplied by the user e.g. in <code>add n/NAME</code>, <code>NAME</code> is a parameter which can be used as <code>add n/John Doe</code>.</p>
 </li>
 <li>
@@ -141,13 +144,15 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="sect2">
 <h3 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">2.1. Viewing help : <code>help</code></a></h3>
 <div class="paragraph">
-<p>Format: <code>help</code></p>
+<p>Shorthand Alias: <code>hp</code>
+Format: <code>help</code></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">2.2. Adding a person: <code>add</code></a></h3>
 <div class="paragraph">
-<p>Adds a person to the address book<br>
+<p>Shorthand Alias: <code>a</code>
+Adds a person to the address book<br>
 Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code></p>
 </div>
 <div class="admonitionblock tip">
@@ -173,20 +178,25 @@ A person can have any number of tags (including 0)
 <li>
 <p><code>add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal</code></p>
 </li>
+<li>
+<p><code>a n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code></p>
+</li>
 </ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="listing-all-persons-code-list-code"><a class="link" href="#listing-all-persons-code-list-code">2.3. Listing all persons : <code>list</code></a></h3>
 <div class="paragraph">
-<p>Shows a list of all persons in the address book.<br>
+<p>Shorthand Alias: <code>l</code>
+Shows a list of all persons in the address book.<br>
 Format: <code>list</code></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">2.4. Editing a person : <code>edit</code></a></h3>
 <div class="paragraph">
-<p>Edits an existing person in the address book.<br>
+<p>Shorthand Alias: <code>e</code>
+Edits an existing person in the address book.<br>
 Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code></p>
 </div>
 <div class="sidebarblock">
@@ -225,13 +235,18 @@ Edits the phone number and email address of the 1st person to be <code>91234567<
 <p><code>edit 2 n/Betsy Crower t/</code><br>
 Edits the name of the 2nd person to be <code>Betsy Crower</code> and clears all existing tags.</p>
 </li>
+<li>
+<p><code>e 3 n/Carl Cooper</code><br>
+Edits the name of the 3rd person to be <code>Carl Cooper</code>.</p>
+</li>
 </ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="locating-persons-by-name-code-find-code"><a class="link" href="#locating-persons-by-name-code-find-code">2.5. Locating persons by name: <code>find</code></a></h3>
 <div class="paragraph">
-<p>Finds persons whose names contain any of the given keywords.<br>
+<p>Shorthand Alias: <code>f</code>
+Finds persons whose names contain any of the given keywords.<br>
 Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 </div>
 <div class="sidebarblock">
@@ -270,13 +285,18 @@ Returns <code>john</code> and <code>John Doe</code></p>
 <p><code>find Betsy Tim John</code><br>
 Returns any person having names <code>Betsy</code>, <code>Tim</code>, or <code>John</code></p>
 </li>
+<li>
+<p><code>f watson</code><br>
+Returns <code>John Watson</code></p>
+</li>
 </ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">2.6. Deleting a person : <code>delete</code></a></h3>
 <div class="paragraph">
-<p>Deletes the specified person from the address book.<br>
+<p>Shorthand Alias: <code>d</code>
+Deletes the specified person from the address book.<br>
 Format: <code>delete INDEX</code></p>
 </div>
 <div class="sidebarblock">
@@ -311,13 +331,19 @@ Deletes the 2nd person in the address book.</p>
 <code>delete 1</code><br>
 Deletes the 1st person in the results of the <code>find</code> command.</p>
 </li>
+<li>
+<p><code>list</code><br>
+<code>d 4</code><br>
+Deletes the 4th person in the address book.</p>
+</li>
 </ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="selecting-a-person-code-select-code"><a class="link" href="#selecting-a-person-code-select-code">2.7. Selecting a person : <code>select</code></a></h3>
 <div class="paragraph">
-<p>Selects the person identified by the index number used in the last person listing.<br>
+<p>Shorthand Alias: <code>s</code>
+Selects the person identified by the index number used in the last person listing.<br>
 Format: <code>select INDEX</code></p>
 </div>
 <div class="sidebarblock">
@@ -352,13 +378,19 @@ Selects the 2nd person in the address book.</p>
 <code>select 1</code><br>
 Selects the 1st person in the results of the <code>find</code> command.</p>
 </li>
+<li>
+<p><code>list</code><br>
+<code>s 7</code><br>
+Selects the 7th person in the address book.</p>
+</li>
 </ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">2.8. Listing entered commands : <code>history</code></a></h3>
 <div class="paragraph">
-<p>Lists all the commands that you have entered in reverse chronological order.<br>
+<p>Shorthand Alias: <code>hx</code>
+Lists all the commands that you have entered in reverse chronological order.<br>
 Format: <code>history</code></p>
 </div>
 <div class="admonitionblock note">
@@ -379,7 +411,8 @@ Format: <code>history</code></p>
 <div class="sect2">
 <h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">2.9. Undoing previous command : <code>undo</code></a></h3>
 <div class="paragraph">
-<p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
+<p>Shorthand Alias: <code>u</code>
+Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
 Format: <code>undo</code></p>
 </div>
 <div class="admonitionblock note">
@@ -415,7 +448,7 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 <li>
 <p><code>delete 1</code><br>
 <code>clear</code><br>
-<code>undo</code> (reverses the <code>clear</code> command)<br>
+<code>u</code> (reverses the <code>clear</code> command)<br>
 <code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
 </li>
 </ul>
@@ -424,7 +457,8 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 <div class="sect2">
 <h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">2.10. Redoing the previously undone command : <code>redo</code></a></h3>
 <div class="paragraph">
-<p>Reverses the most recent <code>undo</code> command.<br>
+<p>Shorthand Alias: <code>r</code>
+Reverses the most recent <code>undo</code> command.<br>
 Format: <code>redo</code></p>
 </div>
 <div class="paragraph">
@@ -447,7 +481,7 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 <code>clear</code><br>
 <code>undo</code> (reverses the <code>clear</code> command)<br>
 <code>undo</code> (reverses the <code>delete 1</code> command)<br>
-<code>redo</code> (reapplies the <code>delete 1</code> command)<br>
+<code>r</code> (reapplies the <code>delete 1</code> command)<br>
 <code>redo</code> (reapplies the <code>clear</code> command)<br></p>
 </li>
 </ul>
@@ -456,14 +490,16 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 <div class="sect2">
 <h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">2.11. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
-<p>Clears all entries from the address book.<br>
+<p>Shorthand Alias: <code>c</code>
+Clears all entries from the address book.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">2.12. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
-<p>Exits the program.<br>
+<p>Shorthand Alias: <code>q</code>
+Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
@@ -535,7 +571,7 @@ e.g.<code>select 2</code></p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-04 12:31:49 +00:00
+Last updated 2017-10-04 12:41:19 +00:00
 </div>
 </div>
 </body>

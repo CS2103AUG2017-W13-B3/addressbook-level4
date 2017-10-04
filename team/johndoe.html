@@ -37,7 +37,8 @@
 <div class="sect2">
 <h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">Undoing previous command : <code>undo</code></a></h3>
 <div class="paragraph">
-<p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
+<p>Shorthand Alias: <code>u</code>
+Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
 Format: <code>undo</code></p>
 </div>
 <div class="admonitionblock note">
@@ -73,7 +74,7 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 <li>
 <p><code>delete 1</code><br>
 <code>clear</code><br>
-<code>undo</code> (reverses the <code>clear</code> command)<br>
+<code>u</code> (reverses the <code>clear</code> command)<br>
 <code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
 </li>
 </ul>
@@ -82,7 +83,8 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 <div class="sect2">
 <h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">Redoing the previously undone command : <code>redo</code></a></h3>
 <div class="paragraph">
-<p>Reverses the most recent <code>undo</code> command.<br>
+<p>Shorthand Alias: <code>r</code>
+Reverses the most recent <code>undo</code> command.<br>
 Format: <code>redo</code></p>
 </div>
 <div class="paragraph">
@@ -105,7 +107,7 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 <code>clear</code><br>
 <code>undo</code> (reverses the <code>clear</code> command)<br>
 <code>undo</code> (reverses the <code>delete 1</code> command)<br>
-<code>redo</code> (reapplies the <code>delete 1</code> command)<br>
+<code>r</code> (reapplies the <code>delete 1</code> command)<br>
 <code>redo</code> (reapplies the <code>clear</code> command)<br></p>
 </li>
 </ul>
@@ -360,7 +362,7 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-04 12:31:49 +00:00
+Last updated 2017-10-04 12:41:19 +00:00
 </div>
 </div>
 </body>
