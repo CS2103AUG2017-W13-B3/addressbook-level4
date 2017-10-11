@@ -17,6 +17,15 @@ Responsibilities: UI
 
 '''
 
+=== Lim Yang Sheng
+image::LimYangSheng.jpg[width="150", align="left"]
+{empty}[http://github.com/LimYangSheng[github]]
+
+Role: Project Member +
+Responsibilities: Storage
+
+'''
+
 === Li Zeyong
 image::newalter.jpg[width="150", align="left"]
 {empty}[http://github.com/newalter[github]]
@@ -28,18 +37,9 @@ Responsibilities: Logic, Code Quality
 
 === Lee Guo Sheng Alexander
 image::alexanderlee.jpg[width="150", align="left"]
-{empty}[http://github.com/alexanderleegs[github]] [<<alexanderlee#, portfolio>>]
+{empty}[http://github.com/alexanderleegs[github]]
 
 Role: Developer +
 Responsibilities: Model, Deliverables and deadlines
-
-'''
-
-=== Benson Meier
-image::yl_coder.jpg[width="150", align="left"]
-{empty}[http://github.com/yl-coder[github]] [<<johndoe#, portfolio>>]
-
-Role: Developer +
-Responsibilities: UI
 
 '''
