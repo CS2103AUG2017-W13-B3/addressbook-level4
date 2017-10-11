@@ -4,37 +4,25 @@ ifdef::env-github,env-browser[:outfilesuffix: .adoc]
 :imagesDir: images
 :stylesDir: stylesheets
 
-AddressBook - Level 4 was developed by the https://se-edu.github.io/docs/Team.html[se-edu] team. +
-The dummy content given below serves as a placeholder to be used by future forks of the project. +
-{empty} +
-We are a team based in the http://www.comp.nus.edu.sg[School of Computing, National University of Singapore].
+AddressBookX was developed by the team W13B3 from CS2103T AY17/18, National University of Singapore . +
 
 == Project Team
 
 === Derrick Chua
-image::derrrickchua.jpg[width="150", align="left"]
+image::derrickchua.jpg[width="150", align="left"]
 {empty}[https://github.com/derrickchua[github]]
 
-Role: Project Member
-Responsibilites: UI
-
-'''
-
-=== John Roe
-image::lejolly.jpg[width="150", align="left"]
-{empty}[http://github.com/lejolly[github]] [<<johndoe#, portfolio>>]
-
-Role: Team Lead +
+Role: Project Member +
 Responsibilities: UI
 
 '''
 
-=== Johnny Doe
-image::yijinl.jpg[width="150", align="left"]
-{empty}[http://github.com/yijinl[github]] [<<johndoe#, portfolio>>]
+=== Li Zeyong
+image::newalter.jpg[width="150", align="left"]
+{empty}[http://github.com/newalter[github]]
 
-Role: Developer +
-Responsibilities: Data
+Role: Project Member +
+Responsibilities: Logic, Code Quality
 
 '''
 
