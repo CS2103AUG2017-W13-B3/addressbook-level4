@@ -3,19 +3,24 @@
 
 == Completed
 
-[width="59%",cols="50%,<25%,<25%",options="header",]
+[width="100%",cols="50%,<25%,<25%",options="header",]
 |=======================================================================
 |Feature |Developer |Delivery Date
-|Delete tags |Alex |11 Oct
+|Add `deleteTags` command |Alex |11 Oct
+|Add `note` command |Derrick| 11 Oct
+|Backup AddressBook database|Yang Sheng| 11 Oct
+|Add `filter` command| Zeyong| 11 Oct
 
 |=======================================================================
 
 == In progress
 
-[width="59%",cols="50%,<25%,<25%",options="header",]
+[width=100%",cols="50%,<25%,<25%",options="header",]
 |=======================================================================
 |Feature |Developer |Delivery Date
-|Add tags |Alex | 11 Oct
+|Add tags |Alex | In progress
+|Google Contacts API integration| Derrick| In progress
+|Add `resize` command| Zeyong| In progress
 
 |=======================================================================
 
