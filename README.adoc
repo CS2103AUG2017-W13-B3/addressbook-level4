@@ -22,6 +22,7 @@ endif::[]
 
 * <<UserGuide#, User Guide>>
 * <<DeveloperGuide#, Developer Guide>>
+* <<FeatureTracking#, Feature Tracking>>
 * <<AboutUs#, About Us>>
 * <<ContactUs#, Contact Us>>
 
