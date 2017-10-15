@@ -1,4 +1,4 @@
-= Tracking
+= Feature Tracking
 :toc:
 :toc-title:
 :toc-placement: preamble
