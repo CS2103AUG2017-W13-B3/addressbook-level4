@@ -88,8 +88,8 @@ public class AddTagCommand extends UndoableCommand {
         }
 
         // state check
-        AddTagCommand a = (AddTagCommand) other;
-        return index.equals(a.index)
-                && newTag.equals(a.newTag);
+        AddTagCommand toCompare = (AddTagCommand) other;
+        return index.equals(toCompare.index)
+                && newTag.equals(toCompare.newTag);
     }
 }
