@@ -45,8 +45,10 @@
 <li><a href="#implementation">3. Implementation</a>
 <ul class="sectlevel2">
 <li><a href="#undo-redo-mechanism">3.1. Undo/Redo mechanism</a></li>
-<li><a href="#logging">3.2. Logging</a></li>
-<li><a href="#configuration">3.3. Configuration</a></li>
+<li><a href="#adding-removing-a-tag">3.2. Adding/Removing a tag</a></li>
+<li><a href="#filter-mechanism">3.3. Filter mechanism</a></li>
+<li><a href="#logging">3.4. Logging</a></li>
+<li><a href="#configuration">3.5. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a>
@@ -767,7 +769,141 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.2. Logging</a></h3>
+<h3 id="adding-removing-a-tag"><a class="link" href="#adding-removing-a-tag">3.2. Adding/Removing a tag</a></h3>
+<div class="paragraph">
+<p>Adding or removing a tag is facilitated by <code>AddTagCommand</code> and <code>DeleteTagCommand</code>, which are subclasses of <code>UndoableCommand</code>. These commands work by changing the value of the <code>Tag</code> objects associated with the contact.</p>
+</div>
+<div class="paragraph">
+<p>These commands take in an integer and a string as arguments. The command is first parsed in <code>AddressBookParser</code> to identify it as the appropriate command. It will then be parsed by <code>AddTagCommandParser</code> or <code>DeleteTagCommandParser</code>, to parse the index, which was the integer argument, and the <code>Tag</code>, which was represented by the string argument. Invalid indexes and tags will be handled by throwing an exception. This is how <code>AddTagCommandParser</code> is implemented:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">AddTagCommandParser</span> <span class="directive">implements</span> <span class="predefined-type">Parser</span>&lt;AddTagCommand&gt; {
+    <span class="directive">public</span> AddTagCommand parse(<span class="predefined-type">String</span> args) <span class="directive">throws</span> <span class="exception">ParseException</span> {
+        <span class="keyword">try</span> {
+            <span class="comment">// ... parse `Index` and `Tag` and pass it to `AddTagCommand` ...</span>
+        } <span class="keyword">catch</span> (IllegalValueException ive) {
+            <span class="comment">// ... throw an exception ...</span>
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To update the <code>Tag</code> objects associated with a <code>Person</code>, the set of <code>Tag</code> objects of that <code>Person</code> is copied to a new set. The new data is then modified, then copied into a newly created <code>Person</code> instance. This is implemented as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">AddTagCommand</span> <span class="directive">extends</span> UndoableCommand {
+    <span class="comment">// ... variables, constructor, other methods ...</span>
+    <span class="directive">private</span> <span class="directive">final</span> Tag newTag;
+
+    <span class="annotation">@Override</span>
+    <span class="directive">public</span> CommandResult executeUndoableCommand() <span class="directive">throws</span> CommandException {
+        <span class="comment">// ... fetch personToEdit ...</span>
+
+        <span class="predefined-type">Set</span>&lt;Tag&gt; oldTags = <span class="keyword">new</span> <span class="predefined-type">HashSet</span>&lt;Tag&gt;(personToEdit.getTags());
+        <span class="comment">// ... check if tag is duplicated ...</span>
+        Person editedPerson = <span class="keyword">new</span> Person(personToEdit);
+        oldTags.add(newTag);
+        editedPerson.setTags(oldTags);
+
+        <span class="comment">// ... try to replace personToEdit with editedPerson ...</span>
+    }
+}</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.2.1. Design Considerations</a></h4>
+<div class="paragraph">
+<p><strong>Aspect:</strong> Changing the <code>Tag</code> objects of the selected <code>Person</code><br>
+<strong>Alternative 1 (current choice):</strong> Copy set of <code>Tag</code> objects to a newly created set. Modify the newly created set. Then create a copy of the selected <code>Person</code> instance and replace its set of <code>Tag</code> objects.<br>
+<strong>Pros:</strong> Ensures that the original value will be unchanged, which is important in the event that updating the <code>Person</code> instance fails in a later stage.<br>
+<strong>Cons:</strong> Additional memory required to create a new <code>Person</code> instance.<br>
+<strong>Alternative 2:</strong> Just edit the <code>Tag</code> set directly<br>
+<strong>Pros:</strong> No need to instantiate new <code>Person</code> instance. Easy to implement.<br>
+<strong>Cons:</strong> Problematic implementation and bad coding practice. Modifying the original values directly can cause problems if updating the <code>Person</code> instance fails in a later stage.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="filter-mechanism"><a class="link" href="#filter-mechanism">3.3. Filter mechanism</a></h3>
+<div class="sect3">
+<h4 id="fundamental-mechanism"><a class="link" href="#fundamental-mechanism">3.3.1. Fundamental mechanism</a></h4>
+<div class="paragraph">
+<p>The list of persons displayed is filtered by a [<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Predicate</a>]
+when the method <code>updateFilteredPersonList(predicate)</code> from the <code>Model</code> interface is invoked.</p>
+</div>
+<div class="paragraph">
+<p>The relevant methods in the Model interface:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">Model</span> {
+
+    ...
+
+    <span class="comment">/** Returns the predicate of the current filtered person list */</span>
+    Predicate&lt;? <span class="local-variable">super</span> ReadOnlyPerson&gt; getPersonListPredicate();
+
+    <span class="comment">/** Updates the filter of the filtered person list to filter by the given {@code predicate}.*/</span>
+    <span class="type">void</span> updateFilteredPersonList(<span class="predefined-type">Predicate</span>&lt;ReadOnlyPerson&gt; predicate);
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When <code>updateFilteredPersonList(predicate)</code> is invoked, every <code>person</code> in the <strong>AddressBook</strong> is evaluated against the <code>predicate</code>.<br>
+A <code>person</code> will be added the the list for display if <code>predicate.test(person)</code> is evaluated to be TRUE.<br>
+All <code>person</code> that fulfill the conditions specified in <code>predicate</code> are filtered to be displayed.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="filtering-on-the-existing-list"><a class="link" href="#filtering-on-the-existing-list">3.3.2. Filtering on the existing list</a></h4>
+<div class="paragraph">
+<p>Note that all <code>person</code> in the existing list satisfy a Predicate <code>currentPredicate</code>.<br>
+Given a new Predicate <code>newPredicate</code>, filtering on the existing list is equivalent to selecting <code>person</code> that satisfy both <code>currentPredicate</code> and <code>newPredicate</code>.<br>
+From Figure 3.2.1, it can also be viewed as the interception of two lists of <code>person</code>, each satisfying one of the two predicates respectively.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/venn_diagram.png" alt="venn diagram" width="250" height="200">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Figure 3.2.1 : Venn Diagram for Filtering</em></p>
+</div>
+<div class="sect4">
+<h5 id="implementation-2"><a class="link" href="#implementation-2">Implementation</a></h5>
+<div class="paragraph">
+<p>The actual implementation of filtering on the existing list involves three steps.<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>invokes <code>getPersonListPredicate()</code> provided in the Model interface to get the <code>currentPredicate</code>.</p>
+</li>
+<li>
+<p>Use [<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html#and-java.util.function.Predicate-">Predicate.and()</a>] to generated the logical AND of the two predicates.</p>
+</li>
+<li>
+<p>Update the list using the predicate generated in step 2.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="design-consideration"><a class="link" href="#design-consideration">Design consideration</a></h5>
+<div class="paragraph">
+<p>The design for filtering on the existing list applies the [<a href="https://en.wikipedia.org/wiki/Open/closed_principle">Open/Close Principle</a>].<br>
+By providing a new extension of <code>getPersonListPredicate()</code> in the <code>Model</code> interface, the new feature is enabled.<br>
+Making use of the logical AND of two predicates, the list can be filtered without modification of the fundamental filtering mechanism.<br></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="logging"><a class="link" href="#logging">3.4. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
@@ -805,7 +941,7 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 </div>
 </div>
 <div class="sect2">
-<h3 id="configuration"><a class="link" href="#configuration">3.3. Configuration</a></h3>
+<h3 id="configuration"><a class="link" href="#configuration">3.5. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -2579,7 +2715,7 @@ Use case ends.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-18 04:34:12 +00:00
+Last updated 2017-10-18 04:46:14 +00:00
 </div>
 </div>
 </body>
