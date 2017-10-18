@@ -2159,6 +2159,94 @@ Use case ends.</p>
 </li>
 </ul>
 </div>
+<h3 id="use-case-add-tag-to-contact" class="discrete">Use case: Add tag to contact</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to add tag to contact</p>
+</li>
+<li>
+<p>AddressBook shows a list of persons</p>
+</li>
+<li>
+<p>User requests to add tag to the person at a specific index in the list</p>
+</li>
+<li>
+<p>AddressBook changes the information in the field</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a. The list is empty.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+<li>
+<p>3a. The given index is invalid.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. AddressBook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3b. The user does not provide a new tag.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3b1. AddressBook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3c. The user provides an invalid tag.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3c1. AddressBook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3d. The user provides a tag that already exists on the specified contact.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3d1. AddressBook shows an error message.</p>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 <h3 id="use-case-backup-data" class="discrete">Use case: Backup data</h3>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
@@ -2491,7 +2579,7 @@ Use case ends.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-17 12:34:35 +00:00
+Last updated 2017-10-18 04:33:41 +00:00
 </div>
 </div>
 </body>
