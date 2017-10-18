@@ -45,9 +45,8 @@
 <li><a href="#implementation">3. Implementation</a>
 <ul class="sectlevel2">
 <li><a href="#undo-redo-mechanism">3.1. Undo/Redo mechanism</a></li>
-<li><a href="#filter-mechanism">3.2. Filter mechanism</a></li>
-<li><a href="#logging">3.3. Logging</a></li>
-<li><a href="#configuration">3.4. Configuration</a></li>
+<li><a href="#logging">3.2. Logging</a></li>
+<li><a href="#configuration">3.3. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a>
@@ -768,83 +767,7 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 </div>
 </div>
 <div class="sect2">
-<h3 id="filter-mechanism"><a class="link" href="#filter-mechanism">3.2. Filter mechanism</a></h3>
-<div class="sect3">
-<h4 id="fundamental-mechanism"><a class="link" href="#fundamental-mechanism">3.2.1. Fundamental mechanism</a></h4>
-<div class="paragraph">
-<p>The list of persons displayed is filtered by a [<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Predicate</a>]
-when the method <code>updateFilteredPersonList(predicate)</code> from the <code>Model</code> interface is invoked.</p>
-</div>
-<div class="paragraph">
-<p>The relevant methods in the Model interface:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">Model</span> {
-
-    ...
-
-    <span class="comment">/** Returns the predicate of the current filtered person list */</span>
-    Predicate&lt;? <span class="local-variable">super</span> ReadOnlyPerson&gt; getPersonListPredicate();
-
-    <span class="comment">/** Updates the filter of the filtered person list to filter by the given {@code predicate}.*/</span>
-    <span class="type">void</span> updateFilteredPersonList(<span class="predefined-type">Predicate</span>&lt;ReadOnlyPerson&gt; predicate);
-
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>When <code>updateFilteredPersonList(predicate)</code> is invoked, every <code>person</code> in the <strong>AddressBook</strong> is evaluated against the <code>predicate</code>.<br>
-A <code>person</code> will be added the the list for display if <code>predicate.test(person)</code> is evaluated to be TRUE.<br>
-All <code>person</code> that fulfill the conditions specified in <code>predicate</code> are filtered to be displayed.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="filtering-on-the-existing-list"><a class="link" href="#filtering-on-the-existing-list">3.2.2. Filtering on the existing list</a></h4>
-<div class="paragraph">
-<p>Note that all <code>person</code> in the existing list satisfy a Predicate <code>currentPredicate</code>.<br>
-Given a new Predicate <code>newPredicate</code>, filtering on the existing list is equivalent to selecting <code>person</code> that satisfy both <code>currentPredicate</code> and <code>newPredicate</code>.<br>
-From Figure 3.2.1, it can also be viewed as the interception of two lists of <code>person</code>, each satisfying one of the two predicates respectively.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/venn_diagram.png" alt="venn diagram" width="250" height="200">
-</div>
-</div>
-<div class="paragraph">
-<p><em>Figure 3.2.1 : Venn Diagram for Filtering</em></p>
-</div>
-<div class="sect4">
-<h5 id="implementation-2"><a class="link" href="#implementation-2">Implementation</a></h5>
-<div class="paragraph">
-<p>The actual implementation of filtering on the existing list involves three steps.<br></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>invokes <code>getPersonListPredicate()</code> provided in the Model interface to get the <code>currentPredicate</code>.</p>
-</li>
-<li>
-<p>Use [<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html#and-java.util.function.Predicate-">Predicate.and()</a>] to generated the logical AND of the two predicates.</p>
-</li>
-<li>
-<p>Update the list using the predicate generated in step 2.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="design-consideration"><a class="link" href="#design-consideration">Design consideration</a></h5>
-<div class="paragraph">
-<p>The design for filtering on the existing list applies the [<a href="https://en.wikipedia.org/wiki/Open/closed_principle">Open/Close Principle</a>].<br>
-By providing a new extension of <code>getPersonListPredicate()</code> in the <code>Model</code> interface, the new feature is enabled.<br>
-Making use of the logical AND of two predicates, the list can be filtered without modification of the fundamental filtering mechanism.<br></p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.3. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">3.2. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
@@ -882,7 +805,7 @@ Making use of the logical AND of two predicates, the list can be filtered withou
 </div>
 </div>
 <div class="sect2">
-<h3 id="configuration"><a class="link" href="#configuration">3.4. Configuration</a></h3>
+<h3 id="configuration"><a class="link" href="#configuration">3.3. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -2656,7 +2579,7 @@ Use case ends.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-18 04:34:25 +00:00
+Last updated 2017-10-18 04:34:12 +00:00
 </div>
 </div>
 </body>
