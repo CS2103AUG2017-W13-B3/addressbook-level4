@@ -5,14 +5,14 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3">
-<title>AddressBook Level 4 - User Guide</title>
+<title>AddressBookX - User Guide</title>
 <link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>AddressBook Level 4 - User Guide</h1>
+<h1>AddressBookX - User Guide</h1>
 </div>
 <div id="content">
 <div id="preamble">
@@ -38,13 +38,14 @@
 <li><a href="#deleting-a-person-code-delete-code">2.9. Deleting a person : <code>delete</code></a></li>
 <li><a href="#deleting-a-tag-code-deletetag-code">2.10. Deleting a tag : <code>deletetag</code></a></li>
 <li><a href="#selecting-a-person-code-select-code">2.11. Selecting a person : <code>select</code></a></li>
-<li><a href="#creating-a-backup-code-backup-code">2.12. Creating a backup : <code>backup</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">2.13. Listing entered commands : <code>history</code></a></li>
-<li><a href="#undoing-previous-command-code-undo-code">2.14. Undoing previous command : <code>undo</code></a></li>
-<li><a href="#redoing-the-previously-undone-command-code-redo-code">2.15. Redoing the previously undone command : <code>redo</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">2.16. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">2.17. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">2.18. Saving the data</a></li>
+<li><a href="#resize-the-main-window-code-resize-code">2.12. Resize the main window : <code>resize</code></a></li>
+<li><a href="#creating-a-backup-code-backup-code">2.13. Creating a backup : <code>backup</code></a></li>
+<li><a href="#listing-entered-commands-code-history-code">2.14. Listing entered commands : <code>history</code></a></li>
+<li><a href="#undoing-previous-command-code-undo-code">2.15. Undoing previous command : <code>undo</code></a></li>
+<li><a href="#redoing-the-previously-undone-command-code-redo-code">2.16. Redoing the previously undone command : <code>redo</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">2.17. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">2.18. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">2.19. Saving the data</a></li>
 </ul>
 </li>
 <li><a href="#faq">3. FAQ</a></li>
@@ -149,14 +150,14 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="sect2">
 <h3 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">2.1. Viewing help : <code>help</code></a></h3>
 <div class="paragraph">
-<p>Shorthand Alias: <code>hp</code>
+<p>Shorthand Alias: <code>hp</code><br>
 Format: <code>help</code></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">2.2. Adding a person: <code>add</code></a></h3>
 <div class="paragraph">
-<p>Shorthand Alias: <code>a</code>
+<p>Shorthand Alias: <code>a</code><br>
 Adds a person to the address book<br>
 Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code></p>
 </div>
@@ -192,7 +193,7 @@ A person can have any number of tags (including 0)
 <div class="sect2">
 <h3 id="listing-all-persons-code-list-code"><a class="link" href="#listing-all-persons-code-list-code">2.3. Listing all persons : <code>list</code></a></h3>
 <div class="paragraph">
-<p>Shorthand Alias: <code>l</code>
+<p>Shorthand Alias: <code>l</code><br>
 Shows a list of all persons in the address book.<br>
 Format: <code>list</code></p>
 </div>
@@ -200,7 +201,7 @@ Format: <code>list</code></p>
 <div class="sect2">
 <h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">2.4. Editing a person : <code>edit</code></a></h3>
 <div class="paragraph">
-<p>Shorthand Alias: <code>e</code>
+<p>Shorthand Alias: <code>e</code><br>
 Edits an existing person in the address book.<br>
 Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code></p>
 </div>
@@ -290,7 +291,7 @@ Adds the <code>9pmclass</code> tag to the 2nd person.</p>
 <div class="sect2">
 <h3 id="making-a-note-code-note-code"><a class="link" href="#making-a-note-code-note-code">2.6. Making a note: <code>note</code></a></h3>
 <div class="paragraph">
-<p>Shorthand Alias: 'n'
+<p>Shorthand Alias: 'n'<br>
 Makes a note for an existing person in the address book.<br>
 Format: <code>note INDEX [n/Note]</code></p>
 </div>
@@ -334,7 +335,7 @@ Removes all existing notes from the 3rd person</p>
 <div class="sect2">
 <h3 id="locating-persons-by-name-code-find-code"><a class="link" href="#locating-persons-by-name-code-find-code">2.7. Locating persons by name: <code>find</code></a></h3>
 <div class="paragraph">
-<p>Shorthand Alias: <code>f</code>
+<p>Shorthand Alias: <code>f</code><br>
 Finds persons whose names contain any of the given keywords.<br>
 Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 </div>
@@ -384,7 +385,7 @@ Returns <code>John Watson</code></p>
 <div class="sect2">
 <h3 id="locating-persons-by-tags-code-filter-code"><a class="link" href="#locating-persons-by-tags-code-filter-code">2.8. Locating persons by tags: <code>filter</code></a></h3>
 <div class="paragraph">
-<p>Shorthand Alias: <code>ft</code>
+<p>Shorthand Alias: <code>ft</code><br>
 Finds persons who are tagged with any of the given tags from the current list.<br>
 Format: <code>filter TAG [MORE_TAGS]</code></p>
 </div>
@@ -433,7 +434,7 @@ Returns any person tagged with <code>family</code> or <code>friends</code></p>
 <div class="sect2">
 <h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">2.9. Deleting a person : <code>delete</code></a></h3>
 <div class="paragraph">
-<p>Shorthand Alias: <code>d</code>
+<p>Shorthand Alias: <code>d</code><br>
 Deletes the specified person from the address book.<br>
 Format: <code>delete INDEX</code></p>
 </div>
@@ -480,7 +481,7 @@ Deletes the 4th person in the address book.</p>
 <div class="sect2">
 <h3 id="deleting-a-tag-code-deletetag-code"><a class="link" href="#deleting-a-tag-code-deletetag-code">2.10. Deleting a tag : <code>deletetag</code></a></h3>
 <div class="paragraph">
-<p>Shorthand Alias: <code>dt</code>
+<p>Shorthand Alias: <code>dt</code><br>
 Deletes the specified tag from the address book.<br>
 Format: <code>deletetag TAGNAME</code></p>
 </div>
@@ -517,7 +518,7 @@ Deletes the tag <code>class2101</code> from all contacts in the address book.</p
 <div class="sect2">
 <h3 id="selecting-a-person-code-select-code"><a class="link" href="#selecting-a-person-code-select-code">2.11. Selecting a person : <code>select</code></a></h3>
 <div class="paragraph">
-<p>Shorthand Alias: <code>s</code>
+<p>Shorthand Alias: <code>s</code><br>
 Selects the person identified by the index number used in the last person listing.<br>
 Format: <code>select INDEX</code></p>
 </div>
@@ -562,17 +563,54 @@ Selects the 7th person in the address book.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="creating-a-backup-code-backup-code"><a class="link" href="#creating-a-backup-code-backup-code">2.12. Creating a backup : <code>backup</code></a></h3>
+<h3 id="resize-the-main-window-code-resize-code"><a class="link" href="#resize-the-main-window-code-resize-code">2.12. Resize the main window : <code>resize</code></a></h3>
 <div class="paragraph">
-<p>Shorthand Alias: <code>b</code>
+<p>Shorthand Alias: <code>rs</code><br>
+Resize the main window to the specified width and height in pixels<br>
+Format: <code>resize WIDTH HEIGHT</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Resize the MainWindows to the specified WIDTH and HEIGHT.</p>
+</li>
+<li>
+<p>Restriction on WIDTH and HEIGHT: <code>WIDTH &lt; = width of the screen display</code>, <code>HEIGHT &lt; = height of the screen display</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>resize 1280 720</code><br>
+Resize the main window to 1280*720.</p>
+</li>
+<li>
+<p><code>rs 1000 600</code><br>
+Resize the main window to 1000*600.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="creating-a-backup-code-backup-code"><a class="link" href="#creating-a-backup-code-backup-code">2.13. Creating a backup : <code>backup</code></a></h3>
+<div class="paragraph">
+<p>Shorthand Alias: <code>b</code><br>
 Creates a backup file to store the data in address book.<br>
 Format: <code>backup</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">2.13. Listing entered commands : <code>history</code></a></h3>
+<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">2.14. Listing entered commands : <code>history</code></a></h3>
 <div class="paragraph">
-<p>Shorthand Alias: <code>hx</code>
+<p>Shorthand Alias: <code>hx</code><br>
 Lists all the commands that you have entered in reverse chronological order.<br>
 Format: <code>history</code></p>
 </div>
@@ -592,9 +630,9 @@ Format: <code>history</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">2.14. Undoing previous command : <code>undo</code></a></h3>
+<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">2.15. Undoing previous command : <code>undo</code></a></h3>
 <div class="paragraph">
-<p>Shorthand Alias: <code>u</code>
+<p>Shorthand Alias: <code>u</code><br>
 Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
 Format: <code>undo</code></p>
 </div>
@@ -638,9 +676,9 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 </div>
 </div>
 <div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">2.15. Redoing the previously undone command : <code>redo</code></a></h3>
+<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">2.16. Redoing the previously undone command : <code>redo</code></a></h3>
 <div class="paragraph">
-<p>Shorthand Alias: <code>r</code>
+<p>Shorthand Alias: <code>r</code><br>
 Reverses the most recent <code>undo</code> command.<br>
 Format: <code>redo</code></p>
 </div>
@@ -671,23 +709,23 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">2.16. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">2.17. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
-<p>Shorthand Alias: <code>c</code>
+<p>Shorthand Alias: <code>c</code><br>
 Clears all entries from the address book.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">2.17. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">2.18. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
-<p>Shorthand Alias: <code>q</code>
+<p>Shorthand Alias: <code>q</code><br>
 Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">2.18. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">2.19. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
@@ -757,7 +795,7 @@ e.g.<code>select 2</code></p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-18 04:33:41 +00:00
+Last updated 2017-10-18 04:33:52 +00:00
 </div>
 </div>
 </body>
