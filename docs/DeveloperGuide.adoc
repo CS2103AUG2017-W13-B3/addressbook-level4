@@ -523,7 +523,7 @@ Authentication and synchronisation of data with a user's Google Contacts is done
 
 Firstly, the command posts an `AuthorizationEvent` event to the EventCenter, which is then handled by a `OAuth` class, which is chiefly responsible for authorization and interaction with a user's Google Contacts. Hence, threading allows for the application to run in the background, while the user can perform other tasks. The user is redirected to login to Google via his default browser through the invoked `authorize` method. A callback is then done to create a `Credential` which is then used to instantiate a `PeopleService` instance. The `PeopleService` is then used to perform CRUD functions on the user's Google Contacts. The following diagram shows the entire sequence.
 
-image::SyncCommandSequenceDiagram.png[width="800"]
+image::SyncCommandSequenceDiagram.png[width="1000"]
 
 ==== Methods
 
