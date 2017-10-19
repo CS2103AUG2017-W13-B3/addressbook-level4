@@ -655,14 +655,14 @@ public class OAuth {
 ----
 
 ==== Design Considerations
-**Aspect:** Google Authorization
-**Alternative 1 (current choice):** A thread is used
-**Pros:** Users can use the application and execute other commands asynchronously from the authorization
+**Aspect:** Google Authorization + 
+**Alternative 1 (current choice):** A thread is used +
+**Pros:** Users can use the application and execute other commands asynchronously from the authorization +
 **Cons:** It is thus more difficult to show the progress of the syncCommand
 
-**Alternative 2:** Block the application while waiting for authorization
-**Pros:** Users will know the progress of the SyncCommand
-**Cons:** The application will freeze if authorization is done, or done in a manner not coded for by the People API (e.g. exiting the window via the 'X' or 'Close' button
+**Alternative 2:** Block the application while waiting for authorization +
+**Pros:** Users will know the progress of the SyncCommand +
+**Cons:** The application will freeze if authorization is done, or done in a manner not coded for by the People API (e.g. exiting the window via the 'X' or 'Close' button +
 
 ---
 
