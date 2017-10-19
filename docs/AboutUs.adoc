@@ -22,7 +22,7 @@ image::LimYangSheng.jpg[width="150", align="left"]
 {empty}[http://github.com/LimYangSheng[github]]
 
 Role: Project Member +
-Responsibilities: Storage
+Responsibilities: Storage, Documentation
 
 '''
 
