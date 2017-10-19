@@ -466,6 +466,7 @@ public class AddTagCommand extends UndoableCommand {
 **Cons:** Problematic implementation and bad coding practice. Modifying the original values directly can cause problems if updating the `Person` instance fails in a later stage.
 // end::addremovetag[]
 
+// tag::filter[]
 === Filter mechanism
 
 ==== Fundamental mechanism
@@ -512,7 +513,9 @@ The actual implementation of filtering on the existing list involves three steps
 The design for filtering on the existing list applies the [https://en.wikipedia.org/wiki/Open/closed_principle[Open/Close Principle]]. +
 By providing a new extension of `getPersonListPredicate()` in the `Model` interface, the new feature is enabled. +
 Making use of the logical AND of two predicates, the list can be filtered without modification of the fundamental filtering mechanism. +
+// end::filter[]
 
+// tag::sync[]
 === Synchronisation with Google Contacts
 
 ==== Basic flow summary
@@ -520,7 +523,7 @@ Authentication and synchronisation of data with a user's Google Contacts is done
 
 Firstly, the command posts an `AuthorizationEvent` event to the EventCenter, which is then handled by a `OAuth` class, which is chiefly responsible for authorization and interaction with a user's Google Contacts. Hence, threading allows for the application to run in the background, while the user can perform other tasks. The user is redirected to login to Google via his default browser through the invoked `authorize` method. A callback is then done to create a `Credential` which is then used to instantiate a `PeopleService` instance. The `PeopleService` is then used to perform CRUD functions on the user's Google Contacts. The following diagram shows the entire sequence.
 
-//Insert Image
+image::SyncCommandSequenceDiagram.png[width="800"]
 
 ==== Methods
 
@@ -670,6 +673,7 @@ public class OAuth {
 **Alternative 2:** Create an `OAuth` object in `Logic`
 **Pros:** No handlers are required to process `Events`  
 **Cons:** Introduce unnecessary dependencies
+// end::sync[]
 
 === Logging
 
