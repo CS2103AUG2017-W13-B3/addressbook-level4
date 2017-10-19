@@ -513,6 +513,15 @@ The design for filtering on the existing list applies the [https://en.wikipedia.
 By providing a new extension of `getPersonListPredicate()` in the `Model` interface, the new feature is enabled. +
 Making use of the logical AND of two predicates, the list can be filtered without modification of the fundamental filtering mechanism. +
 
+=== Synchronisation with Google Contacts
+Authentication and synchronisation of data with a user's Google Contacts is done via the `sync` command, which is a subclass of `UndoableCommand`. This command works in conjunction with the Google Client and People API. 
+
+Firstly, the command posts an `AuthorizationEvent` event to the EventCenter, which is then handled by a `OAuth` class. The user is redirected to login to Google via his default browser. A callback is then done to create a GoogleAuthorizationCodeFlow object which is then used to access a user's contacts. The following diagram shows the entire sequence.
+
+//Insert Image
+
+An asynchronous thread has to be started for the Google authorization and fetching of Contact data, as it will otherwise block the application, which causes it to freeze. Hence, threading allows for the application to run in the background, while the user can perform other tasks. Below is the implementation of `SyncCommand`.
+
 === Logging
 
 We are using `java.util.logging` package for logging. The `LogsCenter` class is used to manage the logging levels and logging destinations.
