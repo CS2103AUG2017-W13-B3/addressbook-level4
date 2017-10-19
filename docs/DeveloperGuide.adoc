@@ -519,7 +519,7 @@ Making use of the logical AND of two predicates, the list can be filtered withou
 === Synchronisation with Google Contacts
 
 ==== Basic flow summary
-Authentication and synchronisation of data with a user's Google Contacts is done via the `sync` command, which is a subclass of `UndoableCommand`. This command works in conjunction with the Google Client and People API. 
+Authentication and synchronisation of data with a user's Google Contacts is done via the `sync` command, which is a subclass of `UndoableCommand`. This command works in conjunction with the Google Client and People API.
 
 Firstly, the command posts an `AuthorizationEvent` event to the EventCenter, which is then handled by a `OAuth` class, which is chiefly responsible for authorization and interaction with a user's Google Contacts. Hence, threading allows for the application to run in the background, while the user can perform other tasks. The user is redirected to login to Google via his default browser through the invoked `authorize` method. A callback is then done to create a `Credential` which is then used to instantiate a `PeopleService` instance. The `PeopleService` is then used to perform CRUD functions on the user's Google Contacts. The following diagram shows the entire sequence.
 
@@ -548,7 +548,7 @@ public class SyncCommand extends UndoableCommand {
         }
 
     }
-}   
+}
 ----
 
 ===== AuthorizationEvent Handler
@@ -655,14 +655,14 @@ public class OAuth {
 ----
 
 ==== Design Considerations
-**Aspect:** Google Authorization + 
+**Aspect:** Google Authorization +
 **Alternative 1 (current choice):** A thread is used +
 **Pros:** Users can use the application and execute other commands asynchronously from the authorization +
 **Cons:** It is thus more difficult to show the progress of the syncCommand
 
 **Alternative 2:** Block the application while waiting for authorization +
 **Pros:** Users will know the progress of the SyncCommand +
-**Cons:** The application will freeze if authorization is done, or done in a manner not coded for by the People API (e.g. exiting the window via the 'X' or 'Close' button 
+**Cons:** The application will freeze if authorization is done, or done in a manner not coded for by the People API (e.g. exiting the window via the 'X' or 'Close' button
 
 ---
 
