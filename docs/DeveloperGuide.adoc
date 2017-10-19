@@ -662,16 +662,16 @@ public class OAuth {
 
 **Alternative 2:** Block the application while waiting for authorization +
 **Pros:** Users will know the progress of the SyncCommand +
-**Cons:** The application will freeze if authorization is done, or done in a manner not coded for by the People API (e.g. exiting the window via the 'X' or 'Close' button +
+**Cons:** The application will freeze if authorization is done, or done in a manner not coded for by the People API (e.g. exiting the window via the 'X' or 'Close' button 
 
 ---
 
-**Aspect:** Accessing `OAuth` from `Logic`
-**Alternative 1 (current choice):** An `Event` and a `Subscriber` is used to communicate between the two different components
-**Pros:** Maintain low coupling and prevent unnecessary addition of dependencies
-**Cons:** Handlers have to be created to handle `Events` when they occur 
-**Alternative 2:** Create an `OAuth` object in `Logic`
-**Pros:** No handlers are required to process `Events`  
+**Aspect:** Accessing `OAuth` from `Logic` +
+**Alternative 1 (current choice):** An `Event` and a `Subscriber` is used to communicate between the two different components +
+**Pros:** Maintain low coupling and prevent unnecessary addition of dependencies +
+**Cons:** Handlers have to be created to handle `Events` when they occur +
+**Alternative 2:** Create an `OAuth` object in `Logic` +
+**Pros:** No handlers are required to process `Events` +
 **Cons:** Introduce unnecessary dependencies
 // end::sync[]
 
