@@ -41,13 +41,15 @@
 <li><a href="#resize-the-main-window-code-resize-code">2.12. Resize the main window : <code>resize</code></a></li>
 <li><a href="#creating-a-backup-code-backup-code">2.13. Creating a backup : <code>backup</code></a></li>
 <li><a href="#restoring-a-backup-code-restore-code">2.14. Restoring a backup : <code>restore</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">2.15. Listing entered commands : <code>history</code></a></li>
-<li><a href="#undoing-previous-command-code-undo-code">2.16. Undoing previous command : <code>undo</code></a></li>
-<li><a href="#redoing-the-previously-undone-command-code-redo-code">2.17. Redoing the previously undone command : <code>redo</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">2.18. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">2.19. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">2.20. Saving the data</a></li>
-<li><a href="#coming-in-v2-0">2.21. Coming in v2.0</a></li>
+<li><a href="#synchronising-with-google-contacts-code-sync-code">2.15. Synchronising with Google Contacts : <code>sync</code></a></li>
+<li><a href="#listing-entered-commands-code-history-code">2.16. Listing entered commands : <code>history</code></a></li>
+<li><a href="#undoing-previous-command-code-undo-code">2.17. Undoing previous command : <code>undo</code></a></li>
+<li><a href="#redoing-the-previously-undone-command-code-redo-code">2.18. Redoing the previously undone command : <code>redo</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">2.19. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">2.20. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">2.21. Saving the data</a></li>
+<li><a href="#since-v1-2">2.22. Since v1.2</a></li>
+<li><a href="#coming-in-v2-0">2.23. Coming in v2.0</a></li>
 </ul>
 </li>
 <li><a href="#faq">3. FAQ</a></li>
@@ -520,7 +522,7 @@ Deletes the tag <code>class2101</code> from all contacts in the address book.</p
 <div class="sect2">
 <h3 id="selecting-a-person-code-select-code"><a class="link" href="#selecting-a-person-code-select-code">2.11. Selecting a person : <code>select</code></a></h3>
 <div class="paragraph">
-<p>Shorthand Alias: <code>s</code><br>
+<p>Shorthand Alias: <code>sl</code><br>
 Selects the person identified by the index number used in the last person listing.<br>
 Format: <code>select INDEX</code></p>
 </div>
@@ -612,13 +614,21 @@ Format: <code>backup</code></p>
 <div class="sect2">
 <h3 id="restoring-a-backup-code-restore-code"><a class="link" href="#restoring-a-backup-code-restore-code">2.14. Restoring a backup : <code>restore</code></a></h3>
 <div class="paragraph">
-<p>Shorthand Alias: <code>rb</code>
+<p>Shorthand Alias: <code>rb</code><br>
 Retrieves data from a backup file and store it in address book.<br>
 Format: <code>restore</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">2.15. Listing entered commands : <code>history</code></a></h3>
+<h3 id="synchronising-with-google-contacts-code-sync-code"><a class="link" href="#synchronising-with-google-contacts-code-sync-code">2.15. Synchronising with Google Contacts : <code>sync</code></a></h3>
+<div class="paragraph">
+<p>Shorthand Alias: <code>sy</code><br>
+Authenticates and communicates with Google Contacts via the People API to synchronise contacts<br>
+Format: <code>sync</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">2.16. Listing entered commands : <code>history</code></a></h3>
 <div class="paragraph">
 <p>Shorthand Alias: <code>hx</code><br>
 Lists all the commands that you have entered in reverse chronological order.<br>
@@ -640,7 +650,7 @@ Format: <code>history</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">2.16. Undoing previous command : <code>undo</code></a></h3>
+<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">2.17. Undoing previous command : <code>undo</code></a></h3>
 <div class="paragraph">
 <p>Shorthand Alias: <code>u</code><br>
 Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
@@ -686,7 +696,7 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 </div>
 </div>
 <div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">2.17. Redoing the previously undone command : <code>redo</code></a></h3>
+<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">2.18. Redoing the previously undone command : <code>redo</code></a></h3>
 <div class="paragraph">
 <p>Shorthand Alias: <code>r</code><br>
 Reverses the most recent <code>undo</code> command.<br>
@@ -719,7 +729,7 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">2.18. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">2.19. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
 <p>Shorthand Alias: <code>c</code><br>
 Clears all entries from the address book.<br>
@@ -727,7 +737,7 @@ Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">2.19. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">2.20. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
 <p>Shorthand Alias: <code>q</code><br>
 Exits the program.<br>
@@ -735,14 +745,33 @@ Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">2.20. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">2.21. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="coming-in-v2-0"><a class="link" href="#coming-in-v2-0">2.21. Coming in v2.0</a></h3>
+<h3 id="since-v1-2"><a class="link" href="#since-v1-2">2.22. Since v1.2</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Adding and deleting of tags</p>
+</li>
+<li>
+<p>Resize window size</p>
+</li>
+<li>
+<p>Restore to a AddressBook backup</p>
+</li>
+<li>
+<p>Synchronise with Google Contacts</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="coming-in-v2-0"><a class="link" href="#coming-in-v2-0">2.23. Coming in v2.0</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -752,13 +781,7 @@ There is no need to save manually.</p>
 <p>Add a person without all his/her parameters</p>
 </li>
 <li>
-<p>Restore to a AddressBook backup</p>
-</li>
-<li>
 <p>Hide private contact details</p>
-</li>
-<li>
-<p>Synchronise with Google Contacts</p>
 </li>
 <li>
 <p>Access a contact&#8217;s Facebook profile</p>
@@ -854,7 +877,7 @@ e.g.<code>select 2</code></p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-18 05:03:42 +00:00
+Last updated 2017-10-20 15:39:06 +00:00
 </div>
 </div>
 </body>
