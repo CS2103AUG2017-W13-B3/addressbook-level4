@@ -159,9 +159,6 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <li>
 <p>Items with <code>…</code>​ after them can be used multiple times including zero times e.g. <code>[t/TAG]&#8230;&#8203;</code> can be used as <code>&#160;</code> (i.e. 0 times), <code>t/friend</code>, <code>t/friend t/family</code> etc.</p>
 </li>
-<li>
-<p>Index refers to the index number shown in the last person listing. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
-</li>
 </ul>
 </div>
 </div>
@@ -275,39 +272,30 @@ Format: <code>list</code></p>
 </div>
 <div class="sect2">
 <h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">3.4. Deleting a person : <code>delete</code></a></h3>
-<div class="exampleblock">
+<div class="paragraph">
+<p>Shorthand Alias: <code>d</code><br>
+Deletes the specified person from the address book.<br>
+Format: <code>delete INDEX</code></p>
+</div>
+<div class="sidebarblock">
 <div class="content">
-<div class="paragraph">
-<p>Command Name: <code>delete</code><br>
-Shorthand Alias: <code>d</code><br>
-Function: Deletes the specified person at the specified <code>INDEX</code> from your <strong>DummyName</strong>.<br>
-Format: <code>delete INDEX</code><br></p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>If you want to delete a contact in your <strong>DummyName</strong>:<br></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
-<p>Locate the contact you want to delete and the index of the contact.<br></p>
+<p>Deletes the person at the specified <code>INDEX</code>.</p>
 </li>
 <li>
-<p>Type in the index of the contact. (Figure 2.4.1)<br>
-<code>&gt;&gt; delete 1</code>.
-<span class="image"><img src="images/Delete_1.png" alt="600"></span><br>
-<em>Figure 2.4.1</em></p>
+<p>The index refers to the index number shown in the most recent listing.</p>
 </li>
 <li>
-<p>Press <code>Enter</code> and you should see that the selected contact has been deleted. (Figure 2.4.2)<br>
-<span class="image"><img src="images/Delete_2.png" alt="600"></span><br>
-<em>Figure 2.4.2</em></p>
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
-</ol>
+</ul>
+</div>
+</div>
 </div>
 <div class="paragraph">
-<p>You can also delete contacts in a filtered list:</p>
+<p>Examples:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -322,297 +310,138 @@ Deletes the 2nd person in the address book.</p>
 Deletes the 1st person in the results of the <code>find</code> command.</p>
 </li>
 <li>
-<p><code>filter friends</code><br>
+<p><code>list</code><br>
 <code>d 4</code><br>
-Deletes the 4th person in the results of the <code>filter</code> command.</p>
+Deletes the 4th person in the address book.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">3.5. Editing a person : <code>edit</code></a></h3>
-<div class="exampleblock">
+<div class="paragraph">
+<p>Shorthand Alias: <code>e</code><br>
+Edits an existing person in the address book.<br>
+Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code></p>
+</div>
+<div class="sidebarblock">
 <div class="content">
-<div class="paragraph">
-<p>Command Name: <code>edit</code><br>
-Shorthand Alias: <code>e</code><br>
-Function: Edits the person at the specified <code>INDEX</code>.<br>
-Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code><br></p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-A person can have any number of tags (including 0)
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Parameters can be in any order e.g. <code>n/NAME p/PHONE_NUMBER</code>, <code>p/PHONE_NUMBER n/NAME</code> are equivalent.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-You must provide at least one of the optional fields.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>If you want to change the details of a contact in your <strong>DummyName</strong>:<br></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Locate the contact you want to edit and the index of the contact.<br></p>
-</li>
-<li>
-<p>Type in the index of the contact, and the details you wish to replace. (Figure 2.5.1)<br>
-<code>&gt;&gt; edit 1 p/91234567 e/johndoe@example.com</code>.
-<span class="image"><img src="images/Edit_1.png" alt="600"></span><br>
-<em>Figure 2.5.1</em></p>
-</li>
-<li>
-<p>Press <code>Enter</code> and you should see that the contact that you selected has been modified. (Figure 2.5.2)<br>
-<span class="image"><img src="images/Edit_2.png" alt="600"></span><br>
-<em>Figure 2.5.2</em></p>
-</li>
-</ol>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
 <div class="ulist">
 <ul>
+<li>
+<p>Edits the person at the specified <code>INDEX</code>. The index refers to the index number shown in the last person listing. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>At least one of the optional fields must be provided.</p>
+</li>
 <li>
 <p>Existing values will be updated to the input values.</p>
 </li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>You can also edit contacts in a filtered list:</p>
-</div>
-<div class="ulist">
-<ul>
 <li>
-<p><code>&gt;&gt; filter friends</code><br>
-<code>&gt;&gt; edit 2 n/Betsy Crower t/</code><br>
-Edits the name of the 2nd person in the results of the <code>filter</code> command to be <code>Betsy Crower</code>
-and clears all existing tags.</p>
+<p>When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.</p>
 </li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
+<li>
 <p>You can remove all the person&#8217;s tags by typing <code>t/</code> without specifying any tags after it.</p>
+</li>
+</ul>
 </div>
-</td>
-</tr>
-</table>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>&gt;&gt; find Betsy</code><br>
-<code>&gt;&gt; e 1 t/friend</code><br>
-Edits the tag of the 1st person in the results of the <code>find</code> command.</p>
+<p><code>edit 1 p/91234567 e/johndoe@example.com</code><br>
+Edits the phone number and email address of the 1st person to be <code>91234567</code> and <code>johndoe@example.com</code> respectively.</p>
+</li>
+<li>
+<p><code>edit 2 n/Betsy Crower t/</code><br>
+Edits the name of the 2nd person to be <code>Betsy Crower</code> and clears all existing tags.</p>
+</li>
+<li>
+<p><code>e 3 n/Carl Cooper</code><br>
+Edits the name of the 3rd person to be <code>Carl Cooper</code>.</p>
 </li>
 </ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>When you edit tags, the existing tags of the person will be removed. To add tags cumulatively, use <code>addtag</code> instead.<br></p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 </div>
 <div class="sect2">
 <h3 id="adding-a-tag-to-a-person-code-addtag-code"><a class="link" href="#adding-a-tag-to-a-person-code-addtag-code">3.6. Adding a tag to a person : <code>addtag</code></a></h3>
-<div class="exampleblock">
+<div class="paragraph">
+<p>Shorthand Alias: <code>at</code>
+Adds a tag to an existing person in the address book.<br>
+Format: <code>addtag INDEX TAG</code></p>
+</div>
+<div class="sidebarblock">
 <div class="content">
-<div class="paragraph">
-<p>Command Name: <code>addtag</code><br>
-Shorthand Alias: <code>at</code><br>
-Function: Adds a tag to an existing person at the specified <code>INDEX</code> in your <strong>DummyName</strong>.<br>
-Format: <code>addtag INDEX TAG</code><br></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Only one alphanumeric tag can be added at a time. Special characters will not be accepted. e.g !, @, #, &#8230;&#8203;
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>If you want to add a single tag to a contact in your <strong>DummyName</strong>:<br></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
-<p>Locate the contact you want to add a tag to and the index of the contact.<br></p>
+<p>Adds a tag to the person at the specified <code>INDEX</code>. The index refers to the index number shown in the last person listing. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
-<p>Type in the index of the contact, and the tag you wish to add. (Figure 2.6.1)<br>
-<code>&gt;&gt; addtag 1 classmate</code>.
-<span class="image"><img src="images/Addtag_1.png" alt="600"></span><br>
-<em>Figure 2.6.1</em></p>
+<p>Only one alphanumeric tag can be added at a time. Special characters will not be accepted. e.g !, @, #, &#8230;&#8203;</p>
 </li>
 <li>
-<p>Press <code>Enter</code> and you should see that the contact that you selected has been modified. (Figure 2.6.2)<br>
-<span class="image"><img src="images/Addtag_2.png" alt="600"></span><br>
-<em>Figure 2.6.2</em></p>
-</li>
-</ol>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
 <p>The tag added must not already exist on the desired contact.</p>
+</li>
+</ul>
 </div>
-</td>
-</tr>
-</table>
+</div>
 </div>
 <div class="paragraph">
-<p>You can also add tags to contacts in a filtered list:</p>
+<p>Examples:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>&gt;&gt; filter friends</code><br>
-<code>&gt;&gt; addtag 2 friends</code><br>
-Adds the <code>friends</code> tag to the 2nd person in the results of the <code>filter</code> command.</p>
+<p><code>addtag 1 friends</code><br>
+Adds the <code>friends</code> tag to the 1st person.</p>
 </li>
 <li>
-<p><code>&gt;&gt; find John</code><br>
-<code>&gt;&gt; at 1 9pmclass</code><br>
-Adds the <code>9pmclass</code> tag to the 1st person in the results of the <code>find</code> command.</p>
+<p><code>at 2 9pmclass</code><br>
+Adds the <code>9pmclass</code> tag to the 2nd person.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="deleting-a-tag-code-deletetag-code"><a class="link" href="#deleting-a-tag-code-deletetag-code">3.7. Deleting a tag : <code>deletetag</code></a></h3>
-<div class="exampleblock">
+<div class="paragraph">
+<p>Shorthand Alias: <code>dt</code><br>
+Deletes the specified tag from the address book.<br>
+Format: <code>deletetag TAGNAME</code></p>
+</div>
+<div class="sidebarblock">
 <div class="content">
-<div class="paragraph">
-<p>Command Name: <code>deletetag</code><br>
-Shorthand Alias: <code>dt</code><br>
-Function: Deletes the specified tag from an existing person at the specified <code>INDEX</code> in your <strong>DummyName</strong>.
-Can also remove all instances of a tag from your <strong>DummyName</strong>.<br>
-Format: <code>deletetag INDEX TAG</code><br></p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><em>Coming in v1.3</em><br>
-If you want to delete a single tag from a contact in your <strong>DummyName</strong>:<br></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
-<p>Locate the contact you want to delete a tag from and the index of the contact.<br></p>
+<p>Deletes the tag with the specified <code>TAGNAME</code>.</p>
 </li>
 <li>
-<p>Type in the index of the contact, and the tag you wish to delete. (Figure 2.7.1)<br>
-<code>&gt;&gt; deletetag 1 classmate</code>.
-<span class="image"><img src="images/deletetag_1.png" alt="600"></span><br>
-<em>Figure 2.7.1</em></p>
+<p>The tag name <strong>must be alphanumeric</strong> friend, class1, 123, &#8230;&#8203;</p>
 </li>
-<li>
-<p>Press <code>Enter</code> and you should see that the contact that you selected has been modified. (Figure 2.7.2)<br>
-<span class="image"><img src="images/deletetag_2.png" alt="600"></span><br>
-<em>Figure 2.7.2</em></p>
-</li>
-</ol>
+</ul>
+</div>
+</div>
 </div>
 <div class="paragraph">
-<p>You can also delete tags from contacts in a filtered list:</p>
+<p>Examples:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>&gt;&gt; filter friends</code><br>
-<code>&gt;&gt; deletetag 2 friends</code><br>
-Deletes the <code>friends</code> tag from the 2nd person in the results of the <code>filter</code> command.</p>
+<p><code>deletetag buddy</code><br>
+Deletes the tag <code>buddy</code> from all contacts in the address book.</p>
 </li>
 <li>
-<p><code>&gt;&gt; find John</code><br>
-<code>&gt;&gt; dt 1 9pmclass</code><br>
-Deletes the <code>9pmclass</code> tag from the 1st person in the results of the <code>find</code> command.</p>
+<p><code>dt class2101</code><br>
+Deletes the tag <code>class2101</code> from all contacts in the address book.</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>If you would like to delete all instances of a particular tag from your <strong>DummyName</strong>:<br></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Type in <code>all</code>, followed by the tag you wish to delete. (Figure 2.7.3)<br>
-<code>&gt;&gt; deletetag all friends</code>.
-<span class="image"><img src="images/deletetag_3.png" alt="600"></span><br>
-<em>Figure 2.7.3</em></p>
-</li>
-<li>
-<p>Press <code>Enter</code> and you should see that this tag has been deleted from all contacts.
-<span class="image"><img src="images/deletetag_4.png" alt="600"></span><br>
-<em>Figure 2.7.4</em></p>
-</li>
-</ol>
 </div>
 </div>
 <div class="sect2">
@@ -1151,16 +980,7 @@ There is no need to save manually.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
-<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous <strong>DummyName</strong> folder.</p>
-</div>
-<div class="paragraph">
-<p><strong>Q</strong>: I can&#8217;t sync my contacts with my Google contacts!<br>
-<strong>A</strong>: Make sure you have a default browser enabled as attempting to sync your data
-will open up a new window in your default browser.</p>
-</div>
-<div class="paragraph">
-<p><strong>Q</strong>: I have a question that isn&#8217;t answered here. How do I get further support?<br>
-<strong>A</strong>: You can contact us by <a href="mailto:alexleegs@gmail.com">email</a>.</p>
+<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous Address Book folder.</p>
 </div>
 </div>
 </div>
@@ -1217,7 +1037,7 @@ e.g.<code>select 2</code></p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-22 13:45:36 +00:00
+Last updated 2017-10-22 13:45:27 +00:00
 </div>
 </div>
 </body>
