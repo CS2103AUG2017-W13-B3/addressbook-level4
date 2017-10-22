@@ -27,7 +27,6 @@ public class DeleteTagCommandParser implements Parser<DeleteTagCommand> {
         if (parts.length < 2) {
             throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, DeleteTagCommand.MESSAGE_USAGE));
         }
-
         if (parts[0].toLowerCase().equals("all")) {
             try {
                 Tag tag = new Tag(parts[1]);
@@ -44,7 +43,5 @@ public class DeleteTagCommandParser implements Parser<DeleteTagCommand> {
                 throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, DeleteTagCommand.MESSAGE_USAGE));
             }
         }
-
     }
-
 }
