@@ -36,7 +36,7 @@ help both experienced contributors and first-time users contribute to <strong>Du
 <li><a href="#setting-up">1. Setting up</a>
 <ul class="sectlevel2">
 <li><a href="#prerequisites">1.1. Prerequisites</a></li>
-<li><a href="#setting-up-the-project-in-your-computer">1.2. Setting up the project in your computer</a></li>
+<li><a href="#setting-up-the-project-in-a-local-computer">1.2. Setting up the project in a local computer</a></li>
 <li><a href="#verifying-the-setup">1.3. Verifying the setup</a></li>
 <li><a href="#configurations-to-do-before-writing-code">1.4. Configurations to do before writing code</a></li>
 </ul>
@@ -114,8 +114,7 @@ help both experienced contributors and first-time users contribute to <strong>Du
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Having any Java 8 version is not enough.<br>
-This app will not work with earlier versions of Java 8.
+This app is not compatible with earlier versions of Java 8.
 </td>
 </tr>
 </table>
@@ -130,8 +129,8 @@ This app will not work with earlier versions of Java 8.
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-IntelliJ by default has Gradle and JavaFx plugins installed.<br>
-Do not disable them. If you have disabled them, go to <code>File</code> &gt; <code>Settings</code> &gt; <code>Plugins</code> to re-enable them.
+IntelliJ has Gradle and JavaFx plugins installed by default.<br>
+Do not disable them. If they are disabled, go to <code>File</code> &gt; <code>Settings</code> &gt; <code>Plugins</code> to re-enable them.
 </td>
 </tr>
 </table>
@@ -141,42 +140,42 @@ Do not disable them. If you have disabled them, go to <code>File</code> &gt; <co
 </div>
 </div>
 <div class="sect2">
-<h3 id="setting-up-the-project-in-your-computer"><a class="link" href="#setting-up-the-project-in-your-computer">1.2. Setting up the project in your computer</a></h3>
+<h3 id="setting-up-the-project-in-a-local-computer"><a class="link" href="#setting-up-the-project-in-a-local-computer">1.2. Setting up the project in a local computer</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Fork this repo, and clone the fork to your computer</p>
+<p>Fork this repo, and clone the fork to the local computer.</p>
 </li>
 <li>
-<p>Open IntelliJ (if you are not in the welcome screen, click <code>File</code> &gt; <code>Close Project</code> to close the existing project dialog first)</p>
+<p>Open IntelliJ (if the welcome screen is not displayed, click <code>File</code> &gt; <code>Close Project</code> to close the existing project dialog first).</p>
 </li>
 <li>
-<p>Set up the correct JDK version for Gradle</p>
+<p>Set up the correct JDK version for Gradle.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Click <code>Configure</code> &gt; <code>Project Defaults</code> &gt; <code>Project Structure</code></p>
+<p>Click <code>Configure</code> &gt; <code>Project Defaults</code> &gt; <code>Project Structure</code>.</p>
 </li>
 <li>
-<p>Click <code>New&#8230;&#8203;</code> and find the directory of the JDK</p>
+<p>Click <code>New&#8230;&#8203;</code> and find the directory of the JDK.</p>
 </li>
 </ol>
 </div>
 </li>
 <li>
-<p>Click <code>Import Project</code></p>
+<p>Click <code>Import Project</code>.</p>
 </li>
 <li>
-<p>Locate the <code>build.gradle</code> file and select it. Click <code>OK</code></p>
+<p>Locate the <code>build.gradle</code> file, select it and click <code>OK</code>.</p>
 </li>
 <li>
-<p>Click <code>Open as Project</code></p>
+<p>Click <code>Open as Project</code>.</p>
 </li>
 <li>
-<p>Click <code>OK</code> to accept the default settings</p>
+<p>Click <code>OK</code> to accept the default settings.</p>
 </li>
 <li>
-<p>Open a console and run the command <code>gradlew processResources</code> (Mac/Linux: <code>./gradlew processResources</code>). It should finish with the <code>BUILD SUCCESSFUL</code> message.<br>
+<p>Open a console and run the command <code>gradlew processResources</code> (Mac/Linux: <code>./gradlew processResources</code>). It should finish with the <code>BUILD SUCCESSFUL</code> message.
 This will generate all resources required by the application and tests.</p>
 </li>
 </ol>
@@ -187,10 +186,10 @@ This will generate all resources required by the application and tests.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Run the <code>seedu.address.MainApp</code> and try a few commands</p>
+<p>Run the <code>seedu.address.MainApp</code> and try a few commands.</p>
 </li>
 <li>
-<p><a href="#testing">Run the tests</a> to ensure they all pass.</p>
+<p><a href="#testing">Run the tests</a> to ensure that they all pass.</p>
 </li>
 </ol>
 </div>
@@ -200,25 +199,25 @@ This will generate all resources required by the application and tests.</p>
 <div class="sect3">
 <h4 id="configuring-the-coding-style"><a class="link" href="#configuring-the-coding-style">1.4.1. Configuring the coding style</a></h4>
 <div class="paragraph">
-<p>This project follows <a href="https://github.com/oss-generic/process/blob/master/docs/CodingStandards.md">oss-generic coding standards</a>. IntelliJ&#8217;s default style is mostly compliant with ours but it uses a different import order from ours. To rectify,</p>
+<p>This project follows <a href="https://github.com/oss-generic/process/blob/master/docs/CodingStandards.md">oss-generic coding standards</a>. IntelliJ&#8217;s default style is mostly compliant with this standard, except for its different import order. To rectify,</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Go to <code>File</code> &gt; <code>Settings&#8230;&#8203;</code> (Windows/Linux), or <code>IntelliJ IDEA</code> &gt; <code>Preferences&#8230;&#8203;</code> (macOS)</p>
+<p>Go to <code>File</code> &gt; <code>Settings&#8230;&#8203;</code> (Windows/Linux), or <code>IntelliJ IDEA</code> &gt; <code>Preferences&#8230;&#8203;</code> (macOS).</p>
 </li>
 <li>
-<p>Select <code>Editor</code> &gt; <code>Code Style</code> &gt; <code>Java</code></p>
+<p>Select <code>Editor</code> &gt; <code>Code Style</code> &gt; <code>Java</code>.</p>
 </li>
 <li>
-<p>Click on the <code>Imports</code> tab to set the order</p>
+<p>Click on the <code>Imports</code> tab to set the order.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>For <code>Class count to use import with '*'</code> and <code>Names count to use static import with '*'</code>: Set to <code>999</code> to prevent IntelliJ from contracting the import statements</p>
+<p>For <code>Class count to use import with '*'</code> and <code>Names count to use static import with '*'</code>: Set to <code>999</code> to prevent IntelliJ from contracting the import statements.</p>
 </li>
 <li>
-<p>For <code>Import Layout</code>: The order is <code>import static all other imports</code>, <code>import java.*</code>, <code>import javax.*</code>, <code>import org.*</code>, <code>import com.*</code>, <code>import all other imports</code>. Add a <code>&lt;blank line&gt;</code> between each <code>import</code></p>
+<p>For <code>Import Layout</code>: The order is <code>import static all other imports</code>, <code>import java.*</code>, <code>import javax.*</code>, <code>import org.*</code>, <code>import com.*</code>, <code>import all other imports</code>. Add a <code>&lt;blank line&gt;</code> between each <code>import</code>.</p>
 </li>
 </ul>
 </div>
@@ -226,22 +225,22 @@ This will generate all resources required by the application and tests.</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>Optionally, you can follow the <a href="UsingCheckstyle.html">UsingCheckstyle.adoc</a> document to configure Intellij to check style-compliance as you write code.</p>
+<p>Optionally, follow the <a href="UsingCheckstyle.html">UsingCheckstyle.adoc</a> document to configure Intellij to check style-compliance while writing code.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="updating-documentation-to-match-your-fork"><a class="link" href="#updating-documentation-to-match-your-fork">1.4.2. Updating documentation to match your fork</a></h4>
+<h4 id="updating-documentation-to-match-the-fork"><a class="link" href="#updating-documentation-to-match-the-fork">1.4.2. Updating documentation to match the fork</a></h4>
 <div class="paragraph">
-<p>After forking the repo, links in the documentation will still point to the <code>se-edu/addressbook-level4</code> repo. If you plan to develop this as a separate product (i.e. instead of contributing to the <code>se-edu/addressbook-level4</code>) , you should replace the URL in the variable <code>repoURL</code> in <code>DeveloperGuide.adoc</code> and <code>UserGuide.adoc</code> with the URL of your fork.</p>
+<p>After forking the repo, links in the documentation will still point to the <code>se-edu/addressbook-level4</code> repo. If there are plans to develop this as a separate product (i.e. instead of contributing to the <code>se-edu/addressbook-level4</code>) , the URL in the variable <code>repoURL</code> in <code>DeveloperGuide.adoc</code> and <code>UserGuide.adoc</code> should be replaced with the URL of the fork.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="setting-up-ci"><a class="link" href="#setting-up-ci">1.4.3. Setting up CI</a></h4>
+<h4 id="setting-up-continuous-integration-ci"><a class="link" href="#setting-up-continuous-integration-ci">1.4.3. Setting up Continuous Integration (CI)</a></h4>
 <div class="paragraph">
-<p>Set up Travis to perform Continuous Integration (CI) for your fork. See <a href="UsingTravis.html">UsingTravis.adoc</a> to learn how to set it up.</p>
+<p>Set up Travis to perform CI for the fork. See <a href="UsingTravis.html">UsingTravis.adoc</a> for information on how to set it up.</p>
 </div>
 <div class="paragraph">
-<p>Optionally, you can set up AppVeyor as a second CI (see <a href="UsingAppVeyor.html">UsingAppVeyor.adoc</a>).</p>
+<p>Optionally, set up AppVeyor as a second CI (see <a href="UsingAppVeyor.html">UsingAppVeyor.adoc</a>).</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -250,7 +249,7 @@ This will generate all resources required by the application and tests.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Having both Travis and AppVeyor ensures your App works on both Unix-based platforms and Windows-based platforms (Travis is Unix-based and AppVeyor is Windows-based)
+Having both Travis and AppVeyor ensures that the App works on both Unix-based platforms and Windows-based platforms (Travis is Unix-based and AppVeyor is Windows-based)
 </td>
 </tr>
 </table>
@@ -259,17 +258,7 @@ Having both Travis and AppVeyor ensures your App works on both Unix-based platfo
 <div class="sect3">
 <h4 id="getting-started-with-coding"><a class="link" href="#getting-started-with-coding">1.4.4. Getting started with coding</a></h4>
 <div class="paragraph">
-<p>When you are ready to start coding,</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Get some sense of the overall design by reading the <a href="#architecture">Architecture</a> section.</p>
-</li>
-<li>
-<p>Take a look at the section <a href="#suggested-programming-tasks-to-get-started">Suggested Programming Tasks to Get Started</a>.</p>
-</li>
-</ol>
+<p>Before starting to code, it is advisable to get a sense of the overall design by reading the <a href="#architecture">Architecture</a> section.</p>
 </div>
 </div>
 </div>
@@ -437,10 +426,10 @@ The event is propagated through the <code>EventsCenter</code> to the <code>Stora
 <p><strong>API</strong> : <a href="https://github.com/CS2103AUG2017-W13-B3/main/tree/master/src/main/java/seedu/address/ui/Ui.java"><code>Ui.java</code></a></p>
 </div>
 <div class="paragraph">
-<p>The UI consists of a <code>MainWindow</code> that is made up of parts e.g.<code>CommandBox</code>, <code>ResultDisplay</code>, <code>PersonListPanel</code>, <code>StatusBarFooter</code>, <code>BrowserPanel</code> etc. All these, including the <code>MainWindow</code>, inherit from the abstract <code>UiPart</code> class.</p>
+<p>As seen in <em>Figure 2.2.1</em>, the UI consists of a <code>MainWindow</code> that is made up of different parts such as <code>CommandBox</code>, <code>ResultDisplay</code>, <code>PersonListPanel</code>, <code>StatusBarFooter</code>, <code>BrowserPanel</code>. All these, including the <code>MainWindow</code>, inherit from the abstract <code>UiPart</code> class.</p>
 </div>
 <div class="paragraph">
-<p>The <code>UI</code> component uses JavaFx UI framework. The layout of these UI parts are defined in matching <code>.fxml</code> files that are in the <code>src/main/resources/view</code> folder. For example, the layout of the <a href="https://github.com/CS2103AUG2017-W13-B3/main/tree/master/src/main/java/seedu/address/ui/MainWindow.java"><code>MainWindow</code></a> is specified in <a href="https://github.com/CS2103AUG2017-W13-B3/main/tree/master/src/main/resources/view/MainWindow.fxml"><code>MainWindow.fxml</code></a></p>
+<p>The <code>UI</code> component uses JavaFx UI framework. The layout of these UI parts are defined in their corresponding <code>.fxml</code> files that are in the <code>src/main/resources/view</code> folder. For example, the layout of the <a href="https://github.com/CS2103AUG2017-W13-B3/main/tree/master/src/main/java/seedu/address/ui/MainWindow.java"><code>MainWindow</code></a> is specified in <a href="https://github.com/CS2103AUG2017-W13-B3/main/tree/master/src/main/resources/view/MainWindow.fxml"><code>MainWindow.fxml</code></a>.</p>
 </div>
 <div class="paragraph">
 <p>The <code>UI</code> component,</p>
@@ -451,7 +440,7 @@ The event is propagated through the <code>EventsCenter</code> to the <code>Stora
 <p>Executes user commands using the <code>Logic</code> component.</p>
 </li>
 <li>
-<p>Binds itself to some data in the <code>Model</code> so that the UI can auto-update when data in the <code>Model</code> change.</p>
+<p>Binds itself to some data in the <code>Model</code> so that the UI can be updated automatically when data in the <code>Model</code> change.</p>
 </li>
 <li>
 <p>Responds to events raised from various parts of the App and updates the UI accordingly.</p>
@@ -481,6 +470,9 @@ The event is propagated through the <code>EventsCenter</code> to the <code>Stora
 <p><strong>API</strong> :
 <a href="https://github.com/CS2103AUG2017-W13-B3/main/tree/master/src/main/java/seedu/address/logic/Logic.java"><code>Logic.java</code></a></p>
 </div>
+<div class="paragraph">
+<p>As seen in <em>Figure 2.3.1</em>,</p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -498,7 +490,7 @@ The event is propagated through the <code>EventsCenter</code> to the <code>Stora
 </ol>
 </div>
 <div class="paragraph">
-<p>Given below is the Sequence Diagram for interactions within the <code>Logic</code> component for the <code>execute("delete 1")</code> API call.</p>
+<p><em>Figure 2.3.3</em> below shows the Sequence Diagram for interactions within the <code>Logic</code> component for the <code>execute("delete 1")</code> API call.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -506,7 +498,7 @@ The event is propagated through the <code>EventsCenter</code> to the <code>Stora
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 2.3.1 : Interactions Inside the Logic Component for the <code>delete 1</code> Command</em></p>
+<p><em>Figure 2.3.3 : Interactions Inside the Logic Component for the <code>delete 1</code> Command</em></p>
 </div>
 </div>
 <div class="sect2">
@@ -523,7 +515,7 @@ The event is propagated through the <code>EventsCenter</code> to the <code>Stora
 <p><strong>API</strong> : <a href="https://github.com/CS2103AUG2017-W13-B3/main/tree/master/src/main/java/seedu/address/model/Model.java"><code>Model.java</code></a></p>
 </div>
 <div class="paragraph">
-<p>The <code>Model</code>,</p>
+<p>As seen in <em>Figure2.4.1</em>, the <code>Model</code> component,</p>
 </div>
 <div class="ulist">
 <ul>
@@ -534,7 +526,7 @@ The event is propagated through the <code>EventsCenter</code> to the <code>Stora
 <p>stores the Address Book data.</p>
 </li>
 <li>
-<p>exposes an unmodifiable <code>ObservableList&lt;ReadOnlyPerson&gt;</code> that can be 'observed' e.g. the UI can be bound to this list so that the UI automatically updates when the data in the list change.</p>
+<p>exposes an unmodifiable <code>ObservableList&lt;ReadOnlyPerson&gt;</code> that can be 'observed' e.g. the UI can be bounded to this list so that the UI automatically updates when the data in the list change.</p>
 </li>
 <li>
 <p>does not depend on any of the other three components.</p>
@@ -556,7 +548,7 @@ The event is propagated through the <code>EventsCenter</code> to the <code>Stora
 <p><strong>API</strong> : <a href="https://github.com/CS2103AUG2017-W13-B3/main/tree/master/src/main/java/seedu/address/storage/Storage.java"><code>Storage.java</code></a></p>
 </div>
 <div class="paragraph">
-<p>The <code>Storage</code> component,</p>
+<p>As seen in <em>Figure 2.5.1</em>, the <code>Storage</code> component,</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3023,7 +3015,7 @@ Use case ends.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-22 13:45:46 +00:00
+Last updated 2017-10-22 13:46:59 +00:00
 </div>
 </div>
 </body>
