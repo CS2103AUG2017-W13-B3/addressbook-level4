@@ -577,6 +577,8 @@ The event is propagated through the <code>EventsCenter</code> to the <code>Stora
 </div>
 <div class="sect2">
 <h3 id="undo-redo-mechanism"><a class="link" href="#undo-redo-mechanism">3.1. Undo/Redo mechanism</a></h3>
+<div class="sect3">
+<h4 id="mechanism"><a class="link" href="#mechanism">3.1.1. Mechanism</a></h4>
 <div class="paragraph">
 <p>The undo/redo mechanism is facilitated by an <code>UndoRedoStack</code>, which resides inside <code>LogicManager</code>. It supports undoing and redoing of commands that modifies the state of the address book (e.g. <code>add</code>, <code>edit</code>). Such commands will inherit from <code>UndoableCommand</code>.</p>
 </div>
@@ -589,7 +591,7 @@ The event is propagated through the <code>EventsCenter</code> to the <code>Stora
 </div>
 </div>
 <div class="paragraph">
-<p>As you can see from the diagram, <code>UndoableCommand</code> adds an extra layer between the abstract <code>Command</code> class and concrete commands that can be undone, such as the <code>DeleteCommand</code>. Note that extra tasks need to be done when executing a command in an <em>undoable</em> way, such as saving the state of the address book before execution. <code>UndoableCommand</code> contains the high-level algorithm for those extra tasks while the child classes implements the details of how to execute the specific command. Note that this technique of putting the high-level algorithm in the parent class and lower-level steps of the algorithm in child classes is also known as the <a href="https://www.tutorialspoint.com/design_pattern/template_pattern.htm">template pattern</a>.</p>
+<p>As can be seen from the diagram, <code>UndoableCommand</code> adds an extra layer between the abstract <code>Command</code> class and concrete commands that can be undone, such as the <code>DeleteCommand</code>. Note that extra tasks need to be done when executing a command in an <em>undoable</em> way, such as saving the state of the address book before execution. <code>UndoableCommand</code> contains the high-level algorithm for those extra tasks while the child classes implements the details of how to execute the specific command. Note that this technique of putting the high-level algorithm in the parent class and lower-level steps of the algorithm in child classes is also known as the <a href="https://www.tutorialspoint.com/design_pattern/template_pattern.htm">template pattern</a>.</p>
 </div>
 <div class="paragraph">
 <p>Commands that are not undoable are implemented this way:</p>
@@ -727,8 +729,9 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 <img src="images/UndoRedoActivityDiagram.png" alt="UndoRedoActivityDiagram" width="200">
 </div>
 </div>
+</div>
 <div class="sect3">
-<h4 id="design-considerations"><a class="link" href="#design-considerations">3.1.1. Design Considerations</a></h4>
+<h4 id="design-considerations"><a class="link" href="#design-considerations">3.1.2. Design Considerations</a></h4>
 <div class="paragraph">
 <p><strong>Aspect:</strong> Implementation of <code>UndoableCommand</code><br>
 <strong>Alternative 1 (current choice):</strong> Add a new abstract method <code>executeUndoableCommand()</code><br>
@@ -773,8 +776,10 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 </div>
 <div class="sect2">
 <h3 id="backup-restoring-backup"><a class="link" href="#backup-restoring-backup">3.2. Backup / Restoring Backup</a></h3>
+<div class="sect3">
+<h4 id="mechanism-2"><a class="link" href="#mechanism-2">3.2.1. Mechanism</a></h4>
 <div class="paragraph">
-<p>The backing up of address book is done by <code>BackupCommand</code> and the restoring of data from a backup file is done by <code>RestoreBackupCommand</code>. These commands do not support the undoing and redoing of user actions and thus, inherits from <code>Command</code>.
+<p>The backing up of DummyName is done by <code>BackupCommand</code> and the restoring of data from a backup file is done by <code>RestoreBackupCommand</code>. These commands do not support the undoing and redoing of user actions and thus, inherits from <code>Command</code>.
 These commands require access to <code>Storage</code> from <code>Logic</code> and the way to accomplish this is to post an event to <code>EventCenter</code>. <code>Subscribers</code> in <code>StorageManager</code> will handle these events and respond correspondingly.
 The following shows a sequence diagram of how the <code>BackupCommand</code> is carried out.</p>
 </div>
@@ -796,7 +801,7 @@ The following shows a sequence diagram of how the <code>BackupCommand</code> is 
 </table>
 </div>
 <div class="paragraph">
-<p>The <code>BackupCommand</code> is executed when user input "backup" or "b". The data that is in <code>model</code> or the active address book is first passed as a parameter to <code>BackupDataEvent</code>. The event will be handled by <code>StorageManager</code> and is saved into the default file path "data/addressbook-backup.xml".
+<p>The <code>BackupCommand</code> is executed when the commands <code>backup</code> or <code>b</code> are entered. The data that is in <code>model</code> or the active address book is first passed as a parameter to <code>BackupDataEvent</code>. The event will be handled by <code>StorageManager</code> and is saved into the default file path "data/addressbook-backup.xml".
 The following is the implementation of <code>BackupCommand</code>:</p>
 </div>
 <div class="listingblock">
@@ -817,7 +822,8 @@ The following is the implementation of <code>BackupCommand</code>:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>RestoreBackupCommand</code> is executed when user input "restore" or "rb". <code>RestoreBackupDataEvent</code> is posted and <code>StorageManager</code> handles it. The data from default file path "data/addressbook-backup.xml" will be retrieved and it will replace the active address book.
+<p>The <code>RestoreBackupCommand</code> is executed when the commands <code>restore</code> or <code>rb</code> are entered. <code>RestoreBackupDataEvent</code> is posted and <code>StorageManager</code> handles it.
+The data from default file path "data/addressbook-backup.xml" will be retrieved and it will replace the active address book.
 The following is the implementation of <code>RestoreBackupCommand</code>:</p>
 </div>
 <div class="listingblock">
@@ -864,8 +870,9 @@ A backup of address book is always created when the Address Book starts. This me
 </tr>
 </table>
 </div>
+</div>
 <div class="sect3">
-<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.2.1. Design Considerations</a></h4>
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.2.2. Design Considerations</a></h4>
 <div class="paragraph">
 <p><strong>Aspect:</strong> Accessing <code>Storage</code> from <code>Logic</code><br>
 <strong>Alternative 1 (current choice):</strong> Make use of <code>EventBus</code> to post events and have <code>StorageManager</code> handle the backing up or retrieval of data<br>
@@ -879,6 +886,8 @@ A backup of address book is always created when the Address Book starts. This me
 </div>
 <div class="sect2">
 <h3 id="adding-removing-a-tag"><a class="link" href="#adding-removing-a-tag">3.3. Adding/Removing a tag</a></h3>
+<div class="sect3">
+<h4 id="mechanism-3"><a class="link" href="#mechanism-3">3.3.1. Mechanism</a></h4>
 <div class="paragraph">
 <p>Adding or removing a tag is facilitated by <code>AddTagCommand</code> and <code>DeleteTagCommand</code>, which are subclasses of <code>UndoableCommand</code>. These commands work by changing the value of the <code>Tag</code> objects associated with the contact.</p>
 </div>
@@ -922,8 +931,9 @@ A backup of address book is always created when the Address Book starts. This me
 }</code></pre>
 </div>
 </div>
+</div>
 <div class="sect3">
-<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.3.1. Design Considerations</a></h4>
+<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.3.2. Design Considerations</a></h4>
 <div class="paragraph">
 <p><strong>Aspect:</strong> Changing the <code>Tag</code> objects of the selected <code>Person</code><br>
 <strong>Alternative 1 (current choice):</strong> Copy set of <code>Tag</code> objects to a newly created set. Modify the newly created set. Then create a copy of the selected <code>Person</code> instance and replace its set of <code>Tag</code> objects.<br>
@@ -938,13 +948,13 @@ A backup of address book is always created when the Address Book starts. This me
 <div class="sect2">
 <h3 id="filter-mechanism"><a class="link" href="#filter-mechanism">3.4. Filter mechanism</a></h3>
 <div class="sect3">
-<h4 id="fundamental-mechanism"><a class="link" href="#fundamental-mechanism">3.4.1. Fundamental mechanism</a></h4>
+<h4 id="mechanism-4"><a class="link" href="#mechanism-4">3.4.1. Mechanism</a></h4>
 <div class="paragraph">
 <p>The list of persons displayed is filtered by a [<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Predicate</a>]
 when the method <code>updateFilteredPersonList(predicate)</code> from the <code>Model</code> interface is invoked.</p>
 </div>
 <div class="paragraph">
-<p>The relevant methods in the Model interface:</p>
+<p>The relevant methods in the Model interface are as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -963,16 +973,16 @@ when the method <code>updateFilteredPersonList(predicate)</code> from the <code>
 </div>
 <div class="paragraph">
 <p>When <code>updateFilteredPersonList(predicate)</code> is invoked, every <code>person</code> in the <strong>AddressBook</strong> is evaluated against the <code>predicate</code>.<br>
-A <code>person</code> will be added the the list for display if <code>predicate.test(person)</code> is evaluated to be TRUE.<br>
-All <code>person</code> that fulfill the conditions specified in <code>predicate</code> are filtered to be displayed.</p>
+A <code>person</code> is added to the displayed list if <code>predicate.test(person)</code> is evaluated to be TRUE.<br>
+All <code>person</code> instances that fulfill the conditions specified in <code>predicate</code> are filtered to be displayed.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="filtering-on-the-existing-list"><a class="link" href="#filtering-on-the-existing-list">3.4.2. Filtering on the existing list</a></h4>
 <div class="paragraph">
-<p>Note that all <code>person</code> in the existing list satisfy a Predicate <code>currentPredicate</code>.<br>
-Given a new Predicate <code>newPredicate</code>, filtering on the existing list is equivalent to selecting <code>person</code> that satisfy both <code>currentPredicate</code> and <code>newPredicate</code>.<br>
-From Figure 3.2.1, it can also be viewed as the interception of two lists of <code>person</code>, each satisfying one of the two predicates respectively.</p>
+<p>Note that all <code>person</code> instances in the existing list satisfy a Predicate <code>currentPredicate</code>.<br>
+Given a new Predicate <code>newPredicate</code>, filtering on the existing list is equivalent to selecting <code>person</code> instancesthat satisfy both <code>currentPredicate</code> and <code>newPredicate</code>.<br>
+From Figure 3.2.1, it can also be viewed as the intersection of two lists of <code>person</code> objects, each satisfying one of the two predicates respectively.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -990,7 +1000,7 @@ From Figure 3.2.1, it can also be viewed as the interception of two lists of <co
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>invokes <code>getPersonListPredicate()</code> provided in the Model interface to get the <code>currentPredicate</code>.</p>
+<p>Invoke <code>getPersonListPredicate()</code> provided in the Model interface to get the <code>currentPredicate</code>.</p>
 </li>
 <li>
 <p>Use [<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html#and-java.util.function.Predicate-">Predicate.and()</a>] to generated the logical AND of the two predicates.</p>
@@ -1022,9 +1032,9 @@ From Figure 3.2.1, it can also be viewed as the interception of two lists of <co
 <div class="sect2">
 <h3 id="synchronisation-with-google-contacts"><a class="link" href="#synchronisation-with-google-contacts">3.5. Synchronisation with Google Contacts</a></h3>
 <div class="sect3">
-<h4 id="basic-flow-summary"><a class="link" href="#basic-flow-summary">3.5.1. Basic flow summary</a></h4>
+<h4 id="mechanism-5"><a class="link" href="#mechanism-5">3.5.1. Mechanism</a></h4>
 <div class="paragraph">
-<p>Authentication and synchronisation of data with a user&#8217;s Google Contacts is done via the <code>sync</code> command, which is a subclass of <code>UndoableCommand</code>. This command works in conjunction with the Google Client and People API.</p>
+<p>Authentication and synchronisation of data with a user&#8217;s Google Contacts is done via the <code>sync</code> command, which is a subclass of <code>Command</code>. This command works in conjunction with the Google Client and People API.</p>
 </div>
 <div class="paragraph">
 <p>Firstly, the command posts an <code>AuthorizationEvent</code> event to the EventCenter, which is then handled by a <code>OAuth</code> class, which is chiefly responsible for authorization and interaction with a user&#8217;s Google Contacts. Hence, threading allows for the application to run in the background, while the user can perform other tasks. The user is redirected to login to Google via his default browser through the invoked <code>authorize</code> method. A callback is then done to create a <code>Credential</code> which is then used to instantiate a <code>PeopleService</code> instance. The <code>PeopleService</code> is then used to perform CRUD functions on the user&#8217;s Google Contacts. The following diagram shows the entire sequence.</p>
@@ -1044,7 +1054,7 @@ From Figure 3.2.1, it can also be viewed as the interception of two lists of <co
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">SyncCommand</span> <span class="directive">extends</span> UndoableCommand {
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">SyncCommand</span> <span class="directive">extends</span> Command {
     <span class="comment">//...variables, constructor, other methods</span>
 
     <span class="annotation">@Override</span>
@@ -1195,8 +1205,10 @@ From Figure 3.2.1, it can also be viewed as the interception of two lists of <co
 <p><strong>Aspect:</strong> Accessing <code>OAuth</code> from <code>Logic</code><br>
 <strong>Alternative 1 (current choice):</strong> An <code>Event</code> and a <code>Subscriber</code> is used to communicate between the two different components<br>
 <strong>Pros:</strong> Maintain low coupling and prevent unnecessary addition of dependencies<br>
-<strong>Cons:</strong> Handlers have to be created to handle <code>Events</code> when they occur<br>
-<strong>Alternative 2:</strong> Create an <code>OAuth</code> object in <code>Logic</code><br>
+<strong>Cons:</strong> Handlers have to be created to handle <code>Events</code> when they occur<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Alternative 2:</strong> Create an <code>OAuth</code> object in <code>Logic</code><br>
 <strong>Pros:</strong> No handlers are required to process <code>Events</code><br>
 <strong>Cons:</strong> Introduce unnecessary dependencies</p>
 </div>
@@ -3015,7 +3027,7 @@ Use case ends.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-22 13:46:59 +00:00
+Last updated 2017-10-22 14:13:36 +00:00
 </div>
 </div>
 </body>

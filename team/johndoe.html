@@ -36,10 +36,15 @@
 </div>
 <div class="sect2">
 <h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">Undoing previous command : <code>undo</code></a></h3>
+<div class="exampleblock">
+<div class="content">
 <div class="paragraph">
-<p>Shorthand Alias: <code>u</code><br>
-Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
+<p>Command Name: <code>undo</code><br>
+Shorthand Alias: <code>u</code><br>
+Function: Restore the address book to the state where the previous <em>undoable</em> command was not executed.<br>
 Format: <code>undo</code></p>
+</div>
+</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -49,66 +54,225 @@ Format: <code>undo</code></p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Undoable commands: those commands that modify the address book&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code>, <code>note</code> and <code>clear</code>).</p>
+<p><em>Undoable</em> commands: those commands that modify the address book&#8217;s content. They include <code>add</code>, <code>delete</code>, <code>edit</code>, <code>note</code> and <code>clear</code>.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p>When you <code>delete</code> a contact by accident:<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Remove the first contact. (Figure 2.16.1)<br>
+<code>&gt;&gt; delete 1</code><br>
+<span class="image"><img src="../images/Undo_1.png" alt="600"></span><br>
+<em>Figure 2.16.1</em><br></p>
+</li>
+<li>
+<p>Type in the <code>undo</code> command. (Figure 2.16.2)<br>
+<code>&gt;&gt; undo</code><br>
+<span class="image"><img src="../images/Undo_2.png" alt="600"></span><br>
+<em>Figure 2.16.2</em><br></p>
+</li>
+<li>
+<p>Press <code>Enter</code> and you should see that the effects of <code>delete 1</code> has been reverted. (Figure 2.16.3)<br>
+<span class="image"><img src="../images/Undo_3.png" alt="600"></span><br>
+<em>Figure 2.16.3</em><br></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following are more examples to help you better understand the <code>undo</code> command:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>delete 1</code><br>
-<code>list</code><br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
+<p>Failure to <code>undo</code> as there are no undoable commands executed previously.</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Restart the application.</p>
 </li>
 <li>
-<p><code>select 1</code><br>
-<code>list</code><br>
-<code>undo</code><br>
-The <code>undo</code> command fails as there are no undoable commands executed previously.</p>
+<p>Select the first contact. (Figure 2.16.4)<br>
+<code>&gt;&gt; select 1</code><br>
+<span class="image"><img src="../images/Undo_4.png" alt="600"></span><br>
+<em>Figure 2.16.4</em><br></p>
 </li>
 <li>
-<p><code>delete 1</code><br>
-<code>clear</code><br>
-<code>u</code> (reverses the <code>clear</code> command)<br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
+<p>List all the contacts. (Figure 2.16.5)<br>
+<code>&gt;&gt; list</code><br>
+<span class="image"><img src="../images/Undo_5.png" alt="600"></span><br>
+<em>Figure 2.16.5</em><br></p>
+</li>
+<li>
+<p>Type in <code>undo</code> and you will see an error message. (Figure 2.16.6)<br>
+<code>&gt;&gt; undo</code><br>
+<span class="image"><img src="../images/Undo_6.png" alt="600"></span><br>
+<em>Figure 2.16.6</em><br></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Attempting to <code>undo</code> multiple commands.</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Delete the first contact. (Figure 2.16.7)<br>
+<code>&gt;&gt; delete 1</code><br>
+<span class="image"><img src="../images/Undo_7.png" alt="600"></span><br>
+<em>Figure 2.16.7</em><br></p>
+</li>
+<li>
+<p>Clear out all the contacts. (Figure 2.16.8)<br>
+<code>&gt;&gt; clear</code>
+<span class="image"><img src="../images/Undo_8.png" alt="600"></span><br>
+<em>Figure 2.16.8</em><br></p>
+</li>
+<li>
+<p>Type in the shorthand alias for <code>undo</code> (Figure 2.16.9)<br>
+<code>&gt;&gt; u</code><br>
+<span class="image"><img src="../images/Undo_9.png" alt="600"></span><br>
+<em>Figure 2.16.9</em><br></p>
+</li>
+<li>
+<p>Press <code>Enter</code> and you should see that the <code>clear</code> command is reverted. (Figure 2.16.10)+
+<span class="image"><img src="../images/Undo_10.png" alt="600"></span><br>
+ <em>Figure 2.16.9</em><br></p>
+</li>
+<li>
+<p>Type in <code>undo</code> and you should see that the <code>delete 1</code> command is reverted as well. (Figure 2.16.11)+
+<code>&gt;&gt; undo</code><br>
+<span class="image"><img src="../images/Undo_11.png" alt="600"></span><br>
+<em>Figure 2.16.11</em><br></p>
+</li>
+</ol>
+</div>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">Redoing the previously undone command : <code>redo</code></a></h3>
+<div class="exampleblock">
+<div class="content">
 <div class="paragraph">
-<p>Shorthand Alias: <code>r</code><br>
-Reverses the most recent <code>undo</code> command.<br>
+<p>Command Name: <code>redo</code><br>
+Shorthand Alias: <code>r</code><br>
+Function: Reverts the most recent <code>undo</code> command.<br>
 Format: <code>redo</code></p>
 </div>
+</div>
+</div>
 <div class="paragraph">
-<p>Examples:</p>
+<p>You <code>delete</code> a contact and <code>undo</code> the <code>delete</code> by mistake:<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Type in the command to delete the first contact. (Figure 2.17.1)<br>
+<code>&gt;&gt; delete 1</code><br>
+<span class="image"><img src="../images/Redo_1.png" alt="600"></span><br>
+<em>Figure 2.17.1</em><br></p>
+</li>
+<li>
+<p>Press <code>Enter</code> and the contact is removed. (Figure 2.17.2)+
+<span class="image"><img src="../images/Redo_2.png" alt="600"></span><br></p>
+</li>
+<li>
+<p>Type in <code>undo</code> by mistake. (Figure 2.17.3)<br>
+<code>&gt;&gt; undo</code><br>
+<span class="image"><img src="../images/Redo_3.png" alt="600"></span><br>
+<em>Figure 2.17.3</em><br></p>
+</li>
+<li>
+<p>Enter the command <code>redo</code> to revert the <code>undo</code> command. (Figure 2.17.4)<br>
+<code>&gt;&gt; redo</code><br>
+<span class="image"><img src="../images/Redo_4.png" alt="600"></span><br>
+<em>Figure 2.17.4</em><br></p>
+</li>
+<li>
+<p>Press <code>Enter</code> and you shoud see that the <code>undo</code> command has been reverted and the contact remains deleted. Refer to <em>Fig</em> to see that you have obtained the correct results. (Figure 2.17.5)<br>
+<span class="image"><img src="../images/Redo_5.png" alt="600"></span><br>
+<em>Figure 2.17.5</em><br></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following are more examples to help you better understand the <code>redo</code> command.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>delete 1</code><br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br>
-<code>redo</code> (reapplies the <code>delete 1</code> command)<br></p>
+<p>Failure to <code>redo</code> as there are no <code>undo</code> commands executed previously:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select a contact to delete. (Figure 2.17.6)<br>
+<code>&gt;&gt; delete 1</code>
+<span class="image"><img src="../images/Redo_6.png" alt="600"></span><br>
+<em>Figure 2.17.6</em><br></p>
 </li>
 <li>
-<p><code>delete 1</code><br>
-<code>redo</code><br>
-The <code>redo</code> command fails as there are no <code>undo</code> commands executed previously.</p>
+<p>Type in the <code>redo</code> command. (Figure 2.17.7)+
+<code>&gt;&gt; redo</code>
+<span class="image"><img src="../images/Redo_7.png" alt="600"></span><br>
+<em>Figure 2.17.7</em><br></p>
 </li>
 <li>
-<p><code>delete 1</code><br>
-<code>clear</code><br>
-<code>undo</code> (reverses the <code>clear</code> command)<br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br>
-<code>r</code> (reapplies the <code>delete 1</code> command)<br>
-<code>redo</code> (reapplies the <code>clear</code> command)<br></p>
+<p>Press <code>Enter</code> and you should see an error message. (Figure 2.17.8)<br>
+<span class="image"><img src="../images/Redo_8.png" alt="600"></span><br>
+<em>Figure 2.17.8</em><br></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Attempting to <code>redo</code> multiple commands:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select a contact to delete. (Figure 2.17.9)<br>
+<code>&gt;&gt; delete 1</code>
+<span class="image"><img src="../images/Redo_9.png" alt="600"></span><br>
+<em>Figure 2.17.9</em><br></p>
+</li>
+<li>
+<p>Remove all the contacts by <code>clear</code> command. (Figure 2.17.10)<br>
+<code>&gt;&gt; clear</code>
+<span class="image"><img src="../images/Redo_10.png" alt="600"></span><br>
+<em>Figure 2.17.10</em><br></p>
+</li>
+<li>
+<p>Type in <code>undo</code> to revert the <code>clear</code> command. (Figure 2.17.11)<br>
+<code>&gt;&gt; undo</code><br>
+<span class="image"><img src="../images/Redo_11.png" alt="600"></span><br>
+<em>Figure 2.17.11</em><br></p>
+</li>
+<li>
+<p>Type in <code>undo</code> to revert the <code>delete 1</code> command. (Figure 2.17.12)<br>
+<code>&gt;&gt; undo</code><br>
+<span class="image"><img src="../images/Redo_12.png" alt="600"></span><br>
+<em>Figure 2.17.12</em><br></p>
+</li>
+<li>
+<p>Type in <code>redo</code> to reapply the <code>delete 1</code> command. (Figure 2.17.13)<br>
+<code>&gt;&gt; redo</code><br>
+<span class="image"><img src="../images/Redo_13.png" alt="600"></span><br>
+<em>Figure 2.17.13</em><br></p>
+</li>
+<li>
+<p>Type in <code>redo</code> to reapply the <code>clear</code> command. (Figure 2.17.14)<br>
+<code>&gt;&gt; redo</code><br>
+<span class="image"><img src="../images/Redo_14.png" alt="600"></span><br>
+<em>Figure 2.17.14</em><br></p>
+</li>
+</ol>
+</div>
 </li>
 </ul>
 </div>
@@ -132,6 +296,8 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </div>
 <div class="sect2">
 <h3 id="undo-redo-mechanism"><a class="link" href="#undo-redo-mechanism">Undo/Redo mechanism</a></h3>
+<div class="sect3">
+<h4 id="mechanism"><a class="link" href="#mechanism">Mechanism</a></h4>
 <div class="paragraph">
 <p>The undo/redo mechanism is facilitated by an <code>UndoRedoStack</code>, which resides inside <code>LogicManager</code>. It supports undoing and redoing of commands that modifies the state of the address book (e.g. <code>add</code>, <code>edit</code>). Such commands will inherit from <code>UndoableCommand</code>.</p>
 </div>
@@ -144,7 +310,7 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </div>
 </div>
 <div class="paragraph">
-<p>As you can see from the diagram, <code>UndoableCommand</code> adds an extra layer between the abstract <code>Command</code> class and concrete commands that can be undone, such as the <code>DeleteCommand</code>. Note that extra tasks need to be done when executing a command in an <em>undoable</em> way, such as saving the state of the address book before execution. <code>UndoableCommand</code> contains the high-level algorithm for those extra tasks while the child classes implements the details of how to execute the specific command. Note that this technique of putting the high-level algorithm in the parent class and lower-level steps of the algorithm in child classes is also known as the <a href="https://www.tutorialspoint.com/design_pattern/template_pattern.htm">template pattern</a>.</p>
+<p>As can be seen from the diagram, <code>UndoableCommand</code> adds an extra layer between the abstract <code>Command</code> class and concrete commands that can be undone, such as the <code>DeleteCommand</code>. Note that extra tasks need to be done when executing a command in an <em>undoable</em> way, such as saving the state of the address book before execution. <code>UndoableCommand</code> contains the high-level algorithm for those extra tasks while the child classes implements the details of how to execute the specific command. Note that this technique of putting the high-level algorithm in the parent class and lower-level steps of the algorithm in child classes is also known as the <a href="https://www.tutorialspoint.com/design_pattern/template_pattern.htm">template pattern</a>.</p>
 </div>
 <div class="paragraph">
 <p>Commands that are not undoable are implemented this way:</p>
@@ -282,6 +448,7 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 <img src="../images/UndoRedoActivityDiagram.png" alt="UndoRedoActivityDiagram" width="200">
 </div>
 </div>
+</div>
 <div class="sect3">
 <h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
 <div class="paragraph">
@@ -362,7 +529,7 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-22 13:47:00 +00:00
+Last updated 2017-10-22 14:13:36 +00:00
 </div>
 </div>
 </body>
