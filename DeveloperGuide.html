@@ -36,7 +36,7 @@ help both experienced contributors and first-time users contribute to <strong>Du
 <li><a href="#setting-up">1. Setting up</a>
 <ul class="sectlevel2">
 <li><a href="#prerequisites">1.1. Prerequisites</a></li>
-<li><a href="#setting-up-the-project-in-a-local-computer">1.2. Setting up the project in a local computer</a></li>
+<li><a href="#setting-up-the-project-in-your-computer">1.2. Setting up the project in your computer</a></li>
 <li><a href="#verifying-the-setup">1.3. Verifying the setup</a></li>
 <li><a href="#configurations-to-do-before-writing-code">1.4. Configurations to do before writing code</a></li>
 </ul>
@@ -114,7 +114,8 @@ help both experienced contributors and first-time users contribute to <strong>Du
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-This app is not compatible with earlier versions of Java 8.
+Having any Java 8 version is not enough.<br>
+This app will not work with earlier versions of Java 8.
 </td>
 </tr>
 </table>
@@ -129,8 +130,8 @@ This app is not compatible with earlier versions of Java 8.
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-IntelliJ has Gradle and JavaFx plugins installed by default.<br>
-Do not disable them. If they are disabled, go to <code>File</code> &gt; <code>Settings</code> &gt; <code>Plugins</code> to re-enable them.
+IntelliJ by default has Gradle and JavaFx plugins installed.<br>
+Do not disable them. If you have disabled them, go to <code>File</code> &gt; <code>Settings</code> &gt; <code>Plugins</code> to re-enable them.
 </td>
 </tr>
 </table>
@@ -140,42 +141,42 @@ Do not disable them. If they are disabled, go to <code>File</code> &gt; <code>Se
 </div>
 </div>
 <div class="sect2">
-<h3 id="setting-up-the-project-in-a-local-computer"><a class="link" href="#setting-up-the-project-in-a-local-computer">1.2. Setting up the project in a local computer</a></h3>
+<h3 id="setting-up-the-project-in-your-computer"><a class="link" href="#setting-up-the-project-in-your-computer">1.2. Setting up the project in your computer</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Fork this repo, and clone the fork to the local computer.</p>
+<p>Fork this repo, and clone the fork to your computer</p>
 </li>
 <li>
-<p>Open IntelliJ (if the welcome screen is not displayed, click <code>File</code> &gt; <code>Close Project</code> to close the existing project dialog first).</p>
+<p>Open IntelliJ (if you are not in the welcome screen, click <code>File</code> &gt; <code>Close Project</code> to close the existing project dialog first)</p>
 </li>
 <li>
-<p>Set up the correct JDK version for Gradle.</p>
+<p>Set up the correct JDK version for Gradle</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Click <code>Configure</code> &gt; <code>Project Defaults</code> &gt; <code>Project Structure</code>.</p>
+<p>Click <code>Configure</code> &gt; <code>Project Defaults</code> &gt; <code>Project Structure</code></p>
 </li>
 <li>
-<p>Click <code>New&#8230;&#8203;</code> and find the directory of the JDK.</p>
+<p>Click <code>New&#8230;&#8203;</code> and find the directory of the JDK</p>
 </li>
 </ol>
 </div>
 </li>
 <li>
-<p>Click <code>Import Project</code>.</p>
+<p>Click <code>Import Project</code></p>
 </li>
 <li>
-<p>Locate the <code>build.gradle</code> file, select it and click <code>OK</code>.</p>
+<p>Locate the <code>build.gradle</code> file and select it. Click <code>OK</code></p>
 </li>
 <li>
-<p>Click <code>Open as Project</code>.</p>
+<p>Click <code>Open as Project</code></p>
 </li>
 <li>
-<p>Click <code>OK</code> to accept the default settings.</p>
+<p>Click <code>OK</code> to accept the default settings</p>
 </li>
 <li>
-<p>Open a console and run the command <code>gradlew processResources</code> (Mac/Linux: <code>./gradlew processResources</code>). It should finish with the <code>BUILD SUCCESSFUL</code> message.
+<p>Open a console and run the command <code>gradlew processResources</code> (Mac/Linux: <code>./gradlew processResources</code>). It should finish with the <code>BUILD SUCCESSFUL</code> message.<br>
 This will generate all resources required by the application and tests.</p>
 </li>
 </ol>
@@ -186,10 +187,10 @@ This will generate all resources required by the application and tests.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Run the <code>seedu.address.MainApp</code> and try a few commands.</p>
+<p>Run the <code>seedu.address.MainApp</code> and try a few commands</p>
 </li>
 <li>
-<p><a href="#testing">Run the tests</a> to ensure that they all pass.</p>
+<p><a href="#testing">Run the tests</a> to ensure they all pass.</p>
 </li>
 </ol>
 </div>
@@ -199,25 +200,25 @@ This will generate all resources required by the application and tests.</p>
 <div class="sect3">
 <h4 id="configuring-the-coding-style"><a class="link" href="#configuring-the-coding-style">1.4.1. Configuring the coding style</a></h4>
 <div class="paragraph">
-<p>This project follows <a href="https://github.com/oss-generic/process/blob/master/docs/CodingStandards.md">oss-generic coding standards</a>. IntelliJ&#8217;s default style is mostly compliant with this standard, except for its different import order. To rectify,</p>
+<p>This project follows <a href="https://github.com/oss-generic/process/blob/master/docs/CodingStandards.md">oss-generic coding standards</a>. IntelliJ&#8217;s default style is mostly compliant with ours but it uses a different import order from ours. To rectify,</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Go to <code>File</code> &gt; <code>Settings&#8230;&#8203;</code> (Windows/Linux), or <code>IntelliJ IDEA</code> &gt; <code>Preferences&#8230;&#8203;</code> (macOS).</p>
+<p>Go to <code>File</code> &gt; <code>Settings&#8230;&#8203;</code> (Windows/Linux), or <code>IntelliJ IDEA</code> &gt; <code>Preferences&#8230;&#8203;</code> (macOS)</p>
 </li>
 <li>
-<p>Select <code>Editor</code> &gt; <code>Code Style</code> &gt; <code>Java</code>.</p>
+<p>Select <code>Editor</code> &gt; <code>Code Style</code> &gt; <code>Java</code></p>
 </li>
 <li>
-<p>Click on the <code>Imports</code> tab to set the order.</p>
+<p>Click on the <code>Imports</code> tab to set the order</p>
 <div class="ulist">
 <ul>
 <li>
-<p>For <code>Class count to use import with '*'</code> and <code>Names count to use static import with '*'</code>: Set to <code>999</code> to prevent IntelliJ from contracting the import statements.</p>
+<p>For <code>Class count to use import with '*'</code> and <code>Names count to use static import with '*'</code>: Set to <code>999</code> to prevent IntelliJ from contracting the import statements</p>
 </li>
 <li>
-<p>For <code>Import Layout</code>: The order is <code>import static all other imports</code>, <code>import java.*</code>, <code>import javax.*</code>, <code>import org.*</code>, <code>import com.*</code>, <code>import all other imports</code>. Add a <code>&lt;blank line&gt;</code> between each <code>import</code>.</p>
+<p>For <code>Import Layout</code>: The order is <code>import static all other imports</code>, <code>import java.*</code>, <code>import javax.*</code>, <code>import org.*</code>, <code>import com.*</code>, <code>import all other imports</code>. Add a <code>&lt;blank line&gt;</code> between each <code>import</code></p>
 </li>
 </ul>
 </div>
@@ -225,22 +226,22 @@ This will generate all resources required by the application and tests.</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>Optionally, follow the <a href="UsingCheckstyle.html">UsingCheckstyle.adoc</a> document to configure Intellij to check style-compliance while writing code.</p>
+<p>Optionally, you can follow the <a href="UsingCheckstyle.html">UsingCheckstyle.adoc</a> document to configure Intellij to check style-compliance as you write code.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="updating-documentation-to-match-the-fork"><a class="link" href="#updating-documentation-to-match-the-fork">1.4.2. Updating documentation to match the fork</a></h4>
+<h4 id="updating-documentation-to-match-your-fork"><a class="link" href="#updating-documentation-to-match-your-fork">1.4.2. Updating documentation to match your fork</a></h4>
 <div class="paragraph">
-<p>After forking the repo, links in the documentation will still point to the <code>se-edu/addressbook-level4</code> repo. If there are plans to develop this as a separate product (i.e. instead of contributing to the <code>se-edu/addressbook-level4</code>) , the URL in the variable <code>repoURL</code> in <code>DeveloperGuide.adoc</code> and <code>UserGuide.adoc</code> should be replaced with the URL of the fork.</p>
+<p>After forking the repo, links in the documentation will still point to the <code>se-edu/addressbook-level4</code> repo. If you plan to develop this as a separate product (i.e. instead of contributing to the <code>se-edu/addressbook-level4</code>) , you should replace the URL in the variable <code>repoURL</code> in <code>DeveloperGuide.adoc</code> and <code>UserGuide.adoc</code> with the URL of your fork.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="setting-up-continuous-integration-ci"><a class="link" href="#setting-up-continuous-integration-ci">1.4.3. Setting up Continuous Integration (CI)</a></h4>
+<h4 id="setting-up-ci"><a class="link" href="#setting-up-ci">1.4.3. Setting up CI</a></h4>
 <div class="paragraph">
-<p>Set up Travis to perform CI for the fork. See <a href="UsingTravis.html">UsingTravis.adoc</a> for information on how to set it up.</p>
+<p>Set up Travis to perform Continuous Integration (CI) for your fork. See <a href="UsingTravis.html">UsingTravis.adoc</a> to learn how to set it up.</p>
 </div>
 <div class="paragraph">
-<p>Optionally, set up AppVeyor as a second CI (see <a href="UsingAppVeyor.html">UsingAppVeyor.adoc</a>).</p>
+<p>Optionally, you can set up AppVeyor as a second CI (see <a href="UsingAppVeyor.html">UsingAppVeyor.adoc</a>).</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -249,7 +250,7 @@ This will generate all resources required by the application and tests.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Having both Travis and AppVeyor ensures that the App works on both Unix-based platforms and Windows-based platforms (Travis is Unix-based and AppVeyor is Windows-based)
+Having both Travis and AppVeyor ensures your App works on both Unix-based platforms and Windows-based platforms (Travis is Unix-based and AppVeyor is Windows-based)
 </td>
 </tr>
 </table>
@@ -258,7 +259,17 @@ Having both Travis and AppVeyor ensures that the App works on both Unix-based pl
 <div class="sect3">
 <h4 id="getting-started-with-coding"><a class="link" href="#getting-started-with-coding">1.4.4. Getting started with coding</a></h4>
 <div class="paragraph">
-<p>Before starting to code, it is advisable to get a sense of the overall design by reading the <a href="#architecture">Architecture</a> section.</p>
+<p>When you are ready to start coding,</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Get some sense of the overall design by reading the <a href="#architecture">Architecture</a> section.</p>
+</li>
+<li>
+<p>Take a look at the section <a href="#suggested-programming-tasks-to-get-started">Suggested Programming Tasks to Get Started</a>.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -426,10 +437,10 @@ The event is propagated through the <code>EventsCenter</code> to the <code>Stora
 <p><strong>API</strong> : <a href="https://github.com/CS2103AUG2017-W13-B3/main/tree/master/src/main/java/seedu/address/ui/Ui.java"><code>Ui.java</code></a></p>
 </div>
 <div class="paragraph">
-<p>As seen in <em>Figure 2.2.1</em>, the UI consists of a <code>MainWindow</code> that is made up of different parts such as <code>CommandBox</code>, <code>ResultDisplay</code>, <code>PersonListPanel</code>, <code>StatusBarFooter</code>, <code>BrowserPanel</code>. All these, including the <code>MainWindow</code>, inherit from the abstract <code>UiPart</code> class.</p>
+<p>The UI consists of a <code>MainWindow</code> that is made up of parts e.g.<code>CommandBox</code>, <code>ResultDisplay</code>, <code>PersonListPanel</code>, <code>StatusBarFooter</code>, <code>BrowserPanel</code> etc. All these, including the <code>MainWindow</code>, inherit from the abstract <code>UiPart</code> class.</p>
 </div>
 <div class="paragraph">
-<p>The <code>UI</code> component uses JavaFx UI framework. The layout of these UI parts are defined in their corresponding <code>.fxml</code> files that are in the <code>src/main/resources/view</code> folder. For example, the layout of the <a href="https://github.com/CS2103AUG2017-W13-B3/main/tree/master/src/main/java/seedu/address/ui/MainWindow.java"><code>MainWindow</code></a> is specified in <a href="https://github.com/CS2103AUG2017-W13-B3/main/tree/master/src/main/resources/view/MainWindow.fxml"><code>MainWindow.fxml</code></a>.</p>
+<p>The <code>UI</code> component uses JavaFx UI framework. The layout of these UI parts are defined in matching <code>.fxml</code> files that are in the <code>src/main/resources/view</code> folder. For example, the layout of the <a href="https://github.com/CS2103AUG2017-W13-B3/main/tree/master/src/main/java/seedu/address/ui/MainWindow.java"><code>MainWindow</code></a> is specified in <a href="https://github.com/CS2103AUG2017-W13-B3/main/tree/master/src/main/resources/view/MainWindow.fxml"><code>MainWindow.fxml</code></a></p>
 </div>
 <div class="paragraph">
 <p>The <code>UI</code> component,</p>
@@ -440,7 +451,7 @@ The event is propagated through the <code>EventsCenter</code> to the <code>Stora
 <p>Executes user commands using the <code>Logic</code> component.</p>
 </li>
 <li>
-<p>Binds itself to some data in the <code>Model</code> so that the UI can be updated automatically when data in the <code>Model</code> change.</p>
+<p>Binds itself to some data in the <code>Model</code> so that the UI can auto-update when data in the <code>Model</code> change.</p>
 </li>
 <li>
 <p>Responds to events raised from various parts of the App and updates the UI accordingly.</p>
@@ -470,9 +481,6 @@ The event is propagated through the <code>EventsCenter</code> to the <code>Stora
 <p><strong>API</strong> :
 <a href="https://github.com/CS2103AUG2017-W13-B3/main/tree/master/src/main/java/seedu/address/logic/Logic.java"><code>Logic.java</code></a></p>
 </div>
-<div class="paragraph">
-<p>As seen in <em>Figure 2.3.1</em>,</p>
-</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -490,7 +498,7 @@ The event is propagated through the <code>EventsCenter</code> to the <code>Stora
 </ol>
 </div>
 <div class="paragraph">
-<p><em>Figure 2.3.3</em> below shows the Sequence Diagram for interactions within the <code>Logic</code> component for the <code>execute("delete 1")</code> API call.</p>
+<p>Given below is the Sequence Diagram for interactions within the <code>Logic</code> component for the <code>execute("delete 1")</code> API call.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -498,7 +506,7 @@ The event is propagated through the <code>EventsCenter</code> to the <code>Stora
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 2.3.3 : Interactions Inside the Logic Component for the <code>delete 1</code> Command</em></p>
+<p><em>Figure 2.3.1 : Interactions Inside the Logic Component for the <code>delete 1</code> Command</em></p>
 </div>
 </div>
 <div class="sect2">
@@ -515,7 +523,7 @@ The event is propagated through the <code>EventsCenter</code> to the <code>Stora
 <p><strong>API</strong> : <a href="https://github.com/CS2103AUG2017-W13-B3/main/tree/master/src/main/java/seedu/address/model/Model.java"><code>Model.java</code></a></p>
 </div>
 <div class="paragraph">
-<p>As seen in <em>Figure2.4.1</em>, the <code>Model</code> component,</p>
+<p>The <code>Model</code>,</p>
 </div>
 <div class="ulist">
 <ul>
@@ -526,7 +534,7 @@ The event is propagated through the <code>EventsCenter</code> to the <code>Stora
 <p>stores the Address Book data.</p>
 </li>
 <li>
-<p>exposes an unmodifiable <code>ObservableList&lt;ReadOnlyPerson&gt;</code> that can be 'observed' e.g. the UI can be bounded to this list so that the UI automatically updates when the data in the list change.</p>
+<p>exposes an unmodifiable <code>ObservableList&lt;ReadOnlyPerson&gt;</code> that can be 'observed' e.g. the UI can be bound to this list so that the UI automatically updates when the data in the list change.</p>
 </li>
 <li>
 <p>does not depend on any of the other three components.</p>
@@ -548,7 +556,7 @@ The event is propagated through the <code>EventsCenter</code> to the <code>Stora
 <p><strong>API</strong> : <a href="https://github.com/CS2103AUG2017-W13-B3/main/tree/master/src/main/java/seedu/address/storage/Storage.java"><code>Storage.java</code></a></p>
 </div>
 <div class="paragraph">
-<p>As seen in <em>Figure 2.5.1</em>, the <code>Storage</code> component,</p>
+<p>The <code>Storage</code> component,</p>
 </div>
 <div class="ulist">
 <ul>
@@ -577,8 +585,6 @@ The event is propagated through the <code>EventsCenter</code> to the <code>Stora
 </div>
 <div class="sect2">
 <h3 id="undo-redo-mechanism"><a class="link" href="#undo-redo-mechanism">3.1. Undo/Redo mechanism</a></h3>
-<div class="sect3">
-<h4 id="mechanism"><a class="link" href="#mechanism">3.1.1. Mechanism</a></h4>
 <div class="paragraph">
 <p>The undo/redo mechanism is facilitated by an <code>UndoRedoStack</code>, which resides inside <code>LogicManager</code>. It supports undoing and redoing of commands that modifies the state of the address book (e.g. <code>add</code>, <code>edit</code>). Such commands will inherit from <code>UndoableCommand</code>.</p>
 </div>
@@ -591,7 +597,7 @@ The event is propagated through the <code>EventsCenter</code> to the <code>Stora
 </div>
 </div>
 <div class="paragraph">
-<p>As can be seen from the diagram, <code>UndoableCommand</code> adds an extra layer between the abstract <code>Command</code> class and concrete commands that can be undone, such as the <code>DeleteCommand</code>. Note that extra tasks need to be done when executing a command in an <em>undoable</em> way, such as saving the state of the address book before execution. <code>UndoableCommand</code> contains the high-level algorithm for those extra tasks while the child classes implements the details of how to execute the specific command. Note that this technique of putting the high-level algorithm in the parent class and lower-level steps of the algorithm in child classes is also known as the <a href="https://www.tutorialspoint.com/design_pattern/template_pattern.htm">template pattern</a>.</p>
+<p>As you can see from the diagram, <code>UndoableCommand</code> adds an extra layer between the abstract <code>Command</code> class and concrete commands that can be undone, such as the <code>DeleteCommand</code>. Note that extra tasks need to be done when executing a command in an <em>undoable</em> way, such as saving the state of the address book before execution. <code>UndoableCommand</code> contains the high-level algorithm for those extra tasks while the child classes implements the details of how to execute the specific command. Note that this technique of putting the high-level algorithm in the parent class and lower-level steps of the algorithm in child classes is also known as the <a href="https://www.tutorialspoint.com/design_pattern/template_pattern.htm">template pattern</a>.</p>
 </div>
 <div class="paragraph">
 <p>Commands that are not undoable are implemented this way:</p>
@@ -729,9 +735,8 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 <img src="images/UndoRedoActivityDiagram.png" alt="UndoRedoActivityDiagram" width="200">
 </div>
 </div>
-</div>
 <div class="sect3">
-<h4 id="design-considerations"><a class="link" href="#design-considerations">3.1.2. Design Considerations</a></h4>
+<h4 id="design-considerations"><a class="link" href="#design-considerations">3.1.1. Design Considerations</a></h4>
 <div class="paragraph">
 <p><strong>Aspect:</strong> Implementation of <code>UndoableCommand</code><br>
 <strong>Alternative 1 (current choice):</strong> Add a new abstract method <code>executeUndoableCommand()</code><br>
@@ -776,10 +781,8 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 </div>
 <div class="sect2">
 <h3 id="backup-restoring-backup"><a class="link" href="#backup-restoring-backup">3.2. Backup / Restoring Backup</a></h3>
-<div class="sect3">
-<h4 id="mechanism-2"><a class="link" href="#mechanism-2">3.2.1. Mechanism</a></h4>
 <div class="paragraph">
-<p>The backing up of DummyName is done by <code>BackupCommand</code> and the restoring of data from a backup file is done by <code>RestoreBackupCommand</code>. These commands do not support the undoing and redoing of user actions and thus, inherits from <code>Command</code>.
+<p>The backing up of address book is done by <code>BackupCommand</code> and the restoring of data from a backup file is done by <code>RestoreBackupCommand</code>. These commands do not support the undoing and redoing of user actions and thus, inherits from <code>Command</code>.
 These commands require access to <code>Storage</code> from <code>Logic</code> and the way to accomplish this is to post an event to <code>EventCenter</code>. <code>Subscribers</code> in <code>StorageManager</code> will handle these events and respond correspondingly.
 The following shows a sequence diagram of how the <code>BackupCommand</code> is carried out.</p>
 </div>
@@ -801,7 +804,7 @@ The following shows a sequence diagram of how the <code>BackupCommand</code> is 
 </table>
 </div>
 <div class="paragraph">
-<p>The <code>BackupCommand</code> is executed when the commands <code>backup</code> or <code>b</code> are entered. The data that is in <code>model</code> or the active address book is first passed as a parameter to <code>BackupDataEvent</code>. The event will be handled by <code>StorageManager</code> and is saved into the default file path "data/addressbook-backup.xml".
+<p>The <code>BackupCommand</code> is executed when user input "backup" or "b". The data that is in <code>model</code> or the active address book is first passed as a parameter to <code>BackupDataEvent</code>. The event will be handled by <code>StorageManager</code> and is saved into the default file path "data/addressbook-backup.xml".
 The following is the implementation of <code>BackupCommand</code>:</p>
 </div>
 <div class="listingblock">
@@ -822,8 +825,7 @@ The following is the implementation of <code>BackupCommand</code>:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>RestoreBackupCommand</code> is executed when the commands <code>restore</code> or <code>rb</code> are entered. <code>RestoreBackupDataEvent</code> is posted and <code>StorageManager</code> handles it.
-The data from default file path "data/addressbook-backup.xml" will be retrieved and it will replace the active address book.
+<p>The <code>RestoreBackupCommand</code> is executed when user input "restore" or "rb". <code>RestoreBackupDataEvent</code> is posted and <code>StorageManager</code> handles it. The data from default file path "data/addressbook-backup.xml" will be retrieved and it will replace the active address book.
 The following is the implementation of <code>RestoreBackupCommand</code>:</p>
 </div>
 <div class="listingblock">
@@ -870,9 +872,8 @@ A backup of address book is always created when the Address Book starts. This me
 </tr>
 </table>
 </div>
-</div>
 <div class="sect3">
-<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.2.2. Design Considerations</a></h4>
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.2.1. Design Considerations</a></h4>
 <div class="paragraph">
 <p><strong>Aspect:</strong> Accessing <code>Storage</code> from <code>Logic</code><br>
 <strong>Alternative 1 (current choice):</strong> Make use of <code>EventBus</code> to post events and have <code>StorageManager</code> handle the backing up or retrieval of data<br>
@@ -886,8 +887,6 @@ A backup of address book is always created when the Address Book starts. This me
 </div>
 <div class="sect2">
 <h3 id="adding-removing-a-tag"><a class="link" href="#adding-removing-a-tag">3.3. Adding/Removing a tag</a></h3>
-<div class="sect3">
-<h4 id="mechanism-3"><a class="link" href="#mechanism-3">3.3.1. Mechanism</a></h4>
 <div class="paragraph">
 <p>Adding or removing a tag is facilitated by <code>AddTagCommand</code> and <code>DeleteTagCommand</code>, which are subclasses of <code>UndoableCommand</code>. These commands work by changing the value of the <code>Tag</code> objects associated with the contact.</p>
 </div>
@@ -931,9 +930,8 @@ A backup of address book is always created when the Address Book starts. This me
 }</code></pre>
 </div>
 </div>
-</div>
 <div class="sect3">
-<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.3.2. Design Considerations</a></h4>
+<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.3.1. Design Considerations</a></h4>
 <div class="paragraph">
 <p><strong>Aspect:</strong> Changing the <code>Tag</code> objects of the selected <code>Person</code><br>
 <strong>Alternative 1 (current choice):</strong> Copy set of <code>Tag</code> objects to a newly created set. Modify the newly created set. Then create a copy of the selected <code>Person</code> instance and replace its set of <code>Tag</code> objects.<br>
@@ -948,13 +946,13 @@ A backup of address book is always created when the Address Book starts. This me
 <div class="sect2">
 <h3 id="filter-mechanism"><a class="link" href="#filter-mechanism">3.4. Filter mechanism</a></h3>
 <div class="sect3">
-<h4 id="mechanism-4"><a class="link" href="#mechanism-4">3.4.1. Mechanism</a></h4>
+<h4 id="fundamental-mechanism"><a class="link" href="#fundamental-mechanism">3.4.1. Fundamental mechanism</a></h4>
 <div class="paragraph">
 <p>The list of persons displayed is filtered by a [<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Predicate</a>]
 when the method <code>updateFilteredPersonList(predicate)</code> from the <code>Model</code> interface is invoked.</p>
 </div>
 <div class="paragraph">
-<p>The relevant methods in the Model interface are as follows:</p>
+<p>The relevant methods in the Model interface:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -973,16 +971,16 @@ when the method <code>updateFilteredPersonList(predicate)</code> from the <code>
 </div>
 <div class="paragraph">
 <p>When <code>updateFilteredPersonList(predicate)</code> is invoked, every <code>person</code> in the <strong>AddressBook</strong> is evaluated against the <code>predicate</code>.<br>
-A <code>person</code> is added to the displayed list if <code>predicate.test(person)</code> is evaluated to be TRUE.<br>
-All <code>person</code> instances that fulfill the conditions specified in <code>predicate</code> are filtered to be displayed.</p>
+A <code>person</code> will be added the the list for display if <code>predicate.test(person)</code> is evaluated to be TRUE.<br>
+All <code>person</code> that fulfill the conditions specified in <code>predicate</code> are filtered to be displayed.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="filtering-on-the-existing-list"><a class="link" href="#filtering-on-the-existing-list">3.4.2. Filtering on the existing list</a></h4>
 <div class="paragraph">
-<p>Note that all <code>person</code> instances in the existing list satisfy a Predicate <code>currentPredicate</code>.<br>
-Given a new Predicate <code>newPredicate</code>, filtering on the existing list is equivalent to selecting <code>person</code> instancesthat satisfy both <code>currentPredicate</code> and <code>newPredicate</code>.<br>
-From Figure 3.2.1, it can also be viewed as the intersection of two lists of <code>person</code> objects, each satisfying one of the two predicates respectively.</p>
+<p>Note that all <code>person</code> in the existing list satisfy a Predicate <code>currentPredicate</code>.<br>
+Given a new Predicate <code>newPredicate</code>, filtering on the existing list is equivalent to selecting <code>person</code> that satisfy both <code>currentPredicate</code> and <code>newPredicate</code>.<br>
+From Figure 3.2.1, it can also be viewed as the interception of two lists of <code>person</code>, each satisfying one of the two predicates respectively.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1000,7 +998,7 @@ From Figure 3.2.1, it can also be viewed as the intersection of two lists of <co
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Invoke <code>getPersonListPredicate()</code> provided in the Model interface to get the <code>currentPredicate</code>.</p>
+<p>invokes <code>getPersonListPredicate()</code> provided in the Model interface to get the <code>currentPredicate</code>.</p>
 </li>
 <li>
 <p>Use [<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html#and-java.util.function.Predicate-">Predicate.and()</a>] to generated the logical AND of the two predicates.</p>
@@ -1032,9 +1030,9 @@ From Figure 3.2.1, it can also be viewed as the intersection of two lists of <co
 <div class="sect2">
 <h3 id="synchronisation-with-google-contacts"><a class="link" href="#synchronisation-with-google-contacts">3.5. Synchronisation with Google Contacts</a></h3>
 <div class="sect3">
-<h4 id="mechanism-5"><a class="link" href="#mechanism-5">3.5.1. Mechanism</a></h4>
+<h4 id="basic-flow-summary"><a class="link" href="#basic-flow-summary">3.5.1. Basic flow summary</a></h4>
 <div class="paragraph">
-<p>Authentication and synchronisation of data with a user&#8217;s Google Contacts is done via the <code>sync</code> command, which is a subclass of <code>Command</code>. This command works in conjunction with the Google Client and People API.</p>
+<p>Authentication and synchronisation of data with a user&#8217;s Google Contacts is done via the <code>sync</code> command, which is a subclass of <code>UndoableCommand</code>. This command works in conjunction with the Google Client and People API.</p>
 </div>
 <div class="paragraph">
 <p>Firstly, the command posts an <code>AuthorizationEvent</code> event to the EventCenter, which is then handled by a <code>OAuth</code> class, which is chiefly responsible for authorization and interaction with a user&#8217;s Google Contacts. Hence, threading allows for the application to run in the background, while the user can perform other tasks. The user is redirected to login to Google via his default browser through the invoked <code>authorize</code> method. A callback is then done to create a <code>Credential</code> which is then used to instantiate a <code>PeopleService</code> instance. The <code>PeopleService</code> is then used to perform CRUD functions on the user&#8217;s Google Contacts. The following diagram shows the entire sequence.</p>
@@ -1054,7 +1052,7 @@ From Figure 3.2.1, it can also be viewed as the intersection of two lists of <co
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">SyncCommand</span> <span class="directive">extends</span> Command {
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">SyncCommand</span> <span class="directive">extends</span> UndoableCommand {
     <span class="comment">//...variables, constructor, other methods</span>
 
     <span class="annotation">@Override</span>
@@ -1205,10 +1203,8 @@ From Figure 3.2.1, it can also be viewed as the intersection of two lists of <co
 <p><strong>Aspect:</strong> Accessing <code>OAuth</code> from <code>Logic</code><br>
 <strong>Alternative 1 (current choice):</strong> An <code>Event</code> and a <code>Subscriber</code> is used to communicate between the two different components<br>
 <strong>Pros:</strong> Maintain low coupling and prevent unnecessary addition of dependencies<br>
-<strong>Cons:</strong> Handlers have to be created to handle <code>Events</code> when they occur<br></p>
-</div>
-<div class="paragraph">
-<p><strong>Alternative 2:</strong> Create an <code>OAuth</code> object in <code>Logic</code><br>
+<strong>Cons:</strong> Handlers have to be created to handle <code>Events</code> when they occur<br>
+<strong>Alternative 2:</strong> Create an <code>OAuth</code> object in <code>Logic</code><br>
 <strong>Pros:</strong> No handlers are required to process <code>Events</code><br>
 <strong>Cons:</strong> Introduce unnecessary dependencies</p>
 </div>
@@ -3027,7 +3023,7 @@ Use case ends.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-22 13:49:49 +00:00
+Last updated 2017-10-22 13:45:46 +00:00
 </div>
 </div>
 </body>

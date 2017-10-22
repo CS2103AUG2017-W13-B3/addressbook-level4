@@ -46,16 +46,15 @@
 <li><a href="#undoing-previous-command-code-undo-code">3.16. Undoing previous command : <code>undo</code></a></li>
 <li><a href="#redoing-the-previously-undone-command-code-redo-code">3.17. Redoing the previously undone command : <code>redo</code></a></li>
 <li><a href="#clearing-all-entries-code-clear-code">3.18. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#resize-the-main-window-code-resize-code">3.19. Resize the main window : <code>resize</code></a></li>
-<li><a href="#resizing-the-main-window-code-resize-code">3.20. Resizing the main window : <code>resize</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.21. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">3.22. Saving the data</a></li>
+<li><a href="#resizing-the-main-window-code-resize-code">3.19. Resizing the main window : <code>resize</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">3.20. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">3.21. Saving the data</a></li>
 </ul>
 </li>
 <li><a href="#since-v1-2">4. Since v1.2</a></li>
 <li><a href="#coming-in-v2-0">5. Coming in v2.0</a></li>
 <li><a href="#faq">6. FAQ</a></li>
-<li><a href="#command-summary-cheatsheet">7. Command Summary/ Cheatsheet</a></li>
+<li><a href="#command-summary">7. Command Summary</a></li>
 </ul>
 </div>
 </div>
@@ -268,55 +267,10 @@ Parameters can be in any order e.g. <code>n/NAME p/PHONE_NUMBER</code>, <code>p/
 </div>
 <div class="sect2">
 <h3 id="listing-all-persons-code-list-code"><a class="link" href="#listing-all-persons-code-list-code">3.3. Listing all persons : <code>list</code></a></h3>
-<div class="exampleblock">
-<div class="content">
 <div class="paragraph">
-<p>Command Name: <code>list</code><br>
-Shorthand Alias: <code>l</code><br>
-Function: List all contacts in DummyName
+<p>Shorthand Alias: <code>l</code><br>
+Shows a list of all persons in the address book.<br>
 Format: <code>list</code></p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-You can use <code>list</code> to view your contacts after running <code>filter</code> or <code>find</code>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>You can view all your contacts by following the steps below:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Type in (Figure 2.3.1)<br>
-<code>&gt;&gt; list</code><br>
-<span class="image"><img src="images/list1.png" alt="list1" width="600"></span><br>
-<em>Figure 2.3.1(<code>filter</code> was run)</em></p>
-</li>
-<li>
-<p>Press Enter. You should now see a list of all your contacts (Figure 2.3.2)<br>
-<span class="image"><img src="images/list2.png" alt="list2" width="600"></span><br>
-<em>Figure 2.3.2</em></p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Here is another way to list your contacts:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>l</code></p>
-</li>
-</ul>
 </div>
 </div>
 <div class="sect2">
@@ -815,67 +769,27 @@ Lists any person tagged with <code>family</code> or <code>friends</code></p>
 </div>
 <div class="sect2">
 <h3 id="selecting-a-person-code-select-code"><a class="link" href="#selecting-a-person-code-select-code">3.10. Selecting a person : <code>select</code></a></h3>
-<div class="exampleblock">
-<div class="content">
 <div class="paragraph">
-<p>Command Name: <code>select</code><br>
-Shorthand Alias: <code>sl</code><br>
-Function: <code>Select a contact with the specified `INDEX`</code><br>
+<p>Shorthand Alias: <code>sl</code><br>
+Selects the person identified by the index number used in the last person listing.<br>
 Format: <code>select INDEX</code></p>
 </div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-The index refers to the index number shown in the most recent listing.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>You can select a contact from the displayed list by:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Typing (Figure 2.10.1)<br>
-<code>&gt;&gt;select 1</code><br>
-<span class="image"><img src="images/select1.png" alt="select1" width="600"></span><br>
-<em>Figure 2.10.1</em></p>
-</li>
-<li>
-<p>Press Enter and your choice should now be selected (Figure 2.10.2)<br>
-<span class="image"><img src="images/select2.png" alt="select2" width="600"></span><br>
-<em>Figure 2.10.2</em></p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Here is another way to select a contact:</p>
-</div>
+<div class="sidebarblock">
+<div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>s 1</p>
+<p>Selects the person and loads the Google search page the person at the specified <code>INDEX</code>.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the most recent listing.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code></p>
 </li>
 </ul>
+</div>
+</div>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -902,76 +816,43 @@ Selects the 7th person in the address book.</p>
 </div>
 <div class="sect2">
 <h3 id="making-a-note-code-note-code"><a class="link" href="#making-a-note-code-note-code">3.11. Making a note: <code>note</code></a></h3>
-<div class="exampleblock">
+<div class="paragraph">
+<p>Shorthand Alias: 'n'<br>
+Makes a note for an existing person in the address book.<br>
+Format: <code>note INDEX [n/Note]</code></p>
+</div>
+<div class="sidebarblock">
 <div class="content">
-<div class="paragraph">
-<p>Command Name: <code>note</code><br>
-Shorthand Alias: 'n'<br>
-Function: Inserts the NOTE for an entry specified by INDEX in the DummyName<br>
-Format: <code>note INDEX [n/NOTE]</code></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Each contact can only have a maximum of 1 note
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Notes can be blank to delete existing notes, i.e. <code>note n/</code>
-</td>
-</tr>
-</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Adds the specified note for the person at the specified <code>INDEX</code>. The index refers to the index number shown in the last person listing. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>Notes can be any string, or even left blank to remove existing notes. Existing notes will be replaced by the input note</p>
+</li>
+<li>
+<p>You can remove a note from a person by typing <code>n/</code> without any text after it.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>If you want to add a note for a DummyName contact:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Locate the index of the contact<br></p>
-</li>
-<li>
-<p>Type in your desired INDEX and NOTE (Figure 2.11.1)<br>
-<code>&gt;&gt; note 1 n/This is an important note</code><br>
-<span class="image"><img src="images/note1.png" alt="note1" width="600"></span><br>
-<em>Figure 2.11.1</em></p>
-</li>
-<li>
-<p>Press Enter. Your note should now be displayed as the last row in your contact&#8217;s details (Figure 2.11.2)<br>
-<span class="image"><img src="images/note2.png" alt="note2" width="600"></span><br>
-<em>Figure 2.11.2</em></p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Here are some other ways to change your DummyName contact&#8217;s note:</p>
+<p>Examples:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>note 2 n/</code><br>
-Removes all existing notes from the 2nd person<br></p>
+<p><code>note 1 n/This is an important note</code>
+Adds or replace the existing note for the 1st person to be <code>This is an important note</code></p>
 </li>
 <li>
-<p><code>n 3 n/This is a note</code><br>
-Changes the 3rd contact&#8217;s note to "This is a note"<br></p>
+<p><code>edit 2 n/</code>
+Removes all existing notes from the 2nd person</p>
 </li>
 <li>
-<p><code>n 3 n/</code><br>
+<p><code>e 3 n/</code>
 Removes all existing notes from the 3rd person</p>
 </li>
 </ul>
@@ -995,60 +876,10 @@ Format: <code>restore</code></p>
 </div>
 <div class="sect2">
 <h3 id="synchronising-with-google-contacts-code-sync-code"><a class="link" href="#synchronising-with-google-contacts-code-sync-code">3.14. Synchronising with Google Contacts : <code>sync</code></a></h3>
-<div class="exampleblock">
-<div class="content">
 <div class="paragraph">
-<p>Command Name: <code>sync</code>
-Shorthand Alias: <code>sy</code><br>
-Function: Synchronise your contacts with Google Contacts after authentication<br>
+<p>Shorthand Alias: <code>sy</code><br>
+Authenticates and communicates with Google Contacts via the People API to synchronise contacts<br>
 Format: <code>sync</code></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-A browser is necessary for logging in to Google
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>You can easily synchronise your DummyName contacts with Google Contacts through the following steps:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Type (Figure 2.14.1)<br>
-<code>&gt;&gt; sync</code><br>
-<span class="image"><img src="images/sync1.png" alt="sync1" width="600"></span><br>
-<em>Figure 2.14.1</em><br></p>
-</li>
-<li>
-<p>Press Enter. Your default browser should open a login window (Figure 2.14.2)<br>
-<span class="image"><img src="images/sync2.png" alt="sync2" width="600"></span><br>
-<em>Figure 2.14.2</em></p>
-</li>
-<li>
-<p>Enter your login details and press Next (Figure 2.14.3)<br>
-<span class="image"><img src="images/sync3.png" alt="sync3" width="600"></span><br>
-<em>Figure 2.14.3</em></p>
-</li>
-<li>
-<p>Allow DummyName to access your Google Contacts information (Figure 2.14.4)<br>
-<span class="image"><img src="images/sync4.png" alt="sync4" width="600"></span><br>
-<em>Figure 2.14.4</em></p>
-</li>
-<li>
-<p>Your contacts are now synchronised. Figure (2.14.5)
-<span class="image"><img src="images/sync5.png" alt="sync5" width="600"></span><br>
-<em>Figure 2.14.5</em></p>
-</li>
-</ol>
 </div>
 </div>
 <div class="sect2">
@@ -1173,84 +1004,14 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </div>
 <div class="sect2">
 <h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.18. Clearing all entries : <code>clear</code></a></h3>
-<div class="exampleblock">
-<div class="content">
 <div class="paragraph">
-<p>Command Name: <code>clear</code><br>
-Shorthand Alias: <code>c</code><br>
-Function: Clears all existing contacts in the DummyName<br>
+<p>Shorthand Alias: <code>c</code><br>
+Clears all entries from the address book.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
-</div>
-<div class="paragraph">
-<p>You can also clear all DummyName contacts. To do so,</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Type (Figure 2.18.1)<br>
-<code>&gt;&gt; clear</code><br>
-<span class="image"><img src="images/clear1.png" alt="clear1" width="600"></span><br>
-<em>Figure 2.18.1</em></p>
-</li>
-<li>
-<p>Press Enter. Your contacts should now be cleared (Figure 2.18.2)<br>
-<span class="image"><img src="images/clear2.png" alt="clear2" width="600"></span><br>
-<em>Figure 2.18.2</em></p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Another example of clearing your contacts:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>c</p>
-</li>
-</ul>
-</div>
-</div>
 <div class="sect2">
-<h3 id="resize-the-main-window-code-resize-code"><a class="link" href="#resize-the-main-window-code-resize-code">3.19. Resize the main window : <code>resize</code></a></h3>
-<div class="paragraph">
-<p>Shorthand Alias: <code>rs</code><br>
-Resize the main window to the specified width and height in pixels<br>
-Format: <code>resize WIDTH HEIGHT</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Resize the MainWindows to the specified WIDTH and HEIGHT.</p>
-</li>
-<li>
-<p>Restriction on WIDTH and HEIGHT: <code>WIDTH &lt; = width of the screen display</code>, <code>HEIGHT &lt; = height of the screen display</code></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>resize 1280 720</code><br>
-Resize the main window to 1280*720.</p>
-</li>
-<li>
-<p><code>rs 1000 600</code><br>
-Resize the main window to 1000*600.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="resizing-the-main-window-code-resize-code"><a class="link" href="#resizing-the-main-window-code-resize-code">3.20. Resizing the main window : <code>resize</code></a></h3>
+<h3 id="resizing-the-main-window-code-resize-code"><a class="link" href="#resizing-the-main-window-code-resize-code">3.19. Resizing the main window : <code>resize</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1303,7 +1064,7 @@ You <strong>CANNOT</strong> <code>undo</code> a <code>resize</code> command
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.21. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.20. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
 <p>Shorthand Alias: <code>q</code><br>
 Exits the program.<br>
@@ -1311,7 +1072,7 @@ Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.22. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.21. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
@@ -1404,140 +1165,59 @@ will open up a new window in your default browser.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="command-summary-cheatsheet"><a class="link" href="#command-summary-cheatsheet">7. Command Summary/ Cheatsheet</a></h2>
+<h2 id="command-summary"><a class="link" href="#command-summary">7. Command Summary</a></h2>
 <div class="sectionbody">
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 96%;">
-<col style="width: 4%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Command</th>
-<th class="tableblock halign-left valign-top">Alias</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Format</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Help</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hp</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Add</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>a</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">List</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>l</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Delete</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>d</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete INDEX</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Edit</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>e</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Add Tag</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>at</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>addtag INDEX TAG</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Delete Tag</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dt</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deletetag TAGNAME</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Select</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sl</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">`select INDEX</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Note</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>n</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>note INDEX n/NOTE</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Backup</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>b</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>backup</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Restore Backup</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rb</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'restore'</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Synchronise with Google Contacts</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sy</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sync</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">History</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'hx'</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>history</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Undo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>u</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>undo</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Redo</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>r</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>redo</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Clear</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>c</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clear</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resize</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rs</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resize WIDTH HEIGHT</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Exit</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>q</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">exit</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Saving Data</p></td>
-</tr>
-</tbody>
-</table>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Add</strong> <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code><br>
+e.g. <code>add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague</code></p>
+</li>
+<li>
+<p><strong>Clear</strong> : <code>clear</code></p>
+</li>
+<li>
+<p><strong>Delete</strong> : <code>delete INDEX</code><br>
+e.g. <code>delete 3</code></p>
+</li>
+<li>
+<p><strong>Edit</strong> : <code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code><br>
+e.g. <code>edit 2 n/James Lee e/jameslee@example.com</code></p>
+</li>
+<li>
+<p><strong>Find</strong> : <code>find KEYWORD [MORE_KEYWORDS]</code><br>
+e.g. <code>find James Jake</code></p>
+</li>
+<li>
+<p><strong>List</strong> : <code>list</code></p>
+</li>
+<li>
+<p><strong>Help</strong> : <code>help</code></p>
+</li>
+<li>
+<p><strong>Select</strong> : <code>select INDEX</code><br>
+e.g.<code>select 2</code></p>
+</li>
+<li>
+<p><strong>History</strong> : <code>history</code></p>
+</li>
+<li>
+<p><strong>Undo</strong> : <code>undo</code></p>
+</li>
+<li>
+<p><strong>Redo</strong> : <code>redo</code></p>
+</li>
+<li>
+<p><strong>Note</strong> : <code>note 2 n\Have a scheduled meeting on Wed, 11 Oct 2017</code></p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-22 13:49:49 +00:00
+Last updated 2017-10-22 13:45:46 +00:00
 </div>
 </div>
 </body>
