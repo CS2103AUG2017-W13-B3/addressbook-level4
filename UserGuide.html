@@ -47,10 +47,9 @@
 <li><a href="#undoing-previous-command-code-undo-code">4.16. Undoing previous command : <code>undo</code></a></li>
 <li><a href="#redoing-the-previously-undone-command-code-redo-code">4.17. Redoing the previously undone command : <code>redo</code></a></li>
 <li><a href="#clearing-all-entries-code-clear-code">4.18. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#resize-the-main-window-code-resize-code">4.19. Resize the main window : <code>resize</code></a></li>
-<li><a href="#resizing-the-main-window-code-resize-code">4.20. Resizing the main window : <code>resize</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">4.21. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">4.22. Saving the data</a></li>
+<li><a href="#resizing-the-main-window-code-resize-code">4.19. Resizing the main window : <code>resize</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">4.20. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">4.21. Saving the data</a></li>
 </ul>
 </li>
 <li><a href="#since-v1-2">5. Since v1.2</a></li>
@@ -200,7 +199,7 @@ Format: <code>help</code></p>
 <p>Type in<br>
 <code>&gt;&gt; help</code><br>
 <span class="image"><img src="images/help.png" alt="help"></span><br>
-<em>Figure 3.1.1</em></p>
+<em>Figure 4.1.1</em></p>
 </li>
 <li>
 <p>Press <code>Enter</code> and a <strong>User Guide</strong> document would show up.</p>
@@ -250,11 +249,15 @@ Parameters can be in any order e.g. <code>n/NAME p/PHONE_NUMBER</code>, <code>p/
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Type in<br>
-<span class="image right"><img src="images/Ui.png" alt="UI" width="40" height="40"></span><code>&gt;&gt; add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal</code>.</p>
+<p>Type in (Figure 4.2.1)+
+<code>&gt;&gt; add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal</code>
+<span class="image"><img src="images/add1.png" alt="add1" width="600"></span><br>
+<em>Figure 4.2.1</em></p>
 </li>
 <li>
-<p><span class="image right"><img src="images/Ui.png" alt="UI" width="40"></span>Press <code>Enter</code> and you should see:</p>
+<p>Press <code>Enter</code> and you should see (Figure 4.2.2):<br>
+<span class="image"><img src="images/add2.png" alt="UI" width="600"></span><br>
+<em>Figure 4.2.2</em></p>
 </li>
 </ol>
 </div>
@@ -308,15 +311,15 @@ You can use <code>list</code> to view your contacts after running <code>filter</
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Type in (Figure 2.3.1)<br>
+<p>Type in (Figure 4.3.1)<br>
 <code>&gt;&gt; list</code><br>
 <span class="image"><img src="images/list1.png" alt="list1" width="600"></span><br>
-<em>Figure 2.3.1(<code>filter</code> was run)</em></p>
+<em>Figure 4.3.1(<code>filter</code> was run)</em></p>
 </li>
 <li>
-<p>Press Enter. You should now see a list of all your contacts (Figure 2.3.2)<br>
+<p>Press Enter. You should now see a list of all your contacts (Figure 4.3.2)<br>
 <span class="image"><img src="images/list2.png" alt="list2" width="600"></span><br>
-<em>Figure 2.3.2</em></p>
+<em>Figure 4.3.2</em></p>
 </li>
 </ol>
 </div>
@@ -352,15 +355,15 @@ Format: <code>delete INDEX</code><br></p>
 <p>Locate the contact you want to delete and the index of the contact.<br></p>
 </li>
 <li>
-<p>Type in the index of the contact. (Figure 2.4.1)<br>
+<p>Type in the index of the contact. (Figure 4.4.1)<br>
 <code>&gt;&gt; delete 1</code>.
 <span class="image"><img src="images/Delete_1.png" alt="600"></span><br>
-<em>Figure 2.4.1</em></p>
+<em>Figure 4.4.1</em></p>
 </li>
 <li>
-<p>Press <code>Enter</code> and you should see that the selected contact has been deleted. (Figure 2.4.2)<br>
+<p>Press <code>Enter</code> and you should see that the selected contact has been deleted. (Figure 4.4.2)<br>
 <span class="image"><img src="images/Delete_2.png" alt="600"></span><br>
-<em>Figure 2.4.2</em></p>
+<em>Figure 4.4.2</em></p>
 </li>
 </ol>
 </div>
@@ -444,15 +447,15 @@ You must provide at least one of the optional fields.
 <p>Locate the contact you want to edit and the index of the contact.<br></p>
 </li>
 <li>
-<p>Type in the index of the contact, and the details you wish to replace. (Figure 2.5.1)<br>
+<p>Type in the index of the contact, and the details you wish to replace. (Figure 4.5.1)<br>
 <code>&gt;&gt; edit 1 p/91234567 e/johndoe@example.com</code>.
 <span class="image"><img src="images/Edit_1.png" alt="600"></span><br>
-<em>Figure 2.5.1</em></p>
+<em>Figure 4.5.1</em></p>
 </li>
 <li>
-<p>Press <code>Enter</code> and you should see that the contact that you selected has been modified. (Figure 2.5.2)<br>
+<p>Press <code>Enter</code> and you should see that the contact that you selected has been modified. (Figure 4.5.2)<br>
 <span class="image"><img src="images/Edit_2.png" alt="600"></span><br>
-<em>Figure 2.5.2</em></p>
+<em>Figure 4.5.2</em></p>
 </li>
 </ol>
 </div>
@@ -558,15 +561,15 @@ Only one alphanumeric tag can be added at a time. Special characters will not be
 <p>Locate the contact you want to add a tag to and the index of the contact.<br></p>
 </li>
 <li>
-<p>Type in the index of the contact, and the tag you wish to add. (Figure 2.6.1)<br>
+<p>Type in the index of the contact, and the tag you wish to add. (Figure 4.6.1)<br>
 <code>&gt;&gt; addtag 1 classmate</code>.
-<span class="image"><img src="images/Addtag_1.png" alt="600"></span><br>
-<em>Figure 2.6.1</em></p>
+<span class="image"><img src="images/addtag_1.png" alt="addtag1" width="600"></span><br>
+<em>Figure 4.6.1</em></p>
 </li>
 <li>
-<p>Press <code>Enter</code> and you should see that the contact that you selected has been modified. (Figure 2.6.2)<br>
-<span class="image"><img src="images/Addtag_2.png" alt="600"></span><br>
-<em>Figure 2.6.2</em></p>
+<p>Press <code>Enter</code> and you should see that the contact that you selected has been modified. (Figure 4.6.2)<br>
+<span class="image"><img src="images/addtag_2.png" alt="addtag2" width="600"></span><br>
+<em>Figure 4.6.2</em></p>
 </li>
 </ol>
 </div>
@@ -625,15 +628,15 @@ If you want to delete a single tag from a contact in your <strong>DummyName</str
 <p>Locate the contact you want to delete a tag from and the index of the contact.<br></p>
 </li>
 <li>
-<p>Type in the index of the contact, and the tag you wish to delete. (Figure 2.7.1)<br>
+<p>Type in the index of the contact, and the tag you wish to delete. (Figure 4.7.1)<br>
 <code>&gt;&gt; deletetag 1 classmate</code>.
 <span class="image"><img src="images/deletetag_1.png" alt="600"></span><br>
-<em>Figure 2.7.1</em></p>
+<em>Figure 4.7.1</em></p>
 </li>
 <li>
-<p>Press <code>Enter</code> and you should see that the contact that you selected has been modified. (Figure 2.7.2)<br>
+<p>Press <code>Enter</code> and you should see that the contact that you selected has been modified. (Figure 4.7.2)<br>
 <span class="image"><img src="images/deletetag_2.png" alt="600"></span><br>
-<em>Figure 2.7.2</em></p>
+<em>Figure 4.7.2</em></p>
 </li>
 </ol>
 </div>
@@ -660,15 +663,15 @@ Deletes the <code>9pmclass</code> tag from the 1st person in the results of the 
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Type in <code>all</code>, followed by the tag you wish to delete. (Figure 2.7.3)<br>
+<p>Type in <code>all</code>, followed by the tag you wish to delete. (Figure 4.7.3)<br>
 <code>&gt;&gt; deletetag all friends</code>.
 <span class="image"><img src="images/deletetag_3.png" alt="600"></span><br>
-<em>Figure 2.7.3</em></p>
+<em>Figure 4.7.3</em></p>
 </li>
 <li>
-<p>Press <code>Enter</code> and you should see that this tag has been deleted from all contacts.
+<p>Press <code>Enter</code> and you should see that this tag has been deleted from all contacts. (Figure 4.7.4)<br>
 <span class="image"><img src="images/deletetag_4.png" alt="600"></span><br>
-<em>Figure 2.7.4</em></p>
+<em>Figure 4.7.4</em></p>
 </li>
 </ol>
 </div>
@@ -714,15 +717,15 @@ Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Type in<br>
+<p>Type in (Figure 4.8.1)<br>
 <code>&gt;&gt; find john</code><br>
 <span class="image"><img src="images/find_1.png" alt="find 1"></span><br>
-<em>Figure 3.8.1</em></p>
+<em>Figure 4.8.1</em></p>
 </li>
 <li>
-<p>Press <code>Enter</code> and you should see a list of persons having the name <code>john</code>:<br>
+<p>Press <code>Enter</code> and you should see a list of persons having the name <code>john</code>: (Figure 4.8.2)<br>
 <span class="image"><img src="images/find_2.png" alt="find 2"></span><br>
-<em>Figure 3.8.2</em></p>
+<em>Figure 4.8.2</em></p>
 </li>
 </ol>
 </div>
@@ -786,26 +789,26 @@ Format: <code>filter TAG [MORE_TAGS]</code></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Type in<br>
-<code>&gt;&gt; filter colleagues</code><br>
+<p>Type in (Figure 4.9.1)<br>
+<code>&gt;&gt; filter colleagues</code> <br>
 <span class="image"><img src="images/filter_1.png" alt="filter 1"></span><br>
-<em>Figure 3.9.1</em></p>
+<em>Figure 4.9.1</em></p>
 </li>
 <li>
-<p>Press <code>Enter</code> and you will see a list of persons who are tagged with <code>colleagues</code><br>
+<p>Press <code>Enter</code> and you will see a list of persons who are tagged with <code>colleagues</code> (Figure 4.9.2)<br>
 <span class="image"><img src="images/filter_2.png" alt="filter 2"></span><br>
-<em>Figure 3.9.2</em></p>
+<em>Figure 4.9.2</em></p>
 </li>
 <li>
-<p>Type in<br>
+<p>Type in (Figure 4.9.3)<br>
 <code>&gt;&gt; filter friends</code><br>
 <span class="image"><img src="images/filter_3.png" alt="filter 3"></span><br>
-<em>Figure 3.9.3</em></p>
+<em>Figure 4.9.3</em></p>
 </li>
 <li>
-<p>Press <code>Enter</code> and you will see a list of persons who are tagged with both <code>friends</code> and <code>colleagues</code><br>
+<p>Press <code>Enter</code> and you will see a list of persons who are tagged with both <code>friends</code> and <code>colleagues</code> (Figure 4.9.4)<br>
 <span class="image"><img src="images/filter_4.png" alt="filter 4"></span><br>
-<em>Figure 3.9.4</em></p>
+<em>Figure 4.9.4</em></p>
 </li>
 </ol>
 </div>
@@ -867,15 +870,15 @@ The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#82
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Typing (Figure 2.10.1)<br>
+<p>Typing (Figure 4.10.1)<br>
 <code>&gt;&gt;select 1</code><br>
 <span class="image"><img src="images/select1.png" alt="select1" width="600"></span><br>
-<em>Figure 2.10.1</em></p>
+<em>Figure 4.10.1</em></p>
 </li>
 <li>
-<p>Press Enter and your choice should now be selected (Figure 2.10.2)<br>
+<p>Pressing Enter. Your choice should now be selected (Figure 4.10.2)<br>
 <span class="image"><img src="images/select2.png" alt="select2" width="600"></span><br>
-<em>Figure 2.10.2</em></p>
+<em>Figure 4.10.2</em></p>
 </li>
 </ol>
 </div>
@@ -918,7 +921,7 @@ Selects the 7th person in the address book.</p>
 <div class="content">
 <div class="paragraph">
 <p>Command Name: <code>note</code><br>
-Shorthand Alias: 'n'<br>
+Shorthand Alias: <code>n</code><br>
 Function: Inserts the NOTE for an entry specified by INDEX in the DummyName<br>
 Format: <code>note INDEX [n/NOTE]</code></p>
 </div>
@@ -957,15 +960,15 @@ Notes can be blank to delete existing notes, i.e. <code>note n/</code>
 <p>Locate the index of the contact<br></p>
 </li>
 <li>
-<p>Type in your desired INDEX and NOTE (Figure 2.11.1)<br>
+<p>Type in your desired INDEX and NOTE (Figure 4.11.1)<br>
 <code>&gt;&gt; note 1 n/This is an important note</code><br>
 <span class="image"><img src="images/note1.png" alt="note1" width="600"></span><br>
-<em>Figure 2.11.1</em></p>
+<em>Figure 4.11.1</em></p>
 </li>
 <li>
-<p>Press Enter. Your note should now be displayed as the last row in your contact&#8217;s details (Figure 2.11.2)<br>
-<span class="image"><img src="images/note2.png" alt="note2" width="600"></span><br>
-<em>Figure 2.11.2</em></p>
+<p>Press <code>Enter</code>. Your note should now be displayed as the last row in your contact&#8217;s details (Figure 4.11.2)<br>
+<span class="image"><img src="images/note2.png" alt="note2" width="600" height="40"></span><br>
+<em>Figure 4.11.2</em></p>
 </li>
 </ol>
 </div>
@@ -1007,15 +1010,15 @@ Format: <code>backup</code></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Type in <code>backup</code>. (Figure 2.13.1)<br>
+<p>Type in <code>backup</code>. (Figure 4.12.1)<br>
 <code>&gt;&gt; backup</code><br>
 <span class="image"><img src="images/Backup_1.png" alt="600"></span><br>
-<em>Figure 2.13.1</em><br></p>
+<em>Figure 4.12.1</em><br></p>
 </li>
 <li>
-<p>Press <code>Enter</code> and you should see a message indicating the successful backup of your data. (Figure 2.13.2)<br>
+<p>Press <code>Enter</code> and you should see a message indicating the successful backup of your data. (Figure 4.12.2)<br>
 <span class="image"><img src="images/Backup_2.png" alt="600"></span><br>
-<em>Figure 2.13.2</em><br></p>
+<em>Figure 4.12.2</em><br></p>
 </li>
 </ol>
 </div>
@@ -1038,27 +1041,27 @@ Format: <code>restore</code></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Execute the <code>backup</code> command to save the current data. (Figure 2.14.1)<br>
+<p>Execute the <code>backup</code> command to save the current data. (Figure 4.13.1)<br>
 <code>&gt;&gt; backup</code><br>
 <span class="image"><img src="images/Restore_1.png" alt="600"></span><br>
-<em>Figure 2.14.1</em><br></p>
+<em>Figure 4.13.1</em><br></p>
 </li>
 <li>
-<p>Enter the <code>clear</code> command to simulate a lost of data. (Figure 2.14.2)<br>
+<p>Enter the <code>clear</code> command to simulate a lost of data. (Figure 4.13.2)<br>
 <code>&gt;&gt; clear</code><br>
 <span class="image"><img src="images/Restore_2.png" alt="600"></span><br>
-<em>Figure 2.14.2</em><br></p>
+<em>Figure 4.13.2</em><br></p>
 </li>
 <li>
-<p>Type in <code>restore</code> command. (Figure 2.14.3)<br>
+<p>Type in <code>restore</code> command. (Figure 4.13.3)<br>
 <code>restore</code><br>
 <span class="image"><img src="images/Restore_3.png" alt="600"></span><br>
-<em>Figure 2.14.3</em><br></p>
+<em>Figure 4.13.3</em><br></p>
 </li>
 <li>
-<p>Press <code>Enter</code> and you should see that the backup data is restored. (Figure 2.14.4)<br>
+<p>Press <code>Enter</code> and you should see that the backup data is restored. (Figure 4.13.4)<br>
 <span class="image"><img src="images/Restore_4.png" alt="600"></span><br>
-<em>Figure 2.16.4</em><br></p>
+<em>Figure 4.13.4</em><br></p>
 </li>
 </ol>
 </div>
@@ -1093,30 +1096,30 @@ A browser is necessary for logging in to Google
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Type (Figure 2.14.1)<br>
+<p>Type (Figure 4.14.1)<br>
 <code>&gt;&gt; sync</code><br>
 <span class="image"><img src="images/sync1.png" alt="sync1" width="600"></span><br>
-<em>Figure 2.14.1</em><br></p>
+<em>Figure 4.14.1</em><br></p>
 </li>
 <li>
-<p>Press Enter. Your default browser should open a login window (Figure 2.14.2)<br>
+<p>Press <code>Enter</code>. Your default browser should open a login window (Figure 4.14.2)<br>
 <span class="image"><img src="images/sync2.png" alt="sync2" width="600"></span><br>
-<em>Figure 2.14.2</em></p>
+<em>Figure 4.14.2</em></p>
 </li>
 <li>
-<p>Enter your login details and press Next (Figure 2.14.3)<br>
+<p>Enter your login details and press Next (Figure 4.14.3)<br>
 <span class="image"><img src="images/sync3.png" alt="sync3" width="600"></span><br>
-<em>Figure 2.14.3</em></p>
+<em>Figure 4.14.3</em></p>
 </li>
 <li>
-<p>Allow DummyName to access your Google Contacts information (Figure 2.14.4)<br>
+<p>Allow DummyName to access your Google Contacts information (Figure 4.14.4)<br>
 <span class="image"><img src="images/sync4.png" alt="sync4" width="600"></span><br>
-<em>Figure 2.14.4</em></p>
+<em>Figure 4.14.4</em></p>
 </li>
 <li>
-<p>Your contacts are now synchronised. Figure (2.14.5)
+<p>Your contacts are now synchronised. Figure (4.14.5)
 <span class="image"><img src="images/sync5.png" alt="sync5" width="600"></span><br>
-<em>Figure 2.14.5</em></p>
+<em>Figure 4.14.5</em></p>
 </li>
 </ol>
 </div>
@@ -1151,10 +1154,10 @@ Pressing the <kbd>&uarr;</kbd> and <kbd>&darr;</kbd> arrows will display the pre
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Type in<br>
+<p>Type in (Figure 4.15.1)<br>
 <code>&gt;&gt; history</code><br>
 <span class="image"><img src="images/history.png" alt="history"></span><br>
-<em>Figure 3.15.1</em></p>
+<em>Figure 4.15.1</em></p>
 </li>
 <li>
 <p>Press <code>Enter</code> and the lists of commands that you entered before would show up.</p>
@@ -1194,21 +1197,21 @@ Format: <code>undo</code></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Remove the first contact. (Figure 2.16.1)<br>
+<p>Remove the first contact. (Figure 4.16.1)<br>
 <code>&gt;&gt; delete 1</code><br>
 <span class="image"><img src="images/Undo_1.png" alt="600"></span><br>
-<em>Figure 2.16.1</em><br></p>
+<em>Figure 4.16.1</em><br></p>
 </li>
 <li>
-<p>Type in the <code>undo</code> command. (Figure 2.16.2)<br>
+<p>Type in the <code>undo</code> command. (Figure 4.16.2)<br>
 <code>&gt;&gt; undo</code><br>
 <span class="image"><img src="images/Undo_2.png" alt="600"></span><br>
-<em>Figure 2.16.2</em><br></p>
+<em>Figure 4.16.2</em><br></p>
 </li>
 <li>
-<p>Press <code>Enter</code> and you should see that the effects of <code>delete 1</code> has been reverted. (Figure 2.16.3)<br>
+<p>Press <code>Enter</code> and you should see that the effects of <code>delete 1</code> has been reverted. (Figure 4.16.3)<br>
 <span class="image"><img src="images/Undo_3.png" alt="600"></span><br>
-<em>Figure 2.16.3</em><br></p>
+<em>Figure 4.16.3</em><br></p>
 </li>
 </ol>
 </div>
@@ -1225,22 +1228,22 @@ Format: <code>undo</code></p>
 <p>Restart the application.</p>
 </li>
 <li>
-<p>Select the first contact. (Figure 2.16.4)<br>
+<p>Select the first contact. (Figure 4.16.4)<br>
 <code>&gt;&gt; select 1</code><br>
 <span class="image"><img src="images/Undo_4.png" alt="600"></span><br>
-<em>Figure 2.16.4</em><br></p>
+<em>Figure 4.16.4</em><br></p>
 </li>
 <li>
-<p>List all the contacts. (Figure 2.16.5)<br>
+<p>List all the contacts. (Figure 4.16.5)<br>
 <code>&gt;&gt; list</code><br>
 <span class="image"><img src="images/Undo_5.png" alt="600"></span><br>
-<em>Figure 2.16.5</em><br></p>
+<em>Figure 4.16.5</em><br></p>
 </li>
 <li>
-<p>Type in <code>undo</code> and you will see an error message. (Figure 2.16.6)<br>
+<p>Type in <code>undo</code> and you will see an error message. (Figure 4.16.6)<br>
 <code>&gt;&gt; undo</code><br>
 <span class="image"><img src="images/Undo_6.png" alt="600"></span><br>
-<em>Figure 2.16.6</em><br></p>
+<em>Figure 4.16.6</em><br></p>
 </li>
 </ol>
 </div>
@@ -1250,33 +1253,33 @@ Format: <code>undo</code></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Delete the first contact. (Figure 2.16.7)<br>
+<p>Delete the first contact. (Figure 4.16.7)<br>
 <code>&gt;&gt; delete 1</code><br>
 <span class="image"><img src="images/Undo_7.png" alt="600"></span><br>
-<em>Figure 2.16.7</em><br></p>
+<em>Figure 4.16.7</em><br></p>
 </li>
 <li>
-<p>Clear out all the contacts. (Figure 2.16.8)<br>
+<p>Clear out all the contacts. (Figure 4.16.8)<br>
 <code>&gt;&gt; clear</code>
 <span class="image"><img src="images/Undo_8.png" alt="600"></span><br>
-<em>Figure 2.16.8</em><br></p>
+<em>Figure 4.16.8</em><br></p>
 </li>
 <li>
-<p>Type in the shorthand alias for <code>undo</code> (Figure 2.16.9)<br>
+<p>Type in the shorthand alias for <code>undo</code> (Figure 4.16.9)<br>
 <code>&gt;&gt; u</code><br>
 <span class="image"><img src="images/Undo_9.png" alt="600"></span><br>
-<em>Figure 2.16.9</em><br></p>
+<em>Figure 4.16.9</em><br></p>
 </li>
 <li>
-<p>Press <code>Enter</code> and you should see that the <code>clear</code> command is reverted. (Figure 2.16.10)+
+<p>Press <code>Enter</code> and you should see that the <code>clear</code> command is reverted. (Figure 4.16.10)+
 <span class="image"><img src="images/Undo_10.png" alt="600"></span><br>
- <em>Figure 2.16.9</em><br></p>
+ <em>Figure 4.16.10</em><br></p>
 </li>
 <li>
-<p>Type in <code>undo</code> and you should see that the <code>delete 1</code> command is reverted as well. (Figure 2.16.11)+
+<p>Type in <code>undo</code> and you should see that the <code>delete 1</code> command is reverted as well. (Figure 4.16.11)+
 <code>&gt;&gt; undo</code><br>
 <span class="image"><img src="images/Undo_11.png" alt="600"></span><br>
-<em>Figure 2.16.11</em><br></p>
+<em>Figure 4.16.11</em><br></p>
 </li>
 </ol>
 </div>
@@ -1302,31 +1305,31 @@ Format: <code>redo</code></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Type in the command to delete the first contact. (Figure 2.17.1)<br>
+<p>Type in the command to delete the first contact. (Figure 4.17.1)<br>
 <code>&gt;&gt; delete 1</code><br>
 <span class="image"><img src="images/Redo_1.png" alt="600"></span><br>
-<em>Figure 2.17.1</em><br></p>
+<em>Figure 4.17.1</em><br></p>
 </li>
 <li>
-<p>Press <code>Enter</code> and the contact is removed. (Figure 2.17.2)+
+<p>Press <code>Enter</code> and the contact is removed. (Figure 4.17.2)+
 <span class="image"><img src="images/Redo_2.png" alt="600"></span><br></p>
 </li>
 <li>
-<p>Type in <code>undo</code> by mistake. (Figure 2.17.3)<br>
+<p>Type in <code>undo</code> by mistake. (Figure 4.17.3)<br>
 <code>&gt;&gt; undo</code><br>
 <span class="image"><img src="images/Redo_3.png" alt="600"></span><br>
-<em>Figure 2.17.3</em><br></p>
+<em>Figure 4.17.3</em><br></p>
 </li>
 <li>
-<p>Enter the command <code>redo</code> to revert the <code>undo</code> command. (Figure 2.17.4)<br>
+<p>Enter the command <code>redo</code> to revert the <code>undo</code> command. (Figure 4.17.4)<br>
 <code>&gt;&gt; redo</code><br>
 <span class="image"><img src="images/Redo_4.png" alt="600"></span><br>
-<em>Figure 2.17.4</em><br></p>
+<em>Figure 4.17.4</em><br></p>
 </li>
 <li>
-<p>Press <code>Enter</code> and you shoud see that the <code>undo</code> command has been reverted and the contact remains deleted. Refer to <em>Fig</em> to see that you have obtained the correct results. (Figure 2.17.5)<br>
+<p>Press <code>Enter</code> and you shoud see that the <code>undo</code> command has been reverted and the contact remains deleted. Refer to <em>Fig</em> to see that you have obtained the correct results. (Figure 4.17.5)<br>
 <span class="image"><img src="images/Redo_5.png" alt="600"></span><br>
-<em>Figure 2.17.5</em><br></p>
+<em>Figure 4.17.5</em><br></p>
 </li>
 </ol>
 </div>
@@ -1340,21 +1343,21 @@ Format: <code>redo</code></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Select a contact to delete. (Figure 2.17.6)<br>
+<p>Select a contact to delete. (Figure 4.17.6)<br>
 <code>&gt;&gt; delete 1</code>
 <span class="image"><img src="images/Redo_6.png" alt="600"></span><br>
-<em>Figure 2.17.6</em><br></p>
+<em>Figure 4.17.6</em><br></p>
 </li>
 <li>
-<p>Type in the <code>redo</code> command. (Figure 2.17.7)+
+<p>Type in the <code>redo</code> command. (Figure 4.17.7)+
 <code>&gt;&gt; redo</code>
 <span class="image"><img src="images/Redo_7.png" alt="600"></span><br>
-<em>Figure 2.17.7</em><br></p>
+<em>Figure 4.17.7</em><br></p>
 </li>
 <li>
-<p>Press <code>Enter</code> and you should see an error message. (Figure 2.17.8)<br>
+<p>Press <code>Enter</code> and you should see an error message. (Figure 4.17.8)<br>
 <span class="image"><img src="images/Redo_8.png" alt="600"></span><br>
-<em>Figure 2.17.8</em><br></p>
+<em>Figure 4.17.8</em><br></p>
 </li>
 </ol>
 </div>
@@ -1364,40 +1367,40 @@ Format: <code>redo</code></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Select a contact to delete. (Figure 2.17.9)<br>
+<p>Select a contact to delete. (Figure 4.17.9)<br>
 <code>&gt;&gt; delete 1</code>
 <span class="image"><img src="images/Redo_9.png" alt="600"></span><br>
-<em>Figure 2.17.9</em><br></p>
+<em>Figure 4.17.9</em><br></p>
 </li>
 <li>
-<p>Remove all the contacts by <code>clear</code> command. (Figure 2.17.10)<br>
+<p>Remove all the contacts by <code>clear</code> command. (Figure 4.17.10)<br>
 <code>&gt;&gt; clear</code>
 <span class="image"><img src="images/Redo_10.png" alt="600"></span><br>
-<em>Figure 2.17.10</em><br></p>
+<em>Figure 4.17.10</em><br></p>
 </li>
 <li>
-<p>Type in <code>undo</code> to revert the <code>clear</code> command. (Figure 2.17.11)<br>
+<p>Type in <code>undo</code> to revert the <code>clear</code> command. (Figure 4.17.11)<br>
 <code>&gt;&gt; undo</code><br>
 <span class="image"><img src="images/Redo_11.png" alt="600"></span><br>
-<em>Figure 2.17.11</em><br></p>
+<em>Figure 4.17.11</em><br></p>
 </li>
 <li>
-<p>Type in <code>undo</code> to revert the <code>delete 1</code> command. (Figure 2.17.12)<br>
+<p>Type in <code>undo</code> to revert the <code>delete 1</code> command. (Figure 4.17.12)<br>
 <code>&gt;&gt; undo</code><br>
 <span class="image"><img src="images/Redo_12.png" alt="600"></span><br>
-<em>Figure 2.17.12</em><br></p>
+<em>Figure 4.17.12</em><br></p>
 </li>
 <li>
-<p>Type in <code>redo</code> to reapply the <code>delete 1</code> command. (Figure 2.17.13)<br>
+<p>Type in <code>redo</code> to reapply the <code>delete 1</code> command. (Figure 4.17.13)<br>
 <code>&gt;&gt; redo</code><br>
 <span class="image"><img src="images/Redo_13.png" alt="600"></span><br>
-<em>Figure 2.17.13</em><br></p>
+<em>Figure 4.17.13</em><br></p>
 </li>
 <li>
-<p>Type in <code>redo</code> to reapply the <code>clear</code> command. (Figure 2.17.14)<br>
+<p>Type in <code>redo</code> to reapply the <code>clear</code> command. (Figure 4.17.14)<br>
 <code>&gt;&gt; redo</code><br>
 <span class="image"><img src="images/Redo_14.png" alt="600"></span><br>
-<em>Figure 2.17.14</em><br></p>
+<em>Figure 4.17.14</em><br></p>
 </li>
 </ol>
 </div>
@@ -1423,15 +1426,15 @@ Format: <code>clear</code></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Type (Figure 2.18.1)<br>
+<p>Type (Figure 4.18.1)<br>
 <code>&gt;&gt; clear</code><br>
 <span class="image"><img src="images/clear1.png" alt="clear1" width="600"></span><br>
-<em>Figure 2.18.1</em></p>
+<em>Figure 4.18.1</em></p>
 </li>
 <li>
-<p>Press Enter. Your contacts should now be cleared (Figure 2.18.2)<br>
+<p>Press <code>Enter</code>. Your contacts should now be cleared (Figure 4.18.2)<br>
 <span class="image"><img src="images/clear2.png" alt="clear2" width="600"></span><br>
-<em>Figure 2.18.2</em></p>
+<em>Figure 4.18.2</em></p>
 </li>
 </ol>
 </div>
@@ -1447,44 +1450,7 @@ Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="resize-the-main-window-code-resize-code"><a class="link" href="#resize-the-main-window-code-resize-code">4.19. Resize the main window : <code>resize</code></a></h3>
-<div class="paragraph">
-<p>Shorthand Alias: <code>rs</code><br>
-Resize the main window to the specified width and height in pixels<br>
-Format: <code>resize WIDTH HEIGHT</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Resize the MainWindows to the specified WIDTH and HEIGHT.</p>
-</li>
-<li>
-<p>Restriction on WIDTH and HEIGHT: <code>WIDTH &lt; = width of the screen display</code>, <code>HEIGHT &lt; = height of the screen display</code></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>resize 1280 720</code><br>
-Resize the main window to 1280*720.</p>
-</li>
-<li>
-<p><code>rs 1000 600</code><br>
-Resize the main window to 1000*600.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="resizing-the-main-window-code-resize-code"><a class="link" href="#resizing-the-main-window-code-resize-code">4.20. Resizing the main window : <code>resize</code></a></h3>
+<h3 id="resizing-the-main-window-code-resize-code"><a class="link" href="#resizing-the-main-window-code-resize-code">4.19. Resizing the main window : <code>resize</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1525,10 +1491,10 @@ You <strong>CANNOT</strong> <code>undo</code> a <code>resize</code> command
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Type in<br>
+<p>Type in (Figure 4.19.1)<br>
 <code>&gt;&gt; resize 1280 720</code><br>
 <span class="image"><img src="images/resize.png" alt="resize"></span><br>
-<em>Figure 3.19.1</em></p>
+<em>Figure 4.19.1</em></p>
 </li>
 <li>
 <p>Press <code>Enter</code> and the main window would be resized to 1280 * 720.</p>
@@ -1537,7 +1503,7 @@ You <strong>CANNOT</strong> <code>undo</code> a <code>resize</code> command
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">4.21. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">4.20. Exiting the program : <code>exit</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1554,10 +1520,10 @@ Format: <code>exit</code></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Type in the command. (Figure 2.19.1)<br>
+<p>Type in the command. (Figure 4.20.1)<br>
 <code>&gt;&gt; exit</code><br>
 <span class="image"><img src="images/Exit_1.png" alt="600"></span><br>
-<em>Figure 2.19.1</em><br></p>
+<em>Figure 4.20.1</em><br></p>
 </li>
 <li>
 <p>Press <code>Enter</code> and you will see that <strong>DummyName</strong> is closed.<br></p>
@@ -1569,7 +1535,7 @@ Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">4.22. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">4.21. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
@@ -1795,7 +1761,7 @@ will open up a new window in your default browser.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-22 14:13:36 +00:00
+Last updated 2017-10-22 15:58:55 +00:00
 </div>
 </div>
 </body>
