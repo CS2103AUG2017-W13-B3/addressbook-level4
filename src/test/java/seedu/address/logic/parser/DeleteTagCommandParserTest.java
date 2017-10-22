@@ -17,11 +17,11 @@ import seedu.address.model.tag.Tag;
 
 public class DeleteTagCommandParserTest {
 
-    private DeleteTagCommandParser parser = new DeleteTagCommandParser();
-
     private static final String MESSAGE_INVALID_FORMAT =
             String.format(MESSAGE_INVALID_COMMAND_FORMAT, DeleteTagCommand.MESSAGE_USAGE);
 
+    private DeleteTagCommandParser parser = new DeleteTagCommandParser();
+    
     @Test
     public void parse_missingParts_failure() {
         // no index specified
