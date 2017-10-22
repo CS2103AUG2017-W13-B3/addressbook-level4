@@ -21,7 +21,7 @@ public class DeleteTagCommandParserTest {
             String.format(MESSAGE_INVALID_COMMAND_FORMAT, DeleteTagCommand.MESSAGE_USAGE);
 
     private DeleteTagCommandParser parser = new DeleteTagCommandParser();
-    
+
     @Test
     public void parse_missingParts_failure() {
         // no index specified
