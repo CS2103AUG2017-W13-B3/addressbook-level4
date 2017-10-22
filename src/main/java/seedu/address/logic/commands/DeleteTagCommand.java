@@ -100,8 +100,8 @@ public class DeleteTagCommand extends UndoableCommand {
 
         // state check
         DeleteTagCommand toCompare = (DeleteTagCommand) other;
-        return ((index == null && toCompare.index == null) ||
-                (index != null && toCompare.index != null && index.equals(toCompare.index)))
+        return ((index == null && toCompare.index == null)
+                || (index != null && toCompare.index != null && index.equals(toCompare.index)))
                 && targetTag.equals(toCompare.targetTag);
     }
 }
