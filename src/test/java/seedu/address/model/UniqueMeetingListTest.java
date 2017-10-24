@@ -16,4 +16,5 @@ public class UniqueMeetingListTest {
         thrown.expect(UnsupportedOperationException.class);
         uniqueMeetingList.asObservableList().remove(0);
     }
+
 }
