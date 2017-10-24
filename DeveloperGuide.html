@@ -925,6 +925,20 @@ A backup of address book is always created when the Address Book starts. This me
 }</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>The diagram below (Figure 3.3.1) shows how <code>AddTagCommand</code> works.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddTagSequenceDiagram.png" alt="AddTagSequenceDiagram">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Figure 3.3.1 : Sequence Diagram for AddTag</em></p>
+</div>
+<div class="paragraph">
+<p><code>RemoveTagCommand</code> works in a similar way. Note that <code>AddTagCommand</code> will throw an exception if the <code>Tag</code> already exists for the <code>Person</code> selected. <code>DeleteTagCommand</code> throws an exception if the <code>Tag</code> is not found on the <code>Person</code>.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.3.2. Design Considerations</a></h4>
@@ -1013,7 +1027,7 @@ From Figure 3.2.1, it can also be viewed as the intersection of two lists of <co
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.4.1 : Sequence Diagram for Filter</em></p>
+<p><em>Figure 3.4.2 : Sequence Diagram for Filter</em></p>
 </div>
 </div>
 <div class="sect4">
@@ -2398,7 +2412,7 @@ Use case ends.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-23 15:34:25 +00:00
+Last updated 2017-10-24 08:51:20 +00:00
 </div>
 </div>
 </body>
