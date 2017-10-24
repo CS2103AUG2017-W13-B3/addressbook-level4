@@ -91,7 +91,8 @@ public class EditCommandParser implements Parser<EditCommand> {
         if (meetings.isEmpty()) {
             return Optional.empty();
         }
-        Collection<String> meetingSet = meetings.size() == 1 && meetings.contains("") ? Collections.emptySet() : meetings;
+        Collection<String> meetingSet = meetings.size() == 1
+                && meetings.contains("") ? Collections.emptySet() : meetings;
         return Optional.of(ParserUtil.parseMeetings(meetingSet));
     }
 }
