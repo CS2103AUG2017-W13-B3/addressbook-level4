@@ -174,6 +174,9 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <li>
 <p>Index refers to the index number shown in the last person listing. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
+<li>
+<p>Wildcard symbol <code>*</code> is allowed in parameters for <code>find</code> and <code>filter</code> which matches any non-space string.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -215,7 +218,7 @@ Format: <code>help</code></p>
 <p>Command Name: <code>add</code><br>
 Shorthand Alias: <code>a</code><br>
 Function: adds a person to <strong>DummyName</strong><br>
-Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code><br></p>
+Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203; [m/MEETING]&#8230;&#8203;</code><br></p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -225,6 +228,18 @@ Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;<
 </td>
 <td class="content">
 A person can have any number of tags (including 0)
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+A person can have any number of meetings (including 0)
 </td>
 </tr>
 </table>
@@ -398,7 +413,7 @@ Deletes the 4th person in the results of the <code>filter</code> command.</p>
 <p>Command Name: <code>edit</code><br>
 Shorthand Alias: <code>e</code><br>
 Function: Edits the person at the specified <code>INDEX</code>.<br>
-Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code><br></p>
+Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203; [m/MEETING]&#8230;&#8203;</code><br></p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -408,6 +423,18 @@ Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;
 </td>
 <td class="content">
 A person can have any number of tags (including 0)
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+A person can have any number of meetings (including 0)
 </td>
 </tr>
 </table>
@@ -742,6 +769,10 @@ Lists any person having names <code>Betsy</code>, <code>Tim</code>, or <code>Joh
 <p><code>f Watson</code><br>
 Lists any person having the name <code>Watson</code></p>
 </li>
+<li>
+<p><code>find j*</code><br>
+Lists any person whose name starts with <code>j</code></p>
+</li>
 </ul>
 </div>
 </div>
@@ -825,7 +856,14 @@ Lists any person having the <code>family</code> tag</p>
 <p><code>filter family friends</code><br>
 Lists any person tagged with <code>family</code> or <code>friends</code></p>
 </li>
+<li>
+<p><code>ft fa*</code><br>
+Lists any person tagged with any tags matching <code>fa*</code> such as <code>family</code> but not <code>friends</code></p>
+</li>
 </ul>
+</div>
+<div class="paragraph">
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; master</p>
 </div>
 </div>
 <div class="sect2">
@@ -1022,6 +1060,18 @@ Format: <code>backup</code></p>
 </li>
 </ol>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Your data is automatically backed up every time you close the app.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="restoring-a-backup-code-restore-code"><a class="link" href="#restoring-a-backup-code-restore-code">4.13. Restoring a backup : <code>restore</code></a></h3>
@@ -1059,11 +1109,37 @@ Format: <code>restore</code></p>
 <em>Figure 4.13.3</em><br></p>
 </li>
 <li>
-<p>Press <code>Enter</code> and you should see that the backup data is restored. (Figure 4.13.4)<br>
+<p>Press <code>Enter</code> and you should see that <strong>DummyName</strong> asks you for permission to carry on with the command. (Figure 4.13.4)<br>
 <span class="image"><img src="images/Restore_4.png" alt="600"></span><br>
 <em>Figure 4.13.4</em><br></p>
 </li>
+<li>
+<p>Enter <code>yes</code> if you want to recover the data and <code>no</code> if you change your mind. In this case, we will type in <code>yes</code>. (Figure 4.13.5)<br>
+<span class="image"><img src="images/Restore_5.png" alt="600"></span><br>
+<em>Figure 4.13.5</em><br></p>
+</li>
+<li>
+<p>Press <code>Enter</code> and you should see that your backup has been restored. (Figure 4.13.6)<br>
+<span class="image"><img src="images/Restore_6.png" alt="600"></span><br>
+<em>Figure 4.13.6</em><br></p>
+</li>
 </ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+An error message will be shown if you do not already have a backup file in the default file path. (Figure 4.13.7)
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/Restore_7.png" alt="600"></span><br>
+<em>Figure 4.13.7</em><br></p>
 </div>
 </div>
 <div class="sect2">
@@ -1655,7 +1731,7 @@ will open up a new window in your default browser.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>a</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203; [m/MEETING]&#8230;&#8203;</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">List</p></td>
 </tr>
 <tr>
@@ -1672,7 +1748,7 @@ will open up a new window in your default browser.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>e</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203; [m/MEETING]&#8230;&#8203;</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Add Tag</p></td>
@@ -1761,7 +1837,7 @@ will open up a new window in your default browser.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-24 08:51:20 +00:00
+Last updated 2017-10-24 14:10:34 +00:00
 </div>
 </div>
 </body>
