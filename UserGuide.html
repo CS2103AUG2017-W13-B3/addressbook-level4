@@ -53,9 +53,10 @@
 </ul>
 </li>
 <li><a href="#since-v1-2">5. Since v1.2</a></li>
-<li><a href="#coming-in-v2-0">6. Coming in v2.0</a></li>
-<li><a href="#faq">7. FAQ</a></li>
-<li><a href="#command-summary-cheatsheet">8. Command Summary/ Cheatsheet</a></li>
+<li><a href="#since-v1-3">6. Since v1.3</a></li>
+<li><a href="#coming-in-v2-0">7. Coming in v2.0</a></li>
+<li><a href="#faq">8. FAQ</a></li>
+<li><a href="#command-summary-cheatsheet">9. Command Summary/ Cheatsheet</a></li>
 </ul>
 </div>
 </div>
@@ -218,7 +219,7 @@ Format: <code>help</code></p>
 <p>Command Name: <code>add</code><br>
 Shorthand Alias: <code>a</code><br>
 Function: adds a person to <strong>DummyName</strong><br>
-Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203; [m/MEETING]&#8230;&#8203;</code><br></p>
+Format: <code>add n/NAME [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203; [m/MEETING]&#8230;&#8203;</code><br></p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -288,7 +289,13 @@ Parameters can be in any order e.g. <code>n/NAME p/PHONE_NUMBER</code>, <code>p/
 <p><code>add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal</code></p>
 </li>
 <li>
+<p><code>add n/Jack Daniels</code></p>
+</li>
+<li>
 <p><code>a n/John Watson p/83331122 e/johnw@example.com a/John Avenue, block 2, #01-01</code></p>
+</li>
+<li>
+<p><code>a n/Dave</code></p>
 </li>
 </ul>
 </div>
@@ -1641,15 +1648,33 @@ There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="coming-in-v2-0"><a class="link" href="#coming-in-v2-0">6. Coming in v2.0</a></h2>
+<h2 id="since-v1-3"><a class="link" href="#since-v1-3">6. Since v1.3</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Add a person without all his/her parameters</p>
+</li>
+<li>
+<p>Confirmation for restoring a backup</p>
+</li>
+<li>
+<p>Wildcard <code>*</code> for searching of contacts</p>
+</li>
+<li>
+<p>Meetings</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="coming-in-v2-0"><a class="link" href="#coming-in-v2-0">7. Coming in v2.0</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
 <p>Add tags cumulatively</p>
-</li>
-<li>
-<p>Add a person without all his/her parameters</p>
 </li>
 <li>
 <p>Hide private contact details</p>
@@ -1686,7 +1711,7 @@ There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="faq"><a class="link" href="#faq">7. FAQ</a></h2>
+<h2 id="faq"><a class="link" href="#faq">8. FAQ</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
@@ -1704,7 +1729,7 @@ will open up a new window in your default browser.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="command-summary-cheatsheet"><a class="link" href="#command-summary-cheatsheet">8. Command Summary/ Cheatsheet</a></h2>
+<h2 id="command-summary-cheatsheet"><a class="link" href="#command-summary-cheatsheet">9. Command Summary/ Cheatsheet</a></h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -1837,7 +1862,7 @@ will open up a new window in your default browser.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-24 14:10:34 +00:00
+Last updated 2017-10-24 15:15:35 +00:00
 </div>
 </div>
 </body>
