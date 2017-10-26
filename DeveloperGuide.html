@@ -773,8 +773,9 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 <div class="sect3">
 <h4 id="mechanism-2"><a class="link" href="#mechanism-2">3.2.1. Mechanism</a></h4>
 <div class="paragraph">
-<p>The backing up of DummyName is done by <code>BackupCommand</code> and the restoring of data from a backup file is done by <code>RestoreBackupCommand</code>. These commands do not support the undoing and redoing of user actions and thus, inherits from <code>Command</code>.
-These commands require access to <code>Storage</code> from <code>Logic</code> and the way to accomplish this is to post an event to <code>EventCenter</code>. <code>Subscribers</code> in <code>StorageManager</code> will handle these events and respond correspondingly.
+<p>The backing up of DummyName is done by <code>BackupCommand</code> and the restoring of data from a backup file is done by <code>RestoreBackupCommand</code>.
+<code>BackupCommand</code> inherits from <code>Command</code> as it does not support the undoing and redoing of user actions, whereas <code>RestoreBackupCommand</code> inherits from <code>UndoableCommand</code>.
+These commands require access to <code>Storage</code> from <code>Logic</code> and the way to accomplish this is to post an event to <code>EventsCenter</code>. <code>Subscribers</code> in <code>StorageManager</code> will handle these events and respond correspondingly.
 The following shows a sequence diagram of how the <code>BackupCommand</code> is carried out.</p>
 </div>
 <div class="imageblock">
@@ -795,7 +796,7 @@ The following shows a sequence diagram of how the <code>BackupCommand</code> is 
 </table>
 </div>
 <div class="paragraph">
-<p>The <code>BackupCommand</code> is executed when the commands <code>backup</code> or <code>b</code> are entered. The data that is in <code>model</code> or the active address book is first passed as a parameter to <code>BackupDataEvent</code>. The event will be handled by <code>StorageManager</code> and is saved into the default file path "data/addressbook-backup.xml".
+<p>The <code>BackupCommand</code> is executed when the commands <code>backup</code> or <code>b</code> is entered. The data that is in <code>model</code> or the active address book is first passed as a parameter to <code>BackupDataEvent</code>. The event will be handled by <code>StorageManager</code> and is saved into the default file path "data/addressbook-backup.xml".
 The following is the implementation of <code>BackupCommand</code>:</p>
 </div>
 <div class="listingblock">
@@ -816,7 +817,7 @@ The following is the implementation of <code>BackupCommand</code>:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>RestoreBackupCommand</code> is executed when the commands <code>restore</code> or <code>rb</code> are entered. <code>RestoreBackupDataEvent</code> is posted and <code>StorageManager</code> handles it.
+<p>The <code>RestoreBackupCommand</code> is executed when the commands <code>restore</code> or <code>rb</code> is entered. <code>RestoreBackupDataEvent</code> is posted and <code>StorageManager</code> handles it.
 The data from default file path "data/addressbook-backup.xml" will be retrieved and it will replace the active address book.
 The following is the implementation of <code>RestoreBackupCommand</code>:</p>
 </div>
@@ -827,6 +828,8 @@ The following is the implementation of <code>RestoreBackupCommand</code>:</p>
 
     <span class="annotation">@Override</span>
     <span class="directive">public</span> CommandResult execute() <span class="directive">throws</span> CommandException {
+        <span class="comment">//... other codes and checks...</span>
+
         RestoreBackupDataEvent event = <span class="keyword">new</span> RestoreBackupDataEvent();
 
         <span class="comment">// posting event to help with restoring backup data</span>
@@ -836,21 +839,16 @@ The following is the implementation of <code>RestoreBackupCommand</code>:</p>
         ReadOnlyAddressBook backupAddressBookData = event.getAddressBookData();
         model.resetData(backupAddressBookData);
         <span class="keyword">return</span> <span class="keyword">new</span> CommandResult(<span class="predefined-type">String</span>.format(MESSAGE_SUCCESS));
+
+        <span class="comment">//... other codes and checks...</span>
     }
 }</code></pre>
 </div>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Once the data has been restored, the original data will be lost and is no longer retrievable.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>If the backup file does not exist in the default file path, an error message will be shown to the user.
+This check is done before <code>RestoreBackupEvent</code> is posted. Once again, this requires <code>Logic</code> to access <code>Storage</code>.
+Therefore, a <code>BackupFilePresentEvent</code> will be posted and the <code>Subscriber</code> in <code>StorageManager</code> would handle this event to check if the backup file exist.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -859,7 +857,7 @@ Once the data has been restored, the original data will be lost and is no longer
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-A backup of address book is always created when the Address Book starts. This means that <code>RestoreBackupCommand</code> will not encounter an <code>IOException</code> where the file does not exist.
+A backup of the data is automatically created when <strong>DummyName</strong> is closed.
 </td>
 </tr>
 </table>
@@ -2412,7 +2410,7 @@ Use case ends.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-26 02:08:25 +00:00
+Last updated 2017-10-26 03:22:57 +00:00
 </div>
 </div>
 </body>
