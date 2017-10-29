@@ -68,5 +68,5 @@ public class AddTagCommandParserTest {
 
         assertParseSuccess(parser, userInput, expectedCommand);
     }
-    
+
 }
