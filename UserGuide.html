@@ -5,14 +5,14 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3">
-<title>AddressBookX - User Guide</title>
+<title>ABC Business Contact - User Guide</title>
 <link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>AddressBookX - User Guide</h1>
+<h1>ABC Business Contact - User Guide</h1>
 </div>
 <div id="content">
 <div id="preamble">
@@ -64,13 +64,13 @@
 <h2 id="product-overview"><a class="link" href="#product-overview">1. Product Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Product Name: <strong>DummyName</strong><br>
-Version: 1.5<br>
+<p>Product Name: <strong>ABC Business Contact</strong><br>
+Version: 1.4<br>
 <br>
-<strong>DummyName</strong> is a free desktop contact management application that helps you manage your large collection of contacts conveniently and keep track of your appointments. You can store contacts as well as other information and retrieve them efficiently with the help of <strong>DummyName</strong>.<br></p>
+<strong>ABC</strong> is a free desktop contact management application that helps you manage your large collection of contacts conveniently and keep track of your appointments. You can store contacts as well as other information and retrieve them efficiently with the help of <strong>ABC</strong>.<br></p>
 </div>
 <div class="paragraph">
-<p><strong>DummyName</strong> is available for the <code>Linux</code>, <code>Unix</code>, <code>Windows 10</code>, and <code>Mac OS X</code> operating systems.</p>
+<p><strong>ABC</strong> is available for the <code>Linux</code>, <code>Unix</code>, <code>Windows 10</code>, and <code>Mac OS X</code> operating systems.</p>
 </div>
 </div>
 </div>
@@ -78,7 +78,7 @@ Version: 1.5<br>
 <h2 id="about"><a class="link" href="#about">2. About</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This User Guide introduces a detailed description of the various features that are available to <strong>DummyName</strong>.
+<p>This User Guide introduces a detailed description of the various features that are available to <strong>ABC</strong>.
 It also contains a summary of all the commands, giving you a quick overview on how to use all the features.
 Being familiar with Command-Line Interface(CLI) will help you with understanding the document, but do not worry if you are not.
 As long as you follow the guide closely, we are sure you can still comprehend the document.</p>
@@ -107,10 +107,10 @@ This app will not work with earlier versions of Java 8.
 </div>
 </li>
 <li>
-<p>Download the latest <code>addressbook.jar</code> <a href="https://github.com/CS2103AUG2017-W13-B3/main/releases">here</a>.</p>
+<p>Download the latest <code>ABC.jar</code> <a href="https://github.com/CS2103AUG2017-W13-B3/main/releases">here</a>.</p>
 </li>
 <li>
-<p>Copy the file to the folder you want to use as the home folder for your Address Book.</p>
+<p>Copy the file to the folder you want to use as the home folder for your <strong>ABC</strong>.</p>
 </li>
 <li>
 <p>Double-click the file to start the app. The GUI should appear in a few seconds.</p>
@@ -176,7 +176,7 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <p>Index refers to the index number shown in the last person listing. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
-<p>Wildcard symbol <code><strong></code> and <code>?</code> are allowed in parameters for <code>find</code> and <code>filter</code> where <code></strong></code> matches any non-space string and <code>?</code> matches any non-space unit-length symbol.</p>
+<p>Wildcard symbol <code>*</code> and <code>?</code> are allowed in parameters for <code>find</code> and <code>filter</code> where <code>\*</code> matches any non-space string and <code>?</code> matches any non-space unit-length symbol.</p>
 </li>
 <li>
 <p>Suggestions would pop up for partial words keyed in. Press <kbd>TAB</kbd> to auto-complete using the first suggestion.</p>
@@ -221,7 +221,7 @@ Format: <code>help</code></p>
 <div class="paragraph">
 <p>Command Name: <code>add</code><br>
 Shorthand Alias: <code>a</code><br>
-Function: adds a person to <strong>DummyName</strong><br>
+Function: adds a person to <strong>ABC</strong><br>
 Format: <code>add n/NAME [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203; [m/MEETING]&#8230;&#8203;</code><br></p>
 </div>
 <div class="admonitionblock tip">
@@ -263,12 +263,12 @@ Parameters can be in any order e.g. <code>n/NAME p/PHONE_NUMBER</code>, <code>p/
 </div>
 </div>
 <div class="paragraph">
-<p>If you want to add a new contact to your <strong>DummyName</strong>:<br></p>
+<p>If you want to add a new contact to your <strong>ABC</strong>:<br></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Type in (Figure 4.2.1)+
+<p>Type in (Figure 4.2.1)<br>
 <code>&gt;&gt; add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal</code>
 <span class="image"><img src="images/add1.png" alt="add1" width="600"></span><br>
 <em>Figure 4.2.1</em></p>
@@ -313,20 +313,8 @@ Parameters can be in any order e.g. <code>n/NAME p/PHONE_NUMBER</code>, <code>p/
 <div class="paragraph">
 <p>Command Name: <code>list</code><br>
 Shorthand Alias: <code>l</code><br>
-Function: List all contacts in DummyName
+Function: List all contacts in ABC<br>
 Format: <code>list</code></p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-You can use <code>list</code> to view your contacts after running <code>filter</code> or <code>find</code>
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
@@ -342,21 +330,11 @@ You can use <code>list</code> to view your contacts after running <code>filter</
 <em>Figure 4.3.1(<code>filter</code> was run)</em></p>
 </li>
 <li>
-<p>Press Enter. You should now see a list of all your contacts (Figure 4.3.2)<br>
+<p>Press <kbd>Enter</kbd>. You should now see a list of all your contacts (Figure 4.3.2)<br>
 <span class="image"><img src="images/list2.png" alt="list2" width="600"></span><br>
 <em>Figure 4.3.2</em></p>
 </li>
 </ol>
-</div>
-<div class="paragraph">
-<p>Here is another way to list your contacts:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>l</code></p>
-</li>
-</ul>
 </div>
 </div>
 <div class="sect2">
@@ -366,13 +344,13 @@ You can use <code>list</code> to view your contacts after running <code>filter</
 <div class="paragraph">
 <p>Command Name: <code>delete</code><br>
 Shorthand Alias: <code>d</code><br>
-Function: Deletes the specified person at the specified <code>INDEX</code> from your <strong>DummyName</strong>.<br>
+Function: Deletes the specified person at the specified <code>INDEX</code> from your <strong>ABC</strong>.<br>
 Format: <code>delete INDEX</code><br></p>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>If you want to delete a contact in your <strong>DummyName</strong>:<br></p>
+<p>If you want to delete a contact in your <strong>ABC</strong>:<br></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -476,7 +454,7 @@ You must provide at least one of the optional fields.
 </div>
 </div>
 <div class="paragraph">
-<p>If you want to change the details of a contact in your <strong>DummyName</strong>:<br></p>
+<p>If you want to change the details of a contact in your <strong>ABC</strong>:<br></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -503,12 +481,8 @@ You must provide at least one of the optional fields.
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<div class="ulist">
-<ul>
-<li>
+<div class="paragraph">
 <p>Existing values will be updated to the input values.</p>
-</li>
-</ul>
 </div>
 </td>
 </tr>
@@ -572,7 +546,7 @@ Edits the tag of the 1st person in the results of the <code>find</code> command.
 <div class="paragraph">
 <p>Command Name: <code>addtag</code><br>
 Shorthand Alias: <code>at</code><br>
-Function: Adds a tag to an existing person at the specified <code>INDEX</code> in your <strong>DummyName</strong>.<br>
+Function: Adds a tag to an existing person at the specified <code>INDEX</code> in your <strong>ABC</strong>.<br>
 Format: <code>addtag INDEX TAG</code><br></p>
 </div>
 <div class="admonitionblock note">
@@ -590,7 +564,7 @@ Only one alphanumeric tag can be added at a time. Special characters will not be
 </div>
 </div>
 <div class="paragraph">
-<p>If you want to add a single tag to a contact in your <strong>DummyName</strong>:<br></p>
+<p>If you want to add a single tag to a contact in your <strong>ABC</strong>:<br></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -649,15 +623,15 @@ Adds the <code>9pmclass</code> tag to the 1st person in the results of the <code
 <div class="paragraph">
 <p>Command Name: <code>deletetag</code><br>
 Shorthand Alias: <code>dt</code><br>
-Function: Deletes the specified tag from an existing person at the specified <code>INDEX</code> in your <strong>DummyName</strong>.
-Can also remove all instances of a tag from your <strong>DummyName</strong>.<br>
+Function: Deletes the specified tag from an existing person at the specified <code>INDEX</code> in your <strong>ABC</strong>.
+Can also remove all instances of a tag from your <strong>ABC</strong>.<br>
 Format: <code>deletetag INDEX TAG</code><br></p>
 </div>
 </div>
 </div>
 <div class="paragraph">
 <p><em>Coming in v1.3</em><br>
-If you want to delete a single tag from a contact in your <strong>DummyName</strong>:<br></p>
+If you want to delete a single tag from a contact in your <strong>ABC</strong>:<br></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -695,7 +669,7 @@ Deletes the <code>9pmclass</code> tag from the 1st person in the results of the 
 </ul>
 </div>
 <div class="paragraph">
-<p>If you would like to delete all instances of a particular tag from your <strong>DummyName</strong>:<br></p>
+<p>If you would like to delete all instances of a particular tag from your <strong>ABC</strong>:<br></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -872,9 +846,6 @@ Lists any person tagged with any tags matching <code>fa*</code> such as <code>fa
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; master</p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="selecting-a-person-code-select-code"><a class="link" href="#selecting-a-person-code-select-code">4.10. Selecting a person : <code>select</code></a></h3>
@@ -924,7 +895,7 @@ The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#82
 <em>Figure 4.10.1</em></p>
 </li>
 <li>
-<p>Pressing Enter. Your choice should now be selected (Figure 4.10.2)<br>
+<p>Pressing <kbd>Enter</kbd>. Your choice should now be selected (Figure 4.10.2)<br>
 <span class="image"><img src="images/select2.png" alt="select2" width="600"></span><br>
 <em>Figure 4.10.2</em></p>
 </li>
@@ -970,7 +941,7 @@ Selects the 7th person in the address book.</p>
 <div class="paragraph">
 <p>Command Name: <code>note</code><br>
 Shorthand Alias: <code>n</code><br>
-Function: Inserts the NOTE for an entry specified by INDEX in the DummyName<br>
+Function: Inserts the NOTE for an entry specified by INDEX in the ABC<br>
 Format: <code>note INDEX [n/NOTE]</code></p>
 </div>
 <div class="admonitionblock note">
@@ -1000,7 +971,7 @@ Notes can be blank to delete existing notes, i.e. <code>note n/</code>
 </div>
 </div>
 <div class="paragraph">
-<p>If you want to add a note for a DummyName contact:</p>
+<p>If you want to add a note for a ABC contact:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1021,7 +992,7 @@ Notes can be blank to delete existing notes, i.e. <code>note n/</code>
 </ol>
 </div>
 <div class="paragraph">
-<p>Here are some other ways to change your DummyName contact&#8217;s note:</p>
+<p>Here are some other ways to change your ABC contact&#8217;s note:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1053,7 +1024,7 @@ Format: <code>backup</code></p>
 </div>
 </div>
 <div class="paragraph">
-<p>You may want to be safe and backup often when using <strong>DummyName</strong>:</p>
+<p>You may want to be safe and backup often when using <strong>ABC</strong>:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1090,7 +1061,7 @@ Your data is automatically backed up every time you close the app.
 <div class="paragraph">
 <p>Command Name: <code>restore</code><br>
 Shorthand Alias: <code>rb</code><br>
-Function: Retrieves data from a backup file and store it in <strong>DummyName</strong>.<br>
+Function: Retrieves data from a backup file and store it in <strong>ABC</strong>.<br>
 Format: <code>restore</code></p>
 </div>
 </div>
@@ -1167,7 +1138,7 @@ A browser is necessary for logging in to Google
 </div>
 </div>
 <div class="paragraph">
-<p>You can easily synchronise your DummyName contacts with Google Contacts through the following steps:</p>
+<p>You can easily synchronise your <strong>ABC</strong> contacts with Google Contacts through the following steps:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1188,7 +1159,7 @@ A browser is necessary for logging in to Google
 <em>Figure 4.14.3</em></p>
 </li>
 <li>
-<p>Allow DummyName to access your Google Contacts information (Figure 4.14.4)<br>
+<p>Allow <strong>ABC</strong> to access your Google Contacts information (Figure 4.14.4)<br>
 <span class="image"><img src="images/sync4.png" alt="sync4" width="600"></span><br>
 <em>Figure 4.14.4</em></p>
 </li>
@@ -1491,13 +1462,13 @@ Format: <code>redo</code></p>
 <div class="paragraph">
 <p>Command Name: <code>clear</code><br>
 Shorthand Alias: <code>c</code><br>
-Function: Clears all existing contacts in the DummyName<br>
+Function: Clears all existing contacts in the ABC<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>You can also clear all DummyName contacts. To do so,</p>
+<p>You can also clear all ABC contacts. To do so,</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1513,16 +1484,6 @@ Format: <code>clear</code></p>
 <em>Figure 4.18.2</em></p>
 </li>
 </ol>
-</div>
-<div class="paragraph">
-<p>Another example of clearing your contacts:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>c</p>
-</li>
-</ul>
 </div>
 </div>
 <div class="sect2">
@@ -1585,7 +1546,7 @@ You <strong>CANNOT</strong> <code>undo</code> a <code>resize</code> command
 <div class="paragraph">
 <p>Command Name: <code>exit</code><br>
 Shorthand Alias: <code>q</code><br>
-Function: Exits the app.
+Function: Exits the app.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
@@ -1602,7 +1563,7 @@ Format: <code>exit</code></p>
 <em>Figure 4.20.1</em><br></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and you will see that <strong>DummyName</strong> is closed.<br></p>
+<p>Press <kbd>Enter</kbd> and you will see that <strong>ABC</strong> is closed.<br></p>
 </li>
 </ol>
 </div>
@@ -1708,7 +1669,7 @@ There is no need to save manually.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
-<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous <strong>DummyName</strong> folder.</p>
+<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous <strong>ABC</strong> folder.</p>
 </div>
 <div class="paragraph">
 <p><strong>Q</strong>: I can&#8217;t sync my contacts with my Google contacts!<br>
@@ -1855,7 +1816,7 @@ will open up a new window in your default browser.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-31 14:06:59 +00:00
+Last updated 2017-10-31 16:00:54 +00:00
 </div>
 </div>
 </body>
