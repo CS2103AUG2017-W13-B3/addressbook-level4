@@ -659,6 +659,29 @@ public class UniqueMeetingList implements Iterable<Meeting> {
  */
 public class TagNotFoundException extends Exception {}
 ```
+###### \java\seedu\address\model\person\Person.java
+``` java
+    /**
+     * Returns an immutable meeting set, which throws {@code UnsupportedOperationException}
+     * if modification is attempted.
+     */
+    @Override
+    public Set<Meeting> getMeetings() {
+        return Collections.unmodifiableSet(meetings.get().toSet());
+    }
+
+    public ObjectProperty<UniqueMeetingList> meetingProperty() {
+        return meetings;
+    }
+
+    /**
+     * Replaces this person's meetings with the meetings in the argument meeting set.
+     */
+    public void setMeetings(Set<Meeting> replacement) {
+        meetings.set(new UniqueMeetingList(replacement));
+    }
+
+```
 ###### \java\seedu\address\model\person\UniquePersonList.java
 ``` java
     /**
