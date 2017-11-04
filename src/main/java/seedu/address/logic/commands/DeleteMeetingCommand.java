@@ -89,7 +89,7 @@ public class DeleteMeetingCommand extends UndoableCommand {
         }
 
         // instanceof handles nulls
-        if (!(other instanceof AddMeetingCommand)) {
+        if (!(other instanceof DeleteMeetingCommand)) {
             return false;
         }
 
