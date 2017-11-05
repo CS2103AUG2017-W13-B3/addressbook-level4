@@ -18,7 +18,7 @@ import seedu.address.model.person.Name;
  */
 public class Meeting {
 
-    public static final String MESSAGE_TIME_CONSTRAINTS = "Time format should be YYYY-MM-DD HH-MM";
+    public static final String MESSAGE_TIME_CONSTRAINTS = "Time format should be YYYY-MM-DD HH:MM";
 
     public final LocalDateTime date;
     public final String value;
