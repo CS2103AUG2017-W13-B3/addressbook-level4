@@ -9,6 +9,7 @@ import static seedu.address.logic.parser.CliSyntax.PREFIX_PHONE;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_TAG;
 
 import java.time.Instant;
+import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Stream;
@@ -62,7 +63,7 @@ public class AddCommandParser implements Parser<AddCommand> {
             Instant time = Instant.now();
             LastUpdated lastUpdated = new LastUpdated(time.toString());
             Set<Tag> tagList = ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAG));
-            Set<Meeting> meetingList = ParserUtil.parseMeetings(argMultimap.getAllValues(PREFIX_MEETING), name);
+            Set<Meeting> meetingList = new HashSet<>();
 
             ReadOnlyPerson person = new Person(name, phone, email, address, note, id,
                     lastUpdated, tagList, meetingList);
