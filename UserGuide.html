@@ -36,22 +36,21 @@
 <li><a href="#editing-a-person-code-edit-code">4.5. Editing a person : <code>edit</code></a></li>
 <li><a href="#adding-a-tag-to-a-person-code-addtag-code">4.6. Adding a tag to a person : <code>addtag</code></a></li>
 <li><a href="#deleting-a-tag-code-deletetag-code">4.7. Deleting a tag : <code>deletetag</code></a></li>
-<li><a href="#locating-persons-by-name-code-find-code">4.8. Locating persons by name: <code>find</code></a></li>
-<li><a href="#locating-persons-by-tags-code-filter-code">4.9. Locating persons by tags: <code>filter</code></a></li>
-<li><a href="#sorting-contact-list-code-sort-code">4.10. Sorting contact list: <code>sort</code></a></li>
-<li><a href="#selecting-a-person-code-select-code">4.11. Selecting a person : <code>select</code></a></li>
-<li><a href="#making-a-note-code-note-code">4.12. Making a note: <code>note</code></a></li>
-<li><a href="#creating-a-backup-code-backup-code">4.13. Creating a backup : <code>backup</code></a></li>
-<li><a href="#restoring-a-backup-code-restore-code">4.14. Restoring a backup : <code>restore</code></a></li>
-<li><a href="#logging-in-to-google-contacts-code-login-code">4.15. Logging in to Google Contacts: <code>login</code></a></li>
-<li><a href="#synchronising-with-google-contacts-code-sync-code">4.16. Synchronising with Google Contacts : <code>sync</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">4.17. Listing entered commands : <code>history</code></a></li>
-<li><a href="#undoing-previous-command-code-undo-code">4.18. Undoing previous command : <code>undo</code></a></li>
-<li><a href="#redoing-the-previously-undone-command-code-redo-code">4.19. Redoing the previously undone command : <code>redo</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">4.20. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#resizing-the-main-window-code-resize-code">4.21. Resizing the main window : <code>resize</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">4.22. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">4.23. Saving the data</a></li>
+<li><a href="#locating-persons-by-keywords-code-find-code">4.8. Locating persons by keywords: <code>find</code></a></li>
+<li><a href="#sorting-contact-list-code-sort-code">4.9. Sorting contact list: <code>sort</code></a></li>
+<li><a href="#selecting-a-person-code-select-code">4.10. Selecting a person : <code>select</code></a></li>
+<li><a href="#making-a-note-code-note-code">4.11. Making a note: <code>note</code></a></li>
+<li><a href="#creating-a-backup-code-backup-code">4.12. Creating a backup : <code>backup</code></a></li>
+<li><a href="#restoring-a-backup-code-restore-code">4.13. Restoring a backup : <code>restore</code></a></li>
+<li><a href="#logging-in-to-google-contacts-code-login-code">4.14. Logging in to Google Contacts: <code>login</code></a></li>
+<li><a href="#synchronising-with-google-contacts-code-sync-code">4.15. Synchronising with Google Contacts : <code>sync</code></a></li>
+<li><a href="#listing-entered-commands-code-history-code">4.16. Listing entered commands : <code>history</code></a></li>
+<li><a href="#undoing-previous-command-code-undo-code">4.17. Undoing previous command : <code>undo</code></a></li>
+<li><a href="#redoing-the-previously-undone-command-code-redo-code">4.18. Redoing the previously undone command : <code>redo</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">4.19. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#resizing-the-main-window-code-resize-code">4.20. Resizing the main window : <code>resize</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">4.21. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">4.22. Saving the data</a></li>
 </ul>
 </li>
 <li><a href="#since-v1-2">5. Since v1.2</a></li>
@@ -178,7 +177,7 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <p>Index refers to the index number shown in the last person listing. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
-<p>Wildcard symbol <code>*</code> and <code>?</code> are allowed in parameters for <code>find</code> and <code>filter</code> where <code>\*</code> matches any non-space string and <code>?</code> matches any non-space unit-length symbol.</p>
+<p>Wildcard symbol <code>*</code> and <code>?</code> are allowed in parameters for <code>find</code> where <code>\*</code> matches any non-space string and <code>?</code> matches any non-space unit-length symbol.</p>
 </li>
 <li>
 <p>Suggestions would pop up for partial words keyed in. Press <kbd>TAB</kbd> to auto-complete using the first suggestion.</p>
@@ -329,7 +328,7 @@ Format: <code>list</code></p>
 <p>Type in (Figure 4.3.1)<br>
 <code>&gt;&gt; list</code><br>
 <span class="image"><img src="images/list1.png" alt="list1" width="600"></span><br>
-<em>Figure 4.3.1(<code>filter</code> was run)</em></p>
+<em>Figure 4.3.1(<code>find</code> was run)</em></p>
 </li>
 <li>
 <p>Press <kbd>Enter</kbd>. You should now see a list of all your contacts (Figure 4.3.2)<br>
@@ -388,9 +387,9 @@ Deletes the 2nd person in the address book.</p>
 Deletes the 1st person in the results of the <code>find</code> command.</p>
 </li>
 <li>
-<p><code>filter friends</code><br>
+<p><code>find t/friends</code><br>
 <code>d 4</code><br>
-Deletes the 4th person in the results of the <code>filter</code> command.</p>
+Deletes the 4th person in the results of the <code>find</code> command.</p>
 </li>
 </ul>
 </div>
@@ -496,9 +495,9 @@ You must provide at least one of the optional fields.
 <div class="ulist">
 <ul>
 <li>
-<p><code>&gt;&gt; filter friends</code><br>
+<p><code>&gt;&gt; find t/friends</code><br>
 <code>&gt;&gt; edit 2 n/Betsy Crower t/</code><br>
-Edits the name of the 2nd person in the results of the <code>filter</code> command to be <code>Betsy Crower</code>
+Edits the name of the 2nd person in the results of the <code>find</code> command to be <code>Betsy Crower</code>
 and clears all existing tags.</p>
 </li>
 </ul>
@@ -606,9 +605,9 @@ Only one alphanumeric tag can be added at a time. Special characters will not be
 <div class="ulist">
 <ul>
 <li>
-<p><code>&gt;&gt; filter friends</code><br>
+<p><code>&gt;&gt; find t/friends</code><br>
 <code>&gt;&gt; addtag 2 friends</code><br>
-Adds the <code>friends</code> tag to the 2nd person in the results of the <code>filter</code> command.</p>
+Adds the <code>friends</code> tag to the 2nd person in the results of the <code>find</code> command.</p>
 </li>
 <li>
 <p><code>&gt;&gt; find John</code><br>
@@ -659,12 +658,12 @@ If you want to delete a single tag from a contact in your <strong>ABC</strong>:<
 <div class="ulist">
 <ul>
 <li>
-<p><code>&gt;&gt; filter friends</code><br>
+<p><code>&gt;&gt; find t/friends</code><br>
 <code>&gt;&gt; deletetag 2 friends</code><br>
-Deletes the <code>friends</code> tag from the 2nd person in the results of the <code>filter</code> command.</p>
+Deletes the <code>friends</code> tag from the 2nd person in the results of the <code>find</code> command.</p>
 </li>
 <li>
-<p><code>&gt;&gt; find John</code><br>
+<p><code>&gt;&gt; find n/John</code><br>
 <code>&gt;&gt; dt 1 9pmclass</code><br>
 Deletes the <code>9pmclass</code> tag from the 1st person in the results of the <code>find</code> command.</p>
 </li>
@@ -690,14 +689,15 @@ Deletes the <code>9pmclass</code> tag from the 1st person in the results of the 
 </div>
 </div>
 <div class="sect2">
-<h3 id="locating-persons-by-name-code-find-code"><a class="link" href="#locating-persons-by-name-code-find-code">4.8. Locating persons by name: <code>find</code></a></h3>
+<h3 id="locating-persons-by-keywords-code-find-code"><a class="link" href="#locating-persons-by-keywords-code-find-code">4.8. Locating persons by keywords: <code>find</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
 <p>Command Name: <code>find</code><br>
 Shorthand Alias: <code>f</code><br>
-Function : Finds persons whose names contain any of the given keywords.<br>
-Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
+Function : Finds persons whose specified fields contain any of the given keywords.<br>
+Format: <code>find [n/KEYWORD&#8230;&#8203;] [p/KEYWORD&#8230;&#8203;] [e/KEYWORD&#8230;&#8203;] [a/KEYWORD&#8230;&#8203;] [t/KEYWORD&#8230;&#8203;]</code><br>
+[NOTE] There must be at least one argument.</p>
 </div>
 </div>
 </div>
@@ -712,13 +712,13 @@ Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 <p>The order of the keywords does not matter. e.g. <code>Hans Bo</code> will match <code>Bo Hans</code></p>
 </li>
 <li>
-<p>Only the name is searched.</p>
-</li>
-<li>
 <p>Only full words will be matched e.g. <code>Han</code> will not match <code>Hans</code></p>
 </li>
 <li>
-<p>Persons matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code></p>
+<p>Persons matching at least one keyword in one field will be returned (i.e. <code>OR</code> search). e.g. <code>find n/Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code></p>
+</li>
+<li>
+<p>The search is done on the existing list. Successive <code>find</code> makes the list smaller and smaller</p>
 </li>
 </ul>
 </div>
@@ -731,13 +731,13 @@ Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 <ol class="arabic">
 <li>
 <p>Type in (Figure 4.8.1)<br>
-<code>&gt;&gt; find john</code><br>
-<span class="image"><img src="images/find_1.png" alt="find 1"></span><br>
+<code>&gt;&gt; find n/john</code><br>
+<span class="image"><img src="images/to be updated" alt="to be updated"></span><br>
 <em>Figure 4.8.1</em></p>
 </li>
 <li>
 <p>Press <kbd>Enter</kbd> and you should see a list of persons having the name <code>john</code>: (Figure 4.8.2)<br>
-<span class="image"><img src="images/find_2.png" alt="find 2"></span><br>
+<span class="image"><img src="images/to be updated" alt="to be updated"></span><br>
 <em>Figure 4.8.2</em></p>
 </li>
 </ol>
@@ -763,94 +763,7 @@ Lists any person whose name starts with <code>j</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="locating-persons-by-tags-code-filter-code"><a class="link" href="#locating-persons-by-tags-code-filter-code">4.9. Locating persons by tags: <code>filter</code></a></h3>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p>Command Name: <code>filter</code><br>
-Shorthand Alias: <code>ft</code><br>
-Function: Finds persons who are tagged with any of the given tags from the existing list of persons.<br>
-Format: <code>filter TAG [MORE_TAGS]</code></p>
-</div>
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>The search is case insensitive. e.g <code>FRIENDS</code> will match <code>friends</code></p>
-</li>
-<li>
-<p>The order of the keywords does not matter. e.g. <code>friends family</code> will match <code>family friends</code></p>
-</li>
-<li>
-<p>Only the tags are searched.</p>
-</li>
-<li>
-<p>Only full words will be matched e.g. <code>friend</code> will not match <code>friends</code></p>
-</li>
-<li>
-<p>Persons matching at least one tag will be returned (i.e. <code>OR</code> search). e.g. <code>family friends</code> will return persons who are tagged with family or friends</p>
-</li>
-<li>
-<p>The filter is done on the existing list. Successive <code>filter</code> makes the list smaller and smaller</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>If you want to find your friends among all your colleagues:<br></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Type in (Figure 4.9.1)<br>
-<code>&gt;&gt; filter colleagues</code> <br>
-<span class="image"><img src="images/filter_1.png" alt="filter 1"></span><br>
-<em>Figure 4.9.1</em></p>
-</li>
-<li>
-<p>Press <kbd>Enter</kbd> and you will see a list of persons who are tagged with <code>colleagues</code> (Figure 4.9.2)<br>
-<span class="image"><img src="images/filter_2.png" alt="filter 2"></span><br>
-<em>Figure 4.9.2</em></p>
-</li>
-<li>
-<p>Type in (Figure 4.9.3)<br>
-<code>&gt;&gt; filter friends</code><br>
-<span class="image"><img src="images/filter_3.png" alt="filter 3"></span><br>
-<em>Figure 4.9.3</em></p>
-</li>
-<li>
-<p>Press <kbd>Enter</kbd> and you will see a list of persons who are tagged with both <code>friends</code> and <code>colleagues</code> (Figure 4.9.4)<br>
-<span class="image"><img src="images/filter_4.png" alt="filter 4"></span><br>
-<em>Figure 4.9.4</em></p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Here are some other commands you can do with <code>filter</code>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>filter family</code><br>
-Lists any person having the <code>family</code> tag</p>
-</li>
-<li>
-<p><code>filter family friends</code><br>
-Lists any person tagged with <code>family</code> or <code>friends</code></p>
-</li>
-<li>
-<p><code>ft fa*</code><br>
-Lists any person tagged with any tags matching <code>fa*</code> such as <code>family</code> but not <code>friends</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="sorting-contact-list-code-sort-code"><a class="link" href="#sorting-contact-list-code-sort-code">4.10. Sorting contact list: <code>sort</code></a></h3>
+<h3 id="sorting-contact-list-code-sort-code"><a class="link" href="#sorting-contact-list-code-sort-code">4.9. Sorting contact list: <code>sort</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -924,7 +837,7 @@ Sorts the contact list by meeting time.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="selecting-a-person-code-select-code"><a class="link" href="#selecting-a-person-code-select-code">4.11. Selecting a person : <code>select</code></a></h3>
+<h3 id="selecting-a-person-code-select-code"><a class="link" href="#selecting-a-person-code-select-code">4.10. Selecting a person : <code>select</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1011,7 +924,7 @@ Selects the 7th person in the address book.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="making-a-note-code-note-code"><a class="link" href="#making-a-note-code-note-code">4.12. Making a note: <code>note</code></a></h3>
+<h3 id="making-a-note-code-note-code"><a class="link" href="#making-a-note-code-note-code">4.11. Making a note: <code>note</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1088,7 +1001,7 @@ Removes all existing notes from the 3rd person</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="creating-a-backup-code-backup-code"><a class="link" href="#creating-a-backup-code-backup-code">4.13. Creating a backup : <code>backup</code></a></h3>
+<h3 id="creating-a-backup-code-backup-code"><a class="link" href="#creating-a-backup-code-backup-code">4.12. Creating a backup : <code>backup</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1131,7 +1044,7 @@ Your data is automatically backed up every time you close the app.
 </div>
 </div>
 <div class="sect2">
-<h3 id="restoring-a-backup-code-restore-code"><a class="link" href="#restoring-a-backup-code-restore-code">4.14. Restoring a backup : <code>restore</code></a></h3>
+<h3 id="restoring-a-backup-code-restore-code"><a class="link" href="#restoring-a-backup-code-restore-code">4.13. Restoring a backup : <code>restore</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1190,7 +1103,7 @@ An error message will be shown if you do not already have a backup file in the d
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging-in-to-google-contacts-code-login-code"><a class="link" href="#logging-in-to-google-contacts-code-login-code">4.15. Logging in to Google Contacts: <code>login</code></a></h3>
+<h3 id="logging-in-to-google-contacts-code-login-code"><a class="link" href="#logging-in-to-google-contacts-code-login-code">4.14. Logging in to Google Contacts: <code>login</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1250,7 +1163,7 @@ Sorts the contact list by meeting time.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="synchronising-with-google-contacts-code-sync-code"><a class="link" href="#synchronising-with-google-contacts-code-sync-code">4.16. Synchronising with Google Contacts : <code>sync</code></a></h3>
+<h3 id="synchronising-with-google-contacts-code-sync-code"><a class="link" href="#synchronising-with-google-contacts-code-sync-code">4.15. Synchronising with Google Contacts : <code>sync</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1305,7 +1218,7 @@ You have to run the <code>login</code> command before you can run <code>sync</co
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">4.17. Listing entered commands : <code>history</code></a></h3>
+<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">4.16. Listing entered commands : <code>history</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1346,7 +1259,7 @@ Pressing the <kbd>&uarr;</kbd> and <kbd>&darr;</kbd> arrows will display the pre
 </div>
 </div>
 <div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">4.18. Undoing previous command : <code>undo</code></a></h3>
+<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">4.17. Undoing previous command : <code>undo</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1468,7 +1381,7 @@ Format: <code>undo</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">4.19. Redoing the previously undone command : <code>redo</code></a></h3>
+<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">4.18. Redoing the previously undone command : <code>redo</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1589,7 +1502,7 @@ Format: <code>redo</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">4.20. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">4.19. Clearing all entries : <code>clear</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1620,7 +1533,7 @@ Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="resizing-the-main-window-code-resize-code"><a class="link" href="#resizing-the-main-window-code-resize-code">4.21. Resizing the main window : <code>resize</code></a></h3>
+<h3 id="resizing-the-main-window-code-resize-code"><a class="link" href="#resizing-the-main-window-code-resize-code">4.20. Resizing the main window : <code>resize</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1673,7 +1586,7 @@ You <strong>CANNOT</strong> <code>undo</code> a <code>resize</code> command
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">4.22. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">4.21. Exiting the program : <code>exit</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1703,7 +1616,7 @@ Do not worry about losing your contacts as they will be saved automatically.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">4.23. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">4.22. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
@@ -1947,7 +1860,7 @@ will open up a new window in your default browser.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-11-05 02:27:17 +00:00
+Last updated 2017-11-05 02:54:35 +00:00
 </div>
 </div>
 </body>
