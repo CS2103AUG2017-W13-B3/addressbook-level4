@@ -27,7 +27,7 @@ public class AddMeetingCommand extends UndoableCommand {
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Adds a meeting to the person identified "
             + "by the index number used in the last person listing.\n"
             + "Parameters: INDEX (must be a positive integer) "
-            + "MEETING NAME (one word only)"
+            + "MEETING NAME " + "/ "
             + "MEETING TIME (YYYY-MM-DD HH:MM)\n"
             + "Example: " + COMMAND_WORD + " 1 "
             + "business " + "2017-12-20 10:00";
@@ -85,7 +85,7 @@ public class AddMeetingCommand extends UndoableCommand {
         } catch (PersonNotFoundException pnfe) {
             throw new AssertionError("The target person cannot be missing");
         }
-        return new CommandResult(String.format(MESSAGE_ADD_TAG_SUCCESS, newMeeting.value));
+        return new CommandResult(String.format(MESSAGE_ADD_TAG_SUCCESS, newMeeting.meetingName));
     }
 
     @Override
