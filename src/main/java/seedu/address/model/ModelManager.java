@@ -129,7 +129,7 @@ public class ModelManager extends ComponentManager implements Model {
     }
 
     @Override
-    public void deleteMeeting(Meeting meeting){
+    public void deleteMeeting(Meeting meeting) {
         addressBook.deleteMeeting(meeting);
         indicateAddressBookChanged();
     }
