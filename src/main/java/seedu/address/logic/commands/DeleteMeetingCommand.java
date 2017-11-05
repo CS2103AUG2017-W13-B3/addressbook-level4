@@ -23,62 +23,37 @@ public class DeleteMeetingCommand extends UndoableCommand {
     public static final String COMMAND_WORD = "deletemeeting";
     public static final String COMMAND_ALIAS = "dm";
 
-    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Deletes a meeting from the person identified "
-            + "by the index number used in the last person listing.\n"
-            + "Parameters: INDEX (must be a positive integer) "
-            + "MEETING NAME (one word only)"
-            + "MEETING TIME (YYYY-MM-DD HH:MM)\n"
-            + "Example: " + COMMAND_WORD + " 1 "
-            + "business " + "2017-12-20 10:00";
+    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Deletes a meeting from the meeting list identified "
+            + "by the index number used in the last meeting listing.\n"
+            + "Parameters: INDEX (must be a positive integer)\n"
+            + "Example: " + COMMAND_WORD + " 1 ";
 
-    public static final String MESSAGE_ADD_TAG_SUCCESS = "Deleted Meeting: %1$s";
-    public static final String MESSAGE_NO_MEETING = "This person does not have this meeting.";
+    public static final String MESSAGE_DELETE_MEETING_SUCCESS = "Deleted Meeting: %1$s";
 
-    private final Index index;
-    private final String meetingName;
-    private final String meetingTime;
-    private Meeting targetMeeting;
+    private final Index targetIndex;
 
     /**
      * @param index of the person in the filtered person list to edit
-     * @param meetingName to be deleted from the person
-     * @param meetingTime to be deleted from the person
      */
-    public DeleteMeetingCommand(Index index, String meetingName, String meetingTime) {
+    public DeleteMeetingCommand(Index index) {
         requireNonNull(index);
 
-        this.index = index;
-        this.meetingName = meetingName;
-        this.meetingTime = meetingTime;
+        this.targetIndex = index;
     }
 
     @Override
     public CommandResult executeUndoableCommand() throws CommandException {
-        List<ReadOnlyPerson> lastShownList = model.getFilteredPersonList();
+        List<Meeting> lastShownList = model.getFilteredMeetingList();
 
-        if (index.getZeroBased() >= lastShownList.size()) {
-            throw new CommandException(Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);
+        if (targetIndex.getZeroBased() >= lastShownList.size()) {
+            throw new CommandException(Messages.MESSAGE_INVALID_MEETING_DISPLAYED_INDEX);
         }
 
-        ReadOnlyPerson personToEdit = lastShownList.get(index.getZeroBased());
+        Meeting meetingToDelete = lastShownList.get(targetIndex.getZeroBased());
 
-        targetMeeting = new Meeting(personToEdit, meetingName, meetingTime);
-        Set<Meeting> oldMeetings = new HashSet<Meeting>(personToEdit.getMeetings());
-        if (!oldMeetings.contains(targetMeeting)) {
-            throw new CommandException(MESSAGE_NO_MEETING);
-        }
-        Person editedPerson = new Person(personToEdit);
-        oldMeetings.remove(targetMeeting);
-        editedPerson.setMeetings(oldMeetings);
+        model.deleteMeeting(meetingToDelete);
 
-        try {
-            model.updatePerson(personToEdit, editedPerson);
-        } catch (DuplicatePersonException dpe) {
-            throw new AssertionError("Not creating a new person");
-        } catch (PersonNotFoundException pnfe) {
-            throw new AssertionError("The target person cannot be missing");
-        }
-        return new CommandResult(String.format(MESSAGE_ADD_TAG_SUCCESS, targetMeeting.value));
+        return new CommandResult(String.format(MESSAGE_DELETE_MEETING_SUCCESS, meetingToDelete.meetingName));
     }
 
     @Override
@@ -95,8 +70,6 @@ public class DeleteMeetingCommand extends UndoableCommand {
 
         // state check
         DeleteMeetingCommand toCompare = (DeleteMeetingCommand) other;
-        return index.equals(toCompare.index)
-                && meetingName.equals(toCompare.meetingName)
-                && meetingTime.equals(toCompare.meetingTime);
+        return targetIndex.equals(toCompare.targetIndex);
     }
 }

@@ -1,6 +1,5 @@
 package seedu.address.logic.parser;
 
-import static java.util.Objects.requireNonNull;
 import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 
 import seedu.address.commons.core.index.Index;
@@ -20,20 +19,12 @@ public class DeleteMeetingCommandParser implements Parser<DeleteMeetingCommand> 
      * @throws ParseException if the user input does not conform the expected format
      */
     public DeleteMeetingCommand parse(String args) throws ParseException {
-        requireNonNull(args);
-        String trimmedArgs = args.trim();
-        String[] parts = trimmedArgs.split("\\s+", 3);
-        Index index;
-        if (parts.length < 3) {
-            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, DeleteMeetingCommand.MESSAGE_USAGE));
-        }
         try {
-            index = ParserUtil.parseIndex(parts[0]);
-            String meetingName = parts[1];
-            String meetingTime = parts[2];
-            return new DeleteMeetingCommand(index, meetingName, meetingTime);
+            Index index = ParserUtil.parseIndex(args);
+            return new DeleteMeetingCommand(index);
         } catch (IllegalValueException ive) {
-            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, DeleteMeetingCommand.MESSAGE_USAGE));
+            throw new ParseException(
+                    String.format(MESSAGE_INVALID_COMMAND_FORMAT, DeleteMeetingCommand.MESSAGE_USAGE));
         }
     }
 }
