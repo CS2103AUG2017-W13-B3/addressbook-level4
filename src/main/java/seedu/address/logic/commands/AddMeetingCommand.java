@@ -34,6 +34,7 @@ public class AddMeetingCommand extends UndoableCommand {
 
     public static final String MESSAGE_ADD_TAG_SUCCESS = "Added Meeting: %1$s";
     public static final String MESSAGE_DUPLICATE_MEETING = "This person already has this meeting.";
+    public static final String MESSAGE_TIME_CONSTRAINTS = "Time format should be YYYY-MM-DD HH:MM";
 
     private final Index index;
     private final String meetingName;
@@ -66,7 +67,7 @@ public class AddMeetingCommand extends UndoableCommand {
         try {
             newMeeting = new Meeting(personToEdit, meetingName, meetingTime);
         } catch (IllegalValueException e) {
-            throw new CommandException(e.getMessage());
+            throw new CommandException(MESSAGE_TIME_CONSTRAINTS);
         }
         Set<Meeting> oldMeetings = new HashSet<Meeting>(personToEdit.getMeetings());
         if (oldMeetings.contains(newMeeting)) {
@@ -78,6 +79,7 @@ public class AddMeetingCommand extends UndoableCommand {
 
         try {
             model.updatePerson(personToEdit, editedPerson);
+            model.sortMeeting();
         } catch (DuplicatePersonException dpe) {
             throw new AssertionError("Not creating a new person");
         } catch (PersonNotFoundException pnfe) {
