@@ -36,21 +36,23 @@
 <li><a href="#editing-a-person-code-edit-code">4.5. Editing a person : <code>edit</code></a></li>
 <li><a href="#adding-a-tag-to-a-person-code-addtag-code">4.6. Adding a tag to a person : <code>addtag</code></a></li>
 <li><a href="#deleting-a-tag-code-deletetag-code">4.7. Deleting a tag : <code>deletetag</code></a></li>
-<li><a href="#locating-persons-by-keywords-code-find-code">4.8. Locating persons by keywords: <code>find</code></a></li>
-<li><a href="#sorting-contact-list-code-sort-code">4.9. Sorting contact list: <code>sort</code></a></li>
-<li><a href="#selecting-a-person-code-select-code">4.10. Selecting a person : <code>select</code></a></li>
-<li><a href="#making-a-note-code-note-code">4.11. Making a note: <code>note</code></a></li>
-<li><a href="#creating-a-backup-code-backup-code">4.12. Creating a backup : <code>backup</code></a></li>
-<li><a href="#restoring-a-backup-code-restore-code">4.13. Restoring a backup : <code>restore</code></a></li>
-<li><a href="#logging-in-to-google-contacts-code-login-code">4.14. Logging in to Google Contacts: <code>login</code></a></li>
-<li><a href="#synchronising-with-google-contacts-code-sync-code">4.15. Synchronising with Google Contacts : <code>sync</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">4.16. Listing entered commands : <code>history</code></a></li>
-<li><a href="#undoing-previous-command-code-undo-code">4.17. Undoing previous command : <code>undo</code></a></li>
-<li><a href="#redoing-the-previously-undone-command-code-redo-code">4.18. Redoing the previously undone command : <code>redo</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">4.19. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#resizing-the-main-window-code-resize-code">4.20. Resizing the main window : <code>resize</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">4.21. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">4.22. Saving the data</a></li>
+<li><a href="#adding-a-meeting-to-a-person-code-addmeeting-code">4.8. Adding a meeting to a person : <code>addmeeting</code></a></li>
+<li><a href="#deleting-a-meeting-code-deletemeeting-code">4.9. Deleting a meeting : <code>deletemeeting</code></a></li>
+<li><a href="#locating-persons-by-keywords-code-find-code">4.10. Locating persons by keywords: <code>find</code></a></li>
+<li><a href="#sorting-contact-list-code-sort-code">4.11. Sorting contact list: <code>sort</code></a></li>
+<li><a href="#selecting-a-person-code-select-code">4.12. Selecting a person : <code>select</code></a></li>
+<li><a href="#making-a-note-code-note-code">4.13. Making a note: <code>note</code></a></li>
+<li><a href="#creating-a-backup-code-backup-code">4.14. Creating a backup : <code>backup</code></a></li>
+<li><a href="#restoring-a-backup-code-restore-code">4.15. Restoring a backup : <code>restore</code></a></li>
+<li><a href="#logging-in-to-google-contacts-code-login-code">4.16. Logging in to Google Contacts: <code>login</code></a></li>
+<li><a href="#synchronising-with-google-contacts-code-sync-code">4.17. Synchronising with Google Contacts : <code>sync</code></a></li>
+<li><a href="#listing-entered-commands-code-history-code">4.18. Listing entered commands : <code>history</code></a></li>
+<li><a href="#undoing-previous-command-code-undo-code">4.19. Undoing previous command : <code>undo</code></a></li>
+<li><a href="#redoing-the-previously-undone-command-code-redo-code">4.20. Redoing the previously undone command : <code>redo</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">4.21. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#resizing-the-main-window-code-resize-code">4.22. Resizing the main window : <code>resize</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">4.23. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">4.24. Saving the data</a></li>
 </ul>
 </li>
 <li><a href="#since-v1-2">5. Since v1.2</a></li>
@@ -631,8 +633,7 @@ Format: <code>deletetag INDEX TAG</code><br></p>
 </div>
 </div>
 <div class="paragraph">
-<p><em>Coming in v1.3</em><br>
-If you want to delete a single tag from a contact in your <strong>ABC</strong>:<br></p>
+<p>If you want to delete a single tag from a contact in your <strong>ABC</strong>:<br></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -689,7 +690,135 @@ Deletes the <code>9pmclass</code> tag from the 1st person in the results of the 
 </div>
 </div>
 <div class="sect2">
-<h3 id="locating-persons-by-keywords-code-find-code"><a class="link" href="#locating-persons-by-keywords-code-find-code">4.8. Locating persons by keywords: <code>find</code></a></h3>
+<h3 id="adding-a-meeting-to-a-person-code-addmeeting-code"><a class="link" href="#adding-a-meeting-to-a-person-code-addmeeting-code">4.8. Adding a meeting to a person : <code>addmeeting</code></a></h3>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Command Name: <code>addmeeting</code><br>
+Shorthand Alias: <code>am</code><br>
+Function: Adds a meeting to an existing person at the specified <code>INDEX</code> in your <strong>ABC</strong>.<br>
+Format: <code>addmeeting MEETING_NAME/MEETING_TIME</code><br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>MEETING_TIME</code> must be in the format YYYY-MM-DD HH:MM
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to add a single meeting to a contact in your <strong>ABC</strong>:<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Locate the contact you want to add a meeting to and the index of the contact.<br></p>
+</li>
+<li>
+<p>Type in the index of the contact, the name of the meeting and the time of the meeting you wish to add. (Figure 4.8.1)<br>
+<code>&gt;&gt; addmeeting 1 class lunch/2017-12-20 12:00</code>.
+<span class="image"><img src="images/addmeeting_1.png" alt="addmeeting1" width="600"></span><br>
+<em>Figure 4.8.1</em></p>
+</li>
+<li>
+<p>Press <kbd>Enter</kbd> and you should see that the contact that you selected has been modified. (Figure 4.8.2)<br>
+<span class="image"><img src="images/addmeeting_2.png" alt="addmeeting2" width="600"></span><br>
+<em>Figure 4.8.2</em></p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The meeting added must not already exist on the desired contact.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You can also add meetings to contacts in a filtered list:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&gt;&gt; find t/friends</code><br>
+<code>&gt;&gt; addmeeting 2 breakfast/2017-12-15 10:00</code><br>
+Adds a meeting named <code>breakfast</code> at <code>2017-12-15 10:00</code> to the 2nd person in the results of the <code>find</code> command.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-meeting-code-deletemeeting-code"><a class="link" href="#deleting-a-meeting-code-deletemeeting-code">4.9. Deleting a meeting : <code>deletemeeting</code></a></h3>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Command Name: <code>deletemeeting</code><br>
+Shorthand Alias: <code>dm</code><br>
+Function: Deletes the specified meeting at the specified <code>INDEX</code> in the meeting list from your <strong>ABC</strong>.<br>
+Format: <code>deletemeeting INDEX</code><br></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to delete a meeting in your <strong>ABC</strong>:<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Locate the meeting you want to delete and the meeting of the contact.<br></p>
+</li>
+<li>
+<p>Type in the index of the meeting. (Figure 4.9.1)<br>
+<code>&gt;&gt; deletemeeting 1</code>.
+<span class="image"><img src="images/deletemeeting_1.png" alt="600"></span><br>
+<em>Figure 4.9.1</em></p>
+</li>
+<li>
+<p>Press <kbd>Enter</kbd> and you should see that the selected meeting has been deleted. (Figure 4.9.2)<br>
+<span class="image"><img src="images/deletemeeting_2.png" alt="600"></span><br>
+<em>Figure 4.9.2</em></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You can also delete contacts in a filtered list:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list</code><br>
+<code>deletemeeting 2</code><br>
+Deletes the 2nd meeting in the address book.</p>
+</li>
+<li>
+<p><code>find Betsy</code><br>
+<code>deletemeeting 1</code><br>
+Deletes the 1st meeting in the results of the <code>find</code> command.</p>
+</li>
+<li>
+<p><code>find t/friends</code><br>
+<code>dm 4</code><br>
+Deletes the 4th meeting in the results of the <code>find</code> command.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="locating-persons-by-keywords-code-find-code"><a class="link" href="#locating-persons-by-keywords-code-find-code">4.10. Locating persons by keywords: <code>find</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -763,7 +892,7 @@ Lists any person whose name starts with <code>j</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="sorting-contact-list-code-sort-code"><a class="link" href="#sorting-contact-list-code-sort-code">4.9. Sorting contact list: <code>sort</code></a></h3>
+<h3 id="sorting-contact-list-code-sort-code"><a class="link" href="#sorting-contact-list-code-sort-code">4.11. Sorting contact list: <code>sort</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -837,7 +966,7 @@ Sorts the contact list by meeting time.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="selecting-a-person-code-select-code"><a class="link" href="#selecting-a-person-code-select-code">4.10. Selecting a person : <code>select</code></a></h3>
+<h3 id="selecting-a-person-code-select-code"><a class="link" href="#selecting-a-person-code-select-code">4.12. Selecting a person : <code>select</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -924,7 +1053,7 @@ Selects the 7th person in the address book.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="making-a-note-code-note-code"><a class="link" href="#making-a-note-code-note-code">4.11. Making a note: <code>note</code></a></h3>
+<h3 id="making-a-note-code-note-code"><a class="link" href="#making-a-note-code-note-code">4.13. Making a note: <code>note</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1001,7 +1130,7 @@ Removes all existing notes from the 3rd person</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="creating-a-backup-code-backup-code"><a class="link" href="#creating-a-backup-code-backup-code">4.12. Creating a backup : <code>backup</code></a></h3>
+<h3 id="creating-a-backup-code-backup-code"><a class="link" href="#creating-a-backup-code-backup-code">4.14. Creating a backup : <code>backup</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1044,7 +1173,7 @@ Your data is automatically backed up every time you close the app.
 </div>
 </div>
 <div class="sect2">
-<h3 id="restoring-a-backup-code-restore-code"><a class="link" href="#restoring-a-backup-code-restore-code">4.13. Restoring a backup : <code>restore</code></a></h3>
+<h3 id="restoring-a-backup-code-restore-code"><a class="link" href="#restoring-a-backup-code-restore-code">4.15. Restoring a backup : <code>restore</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1103,7 +1232,7 @@ An error message will be shown if you do not already have a backup file in the d
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging-in-to-google-contacts-code-login-code"><a class="link" href="#logging-in-to-google-contacts-code-login-code">4.14. Logging in to Google Contacts: <code>login</code></a></h3>
+<h3 id="logging-in-to-google-contacts-code-login-code"><a class="link" href="#logging-in-to-google-contacts-code-login-code">4.16. Logging in to Google Contacts: <code>login</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1163,7 +1292,7 @@ Sorts the contact list by meeting time.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="synchronising-with-google-contacts-code-sync-code"><a class="link" href="#synchronising-with-google-contacts-code-sync-code">4.15. Synchronising with Google Contacts : <code>sync</code></a></h3>
+<h3 id="synchronising-with-google-contacts-code-sync-code"><a class="link" href="#synchronising-with-google-contacts-code-sync-code">4.17. Synchronising with Google Contacts : <code>sync</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1218,7 +1347,7 @@ You have to run the <code>login</code> command before you can run <code>sync</co
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">4.16. Listing entered commands : <code>history</code></a></h3>
+<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">4.18. Listing entered commands : <code>history</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1259,7 +1388,7 @@ Pressing the <kbd>&uarr;</kbd> and <kbd>&darr;</kbd> arrows will display the pre
 </div>
 </div>
 <div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">4.17. Undoing previous command : <code>undo</code></a></h3>
+<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">4.19. Undoing previous command : <code>undo</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1381,7 +1510,7 @@ Format: <code>undo</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">4.18. Redoing the previously undone command : <code>redo</code></a></h3>
+<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">4.20. Redoing the previously undone command : <code>redo</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1502,7 +1631,7 @@ Format: <code>redo</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">4.19. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">4.21. Clearing all entries : <code>clear</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1533,7 +1662,7 @@ Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="resizing-the-main-window-code-resize-code"><a class="link" href="#resizing-the-main-window-code-resize-code">4.20. Resizing the main window : <code>resize</code></a></h3>
+<h3 id="resizing-the-main-window-code-resize-code"><a class="link" href="#resizing-the-main-window-code-resize-code">4.22. Resizing the main window : <code>resize</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1586,7 +1715,7 @@ You <strong>CANNOT</strong> <code>undo</code> a <code>resize</code> command
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">4.21. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">4.23. Exiting the program : <code>exit</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1616,7 +1745,7 @@ Do not worry about losing your contacts as they will be saved automatically.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">4.22. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">4.24. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
@@ -1786,72 +1915,92 @@ will open up a new window in your default browser.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>deletetag TAGNAME</code></p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add Meeting</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>am</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>addmeeting INDEX MEETING_NAME/MEETING_TIME</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete Meeting</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deletemeeting INDEX</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Find</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>f</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>find [n/KEYWORD…​] [p/KEYWORD…​] [e/KEYWORD…​] [a/KEYWORD…​] [t/KEYWORD…​]</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Select</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sl</code></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">`select INDEX</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Note</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>n</code></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>note INDEX n/NOTE</code></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Backup</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>b</code></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>backup</code></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Restore Backup</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>rb</code></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">'restore'</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Synchronise with Google Contacts</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sy</code></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sync</code></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">History</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">'hx'</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>history</code></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Undo</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>u</code></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>undo</code></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Redo</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>r</code></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>redo</code></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Clear</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>c</code></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>clear</code></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Resize</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>rs</code></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>resize WIDTH HEIGHT</code></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Exit</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>q</code></p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>q</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">exit</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Saving Data</p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
@@ -1860,7 +2009,7 @@ will open up a new window in your default browser.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-11-05 16:06:34 +00:00
+Last updated 2017-11-06 05:53:56 +00:00
 </div>
 </div>
 </body>
