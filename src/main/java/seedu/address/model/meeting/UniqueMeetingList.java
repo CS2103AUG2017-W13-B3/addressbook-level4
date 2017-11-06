@@ -94,6 +94,7 @@ public class UniqueMeetingList implements Iterable<Meeting> {
         assert CollectionUtil.elementsAreUnique(internalList);
     }
 
+    //@@author alexanderleegs
     /**
      * Removes the equivalent meeting from the list.
      */
