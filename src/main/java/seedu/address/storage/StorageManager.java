@@ -95,8 +95,6 @@ public class StorageManager extends ComponentManager implements Storage {
 
     /**
      * Creates file path of the backup data file.
-     * @param addressBookFilePath cannot be null.
-     * @return file path for backup address book.
      */
     private String createBackupAddressBookFilePath(String addressBookFilePath) {
         String nameOfFile = addressBookFilePath.split("[.]")[0];
