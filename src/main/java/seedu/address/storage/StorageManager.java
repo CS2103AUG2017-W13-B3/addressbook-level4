@@ -103,8 +103,8 @@ public class StorageManager extends ComponentManager implements Storage {
         String nameOfBackupFile = nameOfFile + "-backup.xml";
         return nameOfBackupFile;
     }
-    //@@author
 
+    //@@author
     @Override
     @Subscribe
     public void handleAddressBookChangedEvent(AddressBookChangedEvent event) {
