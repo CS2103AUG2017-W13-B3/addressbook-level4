@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.3">
+<title>Derrick Chua - Project Portfolio</title>
+<link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Derrick Chua - Project Portfolio</h1>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="project-abc-business-contacts"><a class="link" href="#project-abc-business-contacts">Project: ABC Business Contacts</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ABC Business Contact(ABC) is a desktop Business Contact Management application. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java.</p>
+</div>
+<div class="paragraph">
+<p><strong>Code contributed</strong>: [<a href="https://github.com/CS2103AUG2017-W13-B3/main/blob/master/collated/main/derrickchua.md">Functional code</a>] [<a href="https://github.com/CS2103AUG2017-W13-B3/main/blob/master/collated/test/derrickchua.md">Test code</a>]</p>
+</div>
+<div class="sect2">
+<h3 id="enhancement-added-sync"><a class="link" href="#enhancement-added-sync">Enhancement Added: Sync</a></h3>
+<div class="sect3">
+<h4 id="external-behavior"><a class="link" href="#external-behavior">External behavior</a></h4>
+<hr>
+<div class="paragraph">
+<p><mark>Start of Extract [from: User Guide]</mark></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="logging-in-to-google-contacts-code-login-code"><a class="link" href="#logging-in-to-google-contacts-code-login-code">Logging in to Google Contacts: <code>login</code></a></h3>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Command Name: <code>login</code><br>
+Shorthand Alias: <code>sy</code><br>
+Function: Logs in to Google Contacts<br>
+Format: <code>login</code></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If you would like to login to Google Contacts before running <code>sync</code>:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Type in (Figure 4.14.1)<br>
+<code>&gt;&gt; login</code> <br>
+<span class="image"><img src="../images/login1.png" alt="600"></span><br>
+<em>Figure 4.14.1</em></p>
+</li>
+<li>
+<p>Press <kbd>Enter</kbd>. Your default browser should open a login window (Figure 4.15.2)<br>
+<span class="image"><img src="../images/login2.png" alt="sync2" width="600"></span><br>
+<em>Figure 4.14.2</em></p>
+</li>
+<li>
+<p>Enter your login details and press Next (Figure 4.15.3)<br>
+<span class="image"><img src="../images/login3.png" alt="sync3" width="600"></span><br></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><em>Figure 4.14.3</em>
+.   Allow <strong>ABC</strong> to access your Google Contacts information (Figure 4.14.4)<br>
+<span class="image"><img src="../images/login4.png" alt="sync4" width="600"></span><br>
+<em>Figure 4.14.4</em></p>
+</div>
+<div class="paragraph">
+<p>Here are some other ways to sort your contact list:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>sort phone</code><br>
+Sorts the contact list by phone number.</p>
+</li>
+<li>
+<p><code>s tag</code><br>
+Sorts the contact list by tag.</p>
+</li>
+<li>
+<p><code>sort meeting</code><br>
+Sorts the contact list by meeting time.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="synchronising-with-google-contacts-code-sync-code"><a class="link" href="#synchronising-with-google-contacts-code-sync-code">Synchronising with Google Contacts : <code>sync</code></a></h3>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Command Name: <code>sync</code>
+Shorthand Alias: <code>sy</code><br>
+Function: Synchronise your contacts with Google Contacts after authentication<br>
+Format: <code>sync</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A browser is necessary for logging in to Google
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You have to run the <code>login</code> command before you can run <code>sync</code>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>You can easily synchronise your <strong>ABC</strong> contacts with Google Contacts through the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Type (Figure 4.15.1)<br>
+<code>&gt;&gt; sync</code><br>
+<span class="image"><img src="../images/sync1.png" alt="sync1" width="600"></span><br>
+<em>Figure 4.15.1</em><br></p>
+</li>
+<li>
+<p>Your contacts are now synchronised. Figure (4.15.5)
+<span class="image"><img src="../images/sync5.png" alt="sync5" width="600"></span><br>
+<em>Figure 4.15.5</em></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><mark>End of Extract</mark></p>
+</div>
+<hr>
+<div class="sect3">
+<h4 id="justification"><a class="link" href="#justification">Justification</a></h4>
+<div class="paragraph">
+<p>People use their smartphones mainly to access their contacts,
+and adding synchronisation with Google Contacts provides a way
+for the modern user to use the ABC Business Contacts application
+without the hassle of importing and exporting his contacts
+constantly.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="implementation"><a class="link" href="#implementation">Implementation</a></h4>
+<hr>
+<div class="paragraph">
+<p><mark>Start of Extract [from: Developer Guide]</mark></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="synchronisation-with-google-contacts"><a class="link" href="#synchronisation-with-google-contacts">Synchronisation with Google Contacts</a></h3>
+<div class="sect3">
+<h4 id="mechanism"><a class="link" href="#mechanism">Mechanism</a></h4>
+<div class="paragraph">
+<p>Authentication and synchronisation of data with a user&#8217;s Google Contacts is done via the <code>sync</code> command, which is a subclass of <code>Command</code>. This command works in conjunction with the Google Client and People API.</p>
+</div>
+<div class="paragraph">
+<p>Firstly, the command posts an <code>AuthorizationEvent</code> event to the EventCenter, which is then handled by a <code>OAuth</code> class, which is chiefly responsible for authorization and interaction with a user&#8217;s Google Contacts. Hence, threading allows for the application to run in the background, while the user can perform other tasks. The user is redirected to login to Google via his default browser through the invoked <code>authorize</code> method. A callback is then done to create a <code>Credential</code> which is then used to instantiate a <code>PeopleService</code> instance. The <code>PeopleService</code> is then used to perform CRUD functions on the user&#8217;s Google Contacts. The following diagram shows the entire sequence.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/SyncCommandSequenceDiagram.png" alt="SyncCommandSequenceDiagram" width="1000">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="methods"><a class="link" href="#methods">Methods</a></h4>
+<div class="sect4">
+<h5 id="synccommand"><a class="link" href="#synccommand">SyncCommand</a></h5>
+<div class="paragraph">
+<p>Below is the implementation of <code>SyncCommand</code>, where the <code>AuthorizationEvent</code> is sent upon execution, and the command notifies the user that synchronisation has been initiated.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">SyncCommand</span> <span class="directive">extends</span> Command {
+    <span class="comment">//...variables, constructor, other methods</span>
+
+    <span class="annotation">@Override</span>
+    <span class="directive">public</span> CommandResult executeUndoableCommand() <span class="directive">throws</span> CommandException {
+
+        <span class="keyword">try</span> {
+            <span class="predefined-type">List</span>&lt;ReadOnlyPerson&gt; personList = model.getFilteredPersonList();
+            AuthorizationEvent event = <span class="keyword">new</span> AuthorizationEvent(personList);
+            EventsCenter.getInstance().post(event);
+            <span class="keyword">return</span> <span class="keyword">new</span> CommandResult(<span class="predefined-type">String</span>.format(MESSAGE_SUCCESS));
+        } <span class="keyword">catch</span> (<span class="exception">Exception</span> e) {
+            <span class="keyword">throw</span> <span class="keyword">new</span> CommandException(MESSAGE_FAILURE);
+        }
+
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="authorizationevent-handler"><a class="link" href="#authorizationevent-handler">AuthorizationEvent Handler</a></h5>
+<div class="paragraph">
+<p>The <code>OAuth</code> class handles the AuthorizationEvent. It first runs the <code>authorize</code> method to obtain a Credential, and uses that to create a <code>PeopleService</code>. The <code>exportContacts</code> method is then invoked to export all contacts to the AddressBook to Google Contacts. Below is the code for the handler.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">OAuth</span> {
+    <span class="comment">// variables, constructor and other methods</span>
+
+    <span class="annotation">@Subscribe</span>
+    <span class="directive">public</span> <span class="directive">static</span> <span class="type">void</span> handleAuthorizationEvent(AuthorizationEvent event) <span class="directive">throws</span> <span class="predefined-type">Throwable</span> {
+        <span class="keyword">new</span> <span class="predefined-type">Thread</span> (() -&gt; {
+            <span class="keyword">try</span> {
+                <span class="comment">// initialize the transport</span>
+                httpTransport = GoogleNetHttpTransport.newTrustedTransport();
+
+                <span class="comment">// initialize the data store factory</span>
+                dataStoreFactory = <span class="keyword">new</span> FileDataStoreFactory(DATA_STORE_DIR);
+
+                <span class="comment">// authorization</span>
+                Credential credential = authorize();
+                <span class="comment">// set up global People instance</span>
+                client = <span class="keyword">new</span> PeopleService.Builder(
+                        httpTransport, JSON_FACTORY, credential).setApplicationName(APPLICATION_NAME).build();
+
+                exportContacts(event.getPersonList());
+            } <span class="keyword">catch</span> (<span class="exception">IOException</span> e) {
+                <span class="predefined-type">System</span>.err.println(e.getMessage());
+            } <span class="keyword">catch</span> (<span class="predefined-type">Throwable</span> t) {
+                t.printStackTrace();
+            }
+        }).start();
+
+
+    }</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="authorize-with-google-servers"><a class="link" href="#authorize-with-google-servers">Authorize with Google servers</a></h5>
+<div class="paragraph">
+<p>Below is the <code>authorize</code> method implemented in <code>OAuth</code>, which uses the <code>People API</code> to get an authorization token, used to create a <code>PeopleService</code> to retrieve Google Contacts information. A <code>clients_secret.json</code> file is used to provide the required Client ID and Secret for the Google API. A <code>Credential</code> is returned from this method, which is then used to create a <code>PeopleService</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">OAuth</span> {
+    <span class="comment">// variables, constructor and other methods</span>
+
+    <span class="comment">/** Authorizes the installed application to access user's protected data. */</span>
+    <span class="directive">private</span> <span class="directive">static</span> Credential authorize() <span class="directive">throws</span> <span class="exception">Exception</span> {
+        <span class="comment">// load client secrets</span>
+        GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY,
+                <span class="keyword">new</span> <span class="predefined-type">InputStreamReader</span>(OAuth.class.getResourceAsStream(<span class="string"><span class="delimiter">&quot;</span><span class="content">/client_secrets.json</span><span class="delimiter">&quot;</span></span>)));
+        <span class="keyword">if</span> (clientSecrets.getDetails().getClientId().startsWith(<span class="string"><span class="delimiter">&quot;</span><span class="content">Enter</span><span class="delimiter">&quot;</span></span>)
+                || clientSecrets.getDetails().getClientSecret().startsWith(<span class="string"><span class="delimiter">&quot;</span><span class="content">Enter </span><span class="delimiter">&quot;</span></span>)) {
+            <span class="predefined-type">System</span>.out.println(
+                    <span class="string"><span class="delimiter">&quot;</span><span class="content">Enter Client ID and Secret from https://code.google.com/apis/console/?api=people </span><span class="delimiter">&quot;</span></span>
+                            + <span class="string"><span class="delimiter">&quot;</span><span class="content">into seedu/address/src/main/resources/client_secrets.json</span><span class="delimiter">&quot;</span></span>);
+            <span class="predefined-type">System</span>.exit(<span class="integer">1</span>);
+        }
+
+        <span class="comment">// set up authorization code flow</span>
+        GoogleAuthorizationCodeFlow flow = <span class="keyword">new</span> GoogleAuthorizationCodeFlow.Builder(
+                httpTransport, JSON_FACTORY, clientSecrets,
+                <span class="predefined-type">Collections</span>.singleton(PeopleServiceScopes.CONTACTS)).setDataStoreFactory(dataStoreFactory)
+                .build();
+
+        <span class="comment">// authorize</span>
+
+        <span class="keyword">return</span> <span class="keyword">new</span> AuthorizationCodeInstalledApp(flow, <span class="keyword">new</span> LocalServerReceiver()).authorize(<span class="string"><span class="delimiter">&quot;</span><span class="content">user</span><span class="delimiter">&quot;</span></span>);
+    }
+
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="export-contacts-to-google-contacts"><a class="link" href="#export-contacts-to-google-contacts">Export contacts to Google Contacts</a></h5>
+<div class="paragraph">
+<p>Lastly, AddressBook contacts are then exported to Google Contacts via the <code>exportContacts</code> method. A <code>ReadOnlyPersonList</code> is obtained from the current AddressBook, and iterated through to add their entries into the user&#8217;s Google account via the <code>createContact</code> method provided by People API. The code is shown below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">OAuth</span> {
+
+    <span class="comment">/**Uploads AddressBook contacts to Google Contacts
+     * TODO: Prevent adding of duplicates
+     */</span>
+    <span class="directive">private</span> <span class="directive">static</span> <span class="type">void</span> exportContacts (<span class="predefined-type">List</span>&lt;ReadOnlyPerson&gt; personList) <span class="directive">throws</span> <span class="exception">IOException</span> {
+        <span class="keyword">for</span> (ReadOnlyPerson person : personList) {
+            Person contactToCreate = <span class="keyword">new</span> Person();
+            <span class="predefined-type">List</span>&lt;<span class="predefined-type">Name</span>&gt; name = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;<span class="predefined-type">Name</span>&gt;();
+            <span class="predefined-type">List</span>&lt;EmailAddress&gt; email = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;EmailAddress&gt;();
+            <span class="predefined-type">List</span>&lt;Address&gt; address = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;Address&gt;();
+            <span class="predefined-type">List</span>&lt;PhoneNumber&gt; phone = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;PhoneNumber&gt;();
+            name.add(<span class="keyword">new</span> <span class="predefined-type">Name</span>().setGivenName(person.getName().fullName));
+            email.add(<span class="keyword">new</span> EmailAddress().setValue(person.getEmail().value));
+            address.add(<span class="keyword">new</span> Address().setFormattedValue(person.getAddress().value));
+            phone.add(<span class="keyword">new</span> PhoneNumber().setValue(person.getPhone().value));
+
+            contactToCreate.setNames(name)
+                            .setEmailAddresses(email)
+                            .setAddresses(address)
+                            .setPhoneNumbers(phone);
+
+            Person createdContact = client.people().createContact(contactToCreate).execute();
+        }
+    }</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<div class="paragraph">
+<p><strong>Aspect:</strong> Google Authorization<br>
+<strong>Alternative 1 (current choice):</strong> A thread is used<br>
+<strong>Pros:</strong> Users can use the application and execute other commands asynchronously from the authorization<br>
+<strong>Cons:</strong> It is thus more difficult to show the progress of the syncCommand</p>
+</div>
+<div class="paragraph">
+<p><strong>Alternative 2:</strong> Block the application while waiting for authorization<br>
+<strong>Pros:</strong> Users will know the progress of the SyncCommand<br>
+<strong>Cons:</strong> The application will freeze if authorization is done, or done in a manner not coded for by the People API (e.g. exiting the window via the 'X' or 'Close' button</p>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>Aspect:</strong> Accessing <code>OAuth</code> from <code>Logic</code><br>
+<strong>Alternative 1 (current choice):</strong> An <code>Event</code> and a <code>Subscriber</code> is used to communicate between the two different components<br>
+<strong>Pros:</strong> Maintain low coupling and prevent unnecessary addition of dependencies<br>
+<strong>Cons:</strong> Handlers have to be created to handle <code>Events</code> when they occur<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Alternative 2:</strong> Create an <code>OAuth</code> object in <code>Logic</code><br>
+<strong>Pros:</strong> No handlers are required to process <code>Events</code><br>
+<strong>Cons:</strong> Introduce unnecessary dependencies</p>
+</div>
+<div class="paragraph">
+<p><mark>End of Extract</mark></p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enhancement-added-add-command-code-note-code"><a class="link" href="#enhancement-added-add-command-code-note-code">Enhancement Added: Add command <code>note</code></a></h3>
+<div class="sect3">
+<h4 id="external-behavior-2"><a class="link" href="#external-behavior-2">External behavior</a></h4>
+<hr>
+<div class="paragraph">
+<p><mark>Start of Extract [from: User Guide]</mark></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="making-a-note-code-note-code"><a class="link" href="#making-a-note-code-note-code">Making a note: <code>note</code></a></h3>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Command Name: <code>note</code><br>
+Shorthand Alias: <code>n</code><br>
+Function: Inserts the NOTE for an entry specified by INDEX in the ABC<br>
+Format: <code>note INDEX [n/NOTE]</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Each contact can only have a maximum of 1 note
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Notes can be blank to delete existing notes, i.e. <code>note n/</code>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to add a note for a ABC contact:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Locate the index of the contact<br></p>
+</li>
+<li>
+<p>Type in your desired INDEX and NOTE (Figure 4.12.1)<br>
+<code>&gt;&gt; note 1 n/This is an important note</code><br>
+<span class="image"><img src="../images/note1.png" alt="note1" width="600"></span><br>
+<em>Figure 4.12.1</em></p>
+</li>
+<li>
+<p>Press <kbd>Enter</kbd>. Your note should now be displayed as the last row in your contact&#8217;s details (Figure 4.12.2)<br>
+<span class="image"><img src="../images/note2.png" alt="note2" width="600" height="40"></span><br>
+<em>Figure 4.12.2</em></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Here are some other ways to change your ABC contact&#8217;s note:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>note 2 n/</code><br>
+Removes all existing notes from the 2nd person<br></p>
+</li>
+<li>
+<p><code>n 3 n/This is a note</code><br>
+Changes the 3rd contact&#8217;s note to "This is a note"<br></p>
+</li>
+<li>
+<p><code>n 3 n/</code><br>
+Removes all existing notes from the 3rd person</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><mark>End of Extract</mark></p>
+</div>
+<hr>
+<div class="sect3">
+<h4 id="justification-2"><a class="link" href="#justification-2">Justification</a></h4>
+<div class="paragraph">
+<p>Adding a <code>note</code> command enables the user to add notes for his contacts quickly should he need
+to jot something down.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enhancement-added-optional-fields-for-code-add-code"><a class="link" href="#enhancement-added-optional-fields-for-code-add-code">Enhancement Added: Optional fields for <code>add</code></a></h3>
+<div class="sect3">
+<h4 id="external-behavior-3"><a class="link" href="#external-behavior-3">External behavior</a></h4>
+<hr>
+<div class="paragraph">
+<p><mark>Start of Extract [from: User Guide]</mark></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">Adding a person: <code>add</code></a></h3>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Command Name: <code>add</code><br>
+Shorthand Alias: <code>a</code><br>
+Function: adds a person to <strong>ABC</strong><br>
+Format: <code>add n/NAME [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code><br></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+A person can have any number of tags (including 0)
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+A person can have any number of meetings (including 0)
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Parameters can be in any order e.g. <code>n/NAME p/PHONE_NUMBER</code>, <code>p/PHONE_NUMBER n/NAME</code> are equivalent.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to add a new contact to your <strong>ABC</strong>:<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Type in (Figure 4.2.1)<br>
+<code>&gt;&gt; add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal</code>
+<span class="image"><img src="../images/add1.png" alt="add1" width="600"></span><br>
+<em>Figure 4.2.1</em></p>
+</li>
+<li>
+<p>Press <kbd>Enter</kbd> and you should see (Figure 4.2.2):<br>
+<span class="image"><img src="../images/add2.png" alt="UI" width="600"></span><br>
+<em>Figure 4.2.2</em></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Here are some other ways you can add contacts:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code></p>
+</li>
+<li>
+<p><code>add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal</code></p>
+</li>
+<li>
+<p><code>add n/Jack Daniels</code></p>
+</li>
+<li>
+<p><code>a n/John Watson p/83331122 e/johnw@example.com a/John Avenue, block 2, #01-01</code></p>
+</li>
+<li>
+<p><code>a n/Dave</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you type in all commands shown above, you should see Figure 4.2.3<br>
+<span class="image"><img src="../images/add3.png" alt="add3" width="600"></span><br>
+<em>Figure 4.2.3</em></p>
+</div>
+<div class="paragraph">
+<p><mark>End of Extract</mark></p>
+</div>
+<hr>
+<div class="sect3">
+<h4 id="justification-3"><a class="link" href="#justification-3">Justification</a></h4>
+<div class="paragraph">
+<p>Not all details are always known about a contact, but it should not prevent
+a user from adding him/her.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enhancement-proposed-add-different-views-for-meetings"><a class="link" href="#enhancement-proposed-add-different-views-for-meetings">Enhancement Proposed: Add different views for Meetings</a></h3>
+<div class="paragraph">
+<p>A command <code>view</code> is added, where the user can specify how he wants to view his meetings, i.e. by week, month or year</p>
+</div>
+<div class="sect3">
+<h4 id="justification-4"><a class="link" href="#justification-4">Justification</a></h4>
+<div class="paragraph">
+<p>Users should be able to categorise their contacts by period, i.e. week, month or year</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="other-contributions"><a class="link" href="#other-contributions">Other contributions</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Implement tag colours (Pull request <a href="https://github.com/CS2103AUG2017-W13-B3/main/pull/1">#1</a>)</p>
+</li>
+<li>
+<p>Fix white PersonListPanel CSS (Pull request <a href="https://github.com/CS2103AUG2017-W13-B3/main/pull/75">#75</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2017-11-07 13:21:59 +00:00
+</div>
+</div>
+</body>
+</html>
