@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.3">
+<title>Li Zeyong - Project Portfolio</title>
+<link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Li Zeyong - Project Portfolio</h1>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="project-abc-business-contact"><a class="link" href="#project-abc-business-contact">Project: ABC Business Contact</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>ABC Business Contact</strong> is a free desktop contact management application that helps the user to manage a large collection of contacts conveniently and keep track of appointments. The user can store contacts as well as other information and retrieve them efficiently with the help of <strong>ABC</strong>.<br>
+ The user interact with it using a Command Line Interface(CLI), and it has a GUI created with JavaFX. It is written in Java, and has about 6 kLoC.</p>
+</div>
+<div class="paragraph">
+<p><strong>Code contributed</strong>: [<a href="https://github.com/CS2103AUG2017-W13-B3/main/blob/master/collated/main/newalter.md">Functional code</a>] [<a href="https://github.com/CS2103AUG2017-W13-B3/main/blob/master/collated/test/newalter.md">Test code</a>]</p>
+</div>
+<div class="sect2">
+<h3 id="enhancement-added-a-universal-find-command"><a class="link" href="#enhancement-added-a-universal-find-command">Enhancement Added: A Universal Find Command</a></h3>
+<div class="sect3">
+<h4 id="external-behavior"><a class="link" href="#external-behavior">External behavior</a></h4>
+<hr>
+<div class="paragraph">
+<p><mark>Start of Extract [from: User Guide]</mark></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="locating-persons-by-keywords-code-find-code"><a class="link" href="#locating-persons-by-keywords-code-find-code">Locating persons by keywords: <code>find</code></a></h3>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Command Name: <code>find</code><br>
+Shorthand Alias: <code>f</code><br>
+Function : Finds persons whose specified fields contain any of the given keywords.<br>
+Format: <code>find [n/KEYWORD&#8230;&#8203;] [p/KEYWORD&#8230;&#8203;] [e/KEYWORD&#8230;&#8203;] [a/KEYWORD&#8230;&#8203;] [t/KEYWORD&#8230;&#8203;]</code><br>
+[NOTE] There must be at least one argument.</p>
+</div>
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The search is case insensitive. e.g <code>hans</code> will match <code>Hans</code></p>
+</li>
+<li>
+<p>The order of the keywords does not matter. e.g. <code>Hans Bo</code> will match <code>Bo Hans</code></p>
+</li>
+<li>
+<p>Only full words will be matched e.g. <code>Han</code> will not match <code>Hans</code></p>
+</li>
+<li>
+<p>Persons matching at least one keyword in one field will be returned (i.e. <code>OR</code> search). e.g. <code>find n/Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code></p>
+</li>
+<li>
+<p>The search is done on the existing list. Successive <code>find</code> makes the list smaller and smaller</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to find a person named <code>John Watson</code>:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Type in (Figure 4.8.1)<br>
+<code>&gt;&gt; find n/john</code><br>
+<span class="image"><img src="../images/to be updated" alt="a"></span><br>
+<em>Figure 4.8.1</em></p>
+</li>
+<li>
+<p>Press <kbd>Enter</kbd> and you should see a list of persons having the name <code>john</code>: (Figure 4.8.2)<br>
+<span class="image"><img src="../images/to be updated" alt="a"></span><br>
+<em>Figure 4.8.2</em></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Here are some other commands you can do with <code>find</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>find Betsy Tim John</code><br>
+Lists any person having names <code>Betsy</code>, <code>Tim</code>, or <code>John</code></p>
+</li>
+<li>
+<p><code>f Watson</code><br>
+Lists any person having the name <code>Watson</code></p>
+</li>
+<li>
+<p><code>find j*</code><br>
+Lists any person whose name starts with <code>j</code><br></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><mark>End of Extract</mark></p>
+</div>
+<hr>
+<div class="sect3">
+<h4 id="justification"><a class="link" href="#justification">Justification</a></h4>
+<div class="paragraph">
+<p>It allows users to locate specific contacts efficiently using all information available beyond name and tags.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enhancement-added-filtering-of-find-command"><a class="link" href="#enhancement-added-filtering-of-find-command">Enhancement Added: Filtering of Find command</a></h3>
+<div class="sect3">
+<h4 id="external-behavior-2"><a class="link" href="#external-behavior-2">External behavior</a></h4>
+<hr>
+<div class="paragraph">
+<p>The <code>find</code> command filters the list shown. Successive <code>find</code> makes the list smaller and smaller</p>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="justification-2"><a class="link" href="#justification-2">Justification</a></h4>
+<div class="paragraph">
+<p>By filtering the existing list, the user can narrow down the list to find the relevant contacts without exact information.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="implementation"><a class="link" href="#implementation">Implementation</a></h4>
+<hr>
+<div class="paragraph">
+<p><mark>Start of Extract [from: Developer Guide]</mark></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="filtering-mechanism-in-find"><a class="link" href="#filtering-mechanism-in-find">Filtering mechanism in find</a></h3>
+<div class="sect3">
+<h4 id="mechanism"><a class="link" href="#mechanism">Mechanism</a></h4>
+<div class="paragraph">
+<p>The list of persons displayed is filtered by a [<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Predicate</a>]
+when the method <code>updateFilteredPersonList(predicate)</code> from the <code>Model</code> interface is invoked.</p>
+</div>
+<div class="paragraph">
+<p>The relevant methods in the Model interface are as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">Model</span> {
+
+    ...
+
+    <span class="comment">/** Returns the predicate of the current filtered person list */</span>
+    Predicate&lt;? <span class="local-variable">super</span> ReadOnlyPerson&gt; getPersonListPredicate();
+
+    <span class="comment">/** Updates the filter of the filtered person list to filter by the given {@code predicate}.*/</span>
+    <span class="type">void</span> updateFilteredPersonList(<span class="predefined-type">Predicate</span>&lt;ReadOnlyPerson&gt; predicate);
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When <code>updateFilteredPersonList(predicate)</code> is invoked, every <code>person</code> in the <strong>AddressBook</strong> is evaluated against the <code>predicate</code>.<br>
+A <code>person</code> is added to the displayed list if <code>predicate.test(person)</code> is evaluated to be TRUE.<br>
+All <code>person</code> instances that fulfill the conditions specified in <code>predicate</code> are filtered to be displayed.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="filtering-on-the-existing-list"><a class="link" href="#filtering-on-the-existing-list">Filtering on the existing list</a></h4>
+<div class="paragraph">
+<p>Note that all <code>person</code> instances in the existing list satisfy a Predicate <code>currentPredicate</code>.<br>
+Given a new Predicate <code>newPredicate</code>, filtering on the existing list is equivalent to selecting <code>person</code> instancesthat satisfy both <code>currentPredicate</code> and <code>newPredicate</code>.<br>
+From Figure 3.2.1, it can also be viewed as the intersection of two lists of <code>person</code> objects, each satisfying one of the two predicates respectively.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/venn_diagram.png" alt="venn diagram" width="250" height="200">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Figure 3.4.1 : Venn Diagram for Filtering</em></p>
+</div>
+<div class="sect4">
+<h5 id="implementation-2"><a class="link" href="#implementation-2">Implementation</a></h5>
+<div class="paragraph">
+<p>The actual implementation of filtering on the existing list involves three steps.<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Invoke <code>getPersonListPredicate()</code> provided in the Model interface to get the <code>currentPredicate</code>.</p>
+</li>
+<li>
+<p>Use [<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html#and-java.util.function.Predicate-">Predicate.and()</a>] to generated the logical AND of the two predicates.</p>
+</li>
+<li>
+<p>Update the list using the predicate generated in step 2.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For more detail, refer to the sequence diagram(Figure 3.4.2) below.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/FindCommandSequenceDiagram.png" alt="FindCommandSequenceDiagram">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Figure 3.4.2 : Sequence Diagram for Filter</em></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="design-consideration"><a class="link" href="#design-consideration">Design consideration</a></h5>
+<div class="paragraph">
+<p>The design for filtering on the existing list applies the [<a href="https://en.wikipedia.org/wiki/Open/closed_principle">Open/Close Principle</a>].</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>By providing a new extension of <code>getPersonListPredicate()</code> in the <code>Model</code> interface, the new feature is enabled.<br></p>
+</li>
+<li>
+<p>By making use of the logical AND of two predicates, the list can be filtered without modification of the fundamental filtering mechanism.<br></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><mark>End of Extract</mark></p>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enhancement-added-wildcard-symbol"><a class="link" href="#enhancement-added-wildcard-symbol">Enhancement Added: Wildcard Symbol</a></h3>
+<div class="sect3">
+<h4 id="external-behavior-3"><a class="link" href="#external-behavior-3">External behavior</a></h4>
+<hr>
+<div class="paragraph">
+<p><mark>Start of Extract [from: User Guide]</mark></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wildcard symbol <code>*</code> and <code>?</code> are allowed in parameters for <code>find</code> where <code>\*</code> matches any non-space string and <code>?</code> matches any non-space unit-length symbol.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><mark>End of Extract</mark></p>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="justification-3"><a class="link" href="#justification-3">Justification</a></h4>
+<div class="paragraph">
+<p>The use of wildcard symbol <code>*</code> and <code>?</code> allows fuzzy search.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enhancement-added-resize-command"><a class="link" href="#enhancement-added-resize-command">Enhancement Added: Resize Command</a></h3>
+<div class="sect3">
+<h4 id="external-behavior-4"><a class="link" href="#external-behavior-4">External behavior</a></h4>
+<hr>
+<div class="paragraph">
+<p><mark>Start of Extract [from: User Guide]</mark></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="resizing-the-main-window-code-resize-code"><a class="link" href="#resizing-the-main-window-code-resize-code">Resizing the main window : <code>resize</code></a></h3>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Command Name: <code>resize</code><br>
+Shorthand Alias: <code>rs</code><br>
+Function: Resizes the main window to the specified width and height in pixels<br>
+Format: <code>resize WIDTH HEIGHT</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Restriction on WIDTH and HEIGHT: <code>WIDTH &lt; = width of the screen display</code>, <code>HEIGHT &lt; = height of the screen display</code>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You <strong>CANNOT</strong> <code>undo</code> a <code>resize</code> command
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to resize your main window to 1280 * 720:<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Type in (Figure 4.20.1)<br>
+<code>&gt;&gt; resize 1280 720</code><br>
+<span class="image"><img src="../images/resize.png" alt="resize"></span><br>
+<em>Figure 4.20.1</em></p>
+</li>
+<li>
+<p>Press <kbd>Enter</kbd> and the main window would be resized to 1280 * 720.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><mark>End of Extract</mark></p>
+</div>
+<hr>
+<div class="sect3">
+<h4 id="justification-4"><a class="link" href="#justification-4">Justification</a></h4>
+<div class="paragraph">
+<p>The resize command allows the user to enlarge/shrink the size of the main window conveniently using CLI so that he/she can have a view more contacts or make space in the screen for other applications.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enhancement-added-auto-completion-suggestion"><a class="link" href="#enhancement-added-auto-completion-suggestion">Enhancement Added: Auto-Completion Suggestion</a></h3>
+<div class="sect3">
+<h4 id="external-behavior-5"><a class="link" href="#external-behavior-5">External behavior</a></h4>
+<hr>
+<div class="paragraph">
+<p><mark>Start of Extract [from: User Guide]</mark></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suggestions would pop up for partial words keyed in. Press <kbd>TAB</kbd> to auto-complete using the first suggestion.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><mark>End of Extract</mark></p>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="justification-5"><a class="link" href="#justification-5">Justification</a></h4>
+<div class="paragraph">
+<p>Auto-Completion allows users to type less. Moreover, since all suggestions are generated from the database, it reduces the chance of mistyping.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enhancement-proposed-add-code-filter-code-command"><a class="link" href="#enhancement-proposed-add-code-filter-code-command">Enhancement Proposed: Add <code>filter</code> command</a></h3>
+<div class="paragraph">
+<p>A <code>filter</code> command to filter away unwanted contacts in the list shown.
+For instance, if the user want to see all contacts who are not his friends, he can filter away all contacts tagged with <code>friends</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enhancement-proposed-rank-auto-completion-suggestions-by-their-occurance"><a class="link" href="#enhancement-proposed-rank-auto-completion-suggestions-by-their-occurance">Enhancement Proposed: Rank Auto-Completion Suggestions by their occurance</a></h3>
+<div class="paragraph">
+<p>If a certain keyword is frequently used, it should show up first in the suggestion menu.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="other-contributions"><a class="link" href="#other-contributions">Other contributions</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Discovered a bug that causes the app to crush and provided a solution. (<a href="https://github.com/nus-cs2103-AY1718S1/forum/issues/137">Issue #137</a>)</p>
+</li>
+<li>
+<p>Discovered bugs during acceptance testing. (Issues <a href="https://github.com/CS2103AUG2017-W14-B4/main/issues/116">#116</a>, <a href="https://github.com/CS2103AUG2017-W14-B4/main/issues/117">#117</a>, <a href="https://github.com/CS2103AUG2017-W14-B4/main/issues/118">#118</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2017-11-07 13:50:10 +00:00
+</div>
+</div>
+</body>
+</html>
