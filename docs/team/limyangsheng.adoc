@@ -23,7 +23,7 @@ include::../UserGuide.adoc[tag=backupandrestore]
 
 ==== Justification
 
-Users may lose their original copy of saved data for many reasons. The file may be corrupted or they may clear their contact and then save by accident.
+Users may lose their original copy of saved data for many reasons. The file may be corrupted or it may have been edited accidentally.
 As such, the backup and restore backup command will allow users to retrieve back their loss data.
 
 ==== Implementation
