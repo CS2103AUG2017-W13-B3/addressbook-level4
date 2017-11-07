@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.3">
+<title>Lee Guo Sheng Alexander - Project Portfolio</title>
+<link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Lee Guo Sheng Alexander - Project Portfolio</h1>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="project-abc-business-contacts"><a class="link" href="#project-abc-business-contacts">Project: ABC Business Contacts</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ABC Business Contacts (ABC) is a desktop Business Contact Management application. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java.</p>
+</div>
+<div class="paragraph">
+<p><strong>Code contributed</strong>: [<a href="https://github.com/CS2103AUG2017-W13-B3/main/blob/master/collated/main/alexanderleegs.md">Functional code</a>] [<a href="https://github.com/CS2103AUG2017-W13-B3/main/blob/master/collated/test/alexanderleegs.md">Test code</a>]</p>
+</div>
+<div class="sect2">
+<h3 id="enhancement-added-addtag-deletetag"><a class="link" href="#enhancement-added-addtag-deletetag">Enhancement Added: AddTag/DeleteTag</a></h3>
+<div class="sect3">
+<h4 id="external-behavior"><a class="link" href="#external-behavior">External behavior</a></h4>
+<hr>
+<div class="paragraph">
+<p><mark>Start of Extract [from: User Guide]</mark></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-a-tag-to-a-person-code-addtag-code"><a class="link" href="#adding-a-tag-to-a-person-code-addtag-code">Adding a tag to a person : <code>addtag</code></a></h3>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Command Name: <code>addtag</code><br>
+Shorthand Alias: <code>at</code><br>
+Function: Adds a tag to an existing person at the specified <code>INDEX</code> in your <strong>ABC</strong>.<br>
+Format: <code>addtag INDEX TAG</code><br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Only one alphanumeric tag can be added at a time. Special characters will not be accepted. e.g !, @, #, &#8230;&#8203;
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to add a single tag to a contact in your <strong>ABC</strong>:<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Locate the contact you want to add a tag to and the index of the contact.<br></p>
+</li>
+<li>
+<p>Type in the index of the contact, and the tag you wish to add. (Figure 4.6.1)<br>
+<code>&gt;&gt; addtag 1 classmate</code>.
+<span class="image"><img src="../images/addtag_1.png" alt="addtag1" width="600"></span><br>
+<em>Figure 4.6.1</em></p>
+</li>
+<li>
+<p>Press <kbd>Enter</kbd> and you should see that the contact that you selected has been modified. (Figure 4.6.2)<br>
+<span class="image"><img src="../images/addtag_2.png" alt="addtag2" width="600"></span><br>
+<em>Figure 4.6.2</em></p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The tag added must not already exist on the desired contact.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You can also add tags to contacts in a filtered list:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&gt;&gt; find t/friends</code><br>
+<code>&gt;&gt; addtag 2 friends</code><br>
+Adds the <code>friends</code> tag to the 2nd person in the results of the <code>find</code> command.</p>
+</li>
+<li>
+<p><code>&gt;&gt; find John</code><br>
+<code>&gt;&gt; at 1 9pmclass</code><br>
+Adds the <code>9pmclass</code> tag to the 1st person in the results of the <code>find</code> command.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-tag-code-deletetag-code"><a class="link" href="#deleting-a-tag-code-deletetag-code">Deleting a tag : <code>deletetag</code></a></h3>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Command Name: <code>deletetag</code><br>
+Shorthand Alias: <code>dt</code><br>
+Function: Deletes the specified tag from an existing person at the specified <code>INDEX</code> in your <strong>ABC</strong>.
+Can also remove all instances of a tag from your <strong>ABC</strong>.<br>
+Format: <code>deletetag INDEX TAG</code><br></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to delete a single tag from a contact in your <strong>ABC</strong>:<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Locate the contact you want to delete a tag from and the index of the contact.<br></p>
+</li>
+<li>
+<p>Type in the index of the contact, and the tag you wish to delete. (Figure 4.7.1)<br>
+<code>&gt;&gt; deletetag 1 classmate</code>.
+<span class="image"><img src="../images/deletetag_1.png" alt="600"></span><br>
+<em>Figure 4.7.1</em></p>
+</li>
+<li>
+<p>Press <kbd>Enter</kbd> and you should see that the contact that you selected has been modified. (Figure 4.7.2)<br>
+<span class="image"><img src="../images/deletetag_2.png" alt="600"></span><br>
+<em>Figure 4.7.2</em></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You can also delete tags from contacts in a filtered list:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&gt;&gt; find t/friends</code><br>
+<code>&gt;&gt; deletetag 2 friends</code><br>
+Deletes the <code>friends</code> tag from the 2nd person in the results of the <code>find</code> command.</p>
+</li>
+<li>
+<p><code>&gt;&gt; find n/John</code><br>
+<code>&gt;&gt; dt 1 9pmclass</code><br>
+Deletes the <code>9pmclass</code> tag from the 1st person in the results of the <code>find</code> command.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you would like to delete all instances of a particular tag from your <strong>ABC</strong>:<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Type in <code>all</code>, followed by the tag you wish to delete. (Figure 4.7.3)<br>
+<code>&gt;&gt; deletetag all friends</code>.
+<span class="image"><img src="../images/deletetag_3.png" alt="600"></span><br>
+<em>Figure 4.7.3</em></p>
+</li>
+<li>
+<p>Press <kbd>Enter</kbd> and you should see that this tag has been deleted from all contacts. (Figure 4.7.4)<br>
+<span class="image"><img src="../images/deletetag_4.png" alt="600"></span><br>
+<em>Figure 4.7.4</em></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><mark>End of Extract</mark></p>
+</div>
+<hr>
+<div class="sect3">
+<h4 id="justification"><a class="link" href="#justification">Justification</a></h4>
+<div class="paragraph">
+<p>Users cannot add and delete tags easily using the edit function, as this resets all tag attached to the person. As such, a convenient way to add and delete tags would be useful for many users.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="implementation"><a class="link" href="#implementation">Implementation</a></h4>
+<hr>
+<div class="paragraph">
+<p><mark>Start of Extract [from: Developer Guide]</mark></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-removing-a-tag"><a class="link" href="#adding-removing-a-tag">Adding/Removing a tag</a></h3>
+<div class="sect3">
+<h4 id="mechanism"><a class="link" href="#mechanism">Mechanism</a></h4>
+<div class="paragraph">
+<p>Adding or removing a tag is facilitated by <code>AddTagCommand</code> and <code>DeleteTagCommand</code>, which are subclasses of <code>UndoableCommand</code>. These commands work by changing the value of the <code>Tag</code> objects associated with the contact.</p>
+</div>
+<div class="paragraph">
+<p>These commands take in an integer and a string as arguments. The command is first parsed in <code>AddressBookParser</code> to identify it as the appropriate command. It will then be parsed by <code>AddTagCommandParser</code> or <code>DeleteTagCommandParser</code>, to parse the index, which was the integer argument, and the <code>Tag</code>, which was represented by the string argument. Invalid indexes and tags will be handled by throwing an exception. This is how <code>AddTagCommandParser</code> is implemented:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">AddTagCommandParser</span> <span class="directive">implements</span> <span class="predefined-type">Parser</span>&lt;AddTagCommand&gt; {
+    <span class="directive">public</span> AddTagCommand parse(<span class="predefined-type">String</span> args) <span class="directive">throws</span> <span class="exception">ParseException</span> {
+        <span class="keyword">try</span> {
+            <span class="comment">// ... parse `Index` and `Tag` and pass it to `AddTagCommand` ...</span>
+        } <span class="keyword">catch</span> (IllegalValueException ive) {
+            <span class="comment">// ... throw an exception ...</span>
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To update the <code>Tag</code> objects associated with a <code>Person</code>, the set of <code>Tag</code> objects of that <code>Person</code> is copied to a new set. The new data is then modified, then copied into a newly created <code>Person</code> instance. This is implemented as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">AddTagCommand</span> <span class="directive">extends</span> UndoableCommand {
+    <span class="comment">// ... variables, constructor, other methods ...</span>
+    <span class="directive">private</span> <span class="directive">final</span> Tag newTag;
+
+    <span class="annotation">@Override</span>
+    <span class="directive">public</span> CommandResult executeUndoableCommand() <span class="directive">throws</span> CommandException {
+        <span class="comment">// ... fetch personToEdit ...</span>
+
+        <span class="predefined-type">Set</span>&lt;Tag&gt; oldTags = <span class="keyword">new</span> <span class="predefined-type">HashSet</span>&lt;Tag&gt;(personToEdit.getTags());
+        <span class="comment">// ... check if tag is duplicated ...</span>
+        Person editedPerson = <span class="keyword">new</span> Person(personToEdit);
+        oldTags.add(newTag);
+        editedPerson.setTags(oldTags);
+
+        <span class="comment">// ... try to replace personToEdit with editedPerson ...</span>
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The diagram below (Figure 3.3.1) shows how <code>AddTagCommand</code> works.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/AddTagSequenceDiagram.png" alt="AddTagSequenceDiagram">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Figure 3.3.1 : Sequence Diagram for AddTag</em></p>
+</div>
+<div class="paragraph">
+<p><code>RemoveTagCommand</code> works in a similar way. Note that <code>AddTagCommand</code> will throw an exception if the <code>Tag</code> already exists for the <code>Person</code> selected. <code>DeleteTagCommand</code> throws an exception if the <code>Tag</code> is not found on the <code>Person</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<div class="paragraph">
+<p><strong>Aspect:</strong> Changing the <code>Tag</code> objects of the selected <code>Person</code><br>
+<strong>Alternative 1 (current choice):</strong> Copy set of <code>Tag</code> objects to a newly created set. Modify the newly created set. Then create a copy of the selected <code>Person</code> instance and replace its set of <code>Tag</code> objects.<br>
+<strong>Pros:</strong> Ensures that the original value will be unchanged, which is important in the event that updating the <code>Person</code> instance fails in a later stage.<br>
+<strong>Cons:</strong> Additional memory required to create a new <code>Person</code> instance.<br>
+<strong>Alternative 2:</strong> Just edit the <code>Tag</code> set directly<br>
+<strong>Pros:</strong> No need to instantiate new <code>Person</code> instance. Easy to implement.<br>
+<strong>Cons:</strong> Problematic implementation and bad coding practice. Modifying the original values directly can cause problems if updating the <code>Person</code> instance fails in a later stage.</p>
+</div>
+<div class="paragraph">
+<p><mark>End of Extract</mark></p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enhancement-added-addmeeting-deletemeeting"><a class="link" href="#enhancement-added-addmeeting-deletemeeting">Enhancement Added: AddMeeting/DeleteMeeting</a></h3>
+<div class="sect3">
+<h4 id="external-behavior-2"><a class="link" href="#external-behavior-2">External behavior</a></h4>
+<hr>
+<div class="paragraph">
+<p><mark>Start of Extract [from: User Guide]</mark></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-a-meeting-to-a-person-code-addmeeting-code"><a class="link" href="#adding-a-meeting-to-a-person-code-addmeeting-code">Adding a meeting to a person : <code>addmeeting</code></a></h3>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Command Name: <code>addmeeting</code><br>
+Shorthand Alias: <code>am</code><br>
+Function: Adds a meeting to an existing person at the specified <code>INDEX</code> in your <strong>ABC</strong>.<br>
+Format: <code>addmeeting MEETING_NAME/MEETING_TIME</code><br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>MEETING_TIME</code> must be in the format YYYY-MM-DD HH:MM
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to add a single meeting to a contact in your <strong>ABC</strong>:<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Locate the contact you want to add a meeting to and the index of the contact.<br></p>
+</li>
+<li>
+<p>Type in the index of the contact, the name of the meeting and the time of the meeting you wish to add. (Figure 4.8.1)<br>
+<code>&gt;&gt; addmeeting 1 class lunch/2017-12-20 12:00</code>.
+<span class="image"><img src="../images/addmeeting_1.png" alt="addmeeting1" width="600"></span><br>
+<em>Figure 4.8.1</em></p>
+</li>
+<li>
+<p>Press <kbd>Enter</kbd> and you should see that the contact that you selected has been modified. (Figure 4.8.2)<br>
+<span class="image"><img src="../images/addmeeting_2.png" alt="addmeeting2" width="600"></span><br>
+<em>Figure 4.8.2</em></p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The meeting added must not already exist on the desired contact.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You can also add meetings to contacts in a filtered list:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&gt;&gt; find t/friends</code><br>
+<code>&gt;&gt; addmeeting 2 breakfast/2017-12-15 10:00</code><br>
+Adds a meeting named <code>breakfast</code> at <code>2017-12-15 10:00</code> to the 2nd person in the results of the <code>find</code> command.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-meeting-code-deletemeeting-code"><a class="link" href="#deleting-a-meeting-code-deletemeeting-code">Deleting a meeting : <code>deletemeeting</code></a></h3>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Command Name: <code>deletemeeting</code><br>
+Shorthand Alias: <code>dm</code><br>
+Function: Deletes the specified meeting at the specified <code>INDEX</code> in the meeting list from your <strong>ABC</strong>.<br>
+Format: <code>deletemeeting INDEX</code><br></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to delete a meeting in your <strong>ABC</strong>:<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Locate the meeting you want to delete and the meeting of the contact.<br></p>
+</li>
+<li>
+<p>Type in the index of the meeting. (Figure 4.9.1)<br>
+<code>&gt;&gt; deletemeeting 1</code>.
+<span class="image"><img src="../images/deletemeeting_1.png" alt="600"></span><br>
+<em>Figure 4.9.1</em></p>
+</li>
+<li>
+<p>Press <kbd>Enter</kbd> and you should see that the selected meeting has been deleted. (Figure 4.9.2)<br>
+<span class="image"><img src="../images/deletemeeting_2.png" alt="600"></span><br>
+<em>Figure 4.9.2</em></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You can also delete contacts in a filtered list:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list</code><br>
+<code>deletemeeting 2</code><br>
+Deletes the 2nd meeting in the address book.</p>
+</li>
+<li>
+<p><code>find Betsy</code><br>
+<code>deletemeeting 1</code><br>
+Deletes the 1st meeting in the results of the <code>find</code> command.</p>
+</li>
+<li>
+<p><code>find t/friends</code><br>
+<code>dm 4</code><br>
+Deletes the 4th meeting in the results of the <code>find</code> command.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><mark>End of Extract</mark></p>
+</div>
+<hr>
+<div class="sect3">
+<h4 id="justification-2"><a class="link" href="#justification-2">Justification</a></h4>
+<div class="paragraph">
+<p>Users frequently need to arrange meetings. This allows them to add meetings to specific people. They are also able to delete the meeting if it has been cancelled or has already passed.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enhancement-added-sort"><a class="link" href="#enhancement-added-sort">Enhancement Added: Sort</a></h3>
+<div class="sect3">
+<h4 id="external-behavior-3"><a class="link" href="#external-behavior-3">External behavior</a></h4>
+<hr>
+<div class="paragraph">
+<p><mark>Start of Extract [from: User Guide]</mark></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sorting-contact-list-code-sort-code"><a class="link" href="#sorting-contact-list-code-sort-code">Sorting contact list: <code>sort</code></a></h3>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Command Name: <code>sort</code><br>
+Shorthand Alias: <code>s</code><br>
+Function: Sorts the contact list in alphabetical order of a <code>FIELD</code><br>
+Format: <code>sort FIELD</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Only one <code>FIELD</code> (<code>NAME</code>, <code>PHONE</code>, <code>ADDRESS</code>, <code>EMAIL</code>, <code>TAG</code>, <code>MEETING</code>) can be used at a time.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For fields with multiple entries (<code>TAG</code>, <code>MEETING</code>), the order is detemined by using the entry which comes first alphabetically for each contact.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If you would like to sort your contact list:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Type in the <code>FIELD</code> you would like to sort your contact list by (Figure 4.10.1)<br>
+<code>&gt;&gt; sort name</code> <br>
+<span class="image"><img src="../images/sort_1.png" alt="600"></span><br>
+<em>Figure 4.10.1</em></p>
+</li>
+<li>
+<p>Press <code>Enter</code> and your contact list will be sorted (Figure 4.10.2).
+<span class="image"><img src="../images/sort_2.png" alt="600"></span><br>
+<em>Figure 4.10.2</em></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Here are some other ways to sort your contact list:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>sort phone</code><br>
+Sorts the contact list by phone number.</p>
+</li>
+<li>
+<p><code>s tag</code><br>
+Sorts the contact list by tag.</p>
+</li>
+<li>
+<p><code>sort meeting</code><br>
+Sorts the contact list by meeting time.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><mark>End of Extract</mark></p>
+</div>
+<hr>
+<div class="sect3">
+<h4 id="justification-3"><a class="link" href="#justification-3">Justification</a></h4>
+<div class="paragraph">
+<p>As a user with many contacts, it can be difficult to find someone in your ABC. As such, the sort command allows users to arrange their contact in the way that is most convenient for them, whether it be name, phone, address, or even meeting time.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enhancement-proposed-automatic-checking-of-date"><a class="link" href="#enhancement-proposed-automatic-checking-of-date">Enhancement Proposed: Automatic checking of date</a></h3>
+<div class="paragraph">
+<p>ABC should be able to automatically delete meetings once the date has passed. The meetings should also be colour coded based on how close it is to the time of the meeting, so that users can see immediately at a glance how soon their next meetings are.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="other-contributions"><a class="link" href="#other-contributions">Other contributions</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Updated various commands to work correctly with meetings (Pull requests <a href="https://github.com/CS2103AUG2017-W13-B3/main/pull/124">#124</a>, <a href="https://github.com/CS2103AUG2017-W13-B3/main/pull/125">#125</a>)</p>
+</li>
+<li>
+<p>Updated sort command to move contacts with empty fields to the back of the list (Pull request <a href="https://github.com/CS2103AUG2017-W13-B3/main/pull/121">#121</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2017-11-07 13:27:28 +00:00
+</div>
+</div>
+</body>
+</html>

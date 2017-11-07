@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.3">
+<title>Lim Yang Sheng - Project Portfolio</title>
+<link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Lim Yang Sheng - Project Portfolio</h1>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="project-abc-business-contacts"><a class="link" href="#project-abc-business-contacts">Project: ABC Business Contacts</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ABC Business Contacts (ABC) is a desktop Business Contact Management application. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java.</p>
+</div>
+<div class="paragraph">
+<p><strong>Code contributed</strong>: [<a href="https://github.com/CS2103AUG2017-W13-B3/main/blob/master/collated/main/LimYangSheng.md">Functional code</a>] [<a href="https://github.com/CS2103AUG2017-W13-B3/main/blob/master/collated/test/LimYangSheng.md">Test code</a>]</p>
+</div>
+<div class="sect2">
+<h3 id="enhancement-added-backup-restorebackup"><a class="link" href="#enhancement-added-backup-restorebackup">Enhancement Added: Backup/RestoreBackup</a></h3>
+<div class="sect3">
+<h4 id="external-behavior"><a class="link" href="#external-behavior">External behavior</a></h4>
+<hr>
+<div class="paragraph">
+<p><mark>Start of Extract [from: User Guide]</mark></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="creating-a-backup-code-backup-code"><a class="link" href="#creating-a-backup-code-backup-code">Creating a backup : <code>backup</code></a></h3>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Command Name: <code>backup</code><br>
+Shorthand Alias: <code>b</code><br>
+Function: Creates a backup file to store the data in address book.<br>
+Format: <code>backup</code></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>You may want to be safe and backup often when using <strong>ABC</strong>:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Type in <code>backup</code>. (Figure 4.13.1)<br>
+<code>&gt;&gt; backup</code><br>
+<span class="image"><img src="../images/Backup_1.png" alt="600"></span><br>
+<em>Figure 4.13.1</em><br></p>
+</li>
+<li>
+<p>Press <kbd>Enter</kbd> and you should see a message indicating the successful backup of your data. (Figure 4.13.2)<br>
+<span class="image"><img src="../images/Backup_2.png" alt="600"></span><br>
+<em>Figure 4.13.2</em><br></p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Your data is automatically backed up every time you close the app.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="restoring-a-backup-code-restore-code"><a class="link" href="#restoring-a-backup-code-restore-code">Restoring a backup : <code>restore</code></a></h3>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Command Name: <code>restore</code><br>
+Shorthand Alias: <code>rb</code><br>
+Function: Retrieves data from a backup file and store it in <strong>ABC</strong>.<br>
+Format: <code>restore</code></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>You encounter an unforeseen circumstance and want to revert to a backup file:<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Execute the <code>backup</code> command to save the current data. (Figure 4.14.1)<br>
+<code>&gt;&gt; backup</code><br>
+<span class="image"><img src="../images/Restore_1.png" alt="600"></span><br>
+<em>Figure 4.14.1</em><br></p>
+</li>
+<li>
+<p>Enter the <code>clear</code> command to simulate a lost of data. (Figure 4.14.2)<br>
+<code>&gt;&gt; clear</code><br>
+<span class="image"><img src="../images/Restore_2.png" alt="600"></span><br>
+<em>Figure 4.14.2</em><br></p>
+</li>
+<li>
+<p>Type in <code>restore</code> command. (Figure 4.14.3)<br>
+<code>&gt;&gt; restore</code><br>
+<span class="image"><img src="../images/Restore_3.png" alt="600"></span><br>
+<em>Figure 4.14.3</em><br></p>
+</li>
+<li>
+<p>Press <kbd>Enter</kbd> and you should see that the backup data is restored. (Figure 4.14.4)<br>
+<span class="image"><img src="../images/Restore_4.png" alt="600"></span><br>
+<em>Figure 4.14.4</em><br></p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+An error message will be shown if you do not already have a backup file in the default file path. (Figure 4.13.5)
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/Restore_5.png" alt="600"></span><br>
+<em>Figure 4.13.5</em><br></p>
+</div>
+<div class="paragraph">
+<p><mark>End of Extract</mark></p>
+</div>
+<hr>
+<div class="sect3">
+<h4 id="justification"><a class="link" href="#justification">Justification</a></h4>
+<div class="paragraph">
+<p>Users may lose their original copy of saved data for many reasons. The file may be corrupted or it may have been edited accidentally.
+As such, the backup and restore backup command will allow users to retrieve back their loss data.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="implementation"><a class="link" href="#implementation">Implementation</a></h4>
+<hr>
+<div class="paragraph">
+<p><mark>Start of Extract [from: Developer Guide]</mark></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="backup-restoring-backup"><a class="link" href="#backup-restoring-backup">Backup / Restoring Backup</a></h3>
+<div class="sect3">
+<h4 id="mechanism"><a class="link" href="#mechanism">Mechanism</a></h4>
+<div class="paragraph">
+<p>The backing up of ABC is done by <code>BackupCommand</code> and the restoring of data from a backup file is done by <code>RestoreBackupCommand</code>.
+<code>BackupCommand</code> inherits from <code>Command</code> as it does not support the undoing and redoing of user actions, whereas <code>RestoreBackupCommand</code> inherits from <code>UndoableCommand</code>.
+These commands require access to <code>Storage</code> from <code>Logic</code> and the way to accomplish this is to post an event to <code>EventsCenter</code>. <code>Subscribers</code> in <code>StorageManager</code> will handle these events and respond correspondingly.
+The following shows a sequence diagram of how the <code>BackupCommand</code> is carried out.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/BackupCommandSequenceDiagram.png" alt="BackupCommandSequenceDiagram" width="800">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>RestoreBackupCommand</code> shares a similar sequence diagram in terms of logic.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The <code>BackupCommand</code> is executed when the commands <code>backup</code> or <code>b</code> is entered. The data that is in <code>model</code> or the active address book is first passed as a parameter to <code>BackupDataEvent</code>. The event will be handled by <code>StorageManager</code> and is saved into the default file path "data/addressbook-backup.xml".
+The following is the implementation of <code>BackupCommand</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">BackupCommand</span> <span class="directive">extends</span> Command {
+    <span class="comment">//... variables, constructor, other methods...</span>
+
+    <span class="annotation">@Override</span>
+    <span class="directive">public</span> CommandResult execute() <span class="directive">throws</span> CommandException {
+        <span class="comment">// reading data from model</span>
+        ReadOnlyAddressBook backupAddressBookData = model.getAddressBook();
+
+        <span class="comment">// posting event to backup data</span>
+        EventsCenter.getInstance().post(<span class="keyword">new</span> BackupDataEvent(backupAddressBookData));
+        <span class="keyword">return</span> <span class="keyword">new</span> CommandResult(<span class="predefined-type">String</span>.format(MESSAGE_SUCCESS));
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>RestoreBackupCommand</code> is executed when the commands <code>restore</code> or <code>rb</code> is entered. <code>RestoreBackupDataEvent</code> is posted and <code>StorageManager</code> handles it.
+The data from default file path "data/addressbook-backup.xml" will be retrieved and it will replace the active address book.
+The following is the implementation of <code>RestoreBackupCommand</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">RestoreBackupCommand</span> <span class="directive">extends</span> Command {
+    <span class="comment">//... variables, constructor, other methods...</span>
+
+    <span class="annotation">@Override</span>
+    <span class="directive">public</span> CommandResult execute() <span class="directive">throws</span> CommandException {
+        <span class="comment">//... other codes and checks...</span>
+
+        RestoreBackupDataEvent event = <span class="keyword">new</span> RestoreBackupDataEvent();
+
+        <span class="comment">// posting event to help with restoring backup data</span>
+        EventsCenter.getInstance().post(event);
+
+        <span class="comment">// overwriting the data in active address book</span>
+        ReadOnlyAddressBook backupAddressBookData = event.getAddressBookData();
+        model.resetData(backupAddressBookData);
+        <span class="keyword">return</span> <span class="keyword">new</span> CommandResult(<span class="predefined-type">String</span>.format(MESSAGE_SUCCESS));
+
+        <span class="comment">//... other codes and checks...</span>
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the backup file does not exist in the default file path, an error message will be shown to the user.
+This check is done before <code>RestoreBackupEvent</code> is posted. Once again, this requires <code>Logic</code> to access <code>Storage</code>.
+Therefore, a <code>BackupFilePresentEvent</code> will be posted and the <code>Subscriber</code> in <code>StorageManager</code> would handle this event to check if the backup file exist.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A backup of the data is automatically created when <strong>ABC</strong> is closed.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<div class="paragraph">
+<p><strong>Aspect:</strong> Accessing <code>Storage</code> from <code>Logic</code><br>
+<strong>Alternative 1 (current choice):</strong> Make use of <code>EventBus</code> to post events and have <code>StorageManager</code> handle the backing up or retrieval of data<br>
+<strong>Pros:</strong> Follows the architecture closely without introducing dependencies between components.<br>
+<strong>Cons:</strong> New <code>Event</code> classes have to be created every time a command requires access to data in the storage. <br>
+<strong>Alternative 2:</strong> Allow <code>Logic</code> to access <code>Storage</code> and its functions<br>
+<strong>Pros:</strong> Easier implementation for current and future functions or commands related to <code>Storage</code>.<br>
+<strong>Cons:</strong> Increases coupling between the components.<br></p>
+</div>
+<div class="paragraph">
+<p><mark>End of Extract</mark></p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="enhancement-proposed-person-and-meeting-hashmap-data-structure"><a class="link" href="#enhancement-proposed-person-and-meeting-hashmap-data-structure">Enhancement Proposed: Person and Meeting hashmap data structure</a></h3>
+<div class="paragraph">
+<p>Every time a person object is updated, the corresponding meeting object has to be updated as well.
+This is because the meeting object contains a person object.
+With a hashmap data structure, updating a person will be much faster as compared to looping through a list.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="other-contributions"><a class="link" href="#other-contributions">Other contributions</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Replace browser UI with meeting list UI  (Pull requests <a href="https://github.com/CS2103AUG2017-W13-B3/main/pull/88">#88</a>,
+Pull requests <a href="https://github.com/CS2103AUG2017-W13-B3/main/pull/122">#122</a>)</p>
+</li>
+<li>
+<p>Updated various commands to work with new meeting list (Pull requests <a href="https://github.com/CS2103AUG2017-W13-B3/main/pull/116">#116</a>,
+Pull requests <a href="https://github.com/CS2103AUG2017-W13-B3/main/pull/127">#127</a>,
+Pull requests <a href="https://github.com/CS2103AUG2017-W13-B3/main/pull/132">#132</a>,)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2017-11-07 13:27:28 +00:00
+</div>
+</div>
+</body>
+</html>
