@@ -234,6 +234,9 @@ public class AddressBook implements ReadOnlyAddressBook {
         meetings.remove(meeting);
     }
 
+    /**
+     * Sorts contacts by {@code field}.
+     */
     public void sort(String field) {
         persons.sort(field);
         sortMeeting();
