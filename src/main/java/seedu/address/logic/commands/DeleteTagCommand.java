@@ -59,6 +59,9 @@ public class DeleteTagCommand extends UndoableCommand {
         return new CommandResult(String.format(MESSAGE_DELETE_TAG_SUCCESS, targetTag.tagName));
     }
 
+    /**
+     * Deletes all instances of a tag from the address book.
+     */
     private void deleteAllTags() throws CommandException {
         try {
             model.deleteTag(targetTag);
@@ -69,6 +72,9 @@ public class DeleteTagCommand extends UndoableCommand {
         }
     }
 
+    /**
+     * Deletes a single tag from a person.
+     */
     private void deleteOneTag() throws CommandException {
         List<ReadOnlyPerson> lastShownList = model.getFilteredPersonList();
 

@@ -112,7 +112,6 @@ public class UniquePersonList implements Iterable<Person> {
     //@@author alexanderleegs
     /**
      * Sorts the list by field.
-     * TO DO: More abstraction. Comparators in respective classes?
      */
     public void sort(String field) {
         switch (field) {
@@ -139,6 +138,9 @@ public class UniquePersonList implements Iterable<Person> {
         }
     }
 
+    /**
+     * Sorts the list by name.
+     */
     private void sortName() {
         Collections.sort(internalList, new Comparator<Person>() {
             public int compare(Person one, Person other) {
@@ -149,6 +151,9 @@ public class UniquePersonList implements Iterable<Person> {
         });
     }
 
+    /**
+     * Sorts the list by phone number.
+     */
     private void sortPhone() {
         Collections.sort(internalList, new Comparator<Person>() {
             public int compare(Person one, Person other) {
@@ -157,6 +162,9 @@ public class UniquePersonList implements Iterable<Person> {
         });
     }
 
+    /**
+     * Sorts the list by email.
+     */
     private void sortEmail() {
         Collections.sort(internalList, new Comparator<Person>() {
             public int compare(Person one, Person other) {
@@ -178,6 +186,9 @@ public class UniquePersonList implements Iterable<Person> {
         });
     }
 
+    /**
+     * Sorts the list by address.
+     */
     private void sortAddress() {
         Collections.sort(internalList, new Comparator<Person>() {
             public int compare(Person one, Person other) {
@@ -199,6 +210,9 @@ public class UniquePersonList implements Iterable<Person> {
         });
     }
 
+    /**
+     * Sorts the list by tag.
+     */
     private void sortTag() {
         Collections.sort(internalList, new Comparator<Person>() {
             public int compare(Person one, Person other) {
@@ -230,6 +244,9 @@ public class UniquePersonList implements Iterable<Person> {
         });
     }
 
+    /**
+     * Sorts the list by meeting time.
+     */
     private void sortMeeting() {
         Collections.sort(internalList, new Comparator<Person>() {
             public int compare(Person one, Person other) {
