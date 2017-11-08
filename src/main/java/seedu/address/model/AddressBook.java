@@ -84,6 +84,7 @@ public class AddressBook implements ReadOnlyAddressBook {
         }
         setTags(new HashSet<>(newData.getTagList()));
         setMeetings(meetingList);
+        sortMeeting();
         syncMasterTagListWith(persons);
         syncMasterMeetingListWith(persons);
     }
@@ -235,6 +236,7 @@ public class AddressBook implements ReadOnlyAddressBook {
 
     public void sort(String field) {
         persons.sort(field);
+        sortMeeting();
     }
 
     //@@author
