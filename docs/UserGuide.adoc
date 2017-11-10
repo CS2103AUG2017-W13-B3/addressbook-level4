@@ -210,13 +210,13 @@ For fields with multiple entries (`TAG`, `MEETING`), the contact with the entry 
 
 If you would like to sort your contact list:
 
-.  Type in the `FIELD` you would like to sort your contact list by  +
+.  Type in the `FIELD` to sort your contact list by  +
 `>> sort name`  +
 (See Figure 4.5.1) +
 image:sort_1.png[600] +
 _Figure 4.5.1_
 .  Press kbd:[Enter] and your contact list will be sorted +
-(See Figure 4.5.2)
+(See Figure 4.5.2) +
 image:sort_2.png[600] +
 _Figure 4.5.2_
 
@@ -287,12 +287,13 @@ If you want to change the details of a contact in your *ABC*: +
 (See Figure 4.7.1) +
 image:Edit_1.png[600] +
 _Figure 4.7.1_
-.  Press kbd:[Enter] and you should see that the contact selected has been modified (See Figure 4.7.2) +
+.  Press kbd:[Enter] and you should see that the contact selected has been modified +
+(See Figure 4.7.2) +
 image:Edit_2.png[600] +
 _Figure 4.7.2_
 
-[NOTE]
 ====
+[NOTE]
 Existing values will be updated to the input values
 ====
 
@@ -302,8 +303,8 @@ You can also edit contacts in a filtered list:
 `>> edit 2 n/Betsy Crower t/` +
 Edits the name of the 2nd person from the result of the `find` command to be `Betsy Crower` and clears all existing tags.
 
-[NOTE]
 ====
+[NOTE]
 You can remove all the person's tags by typing `t/` without specifying any tags after it
 ====
 
@@ -311,8 +312,8 @@ You can remove all the person's tags by typing `t/` without specifying any tags 
 `>> e 1 t/friend` +
 Edits the tag of the 1st person from the result of the `find` command.
 
-[NOTE]
 ====
+[NOTE]
 When you edit tags, the existing tags of the person will be removed +
 ====
 
@@ -412,7 +413,7 @@ If you want to add a meeting to a contact in your *ABC*: +
 
 .  Locate the contact you want to add a meeting to and the index of the contact +
 .  Type in the index of the contact, the name of the meeting and the time of the meeting you wish to add (See Figure 4.10.1) +
-`>> addmeeting 1 class lunch/2017-12-20 12:00`
+`>> addmeeting 1 class lunch/2017-12-20 12:00` +
 image:addmeeting_1.png[addmeeting1, 600] +
 _Figure 4.10.1_
 .  Press kbd:[Enter] and you should see that the contact that you selected has been modified (See Figure 4.10.2) +
@@ -475,8 +476,7 @@ You can select a contact from the displayed list by:
 . Type in (Figure 4.12.1) +
 `>>select 1` +
 image:select1.png[select1, 600] +
-
-_Figure 4.12.1_
+_Figure 4.12.1_ +
 . Pressing kbd:[Enter]. Your choice should now be selected (Figure 4.12.2) +
 image:select2.png[select2, 600] +
 _Figure 4.12.2_
@@ -522,7 +522,7 @@ If you want to add a note for a contact:
 image:note1.png[note1, 600] +
 _Figure 4.13.1_
 . Press kbd:[Enter] and your note should now be displayed as the last row in your contact's details (See Figure 4.13.2) +
-image:note2.png[note2, 600, 40] +
+image:note2.png[note2, 600] +
 _Figure 4.13.2_
 
 Here are some other ways to change your ABC contact's note:
@@ -910,24 +910,6 @@ The changelog contains features and improvements added in different major update
 
 :sectnums!:
 
-=== v1.2
-* Adding and deleting of tags
-* Resize window size
-* Restore to a backup
-* Synchronise with Google Contacts
-
-=== v1.3
-* Add a person without all his/her parameters
-* Confirmation for restoring a backup
-* Wildcard `*` for searching of contacts
-* Meetings
-
-=== v1.4
-* Display meetings in UI
-* Auto-Completion
-* Sorting of contacts
-* Google People API Synchronization
-
 === v1.5
 * Smart Auto-Completion
 * Adding and deleting of meetings
@@ -935,6 +917,24 @@ The changelog contains features and improvements added in different major update
 * Synchronisation now checks if Google Contacts are valid
 * Restore now includes meetings
 * Reworking of commands to handle meetings correctly
+
+=== v1.4
+* Display meetings in UI
+* Auto-Completion
+* Sorting of contacts
+* Google People API Synchronization
+
+=== v1.3
+* Add a person without all his/her parameters
+* Confirmation for restoring a backup
+* Wildcard `*` for searching of contacts
+* Meetings
+
+=== v1.2
+* Adding and deleting of tags
+* Resize window size
+* Restore to a backup
+* Synchronise with Google Contacts
 
 == Coming in v2.0
 
@@ -964,7 +964,7 @@ will open up a new window in your default browser.
 
 == Command Summary/ Cheatsheet
 
-[width="100%",cols="24%,1%, 75%",options="header",]
+[width="100%",cols="25%,5%,70%",options="header",]
 |=======================================================================
 |Command | Alias| Format
 |Help |`hp` | `help`
@@ -993,3 +993,6 @@ will open up a new window in your default browser.
 |Exit |`q` | exit
 |Saving Data|
 |=======================================================================
+
+
+
