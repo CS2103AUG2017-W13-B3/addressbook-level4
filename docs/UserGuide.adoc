@@ -162,14 +162,14 @@ Format: `find [n/KEYWORD...] [p/KEYWORD...] [e/KEYWORD...] [a/KEYWORD...] [t/KEY
 ====
 
 ****
-* The search is case insensitive. e.g `hans` will match `Hans`
-* The order of the keywords does not matter. e.g. `Hans Bo` will match `Bo Hans`
-* Only exact words will be matched. e.g. `Han` will not match `Hans`
-* Persons matching at least one search term in the specified field will be returned. e.g. `find n/Hans Bo` will return `Hans Gruber`, `Bo Yang`
+* The search is case insensitive e.g `hans` will match `Hans`
+* The order of the keywords does not matter e.g. `Hans Bo` will match `Bo Hans`
+* Only exact words will be matched e.g. `Han` will not match `Hans`
+* Persons matching at least one search term in the specified field will be returned e.g. `find n/Hans Bo` will return `Hans Gruber`, `Bo Yang`
 // tag::wildcard[]
-* Wildcard symbols `\*` and `?` are allowed in parameters for `find` where `\*` matches any non-space string and `?` matches any non-space unit-length symbol.
+* Wildcard symbols `\*` and `?` are allowed in parameters for `find` where `*` matches any non-space string and `?` matches any non-space unit-length symbol
 // end::wildcard[]
-* The search is done on the existing list. Successive `find` commands make the list smaller.
+* The search is done on the existing list. Successive `find` commands make the list smaller
 ****
 
 If you want to find a person named `John Watson`:
@@ -205,7 +205,7 @@ Format: `sort FIELD`
 [NOTE]
 Only one `FIELD` (`NAME`, `PHONE`, `ADDRESS`, `EMAIL`, `TAG`, `MEETING`) can be used at a time
 [NOTE]
-For fields with multiple entries (`TAG`, `MEETING`), the order is determined by using the entry which comes first alphabetically for each contact
+For fields with multiple entries (`TAG`, `MEETING`), the contact with the entry that comes first alphabetically appears first
 ====
 
 If you would like to sort your contact list:
@@ -337,7 +337,7 @@ If you want to add a single tag to a contact in your *ABC*: +
 (See Figure 4.8.1) +
 image:addtag_1.png[addtag1, 600] +
 _Figure 4.8.1_
-.  Press kbd:[Enter] and you should see that the contact selected has been modified + (See Figure 4.8.2) +
+.  Press kbd:[Enter] and you should see that the contact selected has been modified (See Figure 4.8.2) +
 image:addtag_2.png[addtag2, 600] +
 _Figure 4.8.2_
 
@@ -377,11 +377,11 @@ You can also delete tags from a contact in a filtered list:
 
 * `>> find t/friends` +
 `>> deletetag 2 friends` +
-Deletes the `friends` tag from the 2nd person from the result of the `find` command
+Deletes the `friends` tag from the 2nd person from the result of the `find` command.
 
 * `>> find n/John` +
 `>> dt 1 9pmclass` +
-Deletes the `9pmclass` tag from the 1st person from the result of the `find` command
+Deletes the `9pmclass` tag from the 1st person from the result of the `find` command.
 
 If you would like to delete all instances of a particular tag from your *ABC*: +
 
@@ -472,7 +472,7 @@ Format: `select INDEX`
 
 You can select a contact from the displayed list by:
 
-. Typing (Figure 4.12.1) +
+. Type in (Figure 4.12.1) +
 `>>select 1` +
 image:select1.png[select1, 600] +
 
@@ -528,11 +528,11 @@ _Figure 4.13.2_
 Here are some other ways to change your ABC contact's note:
 
 
-* `note 2 ` +
+* `note 2` +
 Removes the existing note from the 2nd person +
 * `n 3 This is a note` +
 Changes the 3rd contact's note to "This is a note" +
-* `n 3 ‘ +
+* `n 3` +
 Removes the existing note from the 3rd person
 // end::note[]
 
@@ -674,7 +674,7 @@ image:logout1.png[logout1, 600] +
 _Figure 4.18.1_
 
 . You are now logged out (See Figure 4.18.2) +
-image:logout2.png [logout2, 600] +
+image:logout2.png[logout2, 600] +
 _Figure 4.18.2_
 // end::sync[]
 
@@ -849,9 +849,9 @@ Format: `clear`
 
 You can also clear all ABC contacts. To do so,
 
-.   Type (Figure 4.22.1) +
+.   Type +
 `>> clear` +
-(See Figure ) +
+(See Figure 4.22.1) +
 image:clear1.png[clear1, 600] +
 _Figure 4.22.1_
 .   Press kbd:[Enter]. Your contacts should now be cleared (See Figure 4.22.2) +
@@ -907,6 +907,8 @@ There is no need to save manually.
 
 == Changelog
 The changelog contains features and improvements added in different major updates of *ABC*
+
+:sectnums!:
 
 === v1.2
 * Adding and deleting of tags
@@ -979,7 +981,7 @@ will open up a new window in your default browser.
 |Select |`sl` | `select INDEX
 |Note |`n` | `note INDEX n/NOTE`
 |Backup |`b` | `backup`
-|Restore Backup |`rb` | 'restore'
+|Restore Backup |`rb` | `restore`
 |Login | `li` | `login`
 |Synchronise with Google Contacts | `sy` | `sync`
 |Logout | `lo`| `logout`
@@ -991,6 +993,3 @@ will open up a new window in your default browser.
 |Exit |`q` | exit
 |Saving Data|
 |=======================================================================
-
-
-
