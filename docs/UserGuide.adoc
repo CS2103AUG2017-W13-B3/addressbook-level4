@@ -85,7 +85,7 @@ If you want to view the *User Guide*: +
 .  Type in +
 `>> help` +
 (See Figure 4.1.1) +
-image:help.png[] +
+Image:help.png[help, 600] +
 _Figure 4.1.1_
 .  Press kbd:[Enter] and this *User Guide* document will show up
 
@@ -205,7 +205,7 @@ Format: `sort FIELD`
 [NOTE]
 Only one `FIELD` (`NAME`, `PHONE`, `ADDRESS`, `EMAIL`, `TAG`, `MEETING`) can be used at a time
 [NOTE]
-For fields with multiple entries (`TAG`, `MEETING`), the contact with the entry that comes first alphabetically appears first
+For fields with multiple entries (`TAG`, `MEETING`), contacts will be sorted based on the entry that comes first alphabetically
 ====
 
 If you would like to sort your contact list:
@@ -213,11 +213,11 @@ If you would like to sort your contact list:
 .  Type in the `FIELD` to sort your contact list by  +
 `>> sort name`  +
 (See Figure 4.5.1) +
-image:sort_1.png[600] +
+Image:sort_1.png[sort1, 600] +
 _Figure 4.5.1_
 .  Press kbd:[Enter] and your contact list will be sorted +
 (See Figure 4.5.2) +
-image:sort_2.png[600] +
+Image:sort_2.png[sort2, 600] +
 _Figure 4.5.2_
 
 Here are some other ways to sort your contact list:
@@ -246,10 +246,10 @@ If you want to delete a contact in your *ABC*: +
 .  Type in the command to delete the contact at the index +
 `>> delete 1` +
 (See Figure 4.6.1) +
-image:Delete_1.png[600] +
+image:Delete_1.png[delete1, 600] +
 _Figure 4.6.1_
 .  Press kbd:[Enter] and you should see that the selected contact has been deleted (See Figure 4.6.2) +
-image:Delete_2.png[600] +
+image:Delete_2.png[delete2, 600] +
 _Figure 4.6.2_
 
 You can also delete contacts in a filtered list:
@@ -285,11 +285,11 @@ If you want to change the details of a contact in your *ABC*: +
 .  Type in the index of the contact and the details you wish to replace +
 `>> edit 1 p/91234567 e/johndoe@example.com` +
 (See Figure 4.7.1) +
-image:Edit_1.png[600] +
+image:Edit_1.png[edit1, 600] +
 _Figure 4.7.1_
 .  Press kbd:[Enter] and you should see that the contact selected has been modified +
 (See Figure 4.7.2) +
-image:Edit_2.png[600] +
+image:Edit_2.png[edit2, 600] +
 _Figure 4.7.2_
 
 ====
@@ -301,7 +301,7 @@ You can also edit contacts in a filtered list:
 
 * `>> find t/friends` +
 `>> edit 2 n/Betsy Crower t/` +
-Edits the name of the 2nd person from the result of the `find` command to be `Betsy Crower` and clears all existing tags.
+Edits the name of the 2nd person from the result of the `find` command to `Betsy Crower` and clears all existing tags.
 
 ====
 [NOTE]
@@ -332,13 +332,14 @@ Special characters will not be accepted e.g !, @, #, ...
 
 If you want to add a single tag to a contact in your *ABC*: +
 
-.  Locate the contact you want to add a tag to and note down its index +
+.  Locate the contact you want to add a tag to and take note of its index +
 .  Type in the index of the contact, and the tag you wish to add  +
 `>> addtag 1 classmate` +
 (See Figure 4.8.1) +
 image:addtag_1.png[addtag1, 600] +
 _Figure 4.8.1_
-.  Press kbd:[Enter] and you should see that the contact selected has been modified (See Figure 4.8.2) +
+.  Press kbd:[Enter] and you should see that the contact selected has been modified +
+(See Figure 4.8.2) +
 image:addtag_2.png[addtag2, 600] +
 _Figure 4.8.2_
 
@@ -367,11 +368,11 @@ If you want to delete a single tag from a contact in your *ABC*: +
 .  Type in the index of the contact and the tag you wish to delete +
 `>> deletetag 1 classmate` +
 (See Figure 4.9.1) +
-image:deletetag_1.png[600] +
+Image:deletetag_1.png[deletetag1, 600] +
 _Figure 4.9.1_
 .  Press kbd:[Enter] and you should see that the contact selected has been modified +
 (See Figure 4.9.2) +
-image:deletetag_2.png[600] +
+Image:deletetag_2.png[deletetag2, 600] +
 _Figure 4.9.2_
 
 You can also delete tags from a contact in a filtered list:
@@ -386,13 +387,15 @@ Deletes the `9pmclass` tag from the 1st person from the result of the `find` com
 
 If you would like to delete all instances of a particular tag from your *ABC*: +
 
-.  Type in `all`, followed by the tag you wish to delete (See Figure 4.9.3) +
-`>> deletetag all friends`
-image:deletetag_3.png[600] +
+.  Type in `all`, followed by the tag you wish to delete +
+`>> deletetag all friends` +
+(See Figure 4.9.3) +
+Image:deletetag_3.png[deletetag3, 600] +
 _Figure 4.9.3_
 
-.  Press kbd:[Enter] and you should see that this tag has been deleted from all contacts (See Figure 4.9.4) +
-image:deletetag_4.png[600] +
+.  Press kbd:[Enter] and you should see that this tag has been deleted from all contacts +
+(See Figure 4.9.4) +
+Image:deletetag_4.png[deletetag4, 600] +
 _Figure 4.9.4_
 // end::addremovetag[]
 
@@ -411,18 +414,21 @@ Format: `addmeeting MEETING_NAME/MEETING_TIME` +
 
 If you want to add a meeting to a contact in your *ABC*: +
 
-.  Locate the contact you want to add a meeting to and the index of the contact +
-.  Type in the index of the contact, the name of the meeting and the time of the meeting you wish to add (See Figure 4.10.1) +
+.  Locate the contact you want to add a meeting to and take note of its index +
+.  Type in the index of the contact, the name of the meeting and the time of the meeting you wish to add +
 `>> addmeeting 1 class lunch/2017-12-20 12:00` +
+(See Figure 4.10.1) +
 image:addmeeting_1.png[addmeeting1, 600] +
 _Figure 4.10.1_
-.  Press kbd:[Enter] and you should see that the contact that you selected has been modified (See Figure 4.10.2) +
+.  Press kbd:[Enter] and you should see that the contact that you selected has been modified +
+(See Figure 4.10.2) +
 image:addmeeting_2.png[addmeeting2, 600] +
+
 _Figure 4.10.2_
 
 
 
-You can also add meetings to contacts in a filtered list:
+You can also add meetings to a contact in a filtered list:
 
 * `>> find t/friends` +
 `>> addmeeting 2 breakfast/2017-12-15 10:00` +
@@ -439,26 +445,28 @@ Format: `deletemeeting INDEX` +
 
 If you want to delete a meeting in your *ABC*: +
 
-.  Locate the meeting you want to delete and the meeting of the contact +
-.  Type in the index of the meeting (See Figure 4.11.1) +
-`>> deletemeeting 1`
-image:deletemeeting_1.png[600] +
+.  Locate the meeting you want to delete and take note of its index +
+.  Type in the index of the meeting to be deleted +
+`>> deletemeeting 1` +
+(See Figure 4.11.1) +
+Image:deletemeeting_1.png[deletemeeting1, 600] +
 _Figure 4.11.1_
-.  Press kbd:[Enter] and you should see that the selected meeting has been deleted (See Figure 4.11.2) +
-image:deletemeeting_2.png[600] +
+.  Press kbd:[Enter] and you should see that the selected meeting has been deleted +
+(See Figure 4.11.2) +
+Image:deletemeeting_2.png[deletemeeting2, 600] +
 _Figure 4.11.2_
 
-You can also delete contacts in a filtered list:
+You can also delete a contact in a filtered list:
 
-* `list` +
-`deletemeeting 2` +
-Deletes the 2nd meeting in *ABC*
-* `find n/Betsy` +
-`deletemeeting 1` +
-Deletes the 1st meeting from the result of the `find` command
+* `>> list` +
+`>> deletemeeting 2` +
+Deletes the 2nd meeting in *ABC*.
+* `>> find n/Betsy` +
+`>> deletemeeting 1` +
+Deletes the 1st meeting from the result of the `find` command.
 * `find t/friends` +
-`dm 4` +
-Deletes the 4th meeting from the result of the `find` command
+`>> dm 4` +
+Deletes the 4th meeting from the result of the `find` command.
 // end::addremovemeeting[]
 
 
@@ -471,13 +479,15 @@ Function: Selects a contact with the specified `INDEX` +
 Format: `select INDEX`
 ====
 
-You can select a contact from the displayed list by:
+You can select a contact from the displayed list by following the steps below:
 
-. Type in (Figure 4.12.1) +
+. Type in +
 `>>select 1` +
+(See Figure 4.12.1) +
 image:select1.png[select1, 600] +
 _Figure 4.12.1_ +
-. Pressing kbd:[Enter]. Your choice should now be selected (Figure 4.12.2) +
+. Pressing kbd:[Enter] and your choice should now be selected +
+(See Figure 4.12.2) +
 image:select2.png[select2, 600] +
 _Figure 4.12.2_
 
@@ -485,17 +495,17 @@ Here is another way to select a contact:
 
 * s 1
 
-Examples:
+You can also select a contact in a filtered list:
 
 * `list` +
 `select 2` +
-Selects the 2nd person in the address book.
+Selects the 2nd person in *ABC*.
 * `find n/Betsy` +
 `select 1` +
 Selects the 1st person from the result of the `find` command.
 * `list` +
 `s 7` +
-Selects the 7th person in the address book.
+Selects the 7th person in *ABC*.
 
 // tag::note[]
 === Making a note: `note`
@@ -507,21 +517,22 @@ Function: Inserts a NOTE for the contact specified by INDEX in the *ABC* +
 Format: `note INDEX [NOTE]`
 
 [NOTE]
-Each contact can only have at most 1 note
+Each contact can have at most 1 note
 
 [TIP]
-NOTE can be blank to delete existing notes, i.e. `note 1`
+NOTE can be blank to delete existing note, i.e. `note 1`
 ====
 
 If you want to add a note for a contact:
 
-.   Locate the index of the contact +
+.   Locate the contact and take note of its index +
 .   Type in your desired INDEX and NOTE +
 `>> note 1 n/This is an important note` +
 (See Figure 4.13.1) +
 image:note1.png[note1, 600] +
 _Figure 4.13.1_
-. Press kbd:[Enter] and your note should now be displayed as the last row in your contact's details (See Figure 4.13.2) +
+. Press kbd:[Enter] and your note should appear as the last row in your contact's details +
+(See Figure 4.13.2) +
 image:note2.png[note2, 600] +
 _Figure 4.13.2_
 
@@ -535,6 +546,27 @@ Changes the 3rd contact's note to "This is a note" +
 * `n 3` +
 Removes the existing note from the 3rd person
 // end::note[]
+
+=== Clearing all entries : `clear`
+
+====
+Command Name: `clear` +
+Shorthand Alias: `c` +
+Function: Clears all existing contacts in the ABC +
+Format: `clear`
+====
+
+You can also clear all ABC contacts. To do so:
+
+.   Type in +
+`>> clear` +
+(See Figure 4.14.1) +
+image:clear1.png[clear1, 600] +
+_Figure 4.14.1_
+.   Press kbd:[Enter] and your contacts should now be cleared +
+(See Figure 4.14.2) +
+image:clear2.png[clear2, 600] +
+_Figure 4.14.2_
 
 // tag::backupandrestore[]
 === Creating a backup : `backup`
@@ -550,15 +582,16 @@ If you want to backup your data:
 
 . Type in +
 `>> backup` +
-(See Figure 4.14.1) +
-image:Backup_1.png[600] +
-_Figure 4.14.1_ +
-. Press kbd:[Enter] and you should see a message indicating the successful backup of your data (See Figure 4.14.2) +
-image:Backup_2.png[600] +
-_Figure 4.14.2_ +
+(See Figure 4.15.1) +
+image:Backup_1.png[backup1, 600] +
+_Figure 4.15.1_ +
+. Press kbd:[Enter] and you should see a message indicating the successful backup of your data +
+(See Figure 4.15.2) +
+image:Backup_2.png[backup2, 600] +
+_Figure 4.15.2_ +
 
 [NOTE]
-Your data is automatically backed up every time you close the app
+Your data is automatically backed up every time you close *ABC*
 
 === Restoring a backup : `restore`
 
@@ -567,35 +600,23 @@ Command Name: `restore` +
 Shorthand Alias: `rb` +
 Function: Retrieves data from a backup file and restore it in *ABC* +
 Format: `restore`
+
+[NOTE]
+There must be a backup file in the default file path for `restore` command to work
 ====
 
-If you encounter an unforeseen circumstance and want to revert to a backup file: +
-
-. Execute the `backup` command to save the current data (See Figure 4.15.1) +
-`>> backup` +
-image:Restore_1.png[600] +
-_Figure 4.15.1_ +
-
-. Enter the `clear` command to simulate a loss of data. (Figure 4.15.2) +
-`>> clear` +
-image:Restore_2.png[600] +
-_Figure 4.15.2_ +
+If you encounter an unforeseen circumstance and want to revert to a backup: +
 
 . Type in +
 `>> restore` +
-(See Figure 4.15.3) +
-image:Restore_3.png[600] +
-_Figure 4.15.3_ +
+(See Figure 4.16.3) +
+image:Restore_3.png[restore3, 600] +
+_Figure 4.16.3_ +
 
-. Press kbd:[Enter] and you should see that the backup data is restored (See Figure 4.15.4) +
-image:Restore_4.png[600] +
-_Figure 4.15.4_ +
-
-[NOTE]
-An error message will be shown if you do not already have a backup file in the default file path (See Figure 4.15.5)
-
-image:Restore_5.png[600] +
-_Figure 4.15.5_ +
+. Press kbd:[Enter] and you should see that the backup data is restored +
+(See Figure 4.16.4) +
+image:Restore_4.png[restore4, 600] +
+_Figure 4.16.4_ +
 // end::backupandrestore[]
 
 // tag::sync[]
@@ -611,27 +632,29 @@ Format: `login`
 If you would like to login to Google Contacts before running `sync`:
 
 .  Type in +
-`>> login`  +
-(See Figure 4.16.1) +
-image:login1.png[600] +
-_Figure 4.16.1_
-.   Press kbd:[Enter] and your default browser should open a login window (See Figure 4.16.2) +
+`>> login` +
+(See Figure 4.17.1) +
+Image:login1.png[login1, 600] +
+_Figure 4.17.1_
+.   Press kbd:[Enter] and your default browser should open a login window +
+(See Figure 4.17.2) +
 image:login2.png[sync2, 600] +
-_Figure 4.16.2_
-.   Enter your login details and press Next (See Figure 4.16.3) +
+_Figure 4.17.2_
+.   Enter your login details and press Next +
+(See Figure 4.17.3) +
 image:login3.png[sync3, 600] +
-
-_Figure 4.16.3_
-.   Allow *ABC* to access your Google Contacts information (See Figure 4.16.4) +
+_Figure 4.17.3_
+.   Allow *ABC* to access your Google Contacts information +
+(See Figure 4.17.4) +
 image:login4.png[sync4, 600] +
-_Figure 4.16.4_
+_Figure 4.17.4_
 
 
 
 === Synchronising with Google Contacts : `sync`
 
 ====
-Command Name: `sync`
+Command Name: `sync` +
 Shorthand Alias: `sy` +
 Function: Synchronises your contacts with Google Contacts after authentication +
 Format: `sync`
@@ -646,18 +669,19 @@ You can easily synchronise your *ABC* contacts with Google Contacts through the 
 
 .   Type in +
 `>> sync` +
-(See Figure 4.17.1) +
+(See Figure 4.18.1) +
 image:sync1.png[sync1, 600] +
-_Figure 4.17.1_ +
+_Figure 4.18.1_ +
 
-.   Your contacts are now synchronised (See Figure 4.17.5) +
+.   Your contacts are now synchronised +
+(See Figure 4.18.5) +
 image:sync5.png[sync5, 600] +
-_Figure 4.17.5_
+_Figure 4.18.5_
 
 === Logging out of Google Contacts : `logout`
 
 ====
-Command Name: `logout`
+Command Name: `logout` +
 Shorthand Alias: `lo` +
 Function: Logs out of your linked Google Account after you have logged in +
 Format: `logout`
@@ -669,13 +693,14 @@ You can log out of your linked Google Account by doing the following:
 
 . Type in +
 `>>logout` +
-(See Figure 4.18.1) +
+(See Figure 4.19.1) +
 image:logout1.png[logout1, 600] +
-_Figure 4.18.1_
+_Figure 4.19.1_
 
-. You are now logged out (See Figure 4.18.2) +
+. You are now logged out +
+(See Figure 4.19.2) +
 image:logout2.png[logout2, 600] +
-_Figure 4.18.2_
+_Figure 4.19.2_
 // end::sync[]
 
 === Listing entered commands : `history`
@@ -685,7 +710,7 @@ Command Name: `history` +
 Shorthand Alias: `hx` +
 Function: Lists all the commands that you have entered in reverse chronological order +
 Format: `history`
-[NOTE]
+[TIP]
 Pressing the kbd:[&uarr;] and kbd:[&darr;] arrows will display the previous and next input respectively in the command box.
 ====
 
@@ -693,10 +718,13 @@ If you want to view the list of commands entered: +
 
 .  Type in +
 `>> history` +
-(See Figure 4.19.1) +
-image:history.png[] +
-_Figure 4.19.1_
-.  Press kbd:[Enter] and the list of commands that you entered before would show up
+(See Figure 4.20.1) +
+Image:history1.png[history, 600] +
+_Figure 4.20.1_
+.  Press kbd:[Enter] and the list of commands that you entered before would show up +
+(See Figure 4.20.2) +
+Image:history2.png[history, 600] +
+_Figure 4.20.2_
 
 // tag::undoredo[]
 === Undoing previous command : `undo`
@@ -710,61 +738,73 @@ Format: `undo`
 
 [NOTE]
 ====
-_Undoable_ commands: those commands that modify the address book's content. They include `add`, `sort`, `delete`, `edit`, `addtag`, `deletetag`, `addmeeting`, `deletemeeting`, `note`, `restore` and `clear`.
+_Undoable_ commands: those commands that modify the address book's content +
+ They include `add`, `sort`, `delete`, `edit`, `addtag`, `deletetag`, `addmeeting`, `deletemeeting`, `note`, `restore` and `clear`
 ====
 
 When you `delete` a contact by accident: +
 
-. Remove the first contact (See Figure 4.20.1) +
+. Remove the first contact +
 `>> delete 1` +
-image:Undo_1.png[600] +
-_Figure 4.20.1_ +
+(See Figure 4.21.1) +
+image:Undo_1.png[undo1, 600] +
+_Figure 4.21.1_ +
 
-. Type in the `undo` command (See Figure 4.20.2) +
+. Type in the `undo` command +
 `>> undo` +
-image:Undo_2.png[600] +
-_Figure 4.20.2_ +
+(See Figure 4.21.2) +
+image:Undo_2.png[undo2, 600] +
+_Figure 4.21.2_ +
 
-. Press kbd:[Enter] and you should see that the effects of `delete 1` has been reverted (See Figure 4.20.3) +
-image:Undo_3.png[600] +
-_Figure 4.20.3_ +
+. Press kbd:[Enter] and you should see that the effects of `delete 1` has been reverted +
+(See Figure 4.21.3) +
+image:Undo_3.png[undo3, 600] +
+_Figure 4.21.3_ +
 
 The following are more examples to help you better understand the `undo` command:
 
 * Failure to `undo` as there are no undoable commands executed previously:
-. Restart the application and select the first contact (See Figure 4.20.4) +
+. Restart *ABC* and select the first contact +
 `>> select 1` +
-image:Undo_4.png[600] +
-_Figure 4.20.4_ +
-. List all the contacts (See Figure 4.20.5) +
+(See Figure 4.21.4) +
+image:Undo_4.png[undo4, 600] +
+_Figure 4.21.4_ +
+. List all the contacts +
 `>> list` +
-image:Undo_5.png[600] +
-_Figure 4.20.5_ +
-. Type in `undo` and you will see an error message (See Figure 4.20.6) +
+(See Figure 4.21.5) +
+image:Undo_5.png[undo5, 600] +
+_Figure 4.21.5_ +
+. Type in `undo` and you will see an error message +
 `>> undo` +
-image:Undo_6.png[600] +
-_Figure 4.20.6_ +
+(See Figure 4.21.6) +
+image:Undo_6.png[undo6, 600] +
+_Figure 4.21.6_ +
 
 * Attempting to `undo` multiple commands:
-. Delete the first contact (See Figure 4.20.7) +
+. Delete the first contact +
 `>> delete 1` +
-image:Undo_7.png[600] +
-_Figure 4.20.7_ +
-. Clear out all the contacts (See Figure 4.20.8) +
-`>> clear`
-image:Undo_8.png[600] +
-_Figure 4.20.8_ +
-. Type in the shorthand alias for `undo` (See Figure 4.20.9) +
+(See Figure 4.21.7) +
+image:Undo_7.png[undo7, 600] +
+_Figure 4.21.7_ +
+. Clear out all the contacts +
+`>> clear` +
+(See Figure 4.21.8) +
+image:Undo_8.png[undo8, 600] +
+_Figure 4.21.8_ +
+. Type in the shorthand alias for `undo` +
 `>> u` +
-image:Undo_9.png[600] +
-_Figure 4.20.9_ +
-. Press kbd:[Enter] and you should see that the `clear` command is reverted (See Figure 4.20.10) +
-image:Undo_10.png[600] +
-_Figure 4.20.10_ +
-. Type in `undo` and you should see that the `delete 1` command is reverted as well (See Figure 4.20.11)+
+(See Figure 4.21.9) +
+image:Undo_9.png[undo9, 600] +
+_Figure 4.21.9_ +
+. Press kbd:[Enter] and you should see that the `clear` command is reverted +
+(See Figure 4.21.10) +
+image:Undo_10.png[undo10, 600] +
+_Figure 4.21.10_ +
+. Type in `undo` and you should see that the `delete 1` command is reverted as well +
 `>> undo` +
-image:Undo_11.png[600] +
-_Figure 4.20.11_ +
+(See Figure 4.21.11) +
+image:Undo_11.png[undo11, 600] +
+_Figure 4.21.11_ +
 
 === Redoing the previously undone command : `redo`
 
@@ -777,86 +817,80 @@ Format: `redo`
 
 If you `delete` a contact and `undo` the `delete` by mistake: +
 
-. Type in the command to delete the first contact (See Figure 4.21.1) +
+. Type in the command to delete the first contact +
 `>> delete 1` +
-image:Redo_1.png[600] +
-_Figure 4.21.1_ +
-. Press kbd:[Enter] and the contact is removed (See Figure 4.21.2)+
-image:Redo_2.png[600] +
-. Type in `undo` by mistake (See Figure 4.21.3) +
+(See Figure 4.22.1) +
+image:Redo_1.png[redo1, 600] +
+_Figure 4.22.1_ +
+. Press kbd:[Enter] and the contact is removed +
+(See Figure 4.22.2) +
+image:Redo_2.png[redo2, 600] +
+_Figure 4.22.2_ +
+. Type in `undo` by mistake +
 `>> undo` +
-image:Redo_3.png[600] +
-_Figure 4.21.3_ +
-. Enter the command `redo` to revert the `undo` command (See Figure 4.21.4) +
+(See Figure 4.22.3) +
+image:Redo_3.png[redo3, 600] +
+_Figure 4.22.3_ +
+. Enter the command `redo` to revert the `undo` command +
 `>> redo` +
-image:Redo_4.png[600] +
-_Figure 4.21.4_ +
-. Press kbd:[Enter] and you should see that the `undo` command has been reverted and the contact remains deleted. Refer to Figure 4.21.5 to see that you have obtained the correct results +
-image:Redo_5.png[600] +
-_Figure 4.21.5_ +
+(See Figure 4.22.4) +
+image:Redo_4.png[redo4, 600] +
+_Figure 4.22.4_ +
+. Press kbd:[Enter] and you should see that the `undo` command has been reverted and the contact remains deleted +
+(See Figure 4.22.5) +
+image:Redo_5.png[redo5, 600] +
+_Figure 4.22.5_ +
 
 The following are more examples to help you better understand the `redo` command:
 
 * Failure to `redo` as there are no `undo` commands executed previously:
-. Select a contact to delete (See Figure 4.21.6) +
-`>> delete 1`
-image:Redo_6.png[600] +
-_Figure 4.21.6_ +
-. Type in the `redo` command (See Figure 4.21.7)+
-`>> redo`
-image:Redo_7.png[600] +
-_Figure 4.21.7_ +
-. Press kbd:[Enter] and you should see an error message (See Figure 4.21.8) +
-image:Redo_8.png[600] +
-_Figure 4.21.8_ +
+. Select a contact to delete +
+`>> delete 1` +
+(See Figure 4.22.6) +
+image:Redo_6.png[redo6, 600] +
+_Figure 4.22.6_ +
+. Type in the `redo` command +
+`>> redo` +
+(See Figure 4.22.7) +
+image:Redo_7.png[redo7, 600] +
+_Figure 4.22.7_ +
+. Press kbd:[Enter] and you should see an error message +
+(See Figure 4.22.8) +
+image:Redo_8.png[redo8, 600] +
+_Figure 4.22.8_ +
 
 * Attempting to `redo` multiple commands:
-. Select a contact to delete (See Figure 4.21.9) +
-`>> delete 1`
-image:Redo_9.png[600] +
-_Figure 4.21.9_ +
-. Remove all the contacts by `clear` command (See Figure 4.21.10) +
-`>> clear`
-image:Redo_10.png[600] +
-_Figure 4.21.10_ +
-. Type in `undo` to revert the `clear` command (See Figure 4.21.11) +
-`>> undo` +
-image:Redo_11.png[600] +
-_Figure 4.21.11_ +
-. Type in `undo` to revert the `delete 1` command (See Figure 4.21.12) +
-`>> undo` +
-(See Figure 4) +
-image:Redo_12.png[600] +
-_Figure 4.21.12_ +
-. Type in `redo` to reapply the `delete 1` command (See Figure 4.21.13) +
-`>> redo` +
-image:Redo_13.png[600] +
-_Figure 4.21.13_ +
-. Type in `redo` to reapply the `clear` command (See Figure 4.21.14) +
-`>> redo` +
-image:Redo_14.png[600] +
-_Figure 4.21.14_ +
-// end::undoredo[]
-
-=== Clearing all entries : `clear`
-
-====
-Command Name: `clear` +
-Shorthand Alias: `c` +
-Function: Clears all existing contacts in the ABC +
-Format: `clear`
-====
-
-You can also clear all ABC contacts. To do so,
-
-.   Type +
+. Select a contact to delete +
+`>> delete 1` +
+(See Figure 4.22.9) +
+image:Redo_9.png[redo9, 600] +
+_Figure 4.22.9_ +
+. Remove all the contacts by `clear` command +
 `>> clear` +
-(See Figure 4.22.1) +
-image:clear1.png[clear1, 600] +
-_Figure 4.22.1_
-.   Press kbd:[Enter]. Your contacts should now be cleared (See Figure 4.22.2) +
-image:clear2.png[clear2, 600] +
-_Figure 4.22.2_
+(See Figure 4.22.10) +
+image:Redo_10.png[redo10, 600] +
+_Figure 4.22.10_ +
+. Type in `undo` to revert the `clear` command +
+`>> undo` +
+(See Figure 4.22.11) +
+image:Redo_11.png[redo11, 600] +
+_Figure 4.22.11_ +
+. Type in `undo` to revert the `delete 1` command +
+`>> undo` +
+(See Figure 4.22.12) +
+image:Redo_12.png[redo12, 600] +
+_Figure 4.22.12_ +
+. Type in `redo` to reapply the `delete 1` command +
+`>> redo` +
+(See Figure 4.22.13) +
+image:Redo_13.png[redo13, 600] +
+_Figure 4.22.13_ +
+. Type in `redo` to reapply the `clear` command +
+`>> redo` +
+(See Figure 4.22.14) +
+image:Redo_14.png[redo14, 600] +
+_Figure 4.22.14_ +
+// end::undoredo[]
 
 // tag::resize[]
 === Resizing the main window : `resize`
@@ -877,9 +911,9 @@ If you want to resize your main window to 1280 * 720: +
 .  Type in +
 `>> resize 1280 720` +
 (See Figure 4.23.1) +
-image:resize.png[] +
+Image:resize.png[resize, 600] +
 _Figure 4.23.1_
-.  Press kbd:[Enter] and the main window would be resized to 1280 * 720
+.  Press kbd:[Enter] and the main window will be resized to 1280 * 720
 // end::resize[]
 
 === Exiting the program : `exit`
@@ -887,16 +921,16 @@ _Figure 4.23.1_
 ====
 Command Name: `exit` +
 Shorthand Alias: `q` +
-Function: Exits the app +
+Function: Exits the *ABC* +
 Format: `exit`
 ====
 
-If you want to close the app:
+If you want to close *ABC*:
 
 . Type in the command. +
 `>> exit` +
 (See Figure 4.24.1)
-image:Exit_1.png[600] +
+image:Exit_1.png[exit1, 600] +
 _Figure 4.24.1_ +
 . Press kbd:[Enter] and you will see that *ABC* is closed. +
 
@@ -906,11 +940,9 @@ Address book data is saved in the hard disk automatically after any command that
 There is no need to save manually.
 
 == Changelog
-The changelog contains features and improvements added in different major updates of *ABC*
+The changelog contains features and improvements added in different major updates of *ABC*.
 
-:sectnums!:
-
-=== v1.5
+=== Version 1.5
 * Smart Auto-Completion
 * Adding and deleting of meetings
 * Auto complete now works with command words
@@ -918,19 +950,19 @@ The changelog contains features and improvements added in different major update
 * Restore now includes meetings
 * Reworking of commands to handle meetings correctly
 
-=== v1.4
+=== Version 1.4
 * Display meetings in UI
 * Auto-Completion
 * Sorting of contacts
 * Google People API Synchronization
 
-=== v1.3
+=== Version 1.3
 * Add a person without all his/her parameters
 * Confirmation for restoring a backup
 * Wildcard `*` for searching of contacts
 * Meetings
 
-=== v1.2
+=== Version 1.2
 * Adding and deleting of tags
 * Resize window size
 * Restore to a backup
@@ -968,18 +1000,19 @@ will open up a new window in your default browser.
 |=======================================================================
 |Command | Alias| Format
 |Help |`hp` | `help`
-|Add |`a` | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]... [m/MEETING]...`
+|Add |`a` | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]...`
 |List |`l` |`list`
 |Find |`f` |`find [n/KEYWORD…​] [p/KEYWORD…​] [e/KEYWORD…​] [a/KEYWORD…​] [t/KEYWORD…​]`
 |Sort |`s`| `sort FIELD`
 |Delete |`d` | `delete INDEX`
-|Edit |`e` | `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]... [m/MEETING]...`
+|Edit |`e` | `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]...`
 |Add Tag |`at` |`addtag INDEX TAG`
 |Delete Tag |`dt` |`deletetag TAGNAME`
 |Add Meeting |`am` |`addmeeting INDEX MEETING_NAME/MEETING_TIME`
 |Delete Meeting |`dm` |`deletemeeting INDEX`
 |Select |`sl` | `select INDEX
-|Note |`n` | `note INDEX n/NOTE`
+|Note |`n` | `note INDEX NOTE`
+|Clear |`c` | `clear`
 |Backup |`b` | `backup`
 |Restore Backup |`rb` | `restore`
 |Login | `li` | `login`
@@ -988,10 +1021,8 @@ will open up a new window in your default browser.
 |History |`hx` | `history`
 |Undo | `u`| `undo`
 |Redo | `r`| `redo`
-|Clear |`c` | `clear`
 |Resize |`rs` | `resize WIDTH HEIGHT`
 |Exit |`q` | exit
-|Saving Data|
 |=======================================================================
 
 
