@@ -130,7 +130,7 @@ _Figure 2.1.2 : Class Diagram of the Logic Component_
 [discrete]
 ==== Events-Driven nature of the design
 
-The _Sequence Diagram_(Figure 2.1.3a) below shows how the components interact in a scenario where the user issues the command `delete 1`.
+The _Sequence Diagram_ (Figure 2.1.3a) below shows how the components interact in a scenario where the user issues the command `delete 1`.
 
 image::SDforDeletePerson.png[width="800"]
 _Figure 2.1.3a : Sequence Diagram for `delete 1` command (Part a)_
@@ -268,12 +268,12 @@ Suppose that the user has just launched the application. The `UndoRedoStack` wil
 The user executes a new `UndoableCommand`, `delete 5`, to delete the 5th person in the address book. The current state of the address book is saved before the `delete 5` command executes. The `delete 5` command will then be pushed onto the `undoStack` (the current state is saved together with the command). This is illustrated by Figure 3.1.2.
 
 image::UndoRedoStartingStackDiagram.png[width="800"]
-_Figure 3.1.2 : Delete Command Stack Diagram_
+_Figure 3.1.2 : Execute Delete Command Stack Diagram_
 
 As the user continues to use the program, more commands are added into the `undoStack`. For example, the user may execute `add n/David ...` to add a new person. This is shown in Figure 3.1.3.
 
 image::UndoRedoNewCommand1StackDiagram.png[width="800"]
-_Figure 3.1.3 : Add Command Stack Diagram_
+_Figure 3.1.3 : Execute Add Command Stack Diagram_
 
 [NOTE]
 If a command fails its execution, it will not be pushed to the `UndoRedoStack` at all.
@@ -283,7 +283,7 @@ The user now decides that adding the person was a mistake, and executes `undo` t
 As can be seen from Figure 3.1.4, the most recent command is popped out of the `undoStack` and pushed back to the `redoStack`. The address book is then restored to the state before the `add` command executed.
 
 image::UndoRedoExecuteUndoStackDiagram.png[width="800"]
-_Figure 3.1.4 : Execute Undo Stack Diagram_
+_Figure 3.1.4 : Execute Undo Command Stack Diagram_
 
 [NOTE]
 If the `undoStack` is empty, then there are no other commands left to be undone, and an `Exception` will be thrown when popping the `undoStack`.
@@ -301,12 +301,12 @@ If the `redoStack` is empty, there are no other commands left to be redone, and 
 The user now decides to execute a new command, `clear`. As before, `clear` will be pushed into the `undoStack`. The `redoStack` is no longer empty. It will be purged as it no longer makes sense to redo the `add n/David` command (this is the behavior that most modern desktop applications follow). This is shown in Figure 3.1.6.
 
 image::UndoRedoNewCommand2StackDiagram.png[width="800"]
-_Figure 3.1.6 : Clear Command Stack Diagram _
+_Figure 3.1.6 : Execute Clear Command Stack Diagram_
 
 Commands that are not undoable are not added into the `undoStack`. For example, `list`, which inherits from `Command` rather than `UndoableCommand`, will not be added after execution, as shown in Figure 3.1.7.
 
 image::UndoRedoNewCommand3StackDiagram.png[width="800"]
-_Figure 3.1.7 : List Command Stack Diagram_
+_Figure 3.1.7 : Execute List Command Stack Diagram_
 
 The following activity diagram, Figure 3.1.8,  summarizes what happens inside the `UndoRedoStack` when a user executes a new command:
 
@@ -395,7 +395,7 @@ The data from default file path "data/addressbook-backup.xml" will be retrieved 
 The following is the implementation of `RestoreBackupCommand`:
 [source, java]
 ----
-public class RestoreBackupCommand extends Command {
+public class RestoreBackupCommand extends UndoableCommand {
    //... variables, constructor, other methods...
 
    @Override
@@ -757,10 +757,10 @@ Here are the steps to convert the project documentation files to PDF format.
 .  Follow the instructions in <<UsingGradle#rendering-asciidoc-files, UsingGradle.adoc>> to convert the AsciiDoc files in the `docs/` directory to HTML format.
 .  Go to your generated HTML files in the `build/docs` folder, right click on them and select `Open with` -> `Google Chrome`.
 .  Within Chrome, click on the `Print` option in Chrome's menu.
-.  Set the destination to `Save as PDF`, then click `Save` to save a copy of the file in PDF format. For best results, use the settings indicated in the screenshot below.
+.  Set the destination to `Save as PDF`, then click `Save` to save a copy of the file in PDF format. For best results, use the settings indicated in the screenshot below. (Figure 4.3.1)
 
 image::chrome_save_as_pdf.png[width="300"]
-_Figure 5.6.1 : Saving documentation as PDF files in Chrome_
+_Figure 4.3.1 : Saving documentation as PDF files in Chrome_
 
 == Testing
 
