@@ -47,10 +47,10 @@ _Figure 3.1_
 e.g. typing *`help`* and pressing kbd:[Enter] will open the help window.
 .  Here are some example commands you can try:
 
-* *`list`* : lists all contacts
-* **`add`**`n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01` : adds a contact named `John Doe` to your *ABC*
-* **`delete`**`3` : deletes the 3rd contact shown in the current list
-* *`exit`* : exits the app
+* `>> `*`list`* : lists all contacts
+* `>> `**`add`**`n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01` : adds a contact named `John Doe` to your *ABC*
+* `>> `**`delete`**`3` : deletes the 3rd contact shown in the current list
+* `>> `*`exit`* : exits the app
 
 .  Refer to the link:#features[Features] section below for details of each command.
 
@@ -181,7 +181,7 @@ _Figure 4.4.2_
 Here are some other ways you can use `find`:
 
 * `>> find t/friends family p/88887777` +
-Lists any person having tags `friends`or `family` or whose phone number is `88887777`
+Lists any person having tags `friends` or `family` or whose phone number is `88887777`
 * `>> f e/*@example.com` +
 Lists any person whose email domain is `example.com`
 * `>> find n/steph?n` +
@@ -419,7 +419,6 @@ _Figure 4.10.1_
 .  Press kbd:[Enter] and you should see that the contact that you selected has been modified +
 (See Figure 4.10.2) +
 image:addmeeting_2.png[addmeeting2, 600] +
-
 _Figure 4.10.2_
 
 
@@ -946,7 +945,7 @@ The changelog contains features and improvements added in different major update
 === Version 1.5
 * Smart Auto-Completion
 * Adding and deleting of meetings
-* Auto complete now works with command words
+* Find now works on all fields
 * Synchronisation now checks if Google Contacts are valid
 * Restore now includes meetings
 * Reworking of commands to handle meetings correctly
