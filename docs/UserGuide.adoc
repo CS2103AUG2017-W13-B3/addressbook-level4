@@ -256,7 +256,7 @@ You can also delete contacts in a filtered list:
 
 * `list` +
 `delete 2` +
-Deletes the 2nd person in the address book.
+Deletes the 2nd person in the contact list.
 * `find n/Betsy` +
 `delete 1` +
 Deletes the 1st person from the result of the `find` command.
@@ -732,13 +732,13 @@ _Figure 4.20.2_
 ====
 Command Name: `undo` +
 Shorthand Alias: `u` +
-Function: Restores the address book to the state where the previous _undoable_ command was not executed +
+Function: Restores the application to the state where the previous _undoable_ command was not executed +
 Format: `undo`
 ====
 
 [NOTE]
 ====
-_Undoable_ commands: those commands that modify the address book's content +
+_Undoable_ commands: those commands that modify the application’'s content +
  They include `add`, `sort`, `delete`, `edit`, `addtag`, `deletetag`, `addmeeting`, `deletemeeting`, `note`, `restore` and `clear`
 ====
 
@@ -936,7 +936,7 @@ _Figure 4.24.1_ +
 
 === Saving the data
 
-Address book data is saved in the hard disk automatically after any command that changes the data. +
+ABC data is saved in the hard disk automatically after any command that changes the data. +
 There is no need to save manually.
 
 == Changelog
@@ -1024,3 +1024,6 @@ will open up a new window in your default browser.
 |Synchronise with Google Contacts | `sy` | `sync`
 |Undo | `u`| `undo`
 |=======================================================================
+
+
+
