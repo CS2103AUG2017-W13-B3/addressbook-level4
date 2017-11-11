@@ -43,8 +43,19 @@
 <p>Command Name: <code>find</code><br>
 Shorthand Alias: <code>f</code><br>
 Function : Displays a filtered list of persons whose specified fields contain any of the given keywords<br>
-Format: <code>find [n/KEYWORD&#8230;&#8203;] [p/KEYWORD&#8230;&#8203;] [e/KEYWORD&#8230;&#8203;] [a/KEYWORD&#8230;&#8203;] [t/KEYWORD&#8230;&#8203;]</code><br>
-[NOTE] There must be at least one argument</p>
+Format: <code>find [n/KEYWORD&#8230;&#8203;] [p/KEYWORD&#8230;&#8203;] [e/KEYWORD&#8230;&#8203;] [a/KEYWORD&#8230;&#8203;] [t/KEYWORD&#8230;&#8203;]</code><br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+There must be at least one argument
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -56,19 +67,16 @@ Format: <code>find [n/KEYWORD&#8230;&#8203;] [p/KEYWORD&#8230;&#8203;] [e/KEYWOR
 <p>The search is case insensitive e.g <code>hans</code> will match <code>Hans</code></p>
 </li>
 <li>
-<p>The order of the keywords does not matter e.g. <code>Hans Bo</code> will match <code>Bo Hans</code></p>
-</li>
-<li>
 <p>Only exact words will be matched e.g. <code>Han</code> will not match <code>Hans</code></p>
 </li>
 <li>
 <p>Persons matching at least one search term in the specified field will be returned e.g. <code>find n/Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code></p>
 </li>
 <li>
-<p>Wildcard symbols <code>*</code> and <code>?</code> are allowed in parameters for <code>find</code> where <code>*</code> matches any non-space string and <code>?</code> matches any non-space unit-length symbol</p>
+<p>Wildcard symbols <code>*</code> and <code>?</code> are allowed in the parameters where <code>*</code> matches any non-space string and <code>?</code> matches any non-space unit-length symbol</p>
 </li>
 <li>
-<p>The search is done on the existing list. Successive <code>find</code> commands make the list smaller</p>
+<p>The search is done on the most recent listing. Successive <code>find</code> commands make the list smaller</p>
 </li>
 </ul>
 </div>
@@ -100,16 +108,16 @@ Format: <code>find [n/KEYWORD&#8230;&#8203;] [p/KEYWORD&#8230;&#8203;] [e/KEYWOR
 <div class="ulist">
 <ul>
 <li>
-<p><code>find n/Betsy Tim John</code><br>
-Lists any person having names <code>Betsy</code>, <code>Tim</code>, or <code>John</code></p>
+<p><code>find t/friends family p/88887777</code><br>
+Lists any person having tags <code>friends`or `family</code> or whose phone number is <code>88887777</code></p>
 </li>
 <li>
-<p><code>f n/Watson</code><br>
-Lists any person having the name <code>Watson</code></p>
+<p><code>f e/*@example.com</code><br>
+Lists any person whose email domain is <code>example.com</code></p>
 </li>
 <li>
-<p><code>find j*</code><br>
-Lists any person whose name starts with <code>j</code><br></p>
+<p><code>find n/steph?n</code><br>
+Lists persons whose name is <code>stephan</code> or <code>stephen</code><br></p>
 </li>
 </ul>
 </div>
@@ -253,13 +261,6 @@ All <code>person</code> instances that fulfill the conditions specified in <code
 <div class="paragraph">
 <p><mark>Start of Extract [from: User Guide]</mark></p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Wildcard symbols <code>*</code> and <code>?</code> are allowed in parameters for <code>find</code> where <code>*</code> matches any non-space string and <code>?</code> matches any non-space unit-length symbol</p>
-</li>
-</ul>
-</div>
 <div class="paragraph">
 <p><mark>End of Extract</mark></p>
 </div>
@@ -357,7 +358,7 @@ You <strong>CANNOT</strong> <code>undo</code> a <code>resize</code> command
 <div class="ulist">
 <ul>
 <li>
-<p>Suggestions will pop up for partial words keyed in. Press <kbd>TAB</kbd> to auto-complete using the first suggestion.</p>
+<p>Suggestions will pop up for partial words keyed in. Press <kbd>TAB</kbd> to auto-complete using the first suggestion or press <kbd>&uarr;</kbd><kbd>&darr;</kbd> arrows and <kbd>Enter</kbd> to choose the suggestion.</p>
 </li>
 </ul>
 </div>
@@ -404,7 +405,7 @@ For instance, if the user want to see all contacts who are not his friends, he c
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-11-11 04:29:33 +00:00
+Last updated 2017-11-11 05:06:35 +00:00
 </div>
 </div>
 </body>
