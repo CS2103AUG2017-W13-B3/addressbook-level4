@@ -248,7 +248,8 @@ If you want to delete a contact in your *ABC*: +
 (See Figure 4.6.1) +
 image:Delete_1.png[delete1, 600] +
 _Figure 4.6.1_
-.  Press kbd:[Enter] and you should see that the selected contact has been deleted (See Figure 4.6.2) +
+.  Press kbd:[Enter] and you should see that the selected contact has been deleted +
+(See Figure 4.6.2) +
 image:Delete_2.png[delete2, 600] +
 _Figure 4.6.2_
 
