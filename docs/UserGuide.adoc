@@ -184,11 +184,11 @@ _Figure 4.4.2_
 
 Here are some other ways you can use `find`:
 
-* `find t/friends family p/88887777` +
+* `>> find t/friends family p/88887777` +
 Lists any person having tags `friends`or `family` or whose phone number is `88887777`
-* `f e/*@example.com` +
+* `>> f e/*@example.com` +
 Lists any person whose email domain is `example.com`
-* `find n/steph?n` +
+* `>> find n/steph?n` +
 Lists persons whose name is `stephan` or `stephen` +
 // end::find[]
 
@@ -220,11 +220,11 @@ _Figure 4.5.2_
 
 Here are some other ways to sort your contact list:
 
-* `sort phone` +
+* `>> sort phone` +
 Sorts the contact list by phone number.
-* `s tag` +
+* `>> s tag` +
 Sorts the contact list by tag.
-* `sort meeting` +
+* `>> sort meeting` +
 Sorts the contact list by meeting time.
 // end::sort[]
 
@@ -253,14 +253,14 @@ _Figure 4.6.2_
 
 You can also delete contacts in a filtered list:
 
-* `list` +
-`delete 2` +
+* `>> list` +
+`>> delete 2` +
 Deletes the 2nd person in the contact list.
-* `find n/Betsy` +
-`delete 1` +
+* `>> find n/Betsy` +
+`>> delete 1` +
 Deletes the 1st person from the result of the `find` command.
-* `find t/friends` +
-`d 4` +
+* `>> find t/friends` +
+`>> d 4` +
 Deletes the 4th person from the result of the `find` command.
 
 === Editing a person : `edit`
@@ -493,18 +493,18 @@ _Figure 4.12.2_
 
 Here is another way to select a contact:
 
-* s 1
+* `>> s 1`
 
 You can also select a contact in a filtered list:
 
-* `list` +
-`select 2` +
+* `>> list` +
+`>> select 2` +
 Selects the 2nd person in *ABC*.
-* `find n/Betsy` +
-`select 1` +
+* `>> find n/Betsy` +
+`>> select 1` +
 Selects the 1st person from the result of the `find` command.
-* `list` +
-`s 7` +
+* `>> list` +
+`>> s 7` +
 Selects the 7th person in *ABC*.
 
 // tag::note[]
@@ -539,11 +539,11 @@ _Figure 4.13.2_
 Here are some other ways to change your ABC contact's note:
 
 
-* `note 2` +
+* `>> note 2` +
 Removes the existing note from the 2nd person +
-* `n 3 This is a note` +
+* `>> n 3 This is a note` +
 Changes the 3rd contact's note to "This is a note" +
-* `n 3` +
+* `>> n 3` +
 Removes the existing note from the 3rd person
 // end::note[]
 
@@ -627,9 +627,11 @@ Command Name: `login` +
 Shorthand Alias: `li` +
 Function: Logs in to Google Contacts +
 Format: `login`
+[NOTE]
+It is mandatory to execute this command before running `sync`
 ====
 
-If you would like to login to Google Contacts before running `sync`:
+If you would like to login to Google Contacts:
 
 .  Type in +
 `>> login` +
@@ -638,15 +640,15 @@ image:login1.png[login1, 600] +
 _Figure 4.17.1_
 .   Press kbd:[Enter] and your default browser should open a login window +
 (See Figure 4.17.2) +
-image:login2.png[login2, 600] +
+image:login2.png[sync2, 600] +
 _Figure 4.17.2_
 .   Enter your login details and press Next +
 (See Figure 4.17.3) +
-image:login3.png[login3, 600] +
+image:login3.png[sync3, 600] +
 _Figure 4.17.3_
 .   Allow *ABC* to access your Google Contacts information +
 (See Figure 4.17.4) +
-image:login4.png[login4, 600] +
+image:login4.png[sync4, 600] +
 _Figure 4.17.4_
 
 
@@ -677,6 +679,7 @@ _Figure 4.18.1_ +
 (See Figure 4.18.2 and 4.18.3) +
 image:sync2.png[sync2, 600] +
 _Figure 4.18.2_ +
+
 image:sync3.png[sync3, 600] +
 _Figure 4.18.3_
 
