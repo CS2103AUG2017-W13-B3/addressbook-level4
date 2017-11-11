@@ -85,7 +85,7 @@ If you want to view the *User Guide*: +
 .  Type in +
 `>> help` +
 (See Figure 4.1.1) +
-Image:help.png[help, 600] +
+image:help.png[help, 600] +
 _Figure 4.1.1_
 .  Press kbd:[Enter] and this *User Guide* document will show up
 
@@ -213,11 +213,11 @@ If you would like to sort your contact list:
 .  Type in the `FIELD` to sort your contact list by  +
 `>> sort name`  +
 (See Figure 4.5.1) +
-Image:sort_1.png[sort1, 600] +
+image:sort_1.png[sort1, 600] +
 _Figure 4.5.1_
 .  Press kbd:[Enter] and your contact list will be sorted +
 (See Figure 4.5.2) +
-Image:sort_2.png[sort2, 600] +
+image:sort_2.png[sort2, 600] +
 _Figure 4.5.2_
 
 Here are some other ways to sort your contact list:
@@ -368,11 +368,11 @@ If you want to delete a single tag from a contact in your *ABC*: +
 .  Type in the index of the contact and the tag you wish to delete +
 `>> deletetag 1 classmates` +
 (See Figure 4.9.1) +
-Image:deletetag_1.png[deletetag1, 600] +
+image:deletetag_1.png[deletetag1, 600] +
 _Figure 4.9.1_
 .  Press kbd:[Enter] and you should see that the contact selected has been modified +
 (See Figure 4.9.2) +
-Image:deletetag_2.png[deletetag2, 600] +
+image:deletetag_2.png[deletetag2, 600] +
 _Figure 4.9.2_
 
 You can also delete tags from a contact in a filtered list:
@@ -390,12 +390,12 @@ If you would like to delete all instances of a particular tag from your *ABC*: +
 .  Type in `all`, followed by the tag you wish to delete +
 `>> deletetag all friends` +
 (See Figure 4.9.3) +
-Image:deletetag_3.png[deletetag3, 600] +
+image:deletetag_3.png[deletetag3, 600] +
 _Figure 4.9.3_
 
 .  Press kbd:[Enter] and you should see that this tag has been deleted from all contacts +
 (See Figure 4.9.4) +
-Image:deletetag_4.png[deletetag4, 600] +
+image:deletetag_4.png[deletetag4, 600] +
 _Figure 4.9.4_
 // end::addremovetag[]
 
@@ -449,11 +449,11 @@ If you want to delete a meeting in your *ABC*: +
 .  Type in the index of the meeting to be deleted +
 `>> deletemeeting 1` +
 (See Figure 4.11.1) +
-Image:deletemeeting_1.png[deletemeeting1, 600] +
+image:deletemeeting_1.png[deletemeeting1, 600] +
 _Figure 4.11.1_
 .  Press kbd:[Enter] and you should see that the selected meeting has been deleted +
 (See Figure 4.11.2) +
-Image:deletemeeting_2.png[deletemeeting2, 600] +
+image:deletemeeting_2.png[deletemeeting2, 600] +
 _Figure 4.11.2_
 
 You can also delete a contact in a filtered list:
@@ -634,7 +634,7 @@ If you would like to login to Google Contacts before running `sync`:
 .  Type in +
 `>> login` +
 (See Figure 4.17.1) +
-Image:login1.png[login1, 600] +
+image:login1.png[login1, 600] +
 _Figure 4.17.1_
 .   Press kbd:[Enter] and your default browser should open a login window +
 (See Figure 4.17.2) +
@@ -719,11 +719,11 @@ If you want to view the list of commands entered: +
 .  Type in +
 `>> history` +
 (See Figure 4.20.1) +
-Image:history1.png[history, 600] +
+image:history1.png[history, 600] +
 _Figure 4.20.1_
 .  Press kbd:[Enter] and the list of commands that you entered before would show up +
 (See Figure 4.20.2) +
-Image:history2.png[history, 600] +
+image:history2.png[history, 600] +
 _Figure 4.20.2_
 
 // tag::undoredo[]
@@ -911,7 +911,7 @@ If you want to resize your main window to 1280 * 720: +
 .  Type in +
 `>> resize 1280 720` +
 (See Figure 4.23.1) +
-Image:resize.png[resize, 600] +
+image:resize.png[resize, 600] +
 _Figure 4.23.1_
 .  Press kbd:[Enter] and the main window will be resized to 1280 * 720
 // end::resize[]
@@ -999,14 +999,14 @@ will open up a new window in your default browser.
 [width="100%",cols="25%,5%,70%",options="header",]
 |=======================================================================
 |Command | Alias| Format
-|Add |`a` | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]...`
+|Add |`a` | `add n/NAME [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]...`
 |Add Meeting |`am` |`addmeeting INDEX MEETING_NAME/MEETING_TIME`
 |Add Tag |`at` |`addtag INDEX TAG`
 |Backup |`b` |`backup`
 |Clear |`c` | `clear`
 |Delete |`d` | `delete INDEX`
 |Delete Meeting |`dm` |`deletemeeting INDEX`
-|Delete Tag |`dt` |`deletetag TAGNAME`
+|Delete Tag |`dt` |`deletetag INDEX TAGNAME`
 |Edit |`e` | `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]...`
 |Exit |`q` | exit
 |Find |`f` |`find [n/KEYWORD…​] [p/KEYWORD…​] [e/KEYWORD…​] [a/KEYWORD…​] [t/KEYWORD…​]`
@@ -1024,6 +1024,3 @@ will open up a new window in your default browser.
 |Synchronise with Google Contacts | `sy` | `sync`
 |Undo | `u`| `undo`
 |=======================================================================
-
-
-
