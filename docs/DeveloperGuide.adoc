@@ -523,11 +523,11 @@ public interface Model {
 
 
 When `updateFilteredPersonList(predicate)` is invoked, every `Person` in **ABC** is evaluated against the `predicate`. +
-A `person` is added to the displayed list if `predicate.test(person)` is evaluated to be TRUE. +
-All `person` instances that fulfill the conditions specified in `predicate` are filtered to be displayed.
+A `Person` is added to the displayed list if `predicate.test(person)` is evaluated to be TRUE. +
+All `Person` instances that fulfill the conditions specified in `predicate` are filtered to be displayed.
 
 ==== Filtering on the existing list
-Note that all `person` instances in the existing list satisfy a Predicate `currentPredicate`. Given a new Predicate `newPredicate`, filtering on the existing list is equivalent to selecting `person` instances that satisfy both `currentPredicate` and `newPredicate`. From Figure 3.4.1, it can also be viewed as the intersection of two lists of `person` objects, each satisfying one of the two predicates respectively.
+Note that all `Person` instances in the existing list satisfy a Predicate `currentPredicate`. Given a new Predicate `newPredicate`, filtering on the existing list is equivalent to selecting `Person` instances that satisfy both `currentPredicate` and `newPredicate`. From Figure 3.4.1, it can also be viewed as the intersection of two lists of `Person` objects, each satisfying one of the two predicates respectively.
 
 image::venn_diagram.png[height = 200, width = 250]
 _Figure 3.4.1 : Venn Diagram for Filtering_
