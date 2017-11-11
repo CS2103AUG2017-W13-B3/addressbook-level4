@@ -67,7 +67,7 @@ This section aims to help you understand the features in *ABC*. It contains a de
 * Items that comes before `…`​ can have multiple entries e.g. `[t/TAG]...` can be used as `{nbsp}` (i.e. 0 times), `t/friend`, `t/friend t/family` etc.
 * Index refers to the index number shown in the most recent listing. The index *must be a positive integer* e.g. 1, 2, 3, ...
 // tag::tabcomplete[]
-* Suggestions will pop up for partial words keyed in. Press kbd:[TAB] to auto-complete using the first suggestion.
+* Suggestions will pop up for partial words keyed in. Press kbd:[TAB] to auto-complete using the first suggestion or press kbd:[&uarr;]kbd:[&darr;] arrows and kbd:[Enter] to choose the suggestion.
 // end::tabcomplete[]
 ====
 
@@ -158,18 +158,16 @@ Command Name: `find` +
 Shorthand Alias: `f` +
 Function : Displays a filtered list of persons whose specified fields contain any of the given keywords +
 Format: `find [n/KEYWORD...] [p/KEYWORD...] [e/KEYWORD...] [a/KEYWORD...] [t/KEYWORD...]` +
-[NOTE] There must be at least one argument
+[NOTE]
+There must be at least one argument
 ====
 
 ****
 * The search is case insensitive e.g `hans` will match `Hans`
-* The order of the keywords does not matter e.g. `Hans Bo` will match `Bo Hans`
 * Only exact words will be matched e.g. `Han` will not match `Hans`
 * Persons matching at least one search term in the specified field will be returned e.g. `find n/Hans Bo` will return `Hans Gruber`, `Bo Yang`
-// tag::wildcard[]
-* Wildcard symbols `\*` and `?` are allowed in parameters for `find` where `*` matches any non-space string and `?` matches any non-space unit-length symbol
-// end::wildcard[]
-* The search is done on the existing list. Successive `find` commands make the list smaller
+* Wildcard symbols `\*` and `?` are allowed in the parameters where `*` matches any non-space string and `?` matches any non-space unit-length symbol
+* The search is done on the most recent listing. Successive `find` commands make the list smaller
 ****
 
 If you want to find a person named `John Watson`:
@@ -186,12 +184,12 @@ _Figure 4.4.2_
 
 Here are some other ways you can use `find`:
 
-* `find n/Betsy Tim John` +
-Lists any person having names `Betsy`, `Tim`, or `John`
-* `f n/Watson` +
-Lists any person having the name `Watson`
-* `find j*` +
-Lists any person whose name starts with `j` +
+* `find t/friends family p/88887777` +
+Lists any person having tags `friends`or `family` or whose phone number is `88887777`
+* `f e/*@example.com` +
+Lists any person whose email domain is `example.com`
+* `find n/steph?n` +
+Lists persons whose name is `stephan` or `stephen` +
 // end::find[]
 
 // tag::sort[]
@@ -327,7 +325,8 @@ Shorthand Alias: `at` +
 Function: Adds a tag to an existing person at the specified `INDEX` in your *ABC* +
 Format: `addtag INDEX TAG` +
 [NOTE]
-Only one alphanumeric tag can be added at a time +
+Only one tag can be added at a time
+[NOTE]
 Special characters will not be accepted e.g !, @, #, ...
 ====
 
@@ -639,15 +638,15 @@ image:login1.png[login1, 600] +
 _Figure 4.17.1_
 .   Press kbd:[Enter] and your default browser should open a login window +
 (See Figure 4.17.2) +
-image:login2.png[sync2, 600] +
+image:login2.png[login2, 600] +
 _Figure 4.17.2_
 .   Enter your login details and press Next +
 (See Figure 4.17.3) +
-image:login3.png[sync3, 600] +
+image:login3.png[login3, 600] +
 _Figure 4.17.3_
 .   Allow *ABC* to access your Google Contacts information +
 (See Figure 4.17.4) +
-image:login4.png[sync4, 600] +
+image:login4.png[login4, 600] +
 _Figure 4.17.4_
 
 
@@ -675,9 +674,11 @@ image:sync1.png[sync1, 600] +
 _Figure 4.18.1_ +
 
 .   Your contacts are now synchronised +
-(See Figure 4.18.5) +
-image:sync5.png[sync5, 600] +
-_Figure 4.18.5_
+(See Figure 4.18.2 and 4.18.3) +
+image:sync2.png[sync2, 600] +
+_Figure 4.18.2_ +
+image:sync3.png[sync3, 600] +
+_Figure 4.18.3_
 
 === Logging out of Google Contacts : `logout`
 
