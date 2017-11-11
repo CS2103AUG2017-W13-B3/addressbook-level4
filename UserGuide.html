@@ -42,15 +42,15 @@
 <li><a href="#deleting-a-meeting-code-deletemeeting-code">4.11. Deleting a meeting : <code>deletemeeting</code></a></li>
 <li><a href="#selecting-a-person-code-select-code">4.12. Selecting a person : <code>select</code></a></li>
 <li><a href="#making-a-note-code-note-code">4.13. Making a note: <code>note</code></a></li>
-<li><a href="#creating-a-backup-code-backup-code">4.14. Creating a backup : <code>backup</code></a></li>
-<li><a href="#restoring-a-backup-code-restore-code">4.15. Restoring a backup : <code>restore</code></a></li>
-<li><a href="#logging-in-to-google-contacts-code-login-code">4.16. Logging in to Google Contacts: <code>login</code></a></li>
-<li><a href="#synchronising-with-google-contacts-code-sync-code">4.17. Synchronising with Google Contacts : <code>sync</code></a></li>
-<li><a href="#logging-out-of-google-contacts-code-logout-code">4.18. Logging out of Google Contacts : <code>logout</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">4.19. Listing entered commands : <code>history</code></a></li>
-<li><a href="#undoing-previous-command-code-undo-code">4.20. Undoing previous command : <code>undo</code></a></li>
-<li><a href="#redoing-the-previously-undone-command-code-redo-code">4.21. Redoing the previously undone command : <code>redo</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">4.22. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">4.14. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#creating-a-backup-code-backup-code">4.15. Creating a backup : <code>backup</code></a></li>
+<li><a href="#restoring-a-backup-code-restore-code">4.16. Restoring a backup : <code>restore</code></a></li>
+<li><a href="#logging-in-to-google-contacts-code-login-code">4.17. Logging in to Google Contacts: <code>login</code></a></li>
+<li><a href="#synchronising-with-google-contacts-code-sync-code">4.18. Synchronising with Google Contacts : <code>sync</code></a></li>
+<li><a href="#logging-out-of-google-contacts-code-logout-code">4.19. Logging out of Google Contacts : <code>logout</code></a></li>
+<li><a href="#listing-entered-commands-code-history-code">4.20. Listing entered commands : <code>history</code></a></li>
+<li><a href="#undoing-previous-command-code-undo-code">4.21. Undoing previous command : <code>undo</code></a></li>
+<li><a href="#redoing-the-previously-undone-command-code-redo-code">4.22. Redoing the previously undone command : <code>redo</code></a></li>
 <li><a href="#resizing-the-main-window-code-resize-code">4.23. Resizing the main window : <code>resize</code></a></li>
 <li><a href="#exiting-the-program-code-exit-code">4.24. Exiting the program : <code>exit</code></a></li>
 <li><a href="#saving-the-data">4.25. Saving the data</a></li>
@@ -58,15 +58,15 @@
 </li>
 <li><a href="#changelog">5. Changelog</a>
 <ul class="sectlevel2">
-<li><a href="#v1-5">v1.5</a></li>
-<li><a href="#v1-4">v1.4</a></li>
-<li><a href="#v1-3">v1.3</a></li>
-<li><a href="#v1-2">v1.2</a></li>
+<li><a href="#version-1-5">5.1. Version 1.5</a></li>
+<li><a href="#version-1-4">5.2. Version 1.4</a></li>
+<li><a href="#version-1-3">5.3. Version 1.3</a></li>
+<li><a href="#version-1-2">5.4. Version 1.2</a></li>
 </ul>
 </li>
-<li><a href="#coming-in-v2-0">Coming in v2.0</a></li>
-<li><a href="#faq">FAQ</a></li>
-<li><a href="#command-summary-cheatsheet">Command Summary/ Cheatsheet</a></li>
+<li><a href="#coming-in-version-2-0">6. Coming in Version 2.0</a></li>
+<li><a href="#faq">7. FAQ</a></li>
+<li><a href="#command-summary-cheatsheet">8. Command Summary/ Cheatsheet</a></li>
 </ul>
 </div>
 </div>
@@ -136,16 +136,16 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="ulist">
 <ul>
 <li>
-<p><strong><code>list</code></strong> : lists all contacts</p>
+<p><code>&gt;&gt; ` <strong>`list</code></strong> : lists all contacts</p>
 </li>
 <li>
-<p><strong><code>add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code> : adds a contact named <code>John Doe</code> to your <strong>ABC</strong></p>
+<p><code>&gt;&gt; ` <strong>`add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code> : adds a contact named <code>John Doe</code> to your <strong>ABC</strong></p>
 </li>
 <li>
-<p><strong><code>delete</code></strong><code>3</code> : deletes the 3rd contact shown in the current list</p>
+<p><code>&gt;&gt; ` <strong>`delete</code></strong><code>3</code> : deletes the 3rd contact shown in the current list</p>
 </li>
 <li>
-<p><strong><code>exit</code></strong> : exits the app</p>
+<p><code>&gt;&gt; ` <strong>`exit</code></strong> : exits the app</p>
 </li>
 </ul>
 </div>
@@ -213,7 +213,7 @@ Format: <code>help</code></p>
 <p>Type in<br>
 <code>&gt;&gt; help</code><br>
 (See Figure 4.1.1)<br>
-<span class="image"><img src="images/help.png" alt="help"></span><br>
+<span class="image"><img src="images/help.png" alt="help" width="600"></span><br>
 <em>Figure 4.1.1</em></p>
 </li>
 <li>
@@ -284,26 +284,21 @@ Parameters can be in any order e.g. <code>n/NAME p/PHONE_NUMBER</code>, <code>p/
 <div class="ulist">
 <ul>
 <li>
-<p><code>add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code></p>
+<p><code>&gt;&gt; add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code></p>
 </li>
 <li>
-<p><code>add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal</code></p>
+<p><code>&gt;&gt; add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal</code></p>
 </li>
 <li>
-<p><code>add n/Jack Daniels</code></p>
+<p><code>&gt;&gt; add n/Jack Daniels</code></p>
 </li>
 <li>
-<p><code>a n/John Watson p/83331122 e/johnw@example.com a/John Avenue, block 2, #01-01</code></p>
+<p><code>&gt;&gt; a n/John Watson p/83331122 e/johnw@example.com a/John Avenue, block 2, #01-01</code></p>
 </li>
 <li>
-<p><code>a n/Dave</code></p>
+<p><code>&gt;&gt; a n/Dave</code></p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>If you type in all commands shown above, you should see Figure 4.2.3<br>
-<span class="image"><img src="images/add3.png" alt="add3" width="600"></span><br>
-<em>Figure 4.2.3</em></p>
 </div>
 </div>
 <div class="sect2">
@@ -412,16 +407,16 @@ There must be at least one argument
 <div class="ulist">
 <ul>
 <li>
-<p><code>find t/friends family p/88887777</code><br>
-Lists any person having tags <code>friends`or `family</code> or whose phone number is <code>88887777</code></p>
+<p><code>&gt;&gt; find t/friends family p/88887777</code><br>
+Lists any person having tags <code>friends</code> or <code>family</code> or whose phone number is <code>88887777</code>.</p>
 </li>
 <li>
-<p><code>f e/*@example.com</code><br>
-Lists any person whose email domain is <code>example.com</code></p>
+<p><code>&gt;&gt; f e/*@example.com</code><br>
+Lists any person whose email domain is <code>example.com</code>.</p>
 </li>
 <li>
-<p><code>find n/steph?n</code><br>
-Lists persons whose name is <code>stephan</code> or <code>stephen</code><br></p>
+<p><code>&gt;&gt; find n/steph?n</code><br>
+Lists persons whose name is <code>stephan</code> or <code>stephen</code>.<br></p>
 </li>
 </ul>
 </div>
@@ -455,7 +450,7 @@ Only one <code>FIELD</code> (<code>NAME</code>, <code>PHONE</code>, <code>ADDRES
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-For fields with multiple entries (<code>TAG</code>, <code>MEETING</code>), the contact with the entry that comes first alphabetically appears first
+For fields with multiple entries (<code>TAG</code>, <code>MEETING</code>), contacts will be sorted based on the entry that comes first alphabetically
 </td>
 </tr>
 </table>
@@ -471,13 +466,13 @@ For fields with multiple entries (<code>TAG</code>, <code>MEETING</code>), the c
 <p>Type in the <code>FIELD</code> to sort your contact list by <br>
 <code>&gt;&gt; sort name</code> <br>
 (See Figure 4.5.1)<br>
-Image:sort_1.png[sort1, 600]<br>
+<span class="image"><img src="images/sort_1.png" alt="sort1" width="600"></span><br>
 <em>Figure 4.5.1</em></p>
 </li>
 <li>
 <p>Press <kbd>Enter</kbd> and your contact list will be sorted<br>
 (See Figure 4.5.2)<br>
-Image:sort_2.png[sort2, 600]<br>
+<span class="image"><img src="images/sort_2.png" alt="sort2" width="600"></span><br>
 <em>Figure 4.5.2</em></p>
 </li>
 </ol>
@@ -488,15 +483,15 @@ Image:sort_2.png[sort2, 600]<br>
 <div class="ulist">
 <ul>
 <li>
-<p><code>sort phone</code><br>
+<p><code>&gt;&gt; sort phone</code><br>
 Sorts the contact list by phone number.</p>
 </li>
 <li>
-<p><code>s tag</code><br>
+<p><code>&gt;&gt; s tag</code><br>
 Sorts the contact list by tag.</p>
 </li>
 <li>
-<p><code>sort meeting</code><br>
+<p><code>&gt;&gt; sort meeting</code><br>
 Sorts the contact list by meeting time.</p>
 </li>
 </ul>
@@ -530,7 +525,8 @@ Format: <code>delete INDEX</code><br></p>
 <em>Figure 4.6.1</em></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and you should see that the selected contact has been deleted (See Figure 4.6.2)<br>
+<p>Press <kbd>Enter</kbd> and you should see that the selected contact has been deleted<br>
+(See Figure 4.6.2)<br>
 <span class="image"><img src="images/Delete_2.png" alt="delete2" width="600"></span><br>
 <em>Figure 4.6.2</em></p>
 </li>
@@ -542,18 +538,18 @@ Format: <code>delete INDEX</code><br></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>list</code><br>
-<code>delete 2</code><br>
-Deletes the 2nd person in your <strong>ABC</strong>.</p>
+<p><code>&gt;&gt; list</code><br>
+<code>&gt;&gt; delete 2</code><br>
+Deletes the 2nd person in the contact list.</p>
 </li>
 <li>
-<p><code>find n/Betsy</code><br>
-<code>delete 1</code><br>
+<p><code>&gt;&gt; find n/Betsy</code><br>
+<code>&gt;&gt; delete 1</code><br>
 Deletes the 1st person from the result of the <code>find</code> command.</p>
 </li>
 <li>
-<p><code>find t/friends</code><br>
-<code>d 4</code><br>
+<p><code>&gt;&gt; find t/friends</code><br>
+<code>&gt;&gt; d 4</code><br>
 Deletes the 4th person from the result of the <code>find</code> command.</p>
 </li>
 </ul>
@@ -717,7 +713,18 @@ Format: <code>addtag INDEX TAG</code><br></p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Only one alphanumeric tag can be added at a time<br>
+Only one tag can be added at a time
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 Special characters will not be accepted e.g !, @, #, &#8230;&#8203;
 </td>
 </tr>
@@ -735,13 +742,14 @@ Special characters will not be accepted e.g !, @, #, &#8230;&#8203;
 </li>
 <li>
 <p>Type in the index of the contact, and the tag you wish to add <br>
-<code>&gt;&gt; addtag 1 classmate</code><br>
+<code>&gt;&gt; addtag 1 classmates</code><br>
 (See Figure 4.8.1)<br>
 <span class="image"><img src="images/addtag_1.png" alt="addtag1" width="600"></span><br>
 <em>Figure 4.8.1</em></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and you should see that the contact selected has been modified + (See Figure 4.8.2)<br>
+<p>Press <kbd>Enter</kbd> and you should see that the contact selected has been modified<br>
+(See Figure 4.8.2)<br>
 <span class="image"><img src="images/addtag_2.png" alt="addtag2" width="600"></span><br>
 <em>Figure 4.8.2</em></p>
 </li>
@@ -787,15 +795,15 @@ Format: <code>deletetag INDEX TAG</code><br></p>
 </li>
 <li>
 <p>Type in the index of the contact and the tag you wish to delete<br>
-<code>&gt;&gt; deletetag 1 classmate</code><br>
+<code>&gt;&gt; deletetag 1 classmates</code><br>
 (See Figure 4.9.1)<br>
-Image:deletetag_1.png[deletetag1, 600]<br>
+<span class="image"><img src="images/deletetag_1.png" alt="deletetag1" width="600"></span><br>
 <em>Figure 4.9.1</em></p>
 </li>
 <li>
 <p>Press <kbd>Enter</kbd> and you should see that the contact selected has been modified<br>
 (See Figure 4.9.2)<br>
-Image:deletetag_2.png[deletetag2, 600]<br>
+<span class="image"><img src="images/deletetag_2.png" alt="deletetag2" width="600"></span><br>
 <em>Figure 4.9.2</em></p>
 </li>
 </ol>
@@ -823,14 +831,16 @@ Deletes the <code>9pmclass</code> tag from the 1st person from the result of the
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Type in <code>all</code>, followed by the tag you wish to delete (See Figure 4.9.3)<br>
-<code>&gt;&gt; deletetag all friends</code>
-Image:deletetag_3.png[deletetag3, 600]<br>
+<p>Type in <code>all</code>, followed by the tag you wish to delete<br>
+<code>&gt;&gt; deletetag all friends</code><br>
+(See Figure 4.9.3)<br>
+<span class="image"><img src="images/deletetag_3.png" alt="deletetag3" width="600"></span><br>
 <em>Figure 4.9.3</em></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and you should see that this tag has been deleted from all contacts (See Figure 4.9.4)<br>
-Image:deletetag_4.png[deletetag4, 600]<br>
+<p>Press <kbd>Enter</kbd> and you should see that this tag has been deleted from all contacts<br>
+(See Figure 4.9.4)<br>
+<span class="image"><img src="images/deletetag_4.png" alt="deletetag4" width="600"></span><br>
 <em>Figure 4.9.4</em></p>
 </li>
 </ol>
@@ -866,23 +876,25 @@ Format: <code>addmeeting MEETING_NAME/MEETING_TIME</code><br></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Locate the contact you want to add a meeting to and the index of the contact<br></p>
+<p>Locate the contact you want to add a meeting to and take note of its index<br></p>
 </li>
 <li>
-<p>Type in the index of the contact, the name of the meeting and the time of the meeting you wish to add (See Figure 4.10.1)<br>
+<p>Type in the index of the contact, the name of the meeting and the time of the meeting you wish to add<br>
 <code>&gt;&gt; addmeeting 1 class lunch/2017-12-20 12:00</code><br>
+(See Figure 4.10.1)<br>
 <span class="image"><img src="images/addmeeting_1.png" alt="addmeeting1" width="600"></span><br>
 <em>Figure 4.10.1</em></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and you should see that the contact that you selected has been modified (See Figure 4.10.2)<br>
+<p>Press <kbd>Enter</kbd> and you should see that the contact that you selected has been modified<br>
+(See Figure 4.10.2)<br>
 <span class="image"><img src="images/addmeeting_2.png" alt="addmeeting2" width="600"></span><br>
 <em>Figure 4.10.2</em></p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>You can also add meetings to contacts in a filtered list:</p>
+<p>You can also add meetings to a contact in a filtered list:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -912,40 +924,42 @@ Format: <code>deletemeeting INDEX</code><br></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Locate the meeting you want to delete and the meeting of the contact<br></p>
+<p>Locate the meeting you want to delete and take note of its index<br></p>
 </li>
 <li>
-<p>Type in the index of the meeting (See Figure 4.11.1)<br>
-<code>&gt;&gt; deletemeeting 1</code>
-Image:deletemeeting_1.png[deletemeeting1, 600]<br>
+<p>Type in the index of the meeting to be deleted<br>
+<code>&gt;&gt; deletemeeting 1</code><br>
+(See Figure 4.11.1)<br>
+<span class="image"><img src="images/deletemeeting_1.png" alt="deletemeeting1" width="600"></span><br>
 <em>Figure 4.11.1</em></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and you should see that the selected meeting has been deleted (See Figure 4.11.2)<br>
-Image:deletemeeting_2.png[deletemeeting2, 600]<br>
+<p>Press <kbd>Enter</kbd> and you should see that the selected meeting has been deleted<br>
+(See Figure 4.11.2)<br>
+<span class="image"><img src="images/deletemeeting_2.png" alt="deletemeeting2" width="600"></span><br>
 <em>Figure 4.11.2</em></p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>You can also delete contacts in a filtered list:</p>
+<p>You can also delete a contact in a filtered list:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>list</code><br>
-<code>deletemeeting 2</code><br>
-Deletes the 2nd meeting in <strong>ABC</strong></p>
+<p><code>&gt;&gt; list</code><br>
+<code>&gt;&gt; deletemeeting 2</code><br>
+Deletes the 2nd meeting in <strong>ABC</strong>.</p>
 </li>
 <li>
-<p><code>find n/Betsy</code><br>
-<code>deletemeeting 1</code><br>
-Deletes the 1st meeting from the result of the <code>find</code> command</p>
+<p><code>&gt;&gt; find n/Betsy</code><br>
+<code>&gt;&gt; deletemeeting 1</code><br>
+Deletes the 1st meeting from the result of the <code>find</code> command.</p>
 </li>
 <li>
 <p><code>find t/friends</code><br>
-<code>dm 4</code><br>
-Deletes the 4th meeting from the result of the <code>find</code> command</p>
+<code>&gt;&gt; dm 4</code><br>
+Deletes the 4th meeting from the result of the <code>find</code> command.</p>
 </li>
 </ul>
 </div>
@@ -963,42 +977,54 @@ Format: <code>select INDEX</code></p>
 </div>
 </div>
 <div class="paragraph">
-<p>You can select a contact from the displayed list by:</p>
+<p>You can select a contact from the displayed list by following the steps below:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Type in (Figure 4.12.1)<br>
-<code>&gt;&gt;select 1</code><br>
+<p>Type in<br>
+<code>&gt;&gt; select 1</code><br>
+(See Figure 4.12.1)<br>
 <span class="image"><img src="images/select1.png" alt="select1" width="600"></span><br>
 <em>Figure 4.12.1</em><br></p>
 </li>
 <li>
-<p>Pressing <kbd>Enter</kbd>. Your choice should now be selected (Figure 4.12.2)<br>
+<p>Pressing <kbd>Enter</kbd> and your choice should now be selected<br>
+(See Figure 4.12.2)<br>
 <span class="image"><img src="images/select2.png" alt="select2" width="600"></span><br>
 <em>Figure 4.12.2</em></p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>Here are other ways to select a contact:</p>
+<p>Here is another way to select a contact:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>list</code><br>
-<code>select 2</code><br>
-Selects the 2nd person in your <strong>ABC</strong>.</p>
+<p><code>&gt;&gt; s 1</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can also select a contact in a filtered list:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&gt;&gt; list</code><br>
+<code>&gt;&gt; select 2</code><br>
+Selects the 2nd person in <strong>ABC</strong>.</p>
 </li>
 <li>
-<p><code>find n/Betsy</code><br>
-<code>select 1</code><br>
+<p><code>&gt;&gt; find n/Betsy</code><br>
+<code>&gt;&gt; select 1</code><br>
 Selects the 1st person from the result of the <code>find</code> command.</p>
 </li>
 <li>
-<p><code>list</code><br>
-<code>s 7</code><br>
-Selects the 7th person in your <strong>ABC</strong>.</p>
+<p><code>&gt;&gt; list</code><br>
+<code>&gt;&gt; s 7</code><br>
+Selects the 7th person in <strong>ABC</strong>.</p>
 </li>
 </ul>
 </div>
@@ -1020,7 +1046,7 @@ Format: <code>note INDEX [NOTE]</code></p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Each contact can only have at most 1 note
+Each contact can have at most 1 note
 </td>
 </tr>
 </table>
@@ -1032,7 +1058,7 @@ Each contact can only have at most 1 note
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-NOTE can be blank to delete existing notes, i.e. <code>note 1</code>
+NOTE can be blank to delete existing note, i.e. <code>note 1</code>
 </td>
 </tr>
 </table>
@@ -1045,7 +1071,7 @@ NOTE can be blank to delete existing notes, i.e. <code>note 1</code>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Locate the index of the contact<br></p>
+<p>Locate the contact and take note of its index<br></p>
 </li>
 <li>
 <p>Type in your desired INDEX and NOTE<br>
@@ -1055,7 +1081,8 @@ NOTE can be blank to delete existing notes, i.e. <code>note 1</code>
 <em>Figure 4.13.1</em></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and your note should now be displayed as the last row in your contact&#8217;s details (See Figure 4.13.2)<br>
+<p>Press <kbd>Enter</kbd> and your note should appear as the last row in your contact&#8217;s details<br>
+(See Figure 4.13.2)<br>
 <span class="image"><img src="images/note2.png" alt="note2" width="600"></span><br>
 <em>Figure 4.13.2</em></p>
 </li>
@@ -1067,22 +1094,55 @@ NOTE can be blank to delete existing notes, i.e. <code>note 1</code>
 <div class="ulist">
 <ul>
 <li>
-<p><code>note 2</code><br>
+<p><code>&gt;&gt; note 2</code><br>
 Removes the existing note from the 2nd person<br></p>
 </li>
 <li>
-<p><code>n 3 This is a note</code><br>
+<p><code>&gt;&gt; n 3 This is a note</code><br>
 Changes the 3rd contact&#8217;s note to "This is a note"<br></p>
 </li>
 <li>
-<p><code>n 3</code><br>
+<p><code>&gt;&gt; n 3</code><br>
 Removes the existing note from the 3rd person</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="creating-a-backup-code-backup-code"><a class="link" href="#creating-a-backup-code-backup-code">4.14. Creating a backup : <code>backup</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">4.14. Clearing all entries : <code>clear</code></a></h3>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Command Name: <code>clear</code><br>
+Shorthand Alias: <code>c</code><br>
+Function: Clears all existing contacts in the ABC<br>
+Format: <code>clear</code></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also clear all ABC contacts. To do so:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Type in<br>
+<code>&gt;&gt; clear</code><br>
+(See Figure 4.14.1)<br>
+<span class="image"><img src="images/clear1.png" alt="clear1" width="600"></span><br>
+<em>Figure 4.14.1</em></p>
+</li>
+<li>
+<p>Press <kbd>Enter</kbd> and your contacts should now be cleared<br>
+(See Figure 4.14.2)<br>
+<span class="image"><img src="images/clear2.png" alt="clear2" width="600"></span><br>
+<em>Figure 4.14.2</em></p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="creating-a-backup-code-backup-code"><a class="link" href="#creating-a-backup-code-backup-code">4.15. Creating a backup : <code>backup</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1101,14 +1161,15 @@ Format: <code>backup</code></p>
 <li>
 <p>Type in<br>
 <code>&gt;&gt; backup</code><br>
-(See Figure 4.14.1)<br>
+(See Figure 4.15.1)<br>
 <span class="image"><img src="images/Backup_1.png" alt="backup1" width="600"></span><br>
-<em>Figure 4.14.1</em><br></p>
+<em>Figure 4.15.1</em><br></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and you should see a message indicating the successful backup of your data (See Figure 4.14.2)<br>
+<p>Press <kbd>Enter</kbd> and you should see a message indicating the successful backup of your data<br>
+(See Figure 4.15.2)<br>
 <span class="image"><img src="images/Backup_2.png" alt="backup2" width="600"></span><br>
-<em>Figure 4.14.2</em><br></p>
+<em>Figure 4.15.2</em><br></p>
 </li>
 </ol>
 </div>
@@ -1119,14 +1180,14 @@ Format: <code>backup</code></p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Your data is automatically backed up every time you close the app
+Your data is automatically backed up every time you close <strong>ABC</strong>
 </td>
 </tr>
 </table>
 </div>
 </div>
 <div class="sect2">
-<h3 id="restoring-a-backup-code-restore-code"><a class="link" href="#restoring-a-backup-code-restore-code">4.15. Restoring a backup : <code>restore</code></a></h3>
+<h3 id="restoring-a-backup-code-restore-code"><a class="link" href="#restoring-a-backup-code-restore-code">4.16. Restoring a backup : <code>restore</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1135,39 +1196,6 @@ Shorthand Alias: <code>rb</code><br>
 Function: Retrieves data from a backup file and restore it in <strong>ABC</strong><br>
 Format: <code>restore</code></p>
 </div>
-</div>
-</div>
-<div class="paragraph">
-<p>If you encounter an unforeseen circumstance and want to revert to a backup file:<br></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Execute the <code>backup</code> command to save the current data (See Figure 4.15.1)<br>
-<code>&gt;&gt; backup</code><br>
-<span class="image"><img src="images/Restore_1.png" alt="restore1" width="600"></span><br>
-<em>Figure 4.15.1</em><br></p>
-</li>
-<li>
-<p>Enter the <code>clear</code> command to simulate a loss of data. (Figure 4.15.2)<br>
-<code>&gt;&gt; clear</code><br>
-<span class="image"><img src="images/Restore_2.png" alt="restore2" width="600"></span><br>
-<em>Figure 4.15.2</em><br></p>
-</li>
-<li>
-<p>Type in<br>
-<code>&gt;&gt; restore</code><br>
-(See Figure 4.15.3)<br>
-<span class="image"><img src="images/Restore_3.png" alt="restore3" width="600"></span><br>
-<em>Figure 4.15.3</em><br></p>
-</li>
-<li>
-<p>Press <kbd>Enter</kbd> and you should see that the backup data is restored (See Figure 4.15.4)<br>
-<span class="image"><img src="images/Restore_4.png" alt="restore4" width="600"></span><br>
-<em>Figure 4.15.4</em><br></p>
-</li>
-</ol>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1175,18 +1203,36 @@ Format: <code>restore</code></p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-An error message will be shown if you do not already have a backup file in the default file path (See Figure 4.15.5)
+There must be a backup file in the default file path for <code>restore</code> command to work
 </td>
 </tr>
 </table>
 </div>
+</div>
+</div>
 <div class="paragraph">
-<p><span class="image"><img src="images/Restore_5.png" alt="restore5" width="600"></span><br>
-<em>Figure 4.15.5</em><br></p>
+<p>If you encounter an unforeseen circumstance and want to revert to a backup:<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Type in<br>
+<code>&gt;&gt; restore</code><br>
+(See Figure 4.16.3)<br>
+<span class="image"><img src="images/Restore_3.png" alt="restore3" width="600"></span><br>
+<em>Figure 4.16.3</em><br></p>
+</li>
+<li>
+<p>Press <kbd>Enter</kbd> and you should see that the backup data is restored<br>
+(See Figure 4.16.4)<br>
+<span class="image"><img src="images/Restore_4.png" alt="restore4" width="600"></span><br>
+<em>Figure 4.16.4</em><br></p>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging-in-to-google-contacts-code-login-code"><a class="link" href="#logging-in-to-google-contacts-code-login-code">4.16. Logging in to Google Contacts: <code>login</code></a></h3>
+<h3 id="logging-in-to-google-contacts-code-login-code"><a class="link" href="#logging-in-to-google-contacts-code-login-code">4.17. Logging in to Google Contacts: <code>login</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1195,44 +1241,59 @@ Shorthand Alias: <code>li</code><br>
 Function: Logs in to Google Contacts<br>
 Format: <code>login</code></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It is mandatory to execute this command before running <code>sync</code>
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="paragraph">
-<p>If you would like to login to Google Contacts before running <code>sync</code>:</p>
+<p>If you would like to login to Google Contacts:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>Type in<br>
-<code>&gt;&gt; login</code> <br>
-(See Figure 4.16.1)<br>
-Image:login1.png[login1, 600]<br>
-<em>Figure 4.16.1</em></p>
+<code>&gt;&gt; login</code><br>
+(See Figure 4.17.1)<br>
+<span class="image"><img src="images/login1.png" alt="login1" width="600"></span><br>
+<em>Figure 4.17.1</em></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and your default browser should open a login window (See Figure 4.16.2)<br>
+<p>Press <kbd>Enter</kbd> and your default browser should open a login window<br>
+(See Figure 4.17.2)<br>
 <span class="image"><img src="images/login2.png" alt="sync2" width="600"></span><br>
-<em>Figure 4.16.2</em></p>
+<em>Figure 4.17.2</em></p>
 </li>
 <li>
-<p>Enter your login details and press Next (See Figure 4.16.3)<br>
-<span class="image"><img src="images/login3.png" alt="sync3" width="600"></span><br></p>
+<p>Enter your login details and press Next<br>
+(See Figure 4.17.3)<br>
+<span class="image"><img src="images/login3.png" alt="sync3" width="600"></span><br>
+<em>Figure 4.17.3</em></p>
+</li>
+<li>
+<p>Allow <strong>ABC</strong> to access your Google Contacts information<br>
+(See Figure 4.17.4)<br>
+<span class="image"><img src="images/login4.png" alt="sync4" width="600"></span><br>
+<em>Figure 4.17.4</em></p>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>Figure 4.16.3</em>
-.   Allow <strong>ABC</strong> to access your Google Contacts information (See Figure 4.16.4)<br>
-<span class="image"><img src="images/login4.png" alt="sync4" width="600"></span><br>
-<em>Figure 4.16.4</em></p>
-</div>
 </div>
 <div class="sect2">
-<h3 id="synchronising-with-google-contacts-code-sync-code"><a class="link" href="#synchronising-with-google-contacts-code-sync-code">4.17. Synchronising with Google Contacts : <code>sync</code></a></h3>
+<h3 id="synchronising-with-google-contacts-code-sync-code"><a class="link" href="#synchronising-with-google-contacts-code-sync-code">4.18. Synchronising with Google Contacts : <code>sync</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p>Command Name: <code>sync</code>
+<p>Command Name: <code>sync</code><br>
 Shorthand Alias: <code>sy</code><br>
 Function: Synchronises your contacts with Google Contacts after authentication<br>
 Format: <code>sync</code></p>
@@ -1271,24 +1332,29 @@ You have to run the <code>login</code> command before you can run <code>sync</co
 <li>
 <p>Type in<br>
 <code>&gt;&gt; sync</code><br>
-(See Figure 4.17.1)<br>
+(See Figure 4.18.1)<br>
 <span class="image"><img src="images/sync1.png" alt="sync1" width="600"></span><br>
-<em>Figure 4.17.1</em><br></p>
+<em>Figure 4.18.1</em><br></p>
 </li>
 <li>
-<p>Your contacts are now synchronised (See Figure 4.17.5)<br>
-<span class="image"><img src="images/sync5.png" alt="sync5" width="600"></span><br>
-<em>Figure 4.17.5</em></p>
+<p>Your contacts are now synchronised<br>
+(See Figure 4.18.2 and 4.18.3)<br>
+<span class="image"><img src="images/sync2.png" alt="sync2" width="600"></span><br>
+<em>Figure 4.18.2</em><br></p>
 </li>
 </ol>
 </div>
+<div class="paragraph">
+<p><span class="image"><img src="images/sync3.png" alt="sync3" width="600"></span><br>
+<em>Figure 4.18.3</em></p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="logging-out-of-google-contacts-code-logout-code"><a class="link" href="#logging-out-of-google-contacts-code-logout-code">4.18. Logging out of Google Contacts : <code>logout</code></a></h3>
+<h3 id="logging-out-of-google-contacts-code-logout-code"><a class="link" href="#logging-out-of-google-contacts-code-logout-code">4.19. Logging out of Google Contacts : <code>logout</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p>Command Name: <code>logout</code>
+<p>Command Name: <code>logout</code><br>
 Shorthand Alias: <code>lo</code><br>
 Function: Logs out of your linked Google Account after you have logged in<br>
 Format: <code>logout</code></p>
@@ -1314,21 +1380,22 @@ You should only use this command if you would like to log out of your linked Goo
 <ol class="arabic">
 <li>
 <p>Type in<br>
-<code>&gt;&gt;logout</code><br>
-(See Figure 4.18.1)<br>
+<code>&gt;&gt; logout</code><br>
+(See Figure 4.19.1)<br>
 <span class="image"><img src="images/logout1.png" alt="logout1" width="600"></span><br>
-<em>Figure 4.18.1</em></p>
+<em>Figure 4.19.1</em></p>
 </li>
 <li>
-<p>You are now logged out (See Figure 4.18.2)<br>
+<p>You are now logged out<br>
+(See Figure 4.19.2)<br>
 <span class="image"><img src="images/logout2.png" alt="logout2" width="600"></span><br>
-<em>Figure 4.18.2</em></p>
+<em>Figure 4.19.2</em></p>
 </li>
 </ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">4.19. Listing entered commands : <code>history</code></a></h3>
+<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">4.20. Listing entered commands : <code>history</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1337,11 +1404,11 @@ Shorthand Alias: <code>hx</code><br>
 Function: Lists all the commands that you have entered in reverse chronological order<br>
 Format: <code>history</code></p>
 </div>
-<div class="admonitionblock note">
+<div class="admonitionblock tip">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 Pressing the <kbd>&uarr;</kbd> and <kbd>&darr;</kbd> arrows will display the previous and next input respectively in the command box.
@@ -1359,24 +1426,27 @@ Pressing the <kbd>&uarr;</kbd> and <kbd>&darr;</kbd> arrows will display the pre
 <li>
 <p>Type in<br>
 <code>&gt;&gt; history</code><br>
-(See Figure 4.19.1)<br>
-Image:history.png[history, 600]<br>
-<em>Figure 4.19.1</em></p>
+(See Figure 4.20.1)<br>
+<span class="image"><img src="images/history1.png" alt="history" width="600"></span><br>
+<em>Figure 4.20.1</em></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and the list of commands that you entered before would show up</p>
+<p>Press <kbd>Enter</kbd> and the list of commands that you entered before would show up<br>
+(See Figure 4.20.2)<br>
+<span class="image"><img src="images/history2.png" alt="history" width="600"></span><br>
+<em>Figure 4.20.2</em></p>
 </li>
 </ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">4.20. Undoing previous command : <code>undo</code></a></h3>
+<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">4.21. Undoing previous command : <code>undo</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
 <p>Command Name: <code>undo</code><br>
 Shorthand Alias: <code>u</code><br>
-Function: Restores your <strong>ABC</strong> to the state where the previous <em>undoable</em> command was not executed<br>
+Function: Restores the application to the state where the previous <em>undoable</em> command was not executed<br>
 Format: <code>undo</code></p>
 </div>
 </div>
@@ -1389,7 +1459,8 @@ Format: <code>undo</code></p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p><em>Undoable</em> commands: those commands that modify the content in your <strong>ABC</strong>. They include <code>add</code>, <code>sort</code>, <code>delete</code>, <code>edit</code>, <code>addtag</code>, <code>deletetag</code>, <code>addmeeting</code>, <code>deletemeeting</code>, <code>note</code>, <code>restore</code> and <code>clear</code>.</p>
+<p><em>Undoable</em> commands: those commands that modify the application’'s content<br>
+They include <code>add</code>, <code>sort</code>, <code>delete</code>, <code>edit</code>, <code>addtag</code>, <code>deletetag</code>, <code>addmeeting</code>, <code>deletemeeting</code>, <code>note</code>, <code>restore</code> and <code>clear</code></p>
 </div>
 </td>
 </tr>
@@ -1401,21 +1472,24 @@ Format: <code>undo</code></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Remove the first contact (See Figure 4.20.1)<br>
+<p>Remove the first contact<br>
 <code>&gt;&gt; delete 1</code><br>
+(See Figure 4.21.1)<br>
 <span class="image"><img src="images/Undo_1.png" alt="undo1" width="600"></span><br>
-<em>Figure 4.20.1</em><br></p>
+<em>Figure 4.21.1</em><br></p>
 </li>
 <li>
-<p>Type in the <code>undo</code> command (See Figure 4.20.2)<br>
+<p>Type in the <code>undo</code> command<br>
 <code>&gt;&gt; undo</code><br>
+(See Figure 4.21.2)<br>
 <span class="image"><img src="images/Undo_2.png" alt="undo2" width="600"></span><br>
-<em>Figure 4.20.2</em><br></p>
+<em>Figure 4.21.2</em><br></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and you should see that the effects of <code>delete 1</code> has been reverted (See Figure 4.20.3)<br>
+<p>Press <kbd>Enter</kbd> and you should see that the effects of <code>delete 1</code> has been reverted<br>
+(See Figure 4.21.3)<br>
 <span class="image"><img src="images/Undo_3.png" alt="undo3" width="600"></span><br>
-<em>Figure 4.20.3</em><br></p>
+<em>Figure 4.21.3</em><br></p>
 </li>
 </ol>
 </div>
@@ -1429,22 +1503,25 @@ Format: <code>undo</code></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Restart the application and select the first contact (See Figure 4.20.4)<br>
+<p>Restart <strong>ABC</strong> and select the first contact<br>
 <code>&gt;&gt; select 1</code><br>
+(See Figure 4.21.4)<br>
 <span class="image"><img src="images/Undo_4.png" alt="undo4" width="600"></span><br>
-<em>Figure 4.20.4</em><br></p>
+<em>Figure 4.21.4</em><br></p>
 </li>
 <li>
-<p>List all the contacts (See Figure 4.20.5)<br>
+<p>List all the contacts<br>
 <code>&gt;&gt; list</code><br>
+(See Figure 4.21.5)<br>
 <span class="image"><img src="images/Undo_5.png" alt="undo5" width="600"></span><br>
-<em>Figure 4.20.5</em><br></p>
+<em>Figure 4.21.5</em><br></p>
 </li>
 <li>
-<p>Type in <code>undo</code> and you will see an error message (See Figure 4.20.6)<br>
+<p>Type in <code>undo</code> and you will see an error message<br>
 <code>&gt;&gt; undo</code><br>
+(See Figure 4.21.6)<br>
 <span class="image"><img src="images/Undo_6.png" alt="undo6" width="600"></span><br>
-<em>Figure 4.20.6</em><br></p>
+<em>Figure 4.21.6</em><br></p>
 </li>
 </ol>
 </div>
@@ -1454,33 +1531,38 @@ Format: <code>undo</code></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Delete the first contact (See Figure 4.20.7)<br>
+<p>Delete the first contact<br>
 <code>&gt;&gt; delete 1</code><br>
+(See Figure 4.21.7)<br>
 <span class="image"><img src="images/Undo_7.png" alt="undo7" width="600"></span><br>
-<em>Figure 4.20.7</em><br></p>
+<em>Figure 4.21.7</em><br></p>
 </li>
 <li>
-<p>Clear out all the contacts (See Figure 4.20.8)<br>
+<p>Clear out all the contacts<br>
 <code>&gt;&gt; clear</code><br>
+(See Figure 4.21.8)<br>
 <span class="image"><img src="images/Undo_8.png" alt="undo8" width="600"></span><br>
-<em>Figure 4.20.8</em><br></p>
+<em>Figure 4.21.8</em><br></p>
 </li>
 <li>
-<p>Type in the shorthand alias for <code>undo</code> (See Figure 4.20.9)<br>
+<p>Type in the shorthand alias for <code>undo</code><br>
 <code>&gt;&gt; u</code><br>
+(See Figure 4.21.9)<br>
 <span class="image"><img src="images/Undo_9.png" alt="undo9" width="600"></span><br>
-<em>Figure 4.20.9</em><br></p>
+<em>Figure 4.21.9</em><br></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and you should see that the <code>clear</code> command is reverted (See Figure 4.20.10)<br>
+<p>Press <kbd>Enter</kbd> and you should see that the <code>clear</code> command is reverted<br>
+(See Figure 4.21.10)<br>
 <span class="image"><img src="images/Undo_10.png" alt="undo10" width="600"></span><br>
-<em>Figure 4.20.10</em><br></p>
+<em>Figure 4.21.10</em><br></p>
 </li>
 <li>
-<p>Type in <code>undo</code> and you should see that the <code>delete 1</code> command is reverted as well (See Figure 4.20.11)+
+<p>Type in <code>undo</code> and you should see that the <code>delete 1</code> command is reverted as well<br>
 <code>&gt;&gt; undo</code><br>
+(See Figure 4.21.11)<br>
 <span class="image"><img src="images/Undo_11.png" alt="undo11" width="600"></span><br>
-<em>Figure 4.20.11</em><br></p>
+<em>Figure 4.21.11</em><br></p>
 </li>
 </ol>
 </div>
@@ -1489,7 +1571,7 @@ Format: <code>undo</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">4.21. Redoing the previously undone command : <code>redo</code></a></h3>
+<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">4.22. Redoing the previously undone command : <code>redo</code></a></h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -1506,31 +1588,37 @@ Format: <code>redo</code></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Type in the command to delete the first contact (See Figure 4.21.1)<br>
+<p>Type in the command to delete the first contact<br>
 <code>&gt;&gt; delete 1</code><br>
+(See Figure 4.22.1)<br>
 <span class="image"><img src="images/Redo_1.png" alt="redo1" width="600"></span><br>
-<em>Figure 4.21.1</em><br></p>
+<em>Figure 4.22.1</em><br></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and the contact is removed (See Figure 4.21.2)+
-<span class="image"><img src="images/Redo_2.png" alt="redo2" width="600"></span><br></p>
+<p>Press <kbd>Enter</kbd> and the contact is removed<br>
+(See Figure 4.22.2)<br>
+<span class="image"><img src="images/Redo_2.png" alt="redo2" width="600"></span><br>
+<em>Figure 4.22.2</em><br></p>
 </li>
 <li>
-<p>Type in <code>undo</code> by mistake (See Figure 4.21.3)<br>
+<p>Type in <code>undo</code> by mistake<br>
 <code>&gt;&gt; undo</code><br>
+(See Figure 4.22.3)<br>
 <span class="image"><img src="images/Redo_3.png" alt="redo3" width="600"></span><br>
-<em>Figure 4.21.3</em><br></p>
+<em>Figure 4.22.3</em><br></p>
 </li>
 <li>
-<p>Enter the command <code>redo</code> to revert the <code>undo</code> command (See Figure 4.21.4)<br>
+<p>Enter the command <code>redo</code> to revert the <code>undo</code> command<br>
 <code>&gt;&gt; redo</code><br>
+(See Figure 4.22.4)<br>
 <span class="image"><img src="images/Redo_4.png" alt="redo4" width="600"></span><br>
-<em>Figure 4.21.4</em><br></p>
+<em>Figure 4.22.4</em><br></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and you should see that the <code>undo</code> command has been reverted and the contact remains deleted. Refer to Figure 4.21.5 to see that you have obtained the correct results<br>
+<p>Press <kbd>Enter</kbd> and you should see that the <code>undo</code> command has been reverted and the contact remains deleted<br>
+(See Figure 4.22.5)<br>
 <span class="image"><img src="images/Redo_5.png" alt="redo5" width="600"></span><br>
-<em>Figure 4.21.5</em><br></p>
+<em>Figure 4.22.5</em><br></p>
 </li>
 </ol>
 </div>
@@ -1544,21 +1632,24 @@ Format: <code>redo</code></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Select a contact to delete (See Figure 4.21.6)<br>
+<p>Select a contact to delete<br>
 <code>&gt;&gt; delete 1</code><br>
+(See Figure 4.22.6)<br>
 <span class="image"><img src="images/Redo_6.png" alt="redo6" width="600"></span><br>
-<em>Figure 4.21.6</em><br></p>
+<em>Figure 4.22.6</em><br></p>
 </li>
 <li>
-<p>Type in the <code>redo</code> command (See Figure 4.21.7)+
-<code>&gt;&gt; redo</code>
+<p>Type in the <code>redo</code> command<br>
+<code>&gt;&gt; redo</code><br>
+(See Figure 4.22.7)<br>
 <span class="image"><img src="images/Redo_7.png" alt="redo7" width="600"></span><br>
-<em>Figure 4.21.7</em><br></p>
+<em>Figure 4.22.7</em><br></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and you should see an error message (See Figure 4.21.8)<br>
+<p>Press <kbd>Enter</kbd> and you should see an error message<br>
+(See Figure 4.22.8)<br>
 <span class="image"><img src="images/Redo_8.png" alt="redo8" width="600"></span><br>
-<em>Figure 4.21.8</em><br></p>
+<em>Figure 4.22.8</em><br></p>
 </li>
 </ol>
 </div>
@@ -1568,78 +1659,51 @@ Format: <code>redo</code></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Select a contact to delete (See Figure 4.21.9)<br>
+<p>Select a contact to delete<br>
 <code>&gt;&gt; delete 1</code><br>
+(See Figure 4.22.9)<br>
 <span class="image"><img src="images/Redo_9.png" alt="redo9" width="600"></span><br>
-<em>Figure 4.21.9</em><br></p>
+<em>Figure 4.22.9</em><br></p>
 </li>
 <li>
-<p>Remove all the contacts by <code>clear</code> command (See Figure 4.21.10)<br>
+<p>Remove all the contacts by <code>clear</code> command<br>
 <code>&gt;&gt; clear</code><br>
+(See Figure 4.22.10)<br>
 <span class="image"><img src="images/Redo_10.png" alt="redo10" width="600"></span><br>
-<em>Figure 4.21.10</em><br></p>
+<em>Figure 4.22.10</em><br></p>
 </li>
 <li>
-<p>Type in <code>undo</code> to revert the <code>clear</code> command (See Figure 4.21.11)<br>
+<p>Type in <code>undo</code> to revert the <code>clear</code> command<br>
 <code>&gt;&gt; undo</code><br>
+(See Figure 4.22.11)<br>
 <span class="image"><img src="images/Redo_11.png" alt="redo11" width="600"></span><br>
-<em>Figure 4.21.11</em><br></p>
+<em>Figure 4.22.11</em><br></p>
 </li>
 <li>
-<p>Type in <code>undo</code> to revert the <code>delete 1</code> command (See Figure 4.21.12)<br>
+<p>Type in <code>undo</code> to revert the <code>delete 1</code> command<br>
 <code>&gt;&gt; undo</code><br>
-(See Figure 4)<br>
+(See Figure 4.22.12)<br>
 <span class="image"><img src="images/Redo_12.png" alt="redo12" width="600"></span><br>
-<em>Figure 4.21.12</em><br></p>
+<em>Figure 4.22.12</em><br></p>
 </li>
 <li>
-<p>Type in <code>redo</code> to reapply the <code>delete 1</code> command (See Figure 4.21.13)<br>
+<p>Type in <code>redo</code> to reapply the <code>delete 1</code> command<br>
 <code>&gt;&gt; redo</code><br>
+(See Figure 4.22.13)<br>
 <span class="image"><img src="images/Redo_13.png" alt="redo13" width="600"></span><br>
-<em>Figure 4.21.13</em><br></p>
+<em>Figure 4.22.13</em><br></p>
 </li>
 <li>
-<p>Type in <code>redo</code> to reapply the <code>clear</code> command (See Figure 4.21.14)<br>
+<p>Type in <code>redo</code> to reapply the <code>clear</code> command<br>
 <code>&gt;&gt; redo</code><br>
+(See Figure 4.22.14)<br>
 <span class="image"><img src="images/Redo_14.png" alt="redo14" width="600"></span><br>
-<em>Figure 4.21.14</em><br></p>
+<em>Figure 4.22.14</em><br></p>
 </li>
 </ol>
 </div>
 </li>
 </ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">4.22. Clearing all entries : <code>clear</code></a></h3>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p>Command Name: <code>clear</code><br>
-Shorthand Alias: <code>c</code><br>
-Function: Clears all existing contacts in the ABC<br>
-Format: <code>clear</code></p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>You can also clear all ABC contacts. To do so,</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Type<br>
-<code>&gt;&gt; clear</code><br>
-(See Figure 4.22.1)<br>
-<span class="image"><img src="images/clear1.png" alt="clear1" width="600"></span><br>
-<em>Figure 4.22.1</em></p>
-</li>
-<li>
-<p>Press <kbd>Enter</kbd>. Your contacts should now be cleared (See Figure 4.22.2)<br>
-<span class="image"><img src="images/clear2.png" alt="clear2" width="600"></span><br>
-<em>Figure 4.22.2</em></p>
-</li>
-</ol>
 </div>
 </div>
 <div class="sect2">
@@ -1687,11 +1751,11 @@ You <strong>CANNOT</strong> <code>undo</code> a <code>resize</code> command
 <p>Type in<br>
 <code>&gt;&gt; resize 1280 720</code><br>
 (See Figure 4.23.1)<br>
-<span class="image"><img src="images/resize.png" alt="resize"></span><br>
+<span class="image"><img src="images/resize.png" alt="resize" width="600"></span><br>
 <em>Figure 4.23.1</em></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and the main window would be resized to 1280 * 720</p>
+<p>Press <kbd>Enter</kbd> and the main window will be resized to 1280 * 720</p>
 </li>
 </ol>
 </div>
@@ -1703,13 +1767,13 @@ You <strong>CANNOT</strong> <code>undo</code> a <code>resize</code> command
 <div class="paragraph">
 <p>Command Name: <code>exit</code><br>
 Shorthand Alias: <code>q</code><br>
-Function: Exits the app<br>
+Function: Exits the <strong>ABC</strong><br>
 Format: <code>exit</code></p>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>If you want to close the app:</p>
+<p>If you want to close <strong>ABC</strong>:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1729,7 +1793,7 @@ Format: <code>exit</code></p>
 <div class="sect2">
 <h3 id="saving-the-data"><a class="link" href="#saving-the-data">4.25. Saving the data</a></h3>
 <div class="paragraph">
-<p>Data is saved in the hard disk automatically after any changes.<br>
+<p>ABC data is saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
@@ -1739,20 +1803,20 @@ There is no need to save manually.</p>
 <h2 id="changelog"><a class="link" href="#changelog">5. Changelog</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The changelog contains features and improvements added in different major updates of <strong>ABC</strong></p>
+<p>The changelog contains features and improvements added in different major updates of <strong>ABC</strong>.</p>
 </div>
 <div class="sect2">
-<h3 id="v1-5"><a class="link" href="#v1-5">v1.5</a></h3>
+<h3 id="version-1-5"><a class="link" href="#version-1-5">5.1. Version 1.5</a></h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Smart Auto-Completion</p>
+<p>Smarter Auto-Completion</p>
 </li>
 <li>
 <p>Adding and deleting of meetings</p>
 </li>
 <li>
-<p>Auto complete now works with command words</p>
+<p>Find now works on all fields</p>
 </li>
 <li>
 <p>Synchronisation now checks if Google Contacts are valid</p>
@@ -1767,7 +1831,7 @@ There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="v1-4"><a class="link" href="#v1-4">v1.4</a></h3>
+<h3 id="version-1-4"><a class="link" href="#version-1-4">5.2. Version 1.4</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1786,7 +1850,7 @@ There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="v1-3"><a class="link" href="#v1-3">v1.3</a></h3>
+<h3 id="version-1-3"><a class="link" href="#version-1-3">5.3. Version 1.3</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1805,7 +1869,7 @@ There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="v1-2"><a class="link" href="#v1-2">v1.2</a></h3>
+<h3 id="version-1-2"><a class="link" href="#version-1-2">5.4. Version 1.2</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1826,7 +1890,7 @@ There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="coming-in-v2-0"><a class="link" href="#coming-in-v2-0">Coming in v2.0</a></h2>
+<h2 id="coming-in-version-2-0"><a class="link" href="#coming-in-version-2-0">6. Coming in Version 2.0</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -1865,7 +1929,7 @@ There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="faq"><a class="link" href="#faq">FAQ</a></h2>
+<h2 id="faq"><a class="link" href="#faq">7. FAQ</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
@@ -1884,7 +1948,7 @@ will open up a new window in your default browser.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="command-summary-cheatsheet"><a class="link" href="#command-summary-cheatsheet">Command Summary/ Cheatsheet</a></h2>
+<h2 id="command-summary-cheatsheet"><a class="link" href="#command-summary-cheatsheet">8. Command Summary/ Cheatsheet</a></h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -1901,49 +1965,9 @@ will open up a new window in your default browser.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Help</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hp</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Add</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>a</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203; [m/MEETING]&#8230;&#8203;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">List</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>l</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Find</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>f</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>find [n/KEYWORD…​] [p/KEYWORD…​] [e/KEYWORD…​] [a/KEYWORD…​] [t/KEYWORD…​]</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sort</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>s</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sort FIELD</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Delete</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>d</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete INDEX</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Edit</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>e</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203; [m/MEETING]&#8230;&#8203;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Add Tag</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>at</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>addtag INDEX TAG</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Delete Tag</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dt</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deletetag TAGNAME</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add n/NAME [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Add Meeting</p></td>
@@ -1951,19 +1975,9 @@ will open up a new window in your default browser.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>addmeeting INDEX MEETING_NAME/MEETING_TIME</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Delete Meeting</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deletemeeting INDEX</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Select</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sl</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">`select INDEX</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Note</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>n</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>note INDEX n/NOTE</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add Tag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>at</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>addtag INDEX TAG</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Backup</p></td>
@@ -1971,24 +1985,44 @@ will open up a new window in your default browser.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>backup</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Restore Backup</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rb</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>restore</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Clear</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>c</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clear</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Login</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>li</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>login</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>d</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete INDEX</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Synchronise with Google Contacts</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sy</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sync</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete Meeting</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deletemeeting INDEX</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Logout</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>lo</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>logout</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete Tag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deletetag INDEX TAGNAME</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>e</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>q</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">exit</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Find</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>f</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>find [n/KEYWORD…​] [p/KEYWORD…​] [e/KEYWORD…​] [a/KEYWORD…​] [t/KEYWORD…​]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">History</p></td>
@@ -1996,9 +2030,24 @@ will open up a new window in your default browser.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>history</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Undo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>u</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>undo</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>l</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Login</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>li</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>login</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Logout</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>lo</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>logout</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Note</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>n</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>note INDEX NOTE</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Redo</p></td>
@@ -2006,19 +2055,34 @@ will open up a new window in your default browser.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>redo</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Clear</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>c</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clear</code></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Resize</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>rs</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>resize WIDTH HEIGHT</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Exit</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>q</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">exit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Restore Backup</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rb</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>restore</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>select INDEX</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>s</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sort FIELD</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Synchronise with Google Contacts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sync</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Undo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>u</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>undo</code></p></td>
 </tr>
 </tbody>
 </table>
@@ -2027,7 +2091,7 @@ will open up a new window in your default browser.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-11-11 08:34:44 +00:00
+Last updated 2017-11-11 08:35:22 +00:00
 </div>
 </div>
 </body>

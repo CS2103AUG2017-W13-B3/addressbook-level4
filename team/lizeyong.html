@@ -108,16 +108,16 @@ There must be at least one argument
 <div class="ulist">
 <ul>
 <li>
-<p><code>find t/friends family p/88887777</code><br>
-Lists any person having tags <code>friends`or `family</code> or whose phone number is <code>88887777</code></p>
+<p><code>&gt;&gt; find t/friends family p/88887777</code><br>
+Lists any person having tags <code>friends</code> or <code>family</code> or whose phone number is <code>88887777</code>.</p>
 </li>
 <li>
-<p><code>f e/*@example.com</code><br>
-Lists any person whose email domain is <code>example.com</code></p>
+<p><code>&gt;&gt; f e/*@example.com</code><br>
+Lists any person whose email domain is <code>example.com</code>.</p>
 </li>
 <li>
-<p><code>find n/steph?n</code><br>
-Lists persons whose name is <code>stephan</code> or <code>stephen</code><br></p>
+<p><code>&gt;&gt; find n/steph?n</code><br>
+Lists persons whose name is <code>stephan</code> or <code>stephen</code>.<br></p>
 </li>
 </ul>
 </div>
@@ -171,27 +171,27 @@ when the method <code>updateFilteredPersonList(predicate)</code> from the <code>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">Model</span> {
 
-   ...
+  ...
 
-   <span class="comment">/** Returns the predicate of the current filtered person list */</span>
-   Predicate&lt;? <span class="local-variable">super</span> ReadOnlyPerson&gt; getPersonListPredicate();
+  <span class="comment">/** Returns the predicate of the current filtered person list */</span>
+  Predicate&lt;? <span class="local-variable">super</span> ReadOnlyPerson&gt; getPersonListPredicate();
 
-   <span class="comment">/** Updates the filter of the filtered person list to filter by the given {@code predicate}.*/</span>
-   <span class="type">void</span> updateFilteredPersonList(<span class="predefined-type">Predicate</span>&lt;ReadOnlyPerson&gt; predicate);
+  <span class="comment">/** Updates the filter of the filtered person list to filter by the given {@code predicate}.*/</span>
+  <span class="type">void</span> updateFilteredPersonList(<span class="predefined-type">Predicate</span>&lt;ReadOnlyPerson&gt; predicate);
 
 }</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>When <code>updateFilteredPersonList(predicate)</code> is invoked, every <code>Person</code> in <strong>ABC</strong> is evaluated against the <code>predicate</code>.<br>
-A <code>person</code> is added to the displayed list if <code>predicate.test(person)</code> is evaluated to be TRUE.<br>
-All <code>person</code> instances that fulfill the conditions specified in <code>predicate</code> are filtered to be displayed.</p>
+A <code>Person</code> is added to the displayed list if <code>predicate.test(person)</code> is evaluated to be TRUE.<br>
+All <code>Person</code> instances that fulfill the conditions specified in <code>predicate</code> are filtered to be displayed.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="filtering-on-the-existing-list"><a class="link" href="#filtering-on-the-existing-list">Filtering on the existing list</a></h4>
 <div class="paragraph">
-<p>Note that all <code>person</code> instances in the existing list satisfy a Predicate <code>currentPredicate</code>. Given a new Predicate <code>newPredicate</code>, filtering on the existing list is equivalent to selecting <code>person</code> instances that satisfy both <code>currentPredicate</code> and <code>newPredicate</code>. From Figure 3.4.1, it can also be viewed as the intersection of two lists of <code>person</code> objects, each satisfying one of the two predicates respectively.</p>
+<p>Note that all <code>Person</code> instances in the existing list satisfy a Predicate <code>currentPredicate</code>. Given a new Predicate <code>newPredicate</code>, filtering on the existing list is equivalent to selecting <code>Person</code> instances that satisfy both <code>currentPredicate</code> and <code>newPredicate</code>. From Figure 3.4.1, it can also be viewed as the intersection of two lists of <code>Person</code> objects, each satisfying one of the two predicates respectively.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -328,11 +328,11 @@ You <strong>CANNOT</strong> <code>undo</code> a <code>resize</code> command
 <p>Type in<br>
 <code>&gt;&gt; resize 1280 720</code><br>
 (See Figure 4.23.1)<br>
-<span class="image"><img src="../images/resize.png" alt="resize"></span><br>
+<span class="image"><img src="../images/resize.png" alt="resize" width="600"></span><br>
 <em>Figure 4.23.1</em></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and the main window would be resized to 1280 * 720</p>
+<p>Press <kbd>Enter</kbd> and the main window will be resized to 1280 * 720</p>
 </li>
 </ol>
 </div>
@@ -405,7 +405,7 @@ For instance, if the user want to see all contacts who are not his friends, he c
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-11-11 08:34:45 +00:00
+Last updated 2017-11-11 08:35:22 +00:00
 </div>
 </div>
 </body>

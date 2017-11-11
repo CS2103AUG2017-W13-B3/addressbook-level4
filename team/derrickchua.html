@@ -44,36 +44,51 @@ Shorthand Alias: <code>li</code><br>
 Function: Logs in to Google Contacts<br>
 Format: <code>login</code></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It is mandatory to execute this command before running <code>sync</code>
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="paragraph">
-<p>If you would like to login to Google Contacts before running <code>sync</code>:</p>
+<p>If you would like to login to Google Contacts:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>Type in<br>
-<code>&gt;&gt; login</code> <br>
-(See Figure 4.16.1)<br>
-Image:login1.png[login1, 600]<br>
-<em>Figure 4.16.1</em></p>
+<code>&gt;&gt; login</code><br>
+(See Figure 4.17.1)<br>
+<span class="image"><img src="../images/login1.png" alt="login1" width="600"></span><br>
+<em>Figure 4.17.1</em></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and your default browser should open a login window (See Figure 4.16.2)<br>
+<p>Press <kbd>Enter</kbd> and your default browser should open a login window<br>
+(See Figure 4.17.2)<br>
 <span class="image"><img src="../images/login2.png" alt="sync2" width="600"></span><br>
-<em>Figure 4.16.2</em></p>
+<em>Figure 4.17.2</em></p>
 </li>
 <li>
-<p>Enter your login details and press Next (See Figure 4.16.3)<br>
-<span class="image"><img src="../images/login3.png" alt="sync3" width="600"></span><br></p>
+<p>Enter your login details and press Next<br>
+(See Figure 4.17.3)<br>
+<span class="image"><img src="../images/login3.png" alt="sync3" width="600"></span><br>
+<em>Figure 4.17.3</em></p>
+</li>
+<li>
+<p>Allow <strong>ABC</strong> to access your Google Contacts information<br>
+(See Figure 4.17.4)<br>
+<span class="image"><img src="../images/login4.png" alt="sync4" width="600"></span><br>
+<em>Figure 4.17.4</em></p>
 </li>
 </ol>
-</div>
-<div class="paragraph">
-<p><em>Figure 4.16.3</em>
-.   Allow <strong>ABC</strong> to access your Google Contacts information (See Figure 4.16.4)<br>
-<span class="image"><img src="../images/login4.png" alt="sync4" width="600"></span><br>
-<em>Figure 4.16.4</em></p>
 </div>
 </div>
 <div class="sect2">
@@ -81,7 +96,7 @@ Image:login1.png[login1, 600]<br>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p>Command Name: <code>sync</code>
+<p>Command Name: <code>sync</code><br>
 Shorthand Alias: <code>sy</code><br>
 Function: Synchronises your contacts with Google Contacts after authentication<br>
 Format: <code>sync</code></p>
@@ -120,16 +135,21 @@ You have to run the <code>login</code> command before you can run <code>sync</co
 <li>
 <p>Type in<br>
 <code>&gt;&gt; sync</code><br>
-(See Figure 4.17.1)<br>
+(See Figure 4.18.1)<br>
 <span class="image"><img src="../images/sync1.png" alt="sync1" width="600"></span><br>
-<em>Figure 4.17.1</em><br></p>
+<em>Figure 4.18.1</em><br></p>
 </li>
 <li>
-<p>Your contacts are now synchronised (See Figure 4.17.5)<br>
-<span class="image"><img src="../images/sync5.png" alt="sync5" width="600"></span><br>
-<em>Figure 4.17.5</em></p>
+<p>Your contacts are now synchronised<br>
+(See Figure 4.18.2 and 4.18.3)<br>
+<span class="image"><img src="../images/sync2.png" alt="sync2" width="600"></span><br>
+<em>Figure 4.18.2</em><br></p>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/sync3.png" alt="sync3" width="600"></span><br>
+<em>Figure 4.18.3</em></p>
 </div>
 </div>
 <div class="sect2">
@@ -137,7 +157,7 @@ You have to run the <code>login</code> command before you can run <code>sync</co
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p>Command Name: <code>logout</code>
+<p>Command Name: <code>logout</code><br>
 Shorthand Alias: <code>lo</code><br>
 Function: Logs out of your linked Google Account after you have logged in<br>
 Format: <code>logout</code></p>
@@ -163,15 +183,16 @@ You should only use this command if you would like to log out of your linked Goo
 <ol class="arabic">
 <li>
 <p>Type in<br>
-<code>&gt;&gt;logout</code><br>
-(See Figure 4.18.1)<br>
+<code>&gt;&gt; logout</code><br>
+(See Figure 4.19.1)<br>
 <span class="image"><img src="../images/logout1.png" alt="logout1" width="600"></span><br>
-<em>Figure 4.18.1</em></p>
+<em>Figure 4.19.1</em></p>
 </li>
 <li>
-<p>You are now logged out (See Figure 4.18.2)<br>
+<p>You are now logged out<br>
+(See Figure 4.19.2)<br>
 <span class="image"><img src="../images/logout2.png" alt="logout2" width="600"></span><br>
-<em>Figure 4.18.2</em></p>
+<em>Figure 4.19.2</em></p>
 </li>
 </ol>
 </div>
@@ -205,12 +226,15 @@ constantly.</p>
 <p>Authentication and synchronisation of data with a user&#8217;s Google Contacts is done via the <code>sync</code> command, which is a subclass of <code>Command</code>. This command works in conjunction with the Google Client and People API.</p>
 </div>
 <div class="paragraph">
-<p>Firstly, the command posts an <code>AuthorizationEvent</code> event to the EventCenter, which is then handled by a <code>OAuth</code> class, which is chiefly responsible for authorization and interaction with a user&#8217;s Google Contacts. Hence, threading allows for the application to run in the background, while the user can perform other tasks. The user is redirected to login to Google via his default browser through the invoked <code>authorize</code> method. A callback is then done to create a <code>Credential</code> which is then used to instantiate a <code>PeopleService</code> instance. <code>PeopleService</code> is then used to perform create, read, update, and delete (CRUD) functions on the user&#8217;s Google Contacts. The following diagram shows the entire sequence.</p>
+<p>Firstly, the command posts an <code>AuthorizationEvent</code> event to the EventCenter, which is then handled by a <code>OAuth</code> class, which is chiefly responsible for authorization and interaction with a user&#8217;s Google Contacts. Hence, threading allows for the application to run in the background, while the user can perform other tasks. The user is redirected to login to Google via his default browser through the invoked <code>authorize</code> method. A callback is then done to create a <code>Credential</code> which is then used to instantiate a <code>PeopleService</code> instance. <code>PeopleService</code> is then used to perform create, read, update, and delete (CRUD) functions on the user&#8217;s Google Contacts. The following diagram shows the entire sequence. This can be seen in Figure 3.5.1.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="../images/SyncCommandSequenceDiagram.png" alt="SyncCommandSequenceDiagram" width="1000">
 </div>
+</div>
+<div class="paragraph">
+<p>_Figure 3.5.1: Sync Command Sequence Diagram</p>
 </div>
 </div>
 <div class="sect3">
@@ -223,21 +247,21 @@ constantly.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">SyncCommand</span> <span class="directive">extends</span> Command {
-   <span class="comment">//...variables, constructor, other methods</span>
+  <span class="comment">//...variables, constructor, other methods</span>
 
-   <span class="annotation">@Override</span>
-   <span class="directive">public</span> CommandResult executeUndoableCommand() <span class="directive">throws</span> CommandException {
+  <span class="annotation">@Override</span>
+  <span class="directive">public</span> CommandResult executeUndoableCommand() <span class="directive">throws</span> CommandException {
 
-       <span class="keyword">try</span> {
-           <span class="predefined-type">List</span>&lt;ReadOnlyPerson&gt; personList = model.getFilteredPersonList();
-           AuthorizationEvent event = <span class="keyword">new</span> AuthorizationEvent(personList);
-           EventsCenter.getInstance().post(event);
-           <span class="keyword">return</span> <span class="keyword">new</span> CommandResult(<span class="predefined-type">String</span>.format(MESSAGE_SUCCESS));
-       } <span class="keyword">catch</span> (<span class="exception">Exception</span> e) {
-           <span class="keyword">throw</span> <span class="keyword">new</span> CommandException(MESSAGE_FAILURE);
-       }
+      <span class="keyword">try</span> {
+          <span class="predefined-type">List</span>&lt;ReadOnlyPerson&gt; personList = model.getFilteredPersonList();
+          AuthorizationEvent event = <span class="keyword">new</span> AuthorizationEvent(personList);
+          EventsCenter.getInstance().post(event);
+          <span class="keyword">return</span> <span class="keyword">new</span> CommandResult(<span class="predefined-type">String</span>.format(MESSAGE_SUCCESS));
+      } <span class="keyword">catch</span> (<span class="exception">Exception</span> e) {
+          <span class="keyword">throw</span> <span class="keyword">new</span> CommandException(MESSAGE_FAILURE);
+      }
 
-   }
+  }
 }</code></pre>
 </div>
 </div>
@@ -250,34 +274,34 @@ constantly.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">OAuth</span> {
-   <span class="comment">// variables, constructor and other methods</span>
+  <span class="comment">// variables, constructor and other methods</span>
 
-   <span class="annotation">@Subscribe</span>
-   <span class="directive">public</span> <span class="directive">static</span> <span class="type">void</span> handleAuthorizationEvent(AuthorizationEvent event) <span class="directive">throws</span> <span class="predefined-type">Throwable</span> {
-       <span class="keyword">new</span> <span class="predefined-type">Thread</span> (() -&gt; {
-           <span class="keyword">try</span> {
-               <span class="comment">// initialize the transport</span>
-               httpTransport = GoogleNetHttpTransport.newTrustedTransport();
+  <span class="annotation">@Subscribe</span>
+  <span class="directive">public</span> <span class="directive">static</span> <span class="type">void</span> handleAuthorizationEvent(AuthorizationEvent event) <span class="directive">throws</span> <span class="predefined-type">Throwable</span> {
+      <span class="keyword">new</span> <span class="predefined-type">Thread</span> (() -&gt; {
+          <span class="keyword">try</span> {
+              <span class="comment">// initialize the transport</span>
+              httpTransport = GoogleNetHttpTransport.newTrustedTransport();
 
-               <span class="comment">// initialize the data store factory</span>
-               dataStoreFactory = <span class="keyword">new</span> FileDataStoreFactory(DATA_STORE_DIR);
+              <span class="comment">// initialize the data store factory</span>
+              dataStoreFactory = <span class="keyword">new</span> FileDataStoreFactory(DATA_STORE_DIR);
 
-               <span class="comment">// authorization</span>
-               Credential credential = authorize();
-               <span class="comment">// set up global People instance</span>
-               client = <span class="keyword">new</span> PeopleService.Builder(
-                       httpTransport, JSON_FACTORY, credential).setApplicationName(APPLICATION_NAME).build();
+              <span class="comment">// authorization</span>
+              Credential credential = authorize();
+              <span class="comment">// set up global People instance</span>
+              client = <span class="keyword">new</span> PeopleService.Builder(
+                      httpTransport, JSON_FACTORY, credential).setApplicationName(APPLICATION_NAME).build();
 
-               exportContacts(event.getPersonList());
-           } <span class="keyword">catch</span> (<span class="exception">IOException</span> e) {
-               <span class="predefined-type">System</span>.err.println(e.getMessage());
-           } <span class="keyword">catch</span> (<span class="predefined-type">Throwable</span> t) {
-               t.printStackTrace();
-           }
-       }).start();
+              exportContacts(event.getPersonList());
+          } <span class="keyword">catch</span> (<span class="exception">IOException</span> e) {
+              <span class="predefined-type">System</span>.err.println(e.getMessage());
+          } <span class="keyword">catch</span> (<span class="predefined-type">Throwable</span> t) {
+              t.printStackTrace();
+          }
+      }).start();
 
 
-   }</code></pre>
+  }</code></pre>
 </div>
 </div>
 </div>
@@ -289,31 +313,31 @@ constantly.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">OAuth</span> {
-   <span class="comment">// variables, constructor and other methods</span>
+  <span class="comment">// variables, constructor and other methods</span>
 
-   <span class="comment">/** Authorizes the installed application to access user's protected data. */</span>
-   <span class="directive">private</span> <span class="directive">static</span> Credential authorize() <span class="directive">throws</span> <span class="exception">Exception</span> {
-       <span class="comment">// load client secrets</span>
-       GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY,
-               <span class="keyword">new</span> <span class="predefined-type">InputStreamReader</span>(OAuth.class.getResourceAsStream(<span class="string"><span class="delimiter">&quot;</span><span class="content">/client_secrets.json</span><span class="delimiter">&quot;</span></span>)));
-       <span class="keyword">if</span> (clientSecrets.getDetails().getClientId().startsWith(<span class="string"><span class="delimiter">&quot;</span><span class="content">Enter</span><span class="delimiter">&quot;</span></span>)
-               || clientSecrets.getDetails().getClientSecret().startsWith(<span class="string"><span class="delimiter">&quot;</span><span class="content">Enter </span><span class="delimiter">&quot;</span></span>)) {
-           <span class="predefined-type">System</span>.out.println(
-                   <span class="string"><span class="delimiter">&quot;</span><span class="content">Enter Client ID and Secret from https://code.google.com/apis/console/?api=people </span><span class="delimiter">&quot;</span></span>
-                           + <span class="string"><span class="delimiter">&quot;</span><span class="content">into seedu/address/src/main/resources/client_secrets.json</span><span class="delimiter">&quot;</span></span>);
-           <span class="predefined-type">System</span>.exit(<span class="integer">1</span>);
-       }
+  <span class="comment">/** Authorizes the installed application to access user's protected data. */</span>
+  <span class="directive">private</span> <span class="directive">static</span> Credential authorize() <span class="directive">throws</span> <span class="exception">Exception</span> {
+      <span class="comment">// load client secrets</span>
+      GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY,
+              <span class="keyword">new</span> <span class="predefined-type">InputStreamReader</span>(OAuth.class.getResourceAsStream(<span class="string"><span class="delimiter">&quot;</span><span class="content">/client_secrets.json</span><span class="delimiter">&quot;</span></span>)));
+      <span class="keyword">if</span> (clientSecrets.getDetails().getClientId().startsWith(<span class="string"><span class="delimiter">&quot;</span><span class="content">Enter</span><span class="delimiter">&quot;</span></span>)
+              || clientSecrets.getDetails().getClientSecret().startsWith(<span class="string"><span class="delimiter">&quot;</span><span class="content">Enter </span><span class="delimiter">&quot;</span></span>)) {
+          <span class="predefined-type">System</span>.out.println(
+                  <span class="string"><span class="delimiter">&quot;</span><span class="content">Enter Client ID and Secret from https://code.google.com/apis/console/?api=people </span><span class="delimiter">&quot;</span></span>
+                          + <span class="string"><span class="delimiter">&quot;</span><span class="content">into seedu/address/src/main/resources/client_secrets.json</span><span class="delimiter">&quot;</span></span>);
+          <span class="predefined-type">System</span>.exit(<span class="integer">1</span>);
+      }
 
-       <span class="comment">// set up authorization code flow</span>
-       GoogleAuthorizationCodeFlow flow = <span class="keyword">new</span> GoogleAuthorizationCodeFlow.Builder(
-               httpTransport, JSON_FACTORY, clientSecrets,
-               <span class="predefined-type">Collections</span>.singleton(PeopleServiceScopes.CONTACTS)).setDataStoreFactory(dataStoreFactory)
-               .build();
+      <span class="comment">// set up authorization code flow</span>
+      GoogleAuthorizationCodeFlow flow = <span class="keyword">new</span> GoogleAuthorizationCodeFlow.Builder(
+              httpTransport, JSON_FACTORY, clientSecrets,
+              <span class="predefined-type">Collections</span>.singleton(PeopleServiceScopes.CONTACTS)).setDataStoreFactory(dataStoreFactory)
+              .build();
 
-       <span class="comment">// authorize</span>
+      <span class="comment">// authorize</span>
 
-       <span class="keyword">return</span> <span class="keyword">new</span> AuthorizationCodeInstalledApp(flow, <span class="keyword">new</span> LocalServerReceiver()).authorize(<span class="string"><span class="delimiter">&quot;</span><span class="content">user</span><span class="delimiter">&quot;</span></span>);
-   }
+      <span class="keyword">return</span> <span class="keyword">new</span> AuthorizationCodeInstalledApp(flow, <span class="keyword">new</span> LocalServerReceiver()).authorize(<span class="string"><span class="delimiter">&quot;</span><span class="content">user</span><span class="delimiter">&quot;</span></span>);
+  }
 
 }</code></pre>
 </div>
@@ -328,29 +352,29 @@ constantly.</p>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">OAuth</span> {
 
-   <span class="comment">/**Uploads AddressBook contacts to Google Contacts
-    * TODO: Prevent adding of duplicates
-    */</span>
-   <span class="directive">private</span> <span class="directive">static</span> <span class="type">void</span> exportContacts (<span class="predefined-type">List</span>&lt;ReadOnlyPerson&gt; personList) <span class="directive">throws</span> <span class="exception">IOException</span> {
-       <span class="keyword">for</span> (ReadOnlyPerson person : personList) {
-           Person contactToCreate = <span class="keyword">new</span> Person();
-           <span class="predefined-type">List</span>&lt;<span class="predefined-type">Name</span>&gt; name = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;<span class="predefined-type">Name</span>&gt;();
-           <span class="predefined-type">List</span>&lt;EmailAddress&gt; email = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;EmailAddress&gt;();
-           <span class="predefined-type">List</span>&lt;Address&gt; address = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;Address&gt;();
-           <span class="predefined-type">List</span>&lt;PhoneNumber&gt; phone = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;PhoneNumber&gt;();
-           name.add(<span class="keyword">new</span> <span class="predefined-type">Name</span>().setGivenName(person.getName().fullName));
-           email.add(<span class="keyword">new</span> EmailAddress().setValue(person.getEmail().value));
-           address.add(<span class="keyword">new</span> Address().setFormattedValue(person.getAddress().value));
-           phone.add(<span class="keyword">new</span> PhoneNumber().setValue(person.getPhone().value));
+  <span class="comment">/**Uploads AddressBook contacts to Google Contacts
+   * TODO: Prevent adding of duplicates
+   */</span>
+  <span class="directive">private</span> <span class="directive">static</span> <span class="type">void</span> exportContacts (<span class="predefined-type">List</span>&lt;ReadOnlyPerson&gt; personList) <span class="directive">throws</span> <span class="exception">IOException</span> {
+      <span class="keyword">for</span> (ReadOnlyPerson person : personList) {
+          Person contactToCreate = <span class="keyword">new</span> Person();
+          <span class="predefined-type">List</span>&lt;<span class="predefined-type">Name</span>&gt; name = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;<span class="predefined-type">Name</span>&gt;();
+          <span class="predefined-type">List</span>&lt;EmailAddress&gt; email = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;EmailAddress&gt;();
+          <span class="predefined-type">List</span>&lt;Address&gt; address = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;Address&gt;();
+          <span class="predefined-type">List</span>&lt;PhoneNumber&gt; phone = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;PhoneNumber&gt;();
+          name.add(<span class="keyword">new</span> <span class="predefined-type">Name</span>().setGivenName(person.getName().fullName));
+          email.add(<span class="keyword">new</span> EmailAddress().setValue(person.getEmail().value));
+          address.add(<span class="keyword">new</span> Address().setFormattedValue(person.getAddress().value));
+          phone.add(<span class="keyword">new</span> PhoneNumber().setValue(person.getPhone().value));
 
-           contactToCreate.setNames(name)
-                           .setEmailAddresses(email)
-                           .setAddresses(address)
-                           .setPhoneNumbers(phone);
+          contactToCreate.setNames(name)
+                          .setEmailAddresses(email)
+                          .setAddresses(address)
+                          .setPhoneNumbers(phone);
 
-           Person createdContact = client.people().createContact(contactToCreate).execute();
-       }
-   }</code></pre>
+          Person createdContact = client.people().createContact(contactToCreate).execute();
+      }
+  }</code></pre>
 </div>
 </div>
 </div>
@@ -413,7 +437,7 @@ Format: <code>note INDEX [NOTE]</code></p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Each contact can only have at most 1 note
+Each contact can have at most 1 note
 </td>
 </tr>
 </table>
@@ -425,7 +449,7 @@ Each contact can only have at most 1 note
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-NOTE can be blank to delete existing notes, i.e. <code>note 1</code>
+NOTE can be blank to delete existing note, i.e. <code>note 1</code>
 </td>
 </tr>
 </table>
@@ -438,7 +462,7 @@ NOTE can be blank to delete existing notes, i.e. <code>note 1</code>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Locate the index of the contact<br></p>
+<p>Locate the contact and take note of its index<br></p>
 </li>
 <li>
 <p>Type in your desired INDEX and NOTE<br>
@@ -448,7 +472,8 @@ NOTE can be blank to delete existing notes, i.e. <code>note 1</code>
 <em>Figure 4.13.1</em></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and your note should now be displayed as the last row in your contact&#8217;s details (See Figure 4.13.2)<br>
+<p>Press <kbd>Enter</kbd> and your note should appear as the last row in your contact&#8217;s details<br>
+(See Figure 4.13.2)<br>
 <span class="image"><img src="../images/note2.png" alt="note2" width="600"></span><br>
 <em>Figure 4.13.2</em></p>
 </li>
@@ -460,15 +485,15 @@ NOTE can be blank to delete existing notes, i.e. <code>note 1</code>
 <div class="ulist">
 <ul>
 <li>
-<p><code>note 2</code><br>
+<p><code>&gt;&gt; note 2</code><br>
 Removes the existing note from the 2nd person<br></p>
 </li>
 <li>
-<p><code>n 3 This is a note</code><br>
+<p><code>&gt;&gt; n 3 This is a note</code><br>
 Changes the 3rd contact&#8217;s note to "This is a note"<br></p>
 </li>
 <li>
-<p><code>n 3</code><br>
+<p><code>&gt;&gt; n 3</code><br>
 Removes the existing note from the 3rd person</p>
 </li>
 </ul>
@@ -557,26 +582,21 @@ Parameters can be in any order e.g. <code>n/NAME p/PHONE_NUMBER</code>, <code>p/
 <div class="ulist">
 <ul>
 <li>
-<p><code>add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code></p>
+<p><code>&gt;&gt; add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code></p>
 </li>
 <li>
-<p><code>add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal</code></p>
+<p><code>&gt;&gt; add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal</code></p>
 </li>
 <li>
-<p><code>add n/Jack Daniels</code></p>
+<p><code>&gt;&gt; add n/Jack Daniels</code></p>
 </li>
 <li>
-<p><code>a n/John Watson p/83331122 e/johnw@example.com a/John Avenue, block 2, #01-01</code></p>
+<p><code>&gt;&gt; a n/John Watson p/83331122 e/johnw@example.com a/John Avenue, block 2, #01-01</code></p>
 </li>
 <li>
-<p><code>a n/Dave</code></p>
+<p><code>&gt;&gt; a n/Dave</code></p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>If you type in all commands shown above, you should see Figure 4.2.3<br>
-<span class="image"><img src="../images/add3.png" alt="add3" width="600"></span><br>
-<em>Figure 4.2.3</em></p>
 </div>
 <div class="paragraph">
 <p><mark>End of Extract</mark></p>
@@ -620,7 +640,7 @@ a user from adding him/her.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-11-11 08:34:45 +00:00
+Last updated 2017-11-11 08:35:22 +00:00
 </div>
 </div>
 </body>

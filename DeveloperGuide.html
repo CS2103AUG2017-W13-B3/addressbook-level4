@@ -18,7 +18,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>By: <code>Team W13-B3</code>  	Since: <code>Jun 2016</code>  	Licence: <code>MIT</code></p>
+<p>By: <code>Team W13-B3</code>      Since: <code>Jun 2016</code>      Licence: <code>MIT</code></p>
 </div>
 <div class="paragraph">
 <p>Welcome to <strong>ABC</strong>!</p>
@@ -88,7 +88,6 @@
 <li><a href="#use-cases">Appendix B: Use Cases</a></li>
 <li><a href="#non-functional-requirements">Appendix C: Non Functional Requirements</a></li>
 <li><a href="#glossary">Appendix D: Glossary</a></li>
-<li><a href="#product-survey">Appendix E: Product Survey</a></li>
 </ul>
 </div>
 </div>
@@ -243,7 +242,7 @@ This will generate all resources required by the application and tests.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Having both Travis and AppVeyor ensures that the application works on both Unix-based platforms and Windows-based platforms (Travis is Unix-based and AppVeyor is Windows-based)
+Having both Travis and AppVeyor ensures that the application works on both Unix-based platforms and Windows-based platforms (Travis is Unix-based and AppVeyor is Windows-based).
 </td>
 </tr>
 </table>
@@ -272,7 +271,7 @@ Having both Travis and AppVeyor ensures that the application works on both Unix-
 <p><em>Figure 2.1.1 : Architecture Diagram</em></p>
 </div>
 <div class="paragraph">
-<p>The <strong><em>Architecture Diagram</em></strong>(Figure 2.1.1) given above explains the high-level design of the App. Given below is a quick overview of each component.</p>
+<p>The <strong><em>Architecture Diagram</em></strong> (Figure 2.1.1) given above explains the high-level design of the application Given below is a quick overview of each component.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -318,7 +317,7 @@ The <code>.pptx</code> files used to create diagrams in this document can be fou
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#ui-component"><strong><code>UI</code></strong></a> : Takes charge of the UI of the App.</p>
+<p><a href="#ui-component"><strong><code>UI</code></strong></a> : Takes charge of the UI of the application.</p>
 </li>
 <li>
 <p><a href="#logic-component"><strong><code>Logic</code></strong></a> : Executes commands.</p>
@@ -357,7 +356,7 @@ The <code>.pptx</code> files used to create diagrams in this document can be fou
 </div>
 <h4 id="events-driven-nature-of-the-design" class="discrete">Events-Driven nature of the design</h4>
 <div class="paragraph">
-<p>The <em>Sequence Diagram</em>(Figure 2.1.3a) below shows how the components interact in a scenario where the user issues the command <code>delete 1</code>.</p>
+<p>The <em>Sequence Diagram</em> (Figure 2.1.3a) below shows how the components interact in a scenario where the user issues the command <code>delete 1</code>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -380,7 +379,7 @@ The <code>.pptx</code> files used to create diagrams in this document can be fou
 </table>
 </div>
 <div class="paragraph">
-<p>The diagram(Figure 2.1.3b) below shows how <code>EventsCenter</code> reacts to that event, which eventually results in the updates being saved to the hard disk and the status bar of the UI being updated to reflect the 'Last Updated' time.</p>
+<p>The diagram (Figure 2.1.3b) below shows how <code>EventsCenter</code> reacts to that event, which eventually results in the updates being saved to the hard disk and the status bar of the UI being updated to reflect the 'Last Updated' time.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -420,7 +419,7 @@ The event is propagated through <code>EventsCenter</code> to <code>Storage</code
 <p><strong>API</strong> : <a href="https://github.com/CS2103AUG2017-W13-B3/main/tree/master/src/main/java/seedu/address/ui/Ui.java"><code>Ui.java</code></a></p>
 </div>
 <div class="paragraph">
-<p>As seen in <em>Figure 2.2.1</em>, the UI consists of a <code>MainWindow</code> that is made up of different parts such as <code>CommandBox</code>, <code>ResultDisplay</code>, <code>PersonListPanel</code>, <code>StatusBarFooter</code>, <code>BrowserPanel</code>. All these, including the <code>MainWindow</code>, inherit from the abstract <code>UiPart</code> class.</p>
+<p>As seen in <em>Figure 2.2.1</em>, the UI consists of a <code>MainWindow</code> that is made up of different parts such as <code>CommandBox</code>, <code>ResultDisplay</code>, <code>PersonListPanel</code>, <code>StatusBarFooter</code>, <code>MeetingListPanel</code>. All these, including the <code>MainWindow</code>, inherit from the abstract <code>UiPart</code> class.</p>
 </div>
 <div class="paragraph">
 <p>The <code>UI</code> component uses JavaFx UI framework. The layout of these UI parts are defined in their corresponding <code>.fxml</code> files that are in the <code>src/main/resources/view</code> folder. For example, the layout of the <a href="https://github.com/CS2103AUG2017-W13-B3/main/tree/master/src/main/java/seedu/address/ui/MainWindow.java"><code>MainWindow</code></a> is specified in <a href="https://github.com/CS2103AUG2017-W13-B3/main/tree/master/src/main/resources/view/MainWindow.fxml"><code>MainWindow.fxml</code></a>.</p>
@@ -570,7 +569,7 @@ This results in a <code>Command</code> object which is executed by <code>LogicMa
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.1.1</em></p>
+<p><em>Figure 3.1.1 : Logic Command Class Diagram</em></p>
 </div>
 <div class="paragraph">
 <p>As seen from Figure 3.1.1, <code>UndoableCommand</code> adds an extra layer between the abstract <code>Command</code> class and concrete commands that can be undone, such as <code>DeleteCommand</code>. Note that extra tasks need to be done when executing a command that can be undone, such as saving the state of the application before execution. <code>UndoableCommand</code> contains the high-level algorithm for these extra tasks while the child classes implement the details of how to execute the specific command. Note that this technique of putting the high-level algorithm in the parent class and lower-level steps of the algorithm in child classes is also known as the <a href="https://www.tutorialspoint.com/design_pattern/template_pattern.htm">template pattern</a>.</p>
@@ -581,10 +580,10 @@ This results in a <code>Command</code> object which is executed by <code>LogicMa
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">ListCommand</span> <span class="directive">extends</span> Command {
-   <span class="annotation">@Override</span>
-   <span class="directive">public</span> CommandResult execute() {
-       <span class="comment">// ... list logic ...</span>
-   }
+  <span class="annotation">@Override</span>
+  <span class="directive">public</span> CommandResult execute() {
+      <span class="comment">// ... list logic ...</span>
+  }
 }</code></pre>
 </div>
 </div>
@@ -594,19 +593,19 @@ This results in a <code>Command</code> object which is executed by <code>LogicMa
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="directive">abstract</span> <span class="type">class</span> <span class="class">UndoableCommand</span> <span class="directive">extends</span> Command {
-   <span class="annotation">@Override</span>
-   <span class="directive">public</span> CommandResult execute() {
-       <span class="comment">// ... undo logic ...</span>
+  <span class="annotation">@Override</span>
+  <span class="directive">public</span> CommandResult execute() {
+      <span class="comment">// ... undo logic ...</span>
 
-       executeUndoableCommand();
-   }
+      executeUndoableCommand();
+  }
 }
 
 <span class="directive">public</span> <span class="type">class</span> <span class="class">DeleteCommand</span> <span class="directive">extends</span> UndoableCommand {
-   <span class="annotation">@Override</span>
-   <span class="directive">public</span> CommandResult executeUndoableCommand() {
-       <span class="comment">// ... delete logic ...</span>
-   }
+  <span class="annotation">@Override</span>
+  <span class="directive">public</span> CommandResult executeUndoableCommand() {
+      <span class="comment">// ... delete logic ...</span>
+  }
 }</code></pre>
 </div>
 </div>
@@ -622,7 +621,7 @@ This results in a <code>Command</code> object which is executed by <code>LogicMa
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.1.2</em></p>
+<p><em>Figure 3.1.2 : Execute Delete Command Stack Diagram</em></p>
 </div>
 <div class="paragraph">
 <p>As the user continues to use the program, more commands are added into the <code>undoStack</code>. For example, the user may execute <code>add n/David &#8230;&#8203;</code> to add a new person. This is shown in Figure 3.1.3.</p>
@@ -633,7 +632,7 @@ This results in a <code>Command</code> object which is executed by <code>LogicMa
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.1.3</em></p>
+<p><em>Figure 3.1.3 : Execute Add Command Stack Diagram</em></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -659,7 +658,7 @@ If a command fails its execution, it will not be pushed to the <code>UndoRedoSta
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.1.4</em></p>
+<p><em>Figure 3.1.4 : Execute Undo Command Stack Diagram</em></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -682,7 +681,7 @@ If the <code>undoStack</code> is empty, then there are no other commands left to
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.1.5</em></p>
+<p><em>Figure 3.1.5 : Undo/Redo Sequence Diagram</em></p>
 </div>
 <div class="paragraph">
 <p>The redo does the exact opposite (pops from <code>redoStack</code>, pushes to <code>undoStack</code>, and restores the address book to the state after the command is executed).</p>
@@ -708,7 +707,7 @@ If the <code>redoStack</code> is empty, there are no other commands left to be r
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.1.6</em></p>
+<p><em>Figure 3.1.6 : Execute Clear Command Stack Diagram</em></p>
 </div>
 <div class="paragraph">
 <p>Commands that are not undoable are not added into the <code>undoStack</code>. For example, <code>list</code>, which inherits from <code>Command</code> rather than <code>UndoableCommand</code>, will not be added after execution, as shown in Figure 3.1.7.</p>
@@ -719,7 +718,7 @@ If the <code>redoStack</code> is empty, there are no other commands left to be r
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.1.7</em></p>
+<p><em>Figure 3.1.7 : Execute List Command Stack Diagram</em></p>
 </div>
 <div class="paragraph">
 <p>The following activity diagram, Figure 3.1.8,  summarizes what happens inside the <code>UndoRedoStack</code> when a user executes a new command:</p>
@@ -730,7 +729,7 @@ If the <code>redoStack</code> is empty, there are no other commands left to be r
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.1.8</em></p>
+<p><em>Figure 3.1.8 : Undo/Redo Activity Diagram</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -784,8 +783,8 @@ If the <code>redoStack</code> is empty, there are no other commands left to be r
 <div class="paragraph">
 <p>The backing up of ABC is done by <code>BackupCommand</code> and the restoring of data from a backup file is done by <code>RestoreBackupCommand</code>.
 <code>BackupCommand</code> inherits from <code>Command</code> as it does not support the undoing and redoing of user actions, whereas <code>RestoreBackupCommand</code> inherits from <code>UndoableCommand</code>.
-These commands require access to <code>Storage</code> from <code>Logic</code> and this is accomplishing by posting an event to <code>EventsCenter</code>. <code>Subscribers</code> in <code>StorageManager</code> will handle these events and respond correspondingly.
-The following shows a sequence diagram, Figure 3.1.2, of how the <code>BackupCommand</code> is carried out.</p>
+These commands require access to <code>Storage</code> from <code>Logic</code> and this is accomplished by posting an event to <code>EventsCenter</code>. <code>Subscribers</code> in <code>StorageManager</code> will handle these events and respond correspondingly.
+The sequence diagram below (Figure 3.1.2) shows how the <code>BackupCommand</code> is carried out.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -793,7 +792,7 @@ The following shows a sequence diagram, Figure 3.1.2, of how the <code>BackupCom
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.2.1</em></p>
+<p><em>Figure 3.2.1 : Backup Command Sequence Diagram</em></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -808,58 +807,58 @@ The following shows a sequence diagram, Figure 3.1.2, of how the <code>BackupCom
 </table>
 </div>
 <div class="paragraph">
-<p>The <code>BackupCommand</code> is executed when the command <code>backup</code>  is entered. The data that is in <code>Model</code> or the active address book is first passed as a parameter to <code>BackupDataEvent</code>. The event will be handled by <code>StorageManager</code> and is saved into the default file path "data/addressbook-backup.xml".
+<p>The <code>BackupCommand</code> is executed when the command <code>backup</code> is entered. The data that is in <code>Model</code> or the active address book is first passed as a parameter to <code>BackupDataEvent</code>. The event will be handled by <code>StorageManager</code> and is saved into the default file path "data/addressbook-backup.xml".
 The following is the implementation of <code>BackupCommand</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">BackupCommand</span> <span class="directive">extends</span> Command {
-   <span class="comment">//... variables, constructor, other methods...</span>
+  <span class="comment">//... variables, constructor, other methods...</span>
 
-   <span class="annotation">@Override</span>
-   <span class="directive">public</span> CommandResult execute() <span class="directive">throws</span> CommandException {
-       <span class="comment">// reading data from model</span>
-       ReadOnlyAddressBook backupAddressBookData = model.getAddressBook();
+  <span class="annotation">@Override</span>
+  <span class="directive">public</span> CommandResult execute() <span class="directive">throws</span> CommandException {
+      <span class="comment">// reading data from model</span>
+      ReadOnlyAddressBook backupAddressBookData = model.getAddressBook();
 
-       <span class="comment">// posting event to backup data</span>
-       EventsCenter.getInstance().post(<span class="keyword">new</span> BackupDataEvent(backupAddressBookData));
-       <span class="keyword">return</span> <span class="keyword">new</span> CommandResult(<span class="predefined-type">String</span>.format(MESSAGE_SUCCESS));
-   }
+      <span class="comment">// posting event to backup data</span>
+      EventsCenter.getInstance().post(<span class="keyword">new</span> BackupDataEvent(backupAddressBookData));
+      <span class="keyword">return</span> <span class="keyword">new</span> CommandResult(<span class="predefined-type">String</span>.format(MESSAGE_SUCCESS));
+  }
 }</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>RestoreBackupCommand</code> is executed when the commands <code>restore</code> or <code>rb</code> is entered. <code>RestoreBackupDataEvent</code> is posted and <code>StorageManager</code> handles it.
+<p>The <code>RestoreBackupCommand</code> is executed when the command <code>restore</code> is entered. <code>RestoreBackupDataEvent</code> is posted and <code>StorageManager</code> handles it.
 The data from default file path "data/addressbook-backup.xml" will be retrieved and it will replace the active address book.
 The following is the implementation of <code>RestoreBackupCommand</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">RestoreBackupCommand</span> <span class="directive">extends</span> Command {
-   <span class="comment">//... variables, constructor, other methods...</span>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">RestoreBackupCommand</span> <span class="directive">extends</span> UndoableCommand {
+  <span class="comment">//... variables, constructor, other methods...</span>
 
-   <span class="annotation">@Override</span>
-   <span class="directive">public</span> CommandResult execute() <span class="directive">throws</span> CommandException {
-       <span class="comment">//... other codes and checks...</span>
+  <span class="annotation">@Override</span>
+  <span class="directive">public</span> CommandResult execute() <span class="directive">throws</span> CommandException {
+      <span class="comment">//... other codes and checks...</span>
 
-       RestoreBackupDataEvent event = <span class="keyword">new</span> RestoreBackupDataEvent();
+      RestoreBackupDataEvent event = <span class="keyword">new</span> RestoreBackupDataEvent();
 
-       <span class="comment">// posting event to help with restoring backup data</span>
-       EventsCenter.getInstance().post(event);
+      <span class="comment">// posting event to help with restoring backup data</span>
+      EventsCenter.getInstance().post(event);
 
-       <span class="comment">// overwriting the data in active address book</span>
-       ReadOnlyAddressBook backupAddressBookData = event.getAddressBookData();
-       model.resetData(backupAddressBookData);
-       <span class="keyword">return</span> <span class="keyword">new</span> CommandResult(<span class="predefined-type">String</span>.format(MESSAGE_SUCCESS));
+      <span class="comment">// overwriting the data in active address book</span>
+      ReadOnlyAddressBook backupAddressBookData = event.getAddressBookData();
+      model.resetData(backupAddressBookData);
+      <span class="keyword">return</span> <span class="keyword">new</span> CommandResult(<span class="predefined-type">String</span>.format(MESSAGE_SUCCESS));
 
-       <span class="comment">//... other codes and checks...</span>
-   }
+      <span class="comment">//... other codes and checks...</span>
+  }
 }</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>If the backup file does not exist in the default file path, an error message will be shown to the user.
-This check is done before <code>RestoreBackupEvent</code> is posted. Once again, this requires <code>Logic</code> to access <code>Storage</code>.
+This check is done before <code>RestoreBackupDataEvent</code> is posted. Once again, this requires <code>Logic</code> to access <code>Storage</code>.
 Therefore, a <code>BackupFilePresentEvent</code> will be posted and the <code>Subscriber</code> in <code>StorageManager</code> would handle this event to check if the backup file exists.</p>
 </div>
 <div class="admonitionblock note">
@@ -901,13 +900,13 @@ A backup of the data is automatically created when <strong>ABC</strong> is close
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">AddTagCommandParser</span> <span class="directive">implements</span> <span class="predefined-type">Parser</span>&lt;AddTagCommand&gt; {
-   <span class="directive">public</span> AddTagCommand parse(<span class="predefined-type">String</span> args) <span class="directive">throws</span> <span class="exception">ParseException</span> {
-       <span class="keyword">try</span> {
-           <span class="comment">// ... parse `Index` and `Tag` and pass it to `AddTagCommand` ...</span>
-       } <span class="keyword">catch</span> (IllegalValueException ive) {
-           <span class="comment">// ... throw an exception ...</span>
-       }
-   }
+  <span class="directive">public</span> AddTagCommand parse(<span class="predefined-type">String</span> args) <span class="directive">throws</span> <span class="exception">ParseException</span> {
+      <span class="keyword">try</span> {
+          <span class="comment">// ... parse `Index` and `Tag` and pass it to `AddTagCommand` ...</span>
+      } <span class="keyword">catch</span> (IllegalValueException ive) {
+          <span class="comment">// ... throw an exception ...</span>
+      }
+  }
 }</code></pre>
 </div>
 </div>
@@ -917,21 +916,21 @@ A backup of the data is automatically created when <strong>ABC</strong> is close
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">AddTagCommand</span> <span class="directive">extends</span> UndoableCommand {
-   <span class="comment">// ... variables, constructor, other methods ...</span>
-   <span class="directive">private</span> <span class="directive">final</span> Tag newTag;
+  <span class="comment">// ... variables, constructor, other methods ...</span>
+  <span class="directive">private</span> <span class="directive">final</span> Tag newTag;
 
-   <span class="annotation">@Override</span>
-   <span class="directive">public</span> CommandResult executeUndoableCommand() <span class="directive">throws</span> CommandException {
-       <span class="comment">// ... fetch personToEdit ...</span>
+  <span class="annotation">@Override</span>
+  <span class="directive">public</span> CommandResult executeUndoableCommand() <span class="directive">throws</span> CommandException {
+      <span class="comment">// ... fetch personToEdit ...</span>
 
-       <span class="predefined-type">Set</span>&lt;Tag&gt; oldTags = <span class="keyword">new</span> <span class="predefined-type">HashSet</span>&lt;Tag&gt;(personToEdit.getTags());
-       <span class="comment">// ... check if tag is duplicated ...</span>
-       Person editedPerson = <span class="keyword">new</span> Person(personToEdit);
-       oldTags.add(newTag);
-       editedPerson.setTags(oldTags);
+      <span class="predefined-type">Set</span>&lt;Tag&gt; oldTags = <span class="keyword">new</span> <span class="predefined-type">HashSet</span>&lt;Tag&gt;(personToEdit.getTags());
+      <span class="comment">// ... check if tag is duplicated ...</span>
+      Person editedPerson = <span class="keyword">new</span> Person(personToEdit);
+      oldTags.add(newTag);
+      editedPerson.setTags(oldTags);
 
-       <span class="comment">// ... try to replace personToEdit with editedPerson ...</span>
-   }
+      <span class="comment">// ... try to replace personToEdit with editedPerson ...</span>
+  }
 }</code></pre>
 </div>
 </div>
@@ -944,7 +943,7 @@ A backup of the data is automatically created when <strong>ABC</strong> is close
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.3.1 : Sequence Diagram for AddTag</em></p>
+<p><em>Figure 3.3.1 : AddTag Command Sequence Diagram</em></p>
 </div>
 <div class="paragraph">
 <p><code>RemoveTagCommand</code> works in a similar way. Note that <code>AddTagCommand</code> will throw an exception if the <code>Tag</code> already exists for the <code>Person</code> selected. <code>DeleteTagCommand</code> throws an exception if the <code>Tag</code> is not found on the <code>Person</code>.</p>
@@ -957,7 +956,7 @@ A backup of the data is automatically created when <strong>ABC</strong> is close
 <strong>Alternative 1 (current choice):</strong> Copy set of <code>Tag</code> objects to a newly created set and modify the newly created set, then create a copy of the selected <code>Person</code> instance and replace its set of <code>Tag</code> objects<br>
 <strong>Pros:</strong> Ensures that the original value will be unchanged, which is important in the event that updating the <code>Person</code> instance fails in a later stage.<br>
 <strong>Cons:</strong> Additional memory required to create a new <code>Person</code> instance.<br>
-<strong>Alternative 2:</strong> Just edit the <code>Tag</code> set directly<br>
+<strong>Alternative 2:</strong> Edit the <code>Tag</code> set directly<br>
 <strong>Pros:</strong> No need to instantiate new <code>Person</code> instance. Easy to implement.<br>
 <strong>Cons:</strong> Problematic implementation and bad coding practice. Modifying the original values directly can cause problems if updating the <code>Person</code> instance fails in a later stage.</p>
 </div>
@@ -978,27 +977,27 @@ when the method <code>updateFilteredPersonList(predicate)</code> from the <code>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">Model</span> {
 
-   ...
+  ...
 
-   <span class="comment">/** Returns the predicate of the current filtered person list */</span>
-   Predicate&lt;? <span class="local-variable">super</span> ReadOnlyPerson&gt; getPersonListPredicate();
+  <span class="comment">/** Returns the predicate of the current filtered person list */</span>
+  Predicate&lt;? <span class="local-variable">super</span> ReadOnlyPerson&gt; getPersonListPredicate();
 
-   <span class="comment">/** Updates the filter of the filtered person list to filter by the given {@code predicate}.*/</span>
-   <span class="type">void</span> updateFilteredPersonList(<span class="predefined-type">Predicate</span>&lt;ReadOnlyPerson&gt; predicate);
+  <span class="comment">/** Updates the filter of the filtered person list to filter by the given {@code predicate}.*/</span>
+  <span class="type">void</span> updateFilteredPersonList(<span class="predefined-type">Predicate</span>&lt;ReadOnlyPerson&gt; predicate);
 
 }</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>When <code>updateFilteredPersonList(predicate)</code> is invoked, every <code>Person</code> in <strong>ABC</strong> is evaluated against the <code>predicate</code>.<br>
-A <code>person</code> is added to the displayed list if <code>predicate.test(person)</code> is evaluated to be TRUE.<br>
-All <code>person</code> instances that fulfill the conditions specified in <code>predicate</code> are filtered to be displayed.</p>
+A <code>Person</code> is added to the displayed list if <code>predicate.test(person)</code> is evaluated to be TRUE.<br>
+All <code>Person</code> instances that fulfill the conditions specified in <code>predicate</code> are filtered to be displayed.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="filtering-on-the-existing-list"><a class="link" href="#filtering-on-the-existing-list">3.4.2. Filtering on the existing list</a></h4>
 <div class="paragraph">
-<p>Note that all <code>person</code> instances in the existing list satisfy a Predicate <code>currentPredicate</code>. Given a new Predicate <code>newPredicate</code>, filtering on the existing list is equivalent to selecting <code>person</code> instances that satisfy both <code>currentPredicate</code> and <code>newPredicate</code>. From Figure 3.4.1, it can also be viewed as the intersection of two lists of <code>person</code> objects, each satisfying one of the two predicates respectively.</p>
+<p>Note that all <code>Person</code> instances in the existing list satisfy a Predicate <code>currentPredicate</code>. Given a new Predicate <code>newPredicate</code>, filtering on the existing list is equivalent to selecting <code>Person</code> instances that satisfy both <code>currentPredicate</code> and <code>newPredicate</code>. From Figure 3.4.1, it can also be viewed as the intersection of two lists of <code>Person</code> objects, each satisfying one of the two predicates respectively.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1064,12 +1063,15 @@ All <code>person</code> instances that fulfill the conditions specified in <code
 <p>Authentication and synchronisation of data with a user&#8217;s Google Contacts is done via the <code>sync</code> command, which is a subclass of <code>Command</code>. This command works in conjunction with the Google Client and People API.</p>
 </div>
 <div class="paragraph">
-<p>Firstly, the command posts an <code>AuthorizationEvent</code> event to the EventCenter, which is then handled by a <code>OAuth</code> class, which is chiefly responsible for authorization and interaction with a user&#8217;s Google Contacts. Hence, threading allows for the application to run in the background, while the user can perform other tasks. The user is redirected to login to Google via his default browser through the invoked <code>authorize</code> method. A callback is then done to create a <code>Credential</code> which is then used to instantiate a <code>PeopleService</code> instance. <code>PeopleService</code> is then used to perform create, read, update, and delete (CRUD) functions on the user&#8217;s Google Contacts. The following diagram shows the entire sequence.</p>
+<p>Firstly, the command posts an <code>AuthorizationEvent</code> event to the EventCenter, which is then handled by a <code>OAuth</code> class, which is chiefly responsible for authorization and interaction with a user&#8217;s Google Contacts. Hence, threading allows for the application to run in the background, while the user can perform other tasks. The user is redirected to login to Google via his default browser through the invoked <code>authorize</code> method. A callback is then done to create a <code>Credential</code> which is then used to instantiate a <code>PeopleService</code> instance. <code>PeopleService</code> is then used to perform create, read, update, and delete (CRUD) functions on the user&#8217;s Google Contacts. The following diagram shows the entire sequence. This can be seen in Figure 3.5.1.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/SyncCommandSequenceDiagram.png" alt="SyncCommandSequenceDiagram" width="1000">
 </div>
+</div>
+<div class="paragraph">
+<p>_Figure 3.5.1: Sync Command Sequence Diagram</p>
 </div>
 </div>
 <div class="sect3">
@@ -1082,21 +1084,21 @@ All <code>person</code> instances that fulfill the conditions specified in <code
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">SyncCommand</span> <span class="directive">extends</span> Command {
-   <span class="comment">//...variables, constructor, other methods</span>
+  <span class="comment">//...variables, constructor, other methods</span>
 
-   <span class="annotation">@Override</span>
-   <span class="directive">public</span> CommandResult executeUndoableCommand() <span class="directive">throws</span> CommandException {
+  <span class="annotation">@Override</span>
+  <span class="directive">public</span> CommandResult executeUndoableCommand() <span class="directive">throws</span> CommandException {
 
-       <span class="keyword">try</span> {
-           <span class="predefined-type">List</span>&lt;ReadOnlyPerson&gt; personList = model.getFilteredPersonList();
-           AuthorizationEvent event = <span class="keyword">new</span> AuthorizationEvent(personList);
-           EventsCenter.getInstance().post(event);
-           <span class="keyword">return</span> <span class="keyword">new</span> CommandResult(<span class="predefined-type">String</span>.format(MESSAGE_SUCCESS));
-       } <span class="keyword">catch</span> (<span class="exception">Exception</span> e) {
-           <span class="keyword">throw</span> <span class="keyword">new</span> CommandException(MESSAGE_FAILURE);
-       }
+      <span class="keyword">try</span> {
+          <span class="predefined-type">List</span>&lt;ReadOnlyPerson&gt; personList = model.getFilteredPersonList();
+          AuthorizationEvent event = <span class="keyword">new</span> AuthorizationEvent(personList);
+          EventsCenter.getInstance().post(event);
+          <span class="keyword">return</span> <span class="keyword">new</span> CommandResult(<span class="predefined-type">String</span>.format(MESSAGE_SUCCESS));
+      } <span class="keyword">catch</span> (<span class="exception">Exception</span> e) {
+          <span class="keyword">throw</span> <span class="keyword">new</span> CommandException(MESSAGE_FAILURE);
+      }
 
-   }
+  }
 }</code></pre>
 </div>
 </div>
@@ -1109,34 +1111,34 @@ All <code>person</code> instances that fulfill the conditions specified in <code
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">OAuth</span> {
-   <span class="comment">// variables, constructor and other methods</span>
+  <span class="comment">// variables, constructor and other methods</span>
 
-   <span class="annotation">@Subscribe</span>
-   <span class="directive">public</span> <span class="directive">static</span> <span class="type">void</span> handleAuthorizationEvent(AuthorizationEvent event) <span class="directive">throws</span> <span class="predefined-type">Throwable</span> {
-       <span class="keyword">new</span> <span class="predefined-type">Thread</span> (() -&gt; {
-           <span class="keyword">try</span> {
-               <span class="comment">// initialize the transport</span>
-               httpTransport = GoogleNetHttpTransport.newTrustedTransport();
+  <span class="annotation">@Subscribe</span>
+  <span class="directive">public</span> <span class="directive">static</span> <span class="type">void</span> handleAuthorizationEvent(AuthorizationEvent event) <span class="directive">throws</span> <span class="predefined-type">Throwable</span> {
+      <span class="keyword">new</span> <span class="predefined-type">Thread</span> (() -&gt; {
+          <span class="keyword">try</span> {
+              <span class="comment">// initialize the transport</span>
+              httpTransport = GoogleNetHttpTransport.newTrustedTransport();
 
-               <span class="comment">// initialize the data store factory</span>
-               dataStoreFactory = <span class="keyword">new</span> FileDataStoreFactory(DATA_STORE_DIR);
+              <span class="comment">// initialize the data store factory</span>
+              dataStoreFactory = <span class="keyword">new</span> FileDataStoreFactory(DATA_STORE_DIR);
 
-               <span class="comment">// authorization</span>
-               Credential credential = authorize();
-               <span class="comment">// set up global People instance</span>
-               client = <span class="keyword">new</span> PeopleService.Builder(
-                       httpTransport, JSON_FACTORY, credential).setApplicationName(APPLICATION_NAME).build();
+              <span class="comment">// authorization</span>
+              Credential credential = authorize();
+              <span class="comment">// set up global People instance</span>
+              client = <span class="keyword">new</span> PeopleService.Builder(
+                      httpTransport, JSON_FACTORY, credential).setApplicationName(APPLICATION_NAME).build();
 
-               exportContacts(event.getPersonList());
-           } <span class="keyword">catch</span> (<span class="exception">IOException</span> e) {
-               <span class="predefined-type">System</span>.err.println(e.getMessage());
-           } <span class="keyword">catch</span> (<span class="predefined-type">Throwable</span> t) {
-               t.printStackTrace();
-           }
-       }).start();
+              exportContacts(event.getPersonList());
+          } <span class="keyword">catch</span> (<span class="exception">IOException</span> e) {
+              <span class="predefined-type">System</span>.err.println(e.getMessage());
+          } <span class="keyword">catch</span> (<span class="predefined-type">Throwable</span> t) {
+              t.printStackTrace();
+          }
+      }).start();
 
 
-   }</code></pre>
+  }</code></pre>
 </div>
 </div>
 </div>
@@ -1148,31 +1150,31 @@ All <code>person</code> instances that fulfill the conditions specified in <code
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">OAuth</span> {
-   <span class="comment">// variables, constructor and other methods</span>
+  <span class="comment">// variables, constructor and other methods</span>
 
-   <span class="comment">/** Authorizes the installed application to access user's protected data. */</span>
-   <span class="directive">private</span> <span class="directive">static</span> Credential authorize() <span class="directive">throws</span> <span class="exception">Exception</span> {
-       <span class="comment">// load client secrets</span>
-       GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY,
-               <span class="keyword">new</span> <span class="predefined-type">InputStreamReader</span>(OAuth.class.getResourceAsStream(<span class="string"><span class="delimiter">&quot;</span><span class="content">/client_secrets.json</span><span class="delimiter">&quot;</span></span>)));
-       <span class="keyword">if</span> (clientSecrets.getDetails().getClientId().startsWith(<span class="string"><span class="delimiter">&quot;</span><span class="content">Enter</span><span class="delimiter">&quot;</span></span>)
-               || clientSecrets.getDetails().getClientSecret().startsWith(<span class="string"><span class="delimiter">&quot;</span><span class="content">Enter </span><span class="delimiter">&quot;</span></span>)) {
-           <span class="predefined-type">System</span>.out.println(
-                   <span class="string"><span class="delimiter">&quot;</span><span class="content">Enter Client ID and Secret from https://code.google.com/apis/console/?api=people </span><span class="delimiter">&quot;</span></span>
-                           + <span class="string"><span class="delimiter">&quot;</span><span class="content">into seedu/address/src/main/resources/client_secrets.json</span><span class="delimiter">&quot;</span></span>);
-           <span class="predefined-type">System</span>.exit(<span class="integer">1</span>);
-       }
+  <span class="comment">/** Authorizes the installed application to access user's protected data. */</span>
+  <span class="directive">private</span> <span class="directive">static</span> Credential authorize() <span class="directive">throws</span> <span class="exception">Exception</span> {
+      <span class="comment">// load client secrets</span>
+      GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY,
+              <span class="keyword">new</span> <span class="predefined-type">InputStreamReader</span>(OAuth.class.getResourceAsStream(<span class="string"><span class="delimiter">&quot;</span><span class="content">/client_secrets.json</span><span class="delimiter">&quot;</span></span>)));
+      <span class="keyword">if</span> (clientSecrets.getDetails().getClientId().startsWith(<span class="string"><span class="delimiter">&quot;</span><span class="content">Enter</span><span class="delimiter">&quot;</span></span>)
+              || clientSecrets.getDetails().getClientSecret().startsWith(<span class="string"><span class="delimiter">&quot;</span><span class="content">Enter </span><span class="delimiter">&quot;</span></span>)) {
+          <span class="predefined-type">System</span>.out.println(
+                  <span class="string"><span class="delimiter">&quot;</span><span class="content">Enter Client ID and Secret from https://code.google.com/apis/console/?api=people </span><span class="delimiter">&quot;</span></span>
+                          + <span class="string"><span class="delimiter">&quot;</span><span class="content">into seedu/address/src/main/resources/client_secrets.json</span><span class="delimiter">&quot;</span></span>);
+          <span class="predefined-type">System</span>.exit(<span class="integer">1</span>);
+      }
 
-       <span class="comment">// set up authorization code flow</span>
-       GoogleAuthorizationCodeFlow flow = <span class="keyword">new</span> GoogleAuthorizationCodeFlow.Builder(
-               httpTransport, JSON_FACTORY, clientSecrets,
-               <span class="predefined-type">Collections</span>.singleton(PeopleServiceScopes.CONTACTS)).setDataStoreFactory(dataStoreFactory)
-               .build();
+      <span class="comment">// set up authorization code flow</span>
+      GoogleAuthorizationCodeFlow flow = <span class="keyword">new</span> GoogleAuthorizationCodeFlow.Builder(
+              httpTransport, JSON_FACTORY, clientSecrets,
+              <span class="predefined-type">Collections</span>.singleton(PeopleServiceScopes.CONTACTS)).setDataStoreFactory(dataStoreFactory)
+              .build();
 
-       <span class="comment">// authorize</span>
+      <span class="comment">// authorize</span>
 
-       <span class="keyword">return</span> <span class="keyword">new</span> AuthorizationCodeInstalledApp(flow, <span class="keyword">new</span> LocalServerReceiver()).authorize(<span class="string"><span class="delimiter">&quot;</span><span class="content">user</span><span class="delimiter">&quot;</span></span>);
-   }
+      <span class="keyword">return</span> <span class="keyword">new</span> AuthorizationCodeInstalledApp(flow, <span class="keyword">new</span> LocalServerReceiver()).authorize(<span class="string"><span class="delimiter">&quot;</span><span class="content">user</span><span class="delimiter">&quot;</span></span>);
+  }
 
 }</code></pre>
 </div>
@@ -1187,29 +1189,29 @@ All <code>person</code> instances that fulfill the conditions specified in <code
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">OAuth</span> {
 
-   <span class="comment">/**Uploads AddressBook contacts to Google Contacts
-    * TODO: Prevent adding of duplicates
-    */</span>
-   <span class="directive">private</span> <span class="directive">static</span> <span class="type">void</span> exportContacts (<span class="predefined-type">List</span>&lt;ReadOnlyPerson&gt; personList) <span class="directive">throws</span> <span class="exception">IOException</span> {
-       <span class="keyword">for</span> (ReadOnlyPerson person : personList) {
-           Person contactToCreate = <span class="keyword">new</span> Person();
-           <span class="predefined-type">List</span>&lt;<span class="predefined-type">Name</span>&gt; name = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;<span class="predefined-type">Name</span>&gt;();
-           <span class="predefined-type">List</span>&lt;EmailAddress&gt; email = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;EmailAddress&gt;();
-           <span class="predefined-type">List</span>&lt;Address&gt; address = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;Address&gt;();
-           <span class="predefined-type">List</span>&lt;PhoneNumber&gt; phone = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;PhoneNumber&gt;();
-           name.add(<span class="keyword">new</span> <span class="predefined-type">Name</span>().setGivenName(person.getName().fullName));
-           email.add(<span class="keyword">new</span> EmailAddress().setValue(person.getEmail().value));
-           address.add(<span class="keyword">new</span> Address().setFormattedValue(person.getAddress().value));
-           phone.add(<span class="keyword">new</span> PhoneNumber().setValue(person.getPhone().value));
+  <span class="comment">/**Uploads AddressBook contacts to Google Contacts
+   * TODO: Prevent adding of duplicates
+   */</span>
+  <span class="directive">private</span> <span class="directive">static</span> <span class="type">void</span> exportContacts (<span class="predefined-type">List</span>&lt;ReadOnlyPerson&gt; personList) <span class="directive">throws</span> <span class="exception">IOException</span> {
+      <span class="keyword">for</span> (ReadOnlyPerson person : personList) {
+          Person contactToCreate = <span class="keyword">new</span> Person();
+          <span class="predefined-type">List</span>&lt;<span class="predefined-type">Name</span>&gt; name = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;<span class="predefined-type">Name</span>&gt;();
+          <span class="predefined-type">List</span>&lt;EmailAddress&gt; email = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;EmailAddress&gt;();
+          <span class="predefined-type">List</span>&lt;Address&gt; address = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;Address&gt;();
+          <span class="predefined-type">List</span>&lt;PhoneNumber&gt; phone = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;PhoneNumber&gt;();
+          name.add(<span class="keyword">new</span> <span class="predefined-type">Name</span>().setGivenName(person.getName().fullName));
+          email.add(<span class="keyword">new</span> EmailAddress().setValue(person.getEmail().value));
+          address.add(<span class="keyword">new</span> Address().setFormattedValue(person.getAddress().value));
+          phone.add(<span class="keyword">new</span> PhoneNumber().setValue(person.getPhone().value));
 
-           contactToCreate.setNames(name)
-                           .setEmailAddresses(email)
-                           .setAddresses(address)
-                           .setPhoneNumbers(phone);
+          contactToCreate.setNames(name)
+                          .setEmailAddresses(email)
+                          .setAddresses(address)
+                          .setPhoneNumbers(phone);
 
-           Person createdContact = client.people().createContact(contactToCreate).execute();
-       }
-   }</code></pre>
+          Person createdContact = client.people().createContact(contactToCreate).execute();
+      }
+  }</code></pre>
 </div>
 </div>
 </div>
@@ -1271,7 +1273,7 @@ All <code>person</code> instances that fulfill the conditions specified in <code
 <p><code>WARNING</code> : Can continue, but with caution</p>
 </li>
 <li>
-<p><code>INFO</code> : Information showing the noteworthy actions by the App</p>
+<p><code>INFO</code> : Information showing the noteworthy actions by the application</p>
 </li>
 <li>
 <p><code>FINE</code> : Details that is not usually noteworthy but may be useful in debugging e.g. print the actual list instead of just its size</p>
@@ -1338,7 +1340,7 @@ Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows y
 <p>Within Chrome, click on the <code>Print</code> option in Chrome&#8217;s menu.</p>
 </li>
 <li>
-<p>Set the destination to <code>Save as PDF</code>, then click <code>Save</code> to save a copy of the file in PDF format. For best results, use the settings indicated in the screenshot below.</p>
+<p>Set the destination to <code>Save as PDF</code>, then click <code>Save</code> to save a copy of the file in PDF format. For best results, use the settings indicated in the screenshot below. (Figure 4.3.1)</p>
 </li>
 </ol>
 </div>
@@ -1348,7 +1350,7 @@ Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows y
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 5.6.1 : Saving documentation as PDF files in Chrome</em></p>
+<p><em>Figure 4.3.1 : Saving documentation as PDF files in Chrome</em></p>
 </div>
 </div>
 </div>
@@ -1551,7 +1553,7 @@ b. Require developers to download those libraries manually (this creates extra w
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">new user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">see usage instructions</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">refer to instructions when I forget how to use the App</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">refer to instructions when I forget how to use the application</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
@@ -1801,7 +1803,7 @@ b. Require developers to download those libraries manually (this creates extra w
 <h2 id="use-cases"><a class="link" href="#use-cases">Appendix B: Use Cases</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>(For all use cases below, the <strong>System</strong> is the <code>AddressBook</code> and the <strong>Actor</strong> is the <code>user</code>, unless specified otherwise)</p>
+<p>(For all use cases below, the <strong>System</strong> is the <code>ABC</code> and the <strong>Actor</strong> is the <code>user</code>, unless specified otherwise)</p>
 </div>
 <h3 id="use-case-delete-person" class="discrete">Use case: Delete person</h3>
 <div class="paragraph">
@@ -1813,13 +1815,13 @@ b. Require developers to download those libraries manually (this creates extra w
 <p>User requests to list persons</p>
 </li>
 <li>
-<p>AddressBook shows a list of persons</p>
+<p>ABC shows a list of persons</p>
 </li>
 <li>
 <p>User requests to delete a specific person in the list</p>
 </li>
 <li>
-<p>AddressBook deletes the person</p>
+<p>ABC deletes the person</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -1842,7 +1844,7 @@ b. Require developers to download those libraries manually (this creates extra w
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. AddressBook shows an error message.</p>
+<p>3a1. ABC shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -1862,7 +1864,7 @@ b. Require developers to download those libraries manually (this creates extra w
 <p>User requests to delete a specific tag by name</p>
 </li>
 <li>
-<p>AddressBook deletes the tag from every person in the address book</p>
+<p>ABC deletes the tag from every person in the contact list</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -1879,7 +1881,7 @@ b. Require developers to download those libraries manually (this creates extra w
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a1. AddressBook shows an error message.
+<p>1a1. ABC shows an error message.
 Use case ends.</p>
 </li>
 </ul>
@@ -1890,7 +1892,7 @@ Use case ends.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1b1. AddressBook shows an error message.</p>
+<p>1b1. ABC shows an error message.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -1910,19 +1912,19 @@ Use case ends.</p>
 <p>User requests to edit contact</p>
 </li>
 <li>
-<p>AddressBook shows a list of persons</p>
+<p>ABC shows a list of persons</p>
 </li>
 <li>
 <p>User requests to edit a specific index in the list with required tags on new information</p>
 </li>
 <li>
-<p>AddressBook confirms that user wishes to change data</p>
+<p>ABC confirms that user wishes to change data</p>
 </li>
 <li>
 <p>User confirms the change</p>
 </li>
 <li>
-<p>AddressBook changes the information in the field</p>
+<p>ABC changes the information in the field</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -1945,7 +1947,7 @@ Use case ends.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. AddressBook shows an error message.</p>
+<p>3a1. ABC shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -1958,7 +1960,7 @@ Use case ends.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3b1. AddressBook shows an error message.</p>
+<p>3b1. ABC shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -1971,7 +1973,7 @@ Use case ends.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3c1. AddressBook shows an error message.</p>
+<p>3c1. ABC shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -1990,7 +1992,7 @@ Use case ends.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>5b1. AddressBook shows an error message.</p>
+<p>5b1. ABC shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 4.</p>
 </div>
@@ -2010,13 +2012,13 @@ Use case ends.</p>
 <p>User requests to add tag to contact</p>
 </li>
 <li>
-<p>AddressBook shows a list of persons</p>
+<p>ABC shows a list of persons</p>
 </li>
 <li>
 <p>User requests to add tag to the person at a specific index in the list</p>
 </li>
 <li>
-<p>AddressBook changes the information in the field</p>
+<p>ABC changes the information in the field</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2039,7 +2041,7 @@ Use case ends.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. AddressBook shows an error message.</p>
+<p>3a1. ABC shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -2052,7 +2054,7 @@ Use case ends.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3b1. AddressBook shows an error message.</p>
+<p>3b1. ABC shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -2065,7 +2067,7 @@ Use case ends.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3c1. AddressBook shows an error message.</p>
+<p>3c1. ABC shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -2078,7 +2080,7 @@ Use case ends.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3d1. AddressBook shows an error message.</p>
+<p>3d1. ABC shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -2098,7 +2100,7 @@ Use case ends.</p>
 <p>User requests to backup data</p>
 </li>
 <li>
-<p>AddressBook backs up the data to the hard drive</p>
+<p>ABC backs up the data to the hard drive</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2111,11 +2113,11 @@ Use case ends.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>2a. AddressBook fails to save the data.</p>
+<p>2a. ABC fails to save the data.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>2a1. AddressBook shows an error message.</p>
+<p>2a1. ABC shows an error message.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2135,19 +2137,19 @@ Use case ends.</p>
 <p>User requests to restore backup</p>
 </li>
 <li>
-<p>AddressBook shows a list of backups available</p>
+<p>ABC shows a list of backups available</p>
 </li>
 <li>
 <p>User selects index of specific backup in the list</p>
 </li>
 <li>
-<p>AddressBook confirms that user wishes to restore backup and will lose current data</p>
+<p>ABC confirms that user wishes to restore backup and will lose current data</p>
 </li>
 <li>
 <p>User confirms the change</p>
 </li>
 <li>
-<p>AddressBook restores to backup specified by user</p>
+<p>ABC restores to backup specified by user</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2170,7 +2172,7 @@ Use case ends.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. AddressBook shows an error message.</p>
+<p>3a1. ABC shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -2189,7 +2191,7 @@ Use case ends.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>5b1. AddressBook shows an error message.</p>
+<p>5b1. ABC shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 4.</p>
 </div>
@@ -2199,7 +2201,7 @@ Use case ends.</p>
 </li>
 </ul>
 </div>
-<h3 id="use-case-upload-pictures" class="discrete">Use case: upload pictures</h3>
+<h3 id="use-case-upload-pictures" class="discrete">Use case: Upload pictures</h3>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
@@ -2209,13 +2211,13 @@ Use case ends.</p>
 <p>User requests to list persons</p>
 </li>
 <li>
-<p>AddressBook shows a list of persons</p>
+<p>ABC shows a list of persons</p>
 </li>
 <li>
 <p>User requests to upload a picture in a directory for a specific person in the list</p>
 </li>
 <li>
-<p>AddressBook saves the picture for the person in the address book</p>
+<p>ABC saves the picture for the person in the contact list</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2238,7 +2240,7 @@ Use case ends.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. AddressBook shows an error message.</p>
+<p>3a1. ABC shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -2251,7 +2253,7 @@ Use case ends.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3b1. AddressBook shows an error message.</p>
+<p>3b1. ABC shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -2261,7 +2263,7 @@ Use case ends.</p>
 </li>
 </ul>
 </div>
-<h3 id="use-case-add-remark-to-a-person" class="discrete">Use case: add remark to a person</h3>
+<h3 id="use-case-add-remark-to-a-person" class="discrete">Use case: Add remark to a person</h3>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
@@ -2271,13 +2273,13 @@ Use case ends.</p>
 <p>User requests to list persons</p>
 </li>
 <li>
-<p>AddressBook shows a list of persons</p>
+<p>ABC shows a list of persons</p>
 </li>
 <li>
 <p>User requests to add remark to a person in the list</p>
 </li>
 <li>
-<p>AddressBook adds remark to the person in the address book</p>
+<p>ABC adds remark to the person in the contact list</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2300,7 +2302,7 @@ Use case ends.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. AddressBook shows an error message.</p>
+<p>3a1. ABC shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -2309,9 +2311,6 @@ Use case ends.</p>
 </div>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>{More to be added}</p>
 </div>
 </div>
 </div>
@@ -2340,9 +2339,6 @@ Use case ends.</p>
 </li>
 <li>
 <p>Should be able to handle all possible exceptions.</p>
-</li>
-<li>
-<p>Should adhere to the Java coding standard.</p>
 </li>
 </ol>
 </div>
@@ -2380,47 +2376,10 @@ Use case ends.</p>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="product-survey"><a class="link" href="#product-survey">Appendix E: Product Survey</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong>Product Name</strong></p>
-</div>
-<div class="paragraph">
-<p>Author: &#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>Pros:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Cons:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-11-11 08:34:44 +00:00
+Last updated 2017-11-11 08:35:22 +00:00
 </div>
 </div>
 </body>

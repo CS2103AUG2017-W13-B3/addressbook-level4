@@ -51,7 +51,18 @@ Format: <code>addtag INDEX TAG</code><br></p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Only one alphanumeric tag can be added at a time<br>
+Only one tag can be added at a time
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 Special characters will not be accepted e.g !, @, #, &#8230;&#8203;
 </td>
 </tr>
@@ -69,13 +80,14 @@ Special characters will not be accepted e.g !, @, #, &#8230;&#8203;
 </li>
 <li>
 <p>Type in the index of the contact, and the tag you wish to add <br>
-<code>&gt;&gt; addtag 1 classmate</code><br>
+<code>&gt;&gt; addtag 1 classmates</code><br>
 (See Figure 4.8.1)<br>
 <span class="image"><img src="../images/addtag_1.png" alt="addtag1" width="600"></span><br>
 <em>Figure 4.8.1</em></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and you should see that the contact selected has been modified + (See Figure 4.8.2)<br>
+<p>Press <kbd>Enter</kbd> and you should see that the contact selected has been modified<br>
+(See Figure 4.8.2)<br>
 <span class="image"><img src="../images/addtag_2.png" alt="addtag2" width="600"></span><br>
 <em>Figure 4.8.2</em></p>
 </li>
@@ -121,15 +133,15 @@ Format: <code>deletetag INDEX TAG</code><br></p>
 </li>
 <li>
 <p>Type in the index of the contact and the tag you wish to delete<br>
-<code>&gt;&gt; deletetag 1 classmate</code><br>
+<code>&gt;&gt; deletetag 1 classmates</code><br>
 (See Figure 4.9.1)<br>
-Image:deletetag_1.png[deletetag1, 600]<br>
+<span class="image"><img src="../images/deletetag_1.png" alt="deletetag1" width="600"></span><br>
 <em>Figure 4.9.1</em></p>
 </li>
 <li>
 <p>Press <kbd>Enter</kbd> and you should see that the contact selected has been modified<br>
 (See Figure 4.9.2)<br>
-Image:deletetag_2.png[deletetag2, 600]<br>
+<span class="image"><img src="../images/deletetag_2.png" alt="deletetag2" width="600"></span><br>
 <em>Figure 4.9.2</em></p>
 </li>
 </ol>
@@ -157,14 +169,16 @@ Deletes the <code>9pmclass</code> tag from the 1st person from the result of the
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Type in <code>all</code>, followed by the tag you wish to delete (See Figure 4.9.3)<br>
-<code>&gt;&gt; deletetag all friends</code>
-Image:deletetag_3.png[deletetag3, 600]<br>
+<p>Type in <code>all</code>, followed by the tag you wish to delete<br>
+<code>&gt;&gt; deletetag all friends</code><br>
+(See Figure 4.9.3)<br>
+<span class="image"><img src="../images/deletetag_3.png" alt="deletetag3" width="600"></span><br>
 <em>Figure 4.9.3</em></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and you should see that this tag has been deleted from all contacts (See Figure 4.9.4)<br>
-Image:deletetag_4.png[deletetag4, 600]<br>
+<p>Press <kbd>Enter</kbd> and you should see that this tag has been deleted from all contacts<br>
+(See Figure 4.9.4)<br>
+<span class="image"><img src="../images/deletetag_4.png" alt="deletetag4" width="600"></span><br>
 <em>Figure 4.9.4</em></p>
 </li>
 </ol>
@@ -200,13 +214,13 @@ Image:deletetag_4.png[deletetag4, 600]<br>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">AddTagCommandParser</span> <span class="directive">implements</span> <span class="predefined-type">Parser</span>&lt;AddTagCommand&gt; {
-   <span class="directive">public</span> AddTagCommand parse(<span class="predefined-type">String</span> args) <span class="directive">throws</span> <span class="exception">ParseException</span> {
-       <span class="keyword">try</span> {
-           <span class="comment">// ... parse `Index` and `Tag` and pass it to `AddTagCommand` ...</span>
-       } <span class="keyword">catch</span> (IllegalValueException ive) {
-           <span class="comment">// ... throw an exception ...</span>
-       }
-   }
+  <span class="directive">public</span> AddTagCommand parse(<span class="predefined-type">String</span> args) <span class="directive">throws</span> <span class="exception">ParseException</span> {
+      <span class="keyword">try</span> {
+          <span class="comment">// ... parse `Index` and `Tag` and pass it to `AddTagCommand` ...</span>
+      } <span class="keyword">catch</span> (IllegalValueException ive) {
+          <span class="comment">// ... throw an exception ...</span>
+      }
+  }
 }</code></pre>
 </div>
 </div>
@@ -216,21 +230,21 @@ Image:deletetag_4.png[deletetag4, 600]<br>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">AddTagCommand</span> <span class="directive">extends</span> UndoableCommand {
-   <span class="comment">// ... variables, constructor, other methods ...</span>
-   <span class="directive">private</span> <span class="directive">final</span> Tag newTag;
+  <span class="comment">// ... variables, constructor, other methods ...</span>
+  <span class="directive">private</span> <span class="directive">final</span> Tag newTag;
 
-   <span class="annotation">@Override</span>
-   <span class="directive">public</span> CommandResult executeUndoableCommand() <span class="directive">throws</span> CommandException {
-       <span class="comment">// ... fetch personToEdit ...</span>
+  <span class="annotation">@Override</span>
+  <span class="directive">public</span> CommandResult executeUndoableCommand() <span class="directive">throws</span> CommandException {
+      <span class="comment">// ... fetch personToEdit ...</span>
 
-       <span class="predefined-type">Set</span>&lt;Tag&gt; oldTags = <span class="keyword">new</span> <span class="predefined-type">HashSet</span>&lt;Tag&gt;(personToEdit.getTags());
-       <span class="comment">// ... check if tag is duplicated ...</span>
-       Person editedPerson = <span class="keyword">new</span> Person(personToEdit);
-       oldTags.add(newTag);
-       editedPerson.setTags(oldTags);
+      <span class="predefined-type">Set</span>&lt;Tag&gt; oldTags = <span class="keyword">new</span> <span class="predefined-type">HashSet</span>&lt;Tag&gt;(personToEdit.getTags());
+      <span class="comment">// ... check if tag is duplicated ...</span>
+      Person editedPerson = <span class="keyword">new</span> Person(personToEdit);
+      oldTags.add(newTag);
+      editedPerson.setTags(oldTags);
 
-       <span class="comment">// ... try to replace personToEdit with editedPerson ...</span>
-   }
+      <span class="comment">// ... try to replace personToEdit with editedPerson ...</span>
+  }
 }</code></pre>
 </div>
 </div>
@@ -243,7 +257,7 @@ Image:deletetag_4.png[deletetag4, 600]<br>
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.3.1 : Sequence Diagram for AddTag</em></p>
+<p><em>Figure 3.3.1 : AddTag Command Sequence Diagram</em></p>
 </div>
 <div class="paragraph">
 <p><code>RemoveTagCommand</code> works in a similar way. Note that <code>AddTagCommand</code> will throw an exception if the <code>Tag</code> already exists for the <code>Person</code> selected. <code>DeleteTagCommand</code> throws an exception if the <code>Tag</code> is not found on the <code>Person</code>.</p>
@@ -256,7 +270,7 @@ Image:deletetag_4.png[deletetag4, 600]<br>
 <strong>Alternative 1 (current choice):</strong> Copy set of <code>Tag</code> objects to a newly created set and modify the newly created set, then create a copy of the selected <code>Person</code> instance and replace its set of <code>Tag</code> objects<br>
 <strong>Pros:</strong> Ensures that the original value will be unchanged, which is important in the event that updating the <code>Person</code> instance fails in a later stage.<br>
 <strong>Cons:</strong> Additional memory required to create a new <code>Person</code> instance.<br>
-<strong>Alternative 2:</strong> Just edit the <code>Tag</code> set directly<br>
+<strong>Alternative 2:</strong> Edit the <code>Tag</code> set directly<br>
 <strong>Pros:</strong> No need to instantiate new <code>Person</code> instance. Easy to implement.<br>
 <strong>Cons:</strong> Problematic implementation and bad coding practice. Modifying the original values directly can cause problems if updating the <code>Person</code> instance fails in a later stage.</p>
 </div>
@@ -306,23 +320,25 @@ Format: <code>addmeeting MEETING_NAME/MEETING_TIME</code><br></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Locate the contact you want to add a meeting to and the index of the contact<br></p>
+<p>Locate the contact you want to add a meeting to and take note of its index<br></p>
 </li>
 <li>
-<p>Type in the index of the contact, the name of the meeting and the time of the meeting you wish to add (See Figure 4.10.1)<br>
+<p>Type in the index of the contact, the name of the meeting and the time of the meeting you wish to add<br>
 <code>&gt;&gt; addmeeting 1 class lunch/2017-12-20 12:00</code><br>
+(See Figure 4.10.1)<br>
 <span class="image"><img src="../images/addmeeting_1.png" alt="addmeeting1" width="600"></span><br>
 <em>Figure 4.10.1</em></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and you should see that the contact that you selected has been modified (See Figure 4.10.2)<br>
+<p>Press <kbd>Enter</kbd> and you should see that the contact that you selected has been modified<br>
+(See Figure 4.10.2)<br>
 <span class="image"><img src="../images/addmeeting_2.png" alt="addmeeting2" width="600"></span><br>
 <em>Figure 4.10.2</em></p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>You can also add meetings to contacts in a filtered list:</p>
+<p>You can also add meetings to a contact in a filtered list:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -352,40 +368,42 @@ Format: <code>deletemeeting INDEX</code><br></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Locate the meeting you want to delete and the meeting of the contact<br></p>
+<p>Locate the meeting you want to delete and take note of its index<br></p>
 </li>
 <li>
-<p>Type in the index of the meeting (See Figure 4.11.1)<br>
-<code>&gt;&gt; deletemeeting 1</code>
-Image:deletemeeting_1.png[deletemeeting1, 600]<br>
+<p>Type in the index of the meeting to be deleted<br>
+<code>&gt;&gt; deletemeeting 1</code><br>
+(See Figure 4.11.1)<br>
+<span class="image"><img src="../images/deletemeeting_1.png" alt="deletemeeting1" width="600"></span><br>
 <em>Figure 4.11.1</em></p>
 </li>
 <li>
-<p>Press <kbd>Enter</kbd> and you should see that the selected meeting has been deleted (See Figure 4.11.2)<br>
-Image:deletemeeting_2.png[deletemeeting2, 600]<br>
+<p>Press <kbd>Enter</kbd> and you should see that the selected meeting has been deleted<br>
+(See Figure 4.11.2)<br>
+<span class="image"><img src="../images/deletemeeting_2.png" alt="deletemeeting2" width="600"></span><br>
 <em>Figure 4.11.2</em></p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>You can also delete contacts in a filtered list:</p>
+<p>You can also delete a contact in a filtered list:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>list</code><br>
-<code>deletemeeting 2</code><br>
-Deletes the 2nd meeting in <strong>ABC</strong></p>
+<p><code>&gt;&gt; list</code><br>
+<code>&gt;&gt; deletemeeting 2</code><br>
+Deletes the 2nd meeting in <strong>ABC</strong>.</p>
 </li>
 <li>
-<p><code>find n/Betsy</code><br>
-<code>deletemeeting 1</code><br>
-Deletes the 1st meeting from the result of the <code>find</code> command</p>
+<p><code>&gt;&gt; find n/Betsy</code><br>
+<code>&gt;&gt; deletemeeting 1</code><br>
+Deletes the 1st meeting from the result of the <code>find</code> command.</p>
 </li>
 <li>
 <p><code>find t/friends</code><br>
-<code>dm 4</code><br>
-Deletes the 4th meeting from the result of the <code>find</code> command</p>
+<code>&gt;&gt; dm 4</code><br>
+Deletes the 4th meeting from the result of the <code>find</code> command.</p>
 </li>
 </ul>
 </div>
@@ -439,7 +457,7 @@ Only one <code>FIELD</code> (<code>NAME</code>, <code>PHONE</code>, <code>ADDRES
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-For fields with multiple entries (<code>TAG</code>, <code>MEETING</code>), the contact with the entry that comes first alphabetically appears first
+For fields with multiple entries (<code>TAG</code>, <code>MEETING</code>), contacts will be sorted based on the entry that comes first alphabetically
 </td>
 </tr>
 </table>
@@ -455,13 +473,13 @@ For fields with multiple entries (<code>TAG</code>, <code>MEETING</code>), the c
 <p>Type in the <code>FIELD</code> to sort your contact list by <br>
 <code>&gt;&gt; sort name</code> <br>
 (See Figure 4.5.1)<br>
-Image:sort_1.png[sort1, 600]<br>
+<span class="image"><img src="../images/sort_1.png" alt="sort1" width="600"></span><br>
 <em>Figure 4.5.1</em></p>
 </li>
 <li>
 <p>Press <kbd>Enter</kbd> and your contact list will be sorted<br>
 (See Figure 4.5.2)<br>
-Image:sort_2.png[sort2, 600]<br>
+<span class="image"><img src="../images/sort_2.png" alt="sort2" width="600"></span><br>
 <em>Figure 4.5.2</em></p>
 </li>
 </ol>
@@ -472,15 +490,15 @@ Image:sort_2.png[sort2, 600]<br>
 <div class="ulist">
 <ul>
 <li>
-<p><code>sort phone</code><br>
+<p><code>&gt;&gt; sort phone</code><br>
 Sorts the contact list by phone number.</p>
 </li>
 <li>
-<p><code>s tag</code><br>
+<p><code>&gt;&gt; s tag</code><br>
 Sorts the contact list by tag.</p>
 </li>
 <li>
-<p><code>sort meeting</code><br>
+<p><code>&gt;&gt; sort meeting</code><br>
 Sorts the contact list by meeting time.</p>
 </li>
 </ul>
@@ -520,7 +538,7 @@ Sorts the contact list by meeting time.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-11-11 08:34:45 +00:00
+Last updated 2017-11-11 08:35:22 +00:00
 </div>
 </div>
 </body>
