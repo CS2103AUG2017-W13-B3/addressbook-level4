@@ -334,7 +334,7 @@ If you want to add a single tag to a contact in your *ABC*: +
 
 .  Locate the contact you want to add a tag to and take note of its index +
 .  Type in the index of the contact, and the tag you wish to add  +
-`>> addtag 1 classmate` +
+`>> addtag 1 classmates` +
 (See Figure 4.8.1) +
 image:addtag_1.png[addtag1, 600] +
 _Figure 4.8.1_
@@ -366,7 +366,7 @@ If you want to delete a single tag from a contact in your *ABC*: +
 
 .  Locate the contact you want to delete a tag from and take note of its index +
 .  Type in the index of the contact and the tag you wish to delete +
-`>> deletetag 1 classmate` +
+`>> deletetag 1 classmates` +
 (See Figure 4.9.1) +
 Image:deletetag_1.png[deletetag1, 600] +
 _Figure 4.9.1_
@@ -999,30 +999,30 @@ will open up a new window in your default browser.
 [width="100%",cols="25%,5%,70%",options="header",]
 |=======================================================================
 |Command | Alias| Format
-|Help |`hp` | `help`
 |Add |`a` | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]...`
-|List |`l` |`list`
-|Find |`f` |`find [n/KEYWORD…​] [p/KEYWORD…​] [e/KEYWORD…​] [a/KEYWORD…​] [t/KEYWORD…​]`
-|Sort |`s`| `sort FIELD`
-|Delete |`d` | `delete INDEX`
-|Edit |`e` | `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]...`
-|Add Tag |`at` |`addtag INDEX TAG`
-|Delete Tag |`dt` |`deletetag TAGNAME`
 |Add Meeting |`am` |`addmeeting INDEX MEETING_NAME/MEETING_TIME`
-|Delete Meeting |`dm` |`deletemeeting INDEX`
-|Select |`sl` | `select INDEX
-|Note |`n` | `note INDEX NOTE`
+|Add Tag |`at` |`addtag INDEX TAG`
+|Backup |`b` |`backup`
 |Clear |`c` | `clear`
-|Backup |`b` | `backup`
-|Restore Backup |`rb` | `restore`
-|Login | `li` | `login`
-|Synchronise with Google Contacts | `sy` | `sync`
-|Logout | `lo`| `logout`
+|Delete |`d` | `delete INDEX`
+|Delete Meeting |`dm` |`deletemeeting INDEX`
+|Delete Tag |`dt` |`deletetag TAGNAME`
+|Edit |`e` | `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]...`
+|Exit |`q` | exit
+|Find |`f` |`find [n/KEYWORD…​] [p/KEYWORD…​] [e/KEYWORD…​] [a/KEYWORD…​] [t/KEYWORD…​]`
+|Help |`hp` | `help`
 |History |`hx` | `history`
-|Undo | `u`| `undo`
+|List |`l` |`list`
+|Login | `li` | `login`
+|Logout | `lo`| `logout`
+|Note |`n` | `note INDEX NOTE`
 |Redo | `r`| `redo`
 |Resize |`rs` | `resize WIDTH HEIGHT`
-|Exit |`q` | exit
+|Restore Backup |`rb` | `restore`
+|Select |`sl` | `select INDEX`
+|Sort |`s`| `sort FIELD`
+|Synchronise with Google Contacts | `sy` | `sync`
+|Undo | `u`| `undo`
 |=======================================================================
 
 
