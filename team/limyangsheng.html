@@ -111,15 +111,15 @@ There must be a backup file in the default file path for <code>restore</code> co
 <li>
 <p>Type in<br>
 <code>&gt;&gt; restore</code><br>
-(See Figure 4.16.3)<br>
-<span class="image"><img src="../images/Restore_3.png" alt="restore3" width="600"></span><br>
-<em>Figure 4.16.3</em><br></p>
+(See Figure 4.16.1)<br>
+<span class="image"><img src="../images/Restore_1.png" alt="restore1" width="600"></span><br>
+<em>Figure 4.16.1</em><br></p>
 </li>
 <li>
 <p>Press <kbd>Enter</kbd> and you should see that the backup data is restored<br>
-(See Figure 4.16.4)<br>
-<span class="image"><img src="../images/Restore_4.png" alt="restore4" width="600"></span><br>
-<em>Figure 4.16.4</em><br></p>
+(See Figure 4.16.2)<br>
+<span class="image"><img src="../images/Restore_2.png" alt="restore2" width="600"></span><br>
+<em>Figure 4.16.2</em><br></p>
 </li>
 </ol>
 </div>
@@ -167,7 +167,7 @@ The sequence diagram below (Figure 3.1.2) shows how the <code>BackupCommand</cod
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<code>RestoreBackupCommand</code> shares a similar sequence diagram in terms of logic.
+<code>RestoreBackupCommand</code> shares a similar flow for its sequence diagram.
 </td>
 </tr>
 </table>
@@ -258,11 +258,10 @@ A backup of the data is automatically created when <strong>ABC</strong> is close
 </div>
 </div>
 <div class="sect2">
-<h3 id="enhancement-proposed-person-and-meeting-hashmap-data-structure"><a class="link" href="#enhancement-proposed-person-and-meeting-hashmap-data-structure">Enhancement Proposed: Person and Meeting hashmap data structure</a></h3>
+<h3 id="enhancement-proposed-multiple-backup-files-with-specified-path"><a class="link" href="#enhancement-proposed-multiple-backup-files-with-specified-path">Enhancement Proposed: Multiple backup files with specified path</a></h3>
 <div class="paragraph">
-<p>Every time a person object is updated, the corresponding meeting object has to be updated as well.
-This is because the meeting object contains a person object.
-With a hashmap data structure, updating a person will be much faster as compared to looping through a list.</p>
+<p>User should be able to save different copies of backup data files as they may want to restore data from different sessions.
+They should be given the choice to specify the file path to save to and the file path to restore data from.</p>
 </div>
 </div>
 <div class="sect2">
@@ -278,6 +277,9 @@ Pull requests <a href="https://github.com/CS2103AUG2017-W13-B3/main/pull/122">#1
 Pull requests <a href="https://github.com/CS2103AUG2017-W13-B3/main/pull/127">#127</a>,
 Pull requests <a href="https://github.com/CS2103AUG2017-W13-B3/main/pull/132">#132</a>,)</p>
 </li>
+<li>
+<p>Discovered bugs during acceptance testing (Issues <a href="https://github.com/CS2103AUG2017-W15-B2/main/issues/59">#59</a>, <a href="https://github.com/CS2103AUG2017-W15-B2/main/issues/60">#60</a>)</p>
+</li>
 </ul>
 </div>
 </div>
@@ -286,7 +288,7 @@ Pull requests <a href="https://github.com/CS2103AUG2017-W13-B3/main/pull/132">#1
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-11-11 14:58:12 +00:00
+Last updated 2017-11-12 06:30:10 +00:00
 </div>
 </div>
 </body>
