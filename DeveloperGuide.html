@@ -5,14 +5,14 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3">
-<title>ABC Business Contact - Developer Guide</title>
+<title>ABC Business Contacts - Developer Guide</title>
 <link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>ABC Business Contact - Developer Guide</h1>
+<h1>ABC Business Contacts - Developer Guide</h1>
 </div>
 <div id="content">
 <div id="preamble">
@@ -965,7 +965,7 @@ A backup of the data is automatically created when <strong>ABC</strong> is close
 <div class="sect2">
 <h3 id="filtering-mechanism-in-find"><a class="link" href="#filtering-mechanism-in-find">3.4. Filtering mechanism in find</a></h3>
 <div class="sect3">
-<h4 id="mechanism-4"><a class="link" href="#mechanism-4">3.4.1. Mechanism</a></h4>
+<h4 id="basic-mechanism"><a class="link" href="#basic-mechanism">3.4.1. Basic mechanism</a></h4>
 <div class="paragraph">
 <p>The list of persons displayed is filtered by a [<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Predicate</a>]
 when the method <code>updateFilteredPersonList(predicate)</code> from the <code>Model</code> interface is invoked.</p>
@@ -989,15 +989,15 @@ when the method <code>updateFilteredPersonList(predicate)</code> from the <code>
 </div>
 </div>
 <div class="paragraph">
-<p>When <code>updateFilteredPersonList(predicate)</code> is invoked, every <code>Person</code> in <strong>ABC</strong> is evaluated against the <code>predicate</code>.<br>
-A <code>Person</code> is added to the displayed list if <code>predicate.test(person)</code> is evaluated to be TRUE.<br>
-All <code>Person</code> instances that fulfill the conditions specified in <code>predicate</code> are filtered to be displayed.</p>
+<p>When <code>updateFilteredPersonList(predicate)</code> is invoked, every <code>Person</code> in <strong>ABC</strong> is evaluated against the <code>predicate</code>.
+A <code>Person</code> is added to the displayed list if <code>predicate.test(person)</code> is evaluated to be TRUE.
+Therefore, all <code>Person</code> instances that fulfill the conditions specified in <code>predicate</code> are displayed.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="filtering-on-the-existing-list"><a class="link" href="#filtering-on-the-existing-list">3.4.2. Filtering on the existing list</a></h4>
+<h4 id="filtering-the-displayed-list"><a class="link" href="#filtering-the-displayed-list">3.4.2. Filtering the displayed list</a></h4>
 <div class="paragraph">
-<p>Note that all <code>Person</code> instances in the existing list satisfy a Predicate <code>currentPredicate</code>. Given a new Predicate <code>newPredicate</code>, filtering on the existing list is equivalent to selecting <code>Person</code> instances that satisfy both <code>currentPredicate</code> and <code>newPredicate</code>. From Figure 3.4.1, it can also be viewed as the intersection of two lists of <code>Person</code> objects, each satisfying one of the two predicates respectively.</p>
+<p>Note that all <code>Person</code> instances in the displayed list satisfy a Predicate <code>currentPredicate</code>. Given a new Predicate <code>newPredicate</code>, filtering the displayed list of contacts is equivalent to selecting <code>Person</code> instances that satisfy both <code>currentPredicate</code> and <code>newPredicate</code>. From Figure 3.4.1, it can also be viewed as the intersection of two lists of <code>Person</code> objects, each satisfying one of the two predicates respectively.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1007,10 +1007,11 @@ All <code>Person</code> instances that fulfill the conditions specified in <code
 <div class="paragraph">
 <p><em>Figure 3.4.1 : Venn Diagram for Filtering</em></p>
 </div>
-<div class="sect4">
-<h5 id="implementation-2"><a class="link" href="#implementation-2">Implementation</a></h5>
+</div>
+<div class="sect3">
+<h4 id="implementation-2"><a class="link" href="#implementation-2">3.4.3. Implementation</a></h4>
 <div class="paragraph">
-<p>The actual implementation of filtering on the existing list involves three steps.<br></p>
+<p>The actual implementation of filtering the displayed list involves three steps.<br></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1034,13 +1035,13 @@ All <code>Person</code> instances that fulfill the conditions specified in <code
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.4.2 : Sequence Diagram for Filter</em></p>
+<p><em>Figure 3.4.2 : Sequence Diagram for Find</em></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="design-consideration"><a class="link" href="#design-consideration">Design consideration</a></h5>
+<div class="sect3">
+<h4 id="design-consideration"><a class="link" href="#design-consideration">3.4.4. Design consideration</a></h4>
 <div class="paragraph">
-<p>The design for filtering the existing list applies the [<a href="https://en.wikipedia.org/wiki/Open/closed_principle">Open/Close Principle</a>].</p>
+<p>The design for filtering the displayed list applies the [<a href="https://en.wikipedia.org/wiki/Open/closed_principle">Open/Close Principle</a>].</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1054,11 +1055,10 @@ All <code>Person</code> instances that fulfill the conditions specified in <code
 </div>
 </div>
 </div>
-</div>
 <div class="sect2">
 <h3 id="synchronisation-with-google-contacts"><a class="link" href="#synchronisation-with-google-contacts">3.5. Synchronisation with Google Contacts</a></h3>
 <div class="sect3">
-<h4 id="mechanism-5"><a class="link" href="#mechanism-5">3.5.1. Mechanism</a></h4>
+<h4 id="mechanism-4"><a class="link" href="#mechanism-4">3.5.1. Mechanism</a></h4>
 <div class="paragraph">
 <p>Authentication and synchronisation of data with a user&#8217;s Google Contacts is done via the <code>sync</code> command, which is a subclass of <code>Command</code>. This command works in conjunction with the Google Client and People API.</p>
 </div>
@@ -2379,7 +2379,7 @@ Use case ends.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-11-12 06:30:10 +00:00
+Last updated 2017-11-12 07:10:44 +00:00
 </div>
 </div>
 </body>
