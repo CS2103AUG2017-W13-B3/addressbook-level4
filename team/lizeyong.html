@@ -20,7 +20,7 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>ABC Business Contacts</strong> is a free desktop contact management application that helps the user to manage a large collection of contacts conveniently and keep track of appointments. The user can store contacts as well as other information and retrieve them efficiently with the help of <strong>ABC</strong>.<br>
- The user interact with it using a Command Line Interface(CLI), and it has a Graphic User Interface(GUI) created with JavaFX. It is written in Java, and has about 6 kLoC.</p>
+ The user interacts with it using a Command Line Interface(CLI), and it has a Graphic User Interface(GUI) created with JavaFX. It is written in Java, and has about 6 kLoC.</p>
 </div>
 <div class="paragraph">
 <p><strong>Code contributed</strong>: [<a href="https://github.com/CS2103AUG2017-W13-B3/main/blob/master/collated/main/newalter.md">Functional code</a>] [<a href="https://github.com/CS2103AUG2017-W13-B3/main/blob/master/collated/test/newalter.md">Test code</a>]</p>
@@ -298,7 +298,7 @@ Therefore, all <code>Person</code> instances that fulfill the conditions specifi
 </div>
 </div>
 <div class="sect2">
-<h3 id="enhancement-added-resize-command"><a class="link" href="#enhancement-added-resize-command">Enhancement Added: Resize Command</a></h3>
+<h3 id="enhancement-added-code-resize-code-command"><a class="link" href="#enhancement-added-code-resize-code-command">Enhancement Added: <code>resize</code> Command</a></h3>
 <div class="sect3">
 <h4 id="external-behavior-3"><a class="link" href="#external-behavior-3">External behavior</a></h4>
 <hr>
@@ -374,16 +374,28 @@ You <strong>CANNOT</strong> <code>undo</code> a <code>resize</code> command
 </div>
 </div>
 <div class="sect2">
-<h3 id="enhancement-proposed-add-code-filter-code-command"><a class="link" href="#enhancement-proposed-add-code-filter-code-command">Enhancement Proposed: Add <code>filter</code> command</a></h3>
-<div class="paragraph">
-<p>A <code>filter</code> command to filter away unwanted contacts in the list shown.
-For instance, if the user want to see all contacts who are not his friends, he can filter away all contacts tagged with <code>friends</code>.</p>
+<h3 id="enhancement-proposed-a-more-powerful-code-find-code-command"><a class="link" href="#enhancement-proposed-a-more-powerful-code-find-code-command">Enhancement Proposed: A More Powerful <code>find</code> Command</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The user can choose to search from all contacts instead of the displayed ones using an argument <code>-a</code> which stands for <code>all</code>.
+For example, <code>find -a t/friends</code> would search for <strong>ALL</strong> contacts that are tagged with <code>friends</code>.</p>
+</li>
+<li>
+<p>The user can choose to search for contacts that satisfy all conditions using an argument <code>-s</code> which stands for <code>strict</code>.
+For example, <code>find -s n/John t/friends</code> would search for contacts that match <strong>BOTH</strong> the name <code>John</code> the tag <code>friends</code>.</p>
+</li>
+<li>
+<p>The user can choose to filter away unwanted contacts from the displayed list using an argument <code>-u</code> which stands for <code>unwanted</code>.
+For instance, <code>find -u t/friends</code> would filter <strong>AWAY</strong> contacts tagged with <code>friends</code>.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="enhancement-proposed-rank-auto-completion-suggestions-by-their-occurance"><a class="link" href="#enhancement-proposed-rank-auto-completion-suggestions-by-their-occurance">Enhancement Proposed: Rank Auto-Completion Suggestions by their occurance</a></h3>
+<h3 id="enhancement-proposed-rank-auto-completion-suggestions-by-occurrence"><a class="link" href="#enhancement-proposed-rank-auto-completion-suggestions-by-occurrence">Enhancement Proposed: Rank Auto-Completion Suggestions by Occurrence</a></h3>
 <div class="paragraph">
-<p>If a certain keyword is frequently used, it should show up first in the suggestion menu.</p>
+<p>If a certain keyword is frequently used, it would show up first in the suggestion menu.</p>
 </div>
 </div>
 <div class="sect2">
@@ -407,7 +419,7 @@ For instance, if the user want to see all contacts who are not his friends, he c
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-11-12 11:33:32 +00:00
+Last updated 2017-11-12 12:17:18 +00:00
 </div>
 </div>
 </body>
