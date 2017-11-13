@@ -241,7 +241,7 @@ constantly.</p>
 which is used in <code>SyncCommand</code>. The four primary methods in <code>SyncCommand</code> are <code>checkContacts</code>, <code>updateContacts</code>, <code>importContacts</code> and <code>exportContacts</code>.<br></p>
 </div>
 <div class="paragraph">
-<p>The sequence diagram for the command can be seen below, in Figure 3.5.1:</p>
+<p>The sequence diagram for the command can be seen below, in Figure 3.5.1.1:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -249,7 +249,7 @@ which is used in <code>SyncCommand</code>. The four primary methods in <code>Syn
 </div>
 </div>
 <div class="paragraph">
-<p>_Figure 3.5.1: Sync Command Sequence Diagram</p>
+<p><em>Figure 3.5.1.1: Sync Command Sequence Diagram</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -347,46 +347,46 @@ with an ID yet.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>public class SyncCommand extends Command {
-  // variables, constructor and other methods
-    private void importContacts () throws IOException {
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">SyncCommand</span> <span class="directive">extends</span> Command {
+  <span class="comment">// variables, constructor and other methods</span>
+    <span class="directive">private</span> <span class="type">void</span> importContacts () <span class="directive">throws</span> <span class="exception">IOException</span> {
 
-        for (Person person : connections) {
-                String id = person.getResourceName();
-                String gName = retrieveFullGName(person);
-                if (!syncedIDs.contains(id)) {
-                    if (!hashName.containsKey(gName)) {
-                        // We import the contact if there is no contact of a similar name
-                    } else if (hashName.containsKey((gName))) {
+        <span class="keyword">for</span> (Person person : connections) {
+                <span class="predefined-type">String</span> id = person.getResourceName();
+                <span class="predefined-type">String</span> gName = retrieveFullGName(person);
+                <span class="keyword">if</span> (!syncedIDs.contains(id)) {
+                    <span class="keyword">if</span> (!hashName.containsKey(gName)) {
+                        <span class="comment">// We import the contact if there is no contact of a similar name</span>
+                    } <span class="keyword">else</span> <span class="keyword">if</span> (hashName.containsKey((gName))) {
                         seedu.address.model.person.ReadOnlyPerson aPerson = hashName.get(gName);
-                        if (equalPerson(aPerson, person)) {
-                            //We link the 2 contacts if they have the same details
-                        } else {
-                            // We can safely import the contacts as they have different details
+                        <span class="keyword">if</span> (equalPerson(aPerson, person)) {
+                            <span class="comment">//We link the 2 contacts if they have the same details</span>
+                        } <span class="keyword">else</span> {
+                            <span class="comment">// We can safely import the contacts as they have different details</span>
                         }
                     }
                 }
         }
     }
 
-    private void exportContacts (List&lt;ReadOnlyPerson&gt; personList) throws Exception {
-        for (ReadOnlyPerson person : personList) {
-            if (person.getId().getValue().equals("")) {
-                if (hashGoogleName.containsKey(person.getName().fullName)) {
-                    // We can safely export the contact as there is no one with a similar name
-                } else if (hashGoogleName.containsKey(person.getName().fullName)) {
-                    // We check if the person is identical, and link them if they are
+    <span class="directive">private</span> <span class="type">void</span> exportContacts (<span class="predefined-type">List</span>&lt;ReadOnlyPerson&gt; personList) <span class="directive">throws</span> <span class="exception">Exception</span> {
+        <span class="keyword">for</span> (ReadOnlyPerson person : personList) {
+            <span class="keyword">if</span> (person.getId().getValue().equals(<span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>)) {
+                <span class="keyword">if</span> (hashGoogleName.containsKey(person.getName().fullName)) {
+                    <span class="comment">// We can safely export the contact as there is no one with a similar name</span>
+                } <span class="keyword">else</span> <span class="keyword">if</span> (hashGoogleName.containsKey(person.getName().fullName)) {
+                    <span class="comment">// We check if the person is identical, and link them if they are</span>
                     Person gPerson = hashGoogleName.get(person.getName().fullName);
-                    if (equalPerson(person, gPerson)) {
-                        // We link the similar contacts
-                    } else {
-                        // We can safely export the contact as their other details are not similar
+                    <span class="keyword">if</span> (equalPerson(person, gPerson)) {
+                        <span class="comment">// We link the similar contacts</span>
+                    } <span class="keyword">else</span> {
+                        <span class="comment">// We can safely export the contact as their other details are not similar</span>
                     }
                 }
             }
         }
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -655,7 +655,7 @@ a user from adding him/her.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-11-13 02:36:10 +00:00
+Last updated 2017-11-13 03:13:15 +00:00
 </div>
 </div>
 </body>

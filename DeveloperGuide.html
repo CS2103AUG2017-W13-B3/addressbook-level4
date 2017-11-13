@@ -561,7 +561,7 @@ This results in a <code>Command</code> object which is executed by <code>LogicMa
 <p>The undo/redo mechanism is facilitated by an <code>UndoRedoStack</code>, which resides inside <code>LogicManager</code>. It supports undoing and redoing of commands that modify the state of the application (e.g. <code>add</code>, <code>edit</code>). Such commands will inherit from <code>UndoableCommand</code>.</p>
 </div>
 <div class="paragraph">
-<p><code>UndoRedoStack</code> only deals with <code>UndoableCommands</code>. Commands that cannot be undone will inherit from <code>Command</code> instead. The following diagram, Figure 3.1.1, shows the inheritance diagram for commands:</p>
+<p><code>UndoRedoStack</code> only deals with <code>UndoableCommands</code>. Commands that cannot be undone will inherit from <code>Command</code> instead. The following diagram, Figure 3.1.1.1, shows the inheritance diagram for commands:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -569,10 +569,10 @@ This results in a <code>Command</code> object which is executed by <code>LogicMa
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.1.1 : Logic Command Class Diagram</em></p>
+<p><em>Figure 3.1.1.1 : Logic Command Class Diagram</em></p>
 </div>
 <div class="paragraph">
-<p>As seen from Figure 3.1.1, <code>UndoableCommand</code> adds an extra layer between the abstract <code>Command</code> class and concrete commands that can be undone, such as <code>DeleteCommand</code>. Note that extra tasks need to be done when executing a command that can be undone, such as saving the state of the application before execution. <code>UndoableCommand</code> contains the high-level algorithm for these extra tasks while the child classes implement the details of how to execute the specific command. Note that this technique of putting the high-level algorithm in the parent class and lower-level steps of the algorithm in child classes is also known as the <a href="https://www.tutorialspoint.com/design_pattern/template_pattern.htm">template pattern</a>.</p>
+<p>As seen from Figure 3.1.1.2, <code>UndoableCommand</code> adds an extra layer between the abstract <code>Command</code> class and concrete commands that can be undone, such as <code>DeleteCommand</code>. Note that extra tasks need to be done when executing a command that can be undone, such as saving the state of the application before execution. <code>UndoableCommand</code> contains the high-level algorithm for these extra tasks while the child classes implement the details of how to execute the specific command. Note that this technique of putting the high-level algorithm in the parent class and lower-level steps of the algorithm in child classes is also known as the <a href="https://www.tutorialspoint.com/design_pattern/template_pattern.htm">template pattern</a>.</p>
 </div>
 <div class="paragraph">
 <p>Commands that are not undoable are implemented this way:</p>
@@ -613,7 +613,7 @@ This results in a <code>Command</code> object which is executed by <code>LogicMa
 <p>Suppose that the user has just launched the application. The <code>UndoRedoStack</code> will be empty at the start.</p>
 </div>
 <div class="paragraph">
-<p>The user executes a new <code>UndoableCommand</code>, <code>delete 5</code>, to delete the 5th person in the address book. The current state of the address book is saved before the <code>delete 5</code> command executes. The <code>delete 5</code> command will then be pushed onto the <code>undoStack</code> (the current state is saved together with the command). This is illustrated by Figure 3.1.2.</p>
+<p>The user executes a new <code>UndoableCommand</code>, <code>delete 5</code>, to delete the 5th person in the address book. The current state of the address book is saved before the <code>delete 5</code> command executes. The <code>delete 5</code> command will then be pushed onto the <code>undoStack</code> (the current state is saved together with the command). This is illustrated by Figure 3.1.1.2.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -621,10 +621,10 @@ This results in a <code>Command</code> object which is executed by <code>LogicMa
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.1.2 : Execute Delete Command Stack Diagram</em></p>
+<p><em>Figure 3.1.1.2 : Execute Delete Command Stack Diagram</em></p>
 </div>
 <div class="paragraph">
-<p>As the user continues to use the program, more commands are added into the <code>undoStack</code>. For example, the user may execute <code>add n/David &#8230;&#8203;</code> to add a new person. This is shown in Figure 3.1.3.</p>
+<p>As the user continues to use the program, more commands are added into the <code>undoStack</code>. For example, the user may execute <code>add n/David &#8230;&#8203;</code> to add a new person. This is shown in Figure 3.1.1.3.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -632,7 +632,7 @@ This results in a <code>Command</code> object which is executed by <code>LogicMa
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.1.3 : Execute Add Command Stack Diagram</em></p>
+<p><em>Figure 3.1.1.3 : Execute Add Command Stack Diagram</em></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -650,7 +650,7 @@ If a command fails its execution, it will not be pushed to the <code>UndoRedoSta
 <p>The user now decides that adding the person was a mistake, and executes <code>undo</code> to undo his previous command.</p>
 </div>
 <div class="paragraph">
-<p>As can be seen from Figure 3.1.4, the most recent command is popped out of the <code>undoStack</code> and pushed back to the <code>redoStack</code>. The address book is then restored to the state before the <code>add</code> command executed.</p>
+<p>As can be seen from Figure 3.1.1.4, the most recent command is popped out of the <code>undoStack</code> and pushed back to the <code>redoStack</code>. The address book is then restored to the state before the <code>add</code> command executed.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -658,7 +658,7 @@ If a command fails its execution, it will not be pushed to the <code>UndoRedoSta
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.1.4 : Execute Undo Command Stack Diagram</em></p>
+<p><em>Figure 3.1.1.4 : Execute Undo Command Stack Diagram</em></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -673,7 +673,7 @@ If the <code>undoStack</code> is empty, then there are no other commands left to
 </table>
 </div>
 <div class="paragraph">
-<p>The following sequence diagram, Figure 3.1.5, shows how the undo operation works:</p>
+<p>The following sequence diagram, Figure 3.1.1.5, shows how the undo operation works:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -681,7 +681,7 @@ If the <code>undoStack</code> is empty, then there are no other commands left to
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.1.5 : Undo/Redo Sequence Diagram</em></p>
+<p><em>Figure 3.1.1.5 : Undo/Redo Sequence Diagram</em></p>
 </div>
 <div class="paragraph">
 <p>The redo does the exact opposite (pops from <code>redoStack</code>, pushes to <code>undoStack</code>, and restores the address book to the state after the command is executed).</p>
@@ -707,10 +707,10 @@ If the <code>redoStack</code> is empty, there are no other commands left to be r
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.1.6 : Execute Clear Command Stack Diagram</em></p>
+<p><em>Figure 3.1.1.6 : Execute Clear Command Stack Diagram</em></p>
 </div>
 <div class="paragraph">
-<p>Commands that are not undoable are not added into the <code>undoStack</code>. For example, <code>list</code>, which inherits from <code>Command</code> rather than <code>UndoableCommand</code>, will not be added after execution, as shown in Figure 3.1.7.</p>
+<p>Commands that are not undoable are not added into the <code>undoStack</code>. For example, <code>list</code>, which inherits from <code>Command</code> rather than <code>UndoableCommand</code>, will not be added after execution, as shown in Figure 3.1.1.7.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -721,7 +721,7 @@ If the <code>redoStack</code> is empty, there are no other commands left to be r
 <p><em>Figure 3.1.7 : Execute List Command Stack Diagram</em></p>
 </div>
 <div class="paragraph">
-<p>The following activity diagram, Figure 3.1.8,  summarizes what happens inside the <code>UndoRedoStack</code> when a user executes a new command:</p>
+<p>The following activity diagram, Figure 3.1.1.8,  summarizes what happens inside the <code>UndoRedoStack</code> when a user executes a new command:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -729,7 +729,7 @@ If the <code>redoStack</code> is empty, there are no other commands left to be r
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.1.8 : Undo/Redo Activity Diagram</em></p>
+<p><em>Figure 3.1.1.8 : Undo/Redo Activity Diagram</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -784,7 +784,7 @@ If the <code>redoStack</code> is empty, there are no other commands left to be r
 <p>The backing up of ABC is done by <code>BackupCommand</code> and the restoring of data from a backup file is done by <code>RestoreBackupCommand</code>.
 <code>BackupCommand</code> inherits from <code>Command</code> as it does not support the undoing and redoing of user actions, whereas <code>RestoreBackupCommand</code> inherits from <code>UndoableCommand</code>.
 These commands require access to <code>Storage</code> from <code>Logic</code> and this is accomplished by posting an event to <code>EventsCenter</code>. <code>Subscribers</code> in <code>StorageManager</code> will handle these events and respond correspondingly.
-The sequence diagram below (Figure 3.1.2) shows how the <code>BackupCommand</code> is carried out.</p>
+The sequence diagram below (Figure 3.2.1.1) shows how the <code>BackupCommand</code> is carried out.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -792,7 +792,7 @@ The sequence diagram below (Figure 3.1.2) shows how the <code>BackupCommand</cod
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.2.1 : Backup Command Sequence Diagram</em></p>
+<p><em>Figure 3.2.1.1 : Backup Command Sequence Diagram</em></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -935,7 +935,7 @@ A backup of the data is automatically created when <strong>ABC</strong> is close
 </div>
 </div>
 <div class="paragraph">
-<p>The diagram below (Figure 3.3.1) shows how <code>AddTagCommand</code> works.</p>
+<p>The diagram below (Figure 3.3.1.1) shows how <code>AddTagCommand</code> works.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -943,7 +943,7 @@ A backup of the data is automatically created when <strong>ABC</strong> is close
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.3.1 : AddTag Command Sequence Diagram</em></p>
+<p><em>Figure 3.3.1.1 : AddTag Command Sequence Diagram</em></p>
 </div>
 <div class="paragraph">
 <p><code>RemoveTagCommand</code> works in a similar way. Note that <code>AddTagCommand</code> will throw an exception if the <code>Tag</code> already exists for the <code>Person</code> selected. <code>DeleteTagCommand</code> throws an exception if the <code>Tag</code> is not found on the <code>Person</code>.</p>
@@ -997,7 +997,7 @@ Therefore, all <code>Person</code> instances that fulfill the conditions specifi
 <div class="sect3">
 <h4 id="filtering-the-displayed-list"><a class="link" href="#filtering-the-displayed-list">3.4.2. Filtering the displayed list</a></h4>
 <div class="paragraph">
-<p>Note that all <code>Person</code> instances in the displayed list satisfy a Predicate <code>currentPredicate</code>. Given a new Predicate <code>newPredicate</code>, filtering the displayed list of contacts is equivalent to selecting <code>Person</code> instances that satisfy both <code>currentPredicate</code> and <code>newPredicate</code>. From Figure 3.4.1, it can also be viewed as the intersection of two lists of <code>Person</code> objects, each satisfying one of the two predicates respectively.</p>
+<p>Note that all <code>Person</code> instances in the displayed list satisfy a Predicate <code>currentPredicate</code>. Given a new Predicate <code>newPredicate</code>, filtering the displayed list of contacts is equivalent to selecting <code>Person</code> instances that satisfy both <code>currentPredicate</code> and <code>newPredicate</code>. From Figure 3.4.2.1, it can also be viewed as the intersection of two lists of <code>Person</code> objects, each satisfying one of the two predicates respectively.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1005,7 +1005,7 @@ Therefore, all <code>Person</code> instances that fulfill the conditions specifi
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.4.1 : Venn Diagram for Filtering</em></p>
+<p><em>Figure 3.4.2.1 : Venn Diagram for Filtering</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -1027,7 +1027,7 @@ Therefore, all <code>Person</code> instances that fulfill the conditions specifi
 </ol>
 </div>
 <div class="paragraph">
-<p>For more detail, refer to the sequence diagram(Figure 3.4.2) below.</p>
+<p>For more detail, refer to the sequence diagram(Figure 3.4.3.1) below.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1035,7 +1035,7 @@ Therefore, all <code>Person</code> instances that fulfill the conditions specifi
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.4.2 : Sequence Diagram for Find</em></p>
+<p><em>Figure 3.4.3.1 : Sequence Diagram for Find</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -1068,7 +1068,7 @@ Therefore, all <code>Person</code> instances that fulfill the conditions specifi
 which is used in <code>SyncCommand</code>. The four primary methods in <code>SyncCommand</code> are <code>checkContacts</code>, <code>updateContacts</code>, <code>importContacts</code> and <code>exportContacts</code>.<br></p>
 </div>
 <div class="paragraph">
-<p>The sequence diagram for the command can be seen below, in Figure 3.5.1:</p>
+<p>The sequence diagram for the command can be seen below, in Figure 3.5.1.1:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1076,7 +1076,7 @@ which is used in <code>SyncCommand</code>. The four primary methods in <code>Syn
 </div>
 </div>
 <div class="paragraph">
-<p>_Figure 3.5.1: Sync Command Sequence Diagram</p>
+<p><em>Figure 3.5.1.1: Sync Command Sequence Diagram</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -1174,46 +1174,46 @@ with an ID yet.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>public class SyncCommand extends Command {
-  // variables, constructor and other methods
-    private void importContacts () throws IOException {
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">SyncCommand</span> <span class="directive">extends</span> Command {
+  <span class="comment">// variables, constructor and other methods</span>
+    <span class="directive">private</span> <span class="type">void</span> importContacts () <span class="directive">throws</span> <span class="exception">IOException</span> {
 
-        for (Person person : connections) {
-                String id = person.getResourceName();
-                String gName = retrieveFullGName(person);
-                if (!syncedIDs.contains(id)) {
-                    if (!hashName.containsKey(gName)) {
-                        // We import the contact if there is no contact of a similar name
-                    } else if (hashName.containsKey((gName))) {
+        <span class="keyword">for</span> (Person person : connections) {
+                <span class="predefined-type">String</span> id = person.getResourceName();
+                <span class="predefined-type">String</span> gName = retrieveFullGName(person);
+                <span class="keyword">if</span> (!syncedIDs.contains(id)) {
+                    <span class="keyword">if</span> (!hashName.containsKey(gName)) {
+                        <span class="comment">// We import the contact if there is no contact of a similar name</span>
+                    } <span class="keyword">else</span> <span class="keyword">if</span> (hashName.containsKey((gName))) {
                         seedu.address.model.person.ReadOnlyPerson aPerson = hashName.get(gName);
-                        if (equalPerson(aPerson, person)) {
-                            //We link the 2 contacts if they have the same details
-                        } else {
-                            // We can safely import the contacts as they have different details
+                        <span class="keyword">if</span> (equalPerson(aPerson, person)) {
+                            <span class="comment">//We link the 2 contacts if they have the same details</span>
+                        } <span class="keyword">else</span> {
+                            <span class="comment">// We can safely import the contacts as they have different details</span>
                         }
                     }
                 }
         }
     }
 
-    private void exportContacts (List&lt;ReadOnlyPerson&gt; personList) throws Exception {
-        for (ReadOnlyPerson person : personList) {
-            if (person.getId().getValue().equals("")) {
-                if (hashGoogleName.containsKey(person.getName().fullName)) {
-                    // We can safely export the contact as there is no one with a similar name
-                } else if (hashGoogleName.containsKey(person.getName().fullName)) {
-                    // We check if the person is identical, and link them if they are
+    <span class="directive">private</span> <span class="type">void</span> exportContacts (<span class="predefined-type">List</span>&lt;ReadOnlyPerson&gt; personList) <span class="directive">throws</span> <span class="exception">Exception</span> {
+        <span class="keyword">for</span> (ReadOnlyPerson person : personList) {
+            <span class="keyword">if</span> (person.getId().getValue().equals(<span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>)) {
+                <span class="keyword">if</span> (hashGoogleName.containsKey(person.getName().fullName)) {
+                    <span class="comment">// We can safely export the contact as there is no one with a similar name</span>
+                } <span class="keyword">else</span> <span class="keyword">if</span> (hashGoogleName.containsKey(person.getName().fullName)) {
+                    <span class="comment">// We check if the person is identical, and link them if they are</span>
                     Person gPerson = hashGoogleName.get(person.getName().fullName);
-                    if (equalPerson(person, gPerson)) {
-                        // We link the similar contacts
-                    } else {
-                        // We can safely export the contact as their other details are not similar
+                    <span class="keyword">if</span> (equalPerson(person, gPerson)) {
+                        <span class="comment">// We link the similar contacts</span>
+                    } <span class="keyword">else</span> {
+                        <span class="comment">// We can safely export the contact as their other details are not similar</span>
                     }
                 }
             }
         }
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -1535,7 +1535,7 @@ b. Require developers to download those libraries manually (this creates extra w
 <div class="paragraph">
 <p>Priorities: High (must have) - <code>* * *</code>, Medium (nice to have) - <code>* *</code>, Low (unlikely to have) - <code>*</code></p>
 </div>
-<table class="tableblock frame-all grid-all" style="width: 59%;">
+<table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 22%;">
 <col style="width: 23%;">
@@ -2378,7 +2378,7 @@ Use case ends.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-11-13 02:36:10 +00:00
+Last updated 2017-11-13 03:13:15 +00:00
 </div>
 </div>
 </body>

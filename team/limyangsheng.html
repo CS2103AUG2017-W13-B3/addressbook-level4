@@ -151,7 +151,7 @@ As such, the backup and restore backup command will allow users to retrieve back
 <p>The backing up of ABC is done by <code>BackupCommand</code> and the restoring of data from a backup file is done by <code>RestoreBackupCommand</code>.
 <code>BackupCommand</code> inherits from <code>Command</code> as it does not support the undoing and redoing of user actions, whereas <code>RestoreBackupCommand</code> inherits from <code>UndoableCommand</code>.
 These commands require access to <code>Storage</code> from <code>Logic</code> and this is accomplished by posting an event to <code>EventsCenter</code>. <code>Subscribers</code> in <code>StorageManager</code> will handle these events and respond correspondingly.
-The sequence diagram below (Figure 3.1.2) shows how the <code>BackupCommand</code> is carried out.</p>
+The sequence diagram below (Figure 3.2.1.1) shows how the <code>BackupCommand</code> is carried out.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -159,7 +159,7 @@ The sequence diagram below (Figure 3.1.2) shows how the <code>BackupCommand</cod
 </div>
 </div>
 <div class="paragraph">
-<p><em>Figure 3.2.1 : Backup Command Sequence Diagram</em></p>
+<p><em>Figure 3.2.1.1 : Backup Command Sequence Diagram</em></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -289,7 +289,7 @@ Pull requests <a href="https://github.com/CS2103AUG2017-W13-B3/main/pull/132">#1
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-11-13 02:36:10 +00:00
+Last updated 2017-11-13 03:13:15 +00:00
 </div>
 </div>
 </body>
