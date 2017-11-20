@@ -77,13 +77,12 @@ public class SyncCommand extends Command {
             syncedIDs =  (loadStatus() == null) ? new HashSet<String>() : (HashSet) loadStatus();
 
             try {
-                List<ReadOnlyPerson> personList = model.getFilteredPersonList();
+                initialise();
 
-                initialise(personList);
-
-                checkContacts(personList);
+                checkContacts();
                 updateContacts();
-                exportContacts(personList);
+
+                exportContacts();
 
                 if (connections != null) {
                     importContacts();
@@ -103,9 +102,11 @@ public class SyncCommand extends Command {
      *
      * @throws Exception
      */
-    private void initialise(List<ReadOnlyPerson> personList) throws Exception {
+    private void initialise() throws Exception {
+        List<ReadOnlyPerson> personList =  model.getAddressBook().getPersonList();;
         client = clientFuture.get();
         ListConnectionsResponse response = client.people().connections().list("people/me")
+                .setPageSize(2000)
                 .setPersonFields("metadata,names,emailAddresses,addresses,phoneNumbers")
                 .execute();
         connections = response.getConnections();
@@ -125,7 +126,8 @@ public class SyncCommand extends Command {
      *
      * @throws Exception
      */
-    private void checkContacts(List<ReadOnlyPerson> personList) throws Exception {
+    private void checkContacts() throws Exception {
+        List<ReadOnlyPerson> personList =  model.getAddressBook().getPersonList();;
         List<ReadOnlyPerson> toDelete = new ArrayList<ReadOnlyPerson>();
         for (ReadOnlyPerson person : personList) {
             String id = person.getId().getValue();
@@ -144,17 +146,20 @@ public class SyncCommand extends Command {
         }
 
         for (ReadOnlyPerson dPerson: toDelete) {
+            hashAbc.remove(getHashKey(dPerson));
+            hashId.remove(dPerson.getId().getValue());
             model.deletePerson(dPerson);
         }
     }
 
     /** Exports local contacts to Google Contacts
      *
-     * @param personList
+     *
      * @throws IOException
      */
 
-    private void exportContacts (List<ReadOnlyPerson> personList) throws Exception {
+    private void exportContacts () throws Exception {
+        List<ReadOnlyPerson> personList = model.getAddressBook().getPersonList();
         for (ReadOnlyPerson person : personList) {
             if (person.getId().getValue().equals("")) {
                 seedu.address.model.person.Person key = getHashKey(person);
@@ -220,6 +225,10 @@ public class SyncCommand extends Command {
                 // Contact has been deleted locally. We update this remotely
                 if (hashGoogleId.containsKey(id)) {
                     client.people().deleteContact(id).execute();
+                    Person gRemove = hashGoogleId.get(id);
+                    connections.remove(gRemove);
+                    hashGoogleId.remove(id);
+                    hashGoogle.remove(convertGooglePerson(gRemove));
                 }
                 toRemove.add(id);
                 logger.info("Removing id: " + id);
@@ -238,6 +247,7 @@ public class SyncCommand extends Command {
             }
 
             person = hashGoogleId.get(id);
+            connections.remove(person);
 
             String lastUpdated = person.getMetadata().getSources().get(0).getUpdateTime();
             Instant gTime = Instant.parse(lastUpdated);
@@ -368,7 +378,15 @@ public class SyncCommand extends Command {
             logger.warning("Google Contact has no retrievable name");
             return null;
         } else {
-            seedu.address.model.person.Name aName = new seedu.address.model.person.Name(retrieveFullGName(person));
+            seedu.address.model.person.Name aName = (
+                    seedu.address.model.person.Name.isValidName(retrieveFullGName(person)))
+                ? new seedu.address.model.person.Name(retrieveFullGName(person))
+                : null;
+
+            if (aName == null) {
+                return null;
+            }
+
             Phone aPhone = (phone == null || !Phone.isValidPhone(phone.getValue().replaceAll("\\s+", "")))
                     ? new Phone(null)
                     : new seedu.address.model.person.Phone(phone.getValue().replaceAll("\\s+", ""));

@@ -3,7 +3,6 @@ package seedu.address.google;
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.Collections;
-import java.util.Observable;
 
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.extensions.java6.auth.oauth2.AuthorizationCodeInstalledApp;
@@ -28,7 +27,7 @@ import com.google.api.services.people.v1.PeopleServiceScopes;
  *
  * @author Yaniv Inbar
  */
-public class OAuth extends Observable {
+public class OAuth {
 
     private static final OAuth oauth = new OAuth();
 
